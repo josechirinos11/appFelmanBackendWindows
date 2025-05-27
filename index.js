@@ -6,12 +6,10 @@ ADODB.debug = true;
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Construimos la ruta al archivo ACCDB de forma robusta
-const dbFile = path.join(
-  'D:\\Compartido\\AppFelmanAccessMySQL\\access-proxy',
-  'PRODUCCION_MONCADA',
-  'CONTROL_PRODUCCION_MONCADA_V40.accdb'
-);
+
+
+const dbFile = '\\\\192.168.1.81\\Compartido\\PRODUCCION_MONCADA\\CONTROL_PRODUCCION_MONCADA_V40.accdb';
+
 
 // Abre la conexión OLEDB apuntando al archivo correcto
 const connection = ADODB.open(
