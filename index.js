@@ -37,8 +37,10 @@ app.get('/api/controlPedidoInicio', async (req, res) => {
   const pageSize = parseInt(req.query.pageSize || '50');
   const offset = (page - 1) * pageSize;
 
-  try {
-    const rows = await connection.query(`
+  // Debug logs para depuración
+  console.log('Parámetros recibidos:', { page, pageSize, offset });
+
+  const sqlQuery = `
       SELECT TOP ${pageSize}
         Sub.NoPedido, Sub.Seccion, Sub.Cliente, Sub.RefCliente, Sub.Compromiso,
         Sub.Id_ControlMat, Sub.Material, Sub.Proveedor, Sub.FechaPrevista, Sub.Recibido
@@ -66,7 +68,13 @@ app.get('/api/controlPedidoInicio', async (req, res) => {
         SELECT TOP ${offset} Id_Pedido
         FROM BPedidos
       )
-    `);
+    `;
+
+  console.log('Consulta SQL generada:', sqlQuery);
+
+  try {
+    const rows = await connection.query(sqlQuery);
+    console.log('Respuesta de la base de datos:', rows);
     res.json(rows);
   } catch (err) {
     console.error('Error al consultar Access:', err);
