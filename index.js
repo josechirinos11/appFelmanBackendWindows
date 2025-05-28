@@ -59,7 +59,7 @@ app.get('/api/controlPedidoInicio', async (_, res) => {
         LEFT JOIN AMateriales AS AM ON BCM.Id_Material = AM.Id_Material)
         LEFT JOIN AProveedores AS AP ON BCM.Id_Proveedor = AP.Id_Proveedor
     `);
-    console.log(`Resultados obtenidos (${rows.length} registros):`, rows.slice(0, 5));
+    console.log(`Contrl Pedidos (${rows.length} registros):`, rows.slice(0, 5));
     res.json(rows);
   } catch (err) {
     console.error('Error al consultar Access:', err);
@@ -103,6 +103,7 @@ app.get('/api/incidencia', async (_, res) => {
     `;
     
     const rows = await connection.query(query);
+    console.log(`Incidencias (${rows.length} registros):`, rows.slice(0, 5));
     res.json(rows);
   } catch (err) {
     console.error('Error al consultar Access:', err);
@@ -110,6 +111,38 @@ app.get('/api/incidencia', async (_, res) => {
   }
 });
 
+
+
+app.get('/api/pedidosComerciales', async (_, res) => {
+  try {
+    const rows = await connection.query(`
+      SELECT
+  [BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido] AS NoPedido,
+  ASecciones.Seccion,
+  AClientes.NombreCliente AS Cliente,
+  AComerciales.Comercial,
+  BPedidos.RefCliente,
+  BPedidos.FechaCompromiso AS Compromiso,
+  BCM.Id_ControlMat,
+  AM.Material,
+  AP.Proveedor,
+  BCM.FechaPrevista,
+  BCM.Recibido
+FROM (((((BPedidos
+  INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente)
+  INNER JOIN AComerciales ON AClientes.Id_Comercial = AComerciales.Id_Comercial)
+  INNER JOIN ASecciones ON BPedidos.Id_Seccion = ASecciones.Id_Seccion)
+  LEFT JOIN BControlMateriales AS BCM ON BPedidos.Id_Pedido = BCM.Id_Pedido)
+  LEFT JOIN AMateriales AS AM ON BCM.Id_Material = AM.Id_Material)
+  LEFT JOIN AProveedores AS AP ON BCM.Id_Proveedor = AP.Id_Proveedor
+    `);
+    console.log(`Pedidos Comercial (${rows.length} registros):`, rows.slice(0, 5));
+    res.json(rows);
+  } catch (err) {
+    console.error('Error al consultar Access:', err);
+    res.status(500).json({ error: err.message });
+  }
+});
 
 
 
