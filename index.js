@@ -50,14 +50,14 @@ app.get('/api/controlPedidoInicio', async (_, res) => {
         AP.Proveedor,
         BCM.FechaPrevista,
         BCM.Recibido
-      FROM (((BPedidos
+      FROM ((((BPedidos
         INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente)
         INNER JOIN ASecciones ON BPedidos.Id_Seccion = ASecciones.Id_Seccion)
         LEFT JOIN BControlMateriales AS BCM ON BPedidos.Id_Pedido = BCM.Id_Pedido)
-        LEFT JOIN AMateriales AS AM ON BCM.Id_Material = AM.Id_Material
+        LEFT JOIN AMateriales AS AM ON BCM.Id_Material = AM.Id_Material)
         LEFT JOIN AProveedores AS AP ON BCM.Id_Proveedor = AP.Id_Proveedor
     `);
-    console.log(`Resultados obtenidos (${rows.length} registros):`, rows.slice(0, 5)); // muestra los primeros 5
+    console.log(`Resultados obtenidos (${rows.length} registros):`, rows.slice(0, 5));
     res.json(rows);
   } catch (err) {
     console.error('Error al consultar Access:', err);
