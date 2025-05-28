@@ -18,13 +18,7 @@ const connection = ADODB.open(
 
 app.get('/api/pedidos', async (_, res) => {
   try {
-    const rows = await connection.query(`SELECT
-      [Ejercicio] & '-' & [Serie] & '-' & [NPedido] AS NºPedido,
-      Estado AS EstadoPedido,
-      Incidencia,
-      FechaCompromiso AS Compromiso
-    FROM BPedidos
-    LEFT JOIN AEstadosPedido ON BPedidos.Id_EstadoPedido = AEstadosPedido.Id_EstadoPedido`);
+    const rows = await connection.query(`SELECT NPedido, Incidencia FROM BPedidos`);
     res.json(rows);
   } catch (err) {
     console.error('Error al consultar Access:', err);
@@ -68,6 +62,43 @@ app.get('/api/controlPedidoInicio', async (_, res) => {
 
 
 
+app.get('/api/incidencia', async (_, res) => {
+  try {
+    // 1. Obtener los NPedido con Incidencia = 'si'
+    const pedidosConIncidencia = await connection.query(`SELECT NPedido, Ejercicio, Serie FROM BPedidos WHERE Incidencia = 'si'`);
+    if (!pedidosConIncidencia.length) return res.json([]);
+
+    // 2. Construir filtro para la consulta principal
+    const filtros = pedidosConIncidencia.map(p => `([BPedidos].[NPedido] = ${p.NPedido} AND [BPedidos].[Ejercicio] = ${p.Ejercicio} AND [BPedidos].[Serie] = '${p.Serie}')`).join(' OR ');
+
+    // 3. Consultar los datos completos de controlPedidoInicio solo para esos NPedido
+    const query = `
+      SELECT
+        [BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido] AS NoPedido,
+        ASecciones.Seccion,
+        AClientes.NombreCliente AS Cliente,
+        BPedidos.RefCliente,
+        BPedidos.FechaCompromiso AS Compromiso,
+        BCM.Id_ControlMat,
+        AM.Material,
+        AP.Proveedor,
+        BCM.FechaPrevista,
+        BCM.Recibido
+      FROM ((((BPedidos
+        INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente)
+        INNER JOIN ASecciones ON BPedidos.Id_Seccion = ASecciones.Id_Seccion)
+        LEFT JOIN BControlMateriales AS BCM ON BPedidos.Id_Pedido = BCM.Id_Pedido)
+        LEFT JOIN AMateriales AS AM ON BCM.Id_Material = AM.Id_Material)
+        LEFT JOIN AProveedores AS AP ON BCM.Id_Proveedor = AP.Id_Proveedor
+      WHERE ${filtros}
+    `;
+    const rows = await connection.query(query);
+    res.json(rows);
+  } catch (err) {
+    console.error('Error al consultar Access:', err);
+    res.status(500).json({ error: err.message });
+  }
+});
 
 
 
