@@ -46,11 +46,11 @@ app.get('/api/controlPedidoInicio', async (_, res) => {
         C.Proveedor,
         C.FechaPrevista,
         C.Recibido
-      FROM BPedidos
-      INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente
-      INNER JOIN ASecciones ON BPedidos.Id_Seccion = ASecciones.Id_Seccion
+      FROM ((BPedidos
+      INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente)
+      INNER JOIN ASecciones ON BPedidos.Id_Seccion = ASecciones.Id_Seccion)
       LEFT JOIN ControlPedidosProveedores AS C ON 
-        ([BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido]) = C.NºPedido
+        ([BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido]) = C.[NºPedido]
     `);
     res.json(rows);
   } catch (err) {
@@ -58,6 +58,7 @@ app.get('/api/controlPedidoInicio', async (_, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
 
 
 app.listen(PORT, () => console.log(`Proxy Access corriendo en puerto ${PORT}`));
