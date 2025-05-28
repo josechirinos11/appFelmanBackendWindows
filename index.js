@@ -41,16 +41,16 @@ app.get('/api/controlPedidoInicio', async (_, res) => {
         AClientes.NombreCliente AS Cliente,
         BPedidos.RefCliente AS [Ref Cliente],
         BPedidos.FechaCompromiso AS Compromiso,
-        C.Id_ControlMat,
-        C.Material,
-        C.Proveedor,
-        C.FechaPrevista,
-        C.Recibido
+        CPM.Id_ControlMat,
+        CPM.Material,
+        CPM.Proveedor,
+        CPM.FechaPrevista,
+        CPM.Recibido
       FROM ((BPedidos
       INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente)
       INNER JOIN ASecciones ON BPedidos.Id_Seccion = ASecciones.Id_Seccion)
-      LEFT JOIN ControlPedidosProveedores AS C ON 
-        ([BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido]) = C.[NºPedido]
+      LEFT JOIN ControlPedidosMaterial AS CPM ON 
+        ([BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido]) = CPM.[NºPedido]
     `);
     res.json(rows);
   } catch (err) {
@@ -58,6 +58,7 @@ app.get('/api/controlPedidoInicio', async (_, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
 
 
 
