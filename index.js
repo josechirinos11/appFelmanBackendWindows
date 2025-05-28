@@ -39,18 +39,19 @@ app.get('/api/controlPedidoInicio', async (_, res) => {
         [BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido] AS NoPedido,
         ASecciones.Seccion,
         AClientes.NombreCliente AS Cliente,
-        BPedidos.RefCliente AS [Ref Cliente],
+        BPedidos.RefCliente,
         BPedidos.FechaCompromiso AS Compromiso,
-        CPM.Id_ControlMat,
-        CPM.Material,
-        CPM.Proveedor,
-        CPM.FechaPrevista,
-        CPM.Recibido
-      FROM ((BPedidos
-      INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente)
-      INNER JOIN ASecciones ON BPedidos.Id_Seccion = ASecciones.Id_Seccion)
-      LEFT JOIN ControlPedidosMaterial AS CPM ON 
-        ([BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido]) = CPM.[NºPedido]
+        BControlMateriales.Id_ControlMat,
+        AMateriales.Material,
+        AProveedores.Proveedor,
+        BControlMateriales.FechaPrevista,
+        BControlMateriales.Recibido
+      FROM BPedidos
+      INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente
+      INNER JOIN ASecciones ON BPedidos.Id_Seccion = ASecciones.Id_Seccion
+      LEFT JOIN BControlMateriales ON BPedidos.Id_Pedido = BControlMateriales.Id_Pedido
+      LEFT JOIN AMateriales ON BControlMateriales.Id_Material = AMateriales.Id_Material
+      LEFT JOIN AProveedores ON BControlMateriales.Id_Proveedor = AProveedores.Id_Proveedor
     `);
     res.json(rows);
   } catch (err) {
@@ -58,6 +59,7 @@ app.get('/api/controlPedidoInicio', async (_, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
 
 
 
