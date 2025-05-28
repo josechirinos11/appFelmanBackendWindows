@@ -18,7 +18,13 @@ const connection = ADODB.open(
 
 app.get('/api/pedidos', async (_, res) => {
   try {
-    const rows = await connection.query(`SELECT NPedido, Incidencia FROM BPedidos`);
+    const rows = await connection.query(`SELECT
+      [Ejercicio] & '-' & [Serie] & '-' & [NPedido] AS NºPedido,
+      Estado AS EstadoPedido,
+      Incidencia,
+      FechaCompromiso AS Compromiso
+    FROM BPedidos
+    LEFT JOIN AEstadosPedido ON BPedidos.Id_EstadoPedido = AEstadosPedido.Id_EstadoPedido`);
     res.json(rows);
   } catch (err) {
     console.error('Error al consultar Access:', err);
