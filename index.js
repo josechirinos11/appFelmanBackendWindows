@@ -41,17 +41,18 @@ app.get('/api/controlPedidoInicio', async (_, res) => {
         AClientes.NombreCliente AS Cliente,
         BPedidos.RefCliente,
         BPedidos.FechaCompromiso AS Compromiso,
-        BControlMateriales.Id_ControlMat,
-        AMateriales.Material,
-        AProveedores.Proveedor,
-        BControlMateriales.FechaPrevista,
-        BControlMateriales.Recibido
-      FROM BPedidos
-      INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente
-      INNER JOIN ASecciones ON BPedidos.Id_Seccion = ASecciones.Id_Seccion
-      LEFT JOIN BControlMateriales ON BPedidos.Id_Pedido = BControlMateriales.Id_Pedido
-      LEFT JOIN AMateriales ON BControlMateriales.Id_Material = AMateriales.Id_Material
-      LEFT JOIN AProveedores ON BControlMateriales.Id_Proveedor = AProveedores.Id_Proveedor
+        BCM.Id_ControlMat,
+        AM.Material,
+        AP.Proveedor,
+        BCM.FechaPrevista,
+        BCM.Recibido
+      FROM (((
+        BPedidos
+        INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente)
+        INNER JOIN ASecciones ON BPedidos.Id_Seccion = ASecciones.Id_Seccion)
+        LEFT JOIN BControlMateriales AS BCM ON BPedidos.Id_Pedido = BCM.Id_Pedido)
+        LEFT JOIN AMateriales AS AM ON BCM.Id_Material = AM.Id_Material
+        LEFT JOIN AProveedores AS AP ON BCM.Id_Proveedor = AP.Id_Proveedor
     `);
     res.json(rows);
   } catch (err) {
@@ -59,6 +60,7 @@ app.get('/api/controlPedidoInicio', async (_, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
 
 
 
