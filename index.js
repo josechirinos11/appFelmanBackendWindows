@@ -32,4 +32,32 @@ app.get('/api/pedidos', async (_, res) => {
   }
 });
 
+app.get('/api/controlPedidoInicio', async (_, res) => {
+  try {
+    const rows = await connection.query(`
+      SELECT
+        [BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido] AS NoPedido,
+        ASecciones.Seccion,
+        AClientes.NombreCliente AS Cliente,
+        BPedidos.RefCliente AS [Ref Cliente],
+        BPedidos.FechaCompromiso AS Compromiso,
+        C.Id_ControlMat,
+        C.Material,
+        C.Proveedor,
+        C.FechaPrevista,
+        C.Recibido
+      FROM BPedidos
+      INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente
+      INNER JOIN ASecciones ON BPedidos.Id_Seccion = ASecciones.Id_Seccion
+      LEFT JOIN ControlPedidosProveedores AS C ON 
+        ([BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido]) = C.NºPedido
+    `);
+    res.json(rows);
+  } catch (err) {
+    console.error('Error al consultar Access:', err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
 app.listen(PORT, () => console.log(`Proxy Access corriendo en puerto ${PORT}`));
