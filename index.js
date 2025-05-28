@@ -64,14 +64,15 @@ app.get('/api/controlPedidoInicio', async (_, res) => {
 
 app.get('/api/incidencia', async (_, res) => {
   try {
-    // 1. Obtener los NPedido con Incidencia = 'si'
-    const pedidosConIncidencia = await connection.query(`SELECT NPedido, Ejercicio, Serie FROM BPedidos WHERE Incidencia = 'si'`);
+    // 1. Obtener los NPedido donde Incidencia = 'si'
+    const pedidosConIncidencia = await connection.query(`SELECT NPedido FROM BPedidos WHERE Incidencia = 'si'`);
     if (!pedidosConIncidencia.length) return res.json([]);
 
-    // 2. Construir filtro para la consulta principal
-    const filtros = pedidosConIncidencia.map(p => `([BPedidos].[NPedido] = ${p.NPedido} AND [BPedidos].[Ejercicio] = ${p.Ejercicio} AND [BPedidos].[Serie] = '${p.Serie}')`).join(' OR ');
+    // 2. Extraer NPedido y construir cláusula WHERE
+    const pedidos = pedidosConIncidencia.map(p => p.NPedido);
+    const whereClause = pedidos.map(n => `[BPedidos].[NPedido] = ${n}`).join(' OR ');
 
-    // 3. Consultar los datos completos de controlPedidoInicio solo para esos NPedido
+    // 3. Consultar los datos completos
     const query = `
       SELECT
         [BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido] AS NoPedido,
@@ -90,16 +91,17 @@ app.get('/api/incidencia', async (_, res) => {
         LEFT JOIN BControlMateriales AS BCM ON BPedidos.Id_Pedido = BCM.Id_Pedido)
         LEFT JOIN AMateriales AS AM ON BCM.Id_Material = AM.Id_Material)
         LEFT JOIN AProveedores AS AP ON BCM.Id_Proveedor = AP.Id_Proveedor
-      WHERE ${filtros}
+      WHERE ${whereClause}
     `;
+    
     const rows = await connection.query(query);
-    console.log(`Resultados obtenidos (${rows.length} registros):`, rows.slice(0, 5));
     res.json(rows);
   } catch (err) {
     console.error('Error al consultar Access:', err);
     res.status(500).json({ error: err.message });
   }
 });
+
 
 
 
