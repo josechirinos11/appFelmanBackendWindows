@@ -93,6 +93,7 @@ app.get('/api/incidencia', async (_, res) => {
       WHERE ${filtros}
     `;
     const rows = await connection.query(query);
+    console.log(`Resultados obtenidos (${rows.length} registros):`, rows.slice(0, 5));
     res.json(rows);
   } catch (err) {
     console.error('Error al consultar Access:', err);
