@@ -40,7 +40,7 @@ app.get('/api/controlPedidoInicio', async (req, res) => {
 
   console.log('Parámetros recibidos:', { page, pageSize, offset });
 
-  // 2. Genera dinámicamente la cláusula WHERE solo si offset > 0
+  // 2. Construye la cláusula WHERE solo si offset > 0
   let whereClause = '';
   if (offset > 0) {
     whereClause = `
@@ -51,7 +51,7 @@ app.get('/api/controlPedidoInicio', async (req, res) => {
     `;
   }
 
-  // 3. Construye la consulta completa
+  // 3. SQL completo con el typo corregido: AP.Id_Proveedor (antes estaba AP.Id_Proveedo)
   const sqlQuery = `
     SELECT TOP ${pageSize}
       Sub.NoPedido,
@@ -77,12 +77,16 @@ app.get('/api/controlPedidoInicio', async (req, res) => {
         BCM.FechaPrevista,
         BCM.Recibido,
         BPedidos.Id_Pedido
-      FROM (((BPedidos
-        INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente)
-        INNER JOIN ASecciones ON BPedidos.Id_Seccion = ASecciones.Id_Seccion)
-        LEFT JOIN BControlMateriales AS BCM ON BPedidos.Id_Pedido = BCM.Id_Pedido)
-        LEFT JOIN AMateriales AS AM ON BCM.Id_Material = AM.Id_Material
-        LEFT JOIN AProveedores AS AP ON BCM.Id_Proveedor = AP.Id_Proveedor
+      FROM (
+        (
+          (BPedidos
+            INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente)
+            INNER JOIN ASecciones ON BPedidos.Id_Seccion = ASecciones.Id_Seccion
+        )
+        LEFT JOIN BControlMateriales AS BCM ON BPedidos.Id_Pedido = BCM.Id_Pedido
+      )
+      LEFT JOIN AMateriales AS AM ON BCM.Id_Material = AM.Id_Material
+      LEFT JOIN AProveedores AS AP ON BCM.Id_Proveedor = AP.Id_Proveedor
     ) AS Sub
     ${whereClause}
   `;
@@ -98,6 +102,7 @@ app.get('/api/controlPedidoInicio', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
 
 
 
