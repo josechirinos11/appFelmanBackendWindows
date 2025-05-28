@@ -33,42 +33,59 @@ app.get('/api/pedidos', async (_, res) => {
 });
 
 app.get('/api/controlPedidoInicio', async (req, res) => {
-  const page = parseInt(req.query.page || '1');
-  const pageSize = parseInt(req.query.pageSize || '50');
-  const offset = (page - 1) * pageSize;
+  // 1. Parámetros de paginación
+  const page     = parseInt(req.query.page     || '1', 10);
+  const pageSize = parseInt(req.query.pageSize || '50', 10);
+  const offset   = (page - 1) * pageSize;
 
-  // Debug logs para depuración
   console.log('Parámetros recibidos:', { page, pageSize, offset });
 
-  const sqlQuery = `
-      SELECT TOP ${pageSize}
-        Sub.NoPedido, Sub.Seccion, Sub.Cliente, Sub.RefCliente, Sub.Compromiso,
-        Sub.Id_ControlMat, Sub.Material, Sub.Proveedor, Sub.FechaPrevista, Sub.Recibido
-      FROM (
-        SELECT
-          [BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido] AS NoPedido,
-          ASecciones.Seccion,
-          AClientes.NombreCliente AS Cliente,
-          BPedidos.RefCliente,
-          BPedidos.FechaCompromiso AS Compromiso,
-          BCM.Id_ControlMat,
-          AM.Material,
-          AP.Proveedor,
-          BCM.FechaPrevista,
-          BCM.Recibido,
-          BPedidos.Id_Pedido
-        FROM (((BPedidos
-          INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente)
-          INNER JOIN ASecciones ON BPedidos.Id_Seccion = ASecciones.Id_Seccion)
-          LEFT JOIN BControlMateriales AS BCM ON BPedidos.Id_Pedido = BCM.Id_Pedido)
-          LEFT JOIN AMateriales AS AM ON BCM.Id_Material = AM.Id_Material
-          LEFT JOIN AProveedores AS AP ON BCM.Id_Proveedor = AP.Id_Proveedor
-      ) AS Sub
+  // 2. Genera dinámicamente la cláusula WHERE solo si offset > 0
+  let whereClause = '';
+  if (offset > 0) {
+    whereClause = `
       WHERE Sub.Id_Pedido NOT IN (
         SELECT TOP ${offset} Id_Pedido
         FROM BPedidos
       )
     `;
+  }
+
+  // 3. Construye la consulta completa
+  const sqlQuery = `
+    SELECT TOP ${pageSize}
+      Sub.NoPedido,
+      Sub.Seccion,
+      Sub.Cliente,
+      Sub.RefCliente,
+      Sub.Compromiso,
+      Sub.Id_ControlMat,
+      Sub.Material,
+      Sub.Proveedor,
+      Sub.FechaPrevista,
+      Sub.Recibido
+    FROM (
+      SELECT
+        [BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido] AS NoPedido,
+        ASecciones.Seccion,
+        AClientes.NombreCliente AS Cliente,
+        BPedidos.RefCliente,
+        BPedidos.FechaCompromiso AS Compromiso,
+        BCM.Id_ControlMat,
+        AM.Material,
+        AP.Proveedor,
+        BCM.FechaPrevista,
+        BCM.Recibido,
+        BPedidos.Id_Pedido
+      FROM (((BPedidos
+        INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente)
+        INNER JOIN ASecciones ON BPedidos.Id_Seccion = ASecciones.Id_Seccion)
+        LEFT JOIN BControlMateriales AS BCM ON BPedidos.Id_Pedido = BCM.Id_Pedido)
+        LEFT JOIN AMateriales AS AM ON BCM.Id_Material = AM.Id_Material
+        LEFT JOIN AProveedores AS AP ON BCM.Id_Proveedor = AP.Id_Proveedor
+    ) AS Sub
+    ${whereClause}
+  `;
 
   console.log('Consulta SQL generada:', sqlQuery);
 
