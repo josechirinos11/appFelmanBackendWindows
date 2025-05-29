@@ -149,13 +149,30 @@ app.get('/api/controlEntregaDiaria', async (_, res) => {
   try {
     const rows = await connection.query(`
       SELECT
-        [BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido] AS NoPedido,
-        AClientes.NombreCliente AS Cliente,
+        DED.Id_Entrega,
+        DED.FechaEnvio,
+        DED.EntregaConfirmada,
+        DED.EstadoCarga,
+        DED.ObservaGral,
+        DEL.Id_LineaEntrega,
+        DEL.Id_Pedido,
+        DEL.Observaciones,
+        DEL.NCaballetes,
+        DEL.NBultos,
+        DEL.Id_ResponsableEnvio,
+        DEL.Id_EstadoEntrega,
+        DEL.DocuAdjunta,
+        DEL.Id_LugarEntrega,
+        DEL.NSCaballetes,
+        BPedidos.Ejercicio & '-' & BPedidos.Serie & '-' & BPedidos.NPedido AS NoPedido,
         BPedidos.RefCliente,
+        AClientes.NombreCliente AS Cliente,
         AComerciales.Comercial
-      FROM ((BPedidos
-        INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente)
-        INNER JOIN AComerciales ON AClientes.Id_Comercial = AComerciales.Id_Comercial)
+      FROM ((DEntregasDiarias AS DED
+        INNER JOIN DEntregasLineas AS DEL ON DED.Id_Entrega = DEL.Id_Entrega)
+        INNER JOIN BPedidos ON DEL.Id_Pedido = BPedidos.Id_Pedido)
+        INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente
+        INNER JOIN AComerciales ON AClientes.Id_Comercial = AComerciales.Id_Comercial
     `);
     console.log(`Control Entrega Diaria (${rows.length} registros):`, rows.slice(0, 5));
     res.json(rows);
