@@ -25,7 +25,7 @@ app.get('/api/pedidos', async (_, res) => {
       FechaCompromiso AS Compromiso
     FROM BPedidos
     LEFT JOIN AEstadosPedido ON BPedidos.Id_EstadoPedido = AEstadosPedido.Id_EstadoPedido`);
-    console.log(`Resultados obtenidos (${rows.length} registros):`, rows.slice(0, 5));
+    console.log(`Consulta a api/pedidos`);
     res.json(rows);
 
   } catch (err) {
