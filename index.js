@@ -153,9 +153,9 @@ app.get('/api/controlEntregaDiaria', async (_, res) => {
         AClientes.NombreCliente AS Cliente,
         BPedidos.RefCliente,
         AComerciales.Comercial
-      FROM BPedidos
-      INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente
-      INNER JOIN AComerciales ON AClientes.Id_Comercial = AComerciales.Id_Comercial
+      FROM ((BPedidos
+        INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente)
+        INNER JOIN AComerciales ON AClientes.Id_Comercial = AComerciales.Id_Comercial)
     `);
     console.log(`Control Entrega Diaria (${rows.length} registros):`, rows.slice(0, 5));
     res.json(rows);
