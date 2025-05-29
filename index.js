@@ -145,6 +145,27 @@ FROM (((((BPedidos
 });
 
 
+app.get('/api/controlEntregaDiaria', async (_, res) => {
+  try {
+    const rows = await connection.query(`
+      SELECT
+        [BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido] AS NoPedido,
+        AClientes.NombreCliente AS Cliente,
+        BPedidos.RefCliente,
+        AComerciales.Comercial
+      FROM BPedidos
+      INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente
+      INNER JOIN AComerciales ON AClientes.Id_Comercial = AComerciales.Id_Comercial
+    `);
+    console.log(`Control Entrega Diaria (${rows.length} registros):`, rows.slice(0, 5));
+    res.json(rows);
+  } catch (err) {
+    console.error('Error al consultar Access (controlEntregaDiaria):', err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
 
 
 
