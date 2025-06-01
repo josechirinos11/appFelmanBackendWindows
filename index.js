@@ -3,44 +3,69 @@ const fs = require('fs');
 const path = require('path');
 const express = require('express');
 const ADODB = require('node-adodb');
+const cors = require('cors');
 
-// Usar la versión correcta de cscript dependiendo de la arquitectura
-const sysWow64Path = 'C:\\Windows\\SysWOW64\\cscript.exe';
-const system32Path = 'C:\\Windows\\System32\\cscript.exe';
-
-// Verificar si existe la ruta SysWOW64 y usarla si está disponible, ya que es compatible con 32 bits
-if (fs.existsSync(sysWow64Path)) {
-  process.env.ADODB_CSCRIPT = sysWow64Path;
-  console.log('Usando cscript de SysWOW64 (32 bits)');
-} else {
-  process.env.ADODB_CSCRIPT = system32Path;
-  console.log('Usando cscript de System32 (64 bits)');
-}
+// Forzar el uso de la versión de 64 bits de cscript.exe
+process.env.ADODB_CSCRIPT = 'C:\\Windows\\System32\\cscript.exe';
+console.log('Forzando el uso de cscript de System32 (64 bits)');
 
 ADODB.debug = true;
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Ruta a la base de datos Access
-const dbFile = '\\\\192.168.1.81\\Compartido\\PRODUCCION_MONCADA\\CONTROL_PRODUCCION_MONCADA_V40.accdb';
+// Habilitar CORS para todas las rutas
+app.use(cors());
 
-// Verificar si el archivo existe antes de intentar conectarse
+// Ruta a la base de datos Access - Usar una copia local si es posible
+const originDbFile = '\\\\192.168.1.81\\Compartido\\PRODUCCION_MONCADA\\CONTROL_PRODUCCION_MONCADA_V40.accdb';
+const localDbCopy = path.join(__dirname, 'CONTROL_PRODUCCION_MONCADA_V40_LOCAL.accdb');
+
+// Crear una copia local de la base de datos para evitar problemas de bloqueo
 try {
-  if (!fs.existsSync(dbFile)) {
-    console.error(`La base de datos no existe en la ruta: ${dbFile}`);
-    process.exit(1);
+  if (fs.existsSync(originDbFile)) {
+    console.log(`Base de datos remota encontrada en: ${originDbFile}`);
+    console.log('Creando copia local para evitar problemas de bloqueo...');
+    fs.copyFileSync(originDbFile, localDbCopy);
+    console.log(`Copia local creada en: ${localDbCopy}`);
   } else {
-    console.log(`Base de datos encontrada en: ${dbFile}`);
+    console.error(`La base de datos remota no existe en la ruta: ${originDbFile}`);
+    if (!fs.existsSync(localDbCopy)) {
+      console.error('No existe una copia local de respaldo. Imposible continuar.');
+      process.exit(1);
+    } else {
+      console.log('Usando la copia local existente como respaldo.');
+    }
   }
 } catch (err) {
-  console.error(`Error al verificar la existencia de la base de datos: ${err.message}`);
-  process.exit(1);
+  console.error(`Error al intentar crear copia local: ${err.message}`);
+  if (fs.existsSync(localDbCopy)) {
+    console.log('Usando la copia local existente como respaldo.');
+  } else {
+    console.error('No hay copia local disponible. Intentando usar la remota directamente.');
+  }
 }
 
-// Abre la conexión OLEDB con opciones adicionales para gestionar el acceso compartido
-const connection = ADODB.open(
-  `Provider=Microsoft.ACE.OLEDB.12.0;Data Source=${dbFile};Mode=Share Deny None;Persist Security Info=False;`
-);
+const dbFile = fs.existsSync(localDbCopy) ? localDbCopy : originDbFile;
+console.log(`Usando base de datos en: ${dbFile}`);
+
+// Intentar varias opciones de conexión con diferentes configuraciones
+function createConnection() {
+  try {
+    // Opciones de conexión con manejo explícito de permisos y bloqueo
+    return ADODB.open(
+      `Provider=Microsoft.ACE.OLEDB.12.0;Data Source=${dbFile};Mode=Share Deny None;Jet OLEDB:Database Password=;User Id=Admin;Password=;`
+    );
+  } catch (error) {
+    console.error('Error al crear la conexión:', error);
+    // Intentar una configuración alternativa si la primera falla
+    return ADODB.open(
+      `Provider=Microsoft.ACE.OLEDB.12.0;Data Source=${dbFile};Mode=Read;Persist Security Info=False;`
+    );
+  }
+}
+
+// Crear la conexión
+const connection = createConnection();
 
 app.get('/api/pedidos', async (_, res) => {
   try {
