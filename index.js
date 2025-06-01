@@ -1,23 +1,45 @@
-﻿// 1. Fuerzo a node-adodb a usar cscript de System32 (64 bits)
-process.env.ADODB_CSCRIPT = 'C:\\Windows\\System32\\cscript.exe';
-
-
+﻿// Configuración del entorno para node-adodb
+const fs = require('fs');
 const path = require('path');
 const express = require('express');
 const ADODB = require('node-adodb');
+
+// Usar la versión correcta de cscript dependiendo de la arquitectura
+const sysWow64Path = 'C:\\Windows\\SysWOW64\\cscript.exe';
+const system32Path = 'C:\\Windows\\System32\\cscript.exe';
+
+// Verificar si existe la ruta SysWOW64 y usarla si está disponible, ya que es compatible con 32 bits
+if (fs.existsSync(sysWow64Path)) {
+  process.env.ADODB_CSCRIPT = sysWow64Path;
+  console.log('Usando cscript de SysWOW64 (32 bits)');
+} else {
+  process.env.ADODB_CSCRIPT = system32Path;
+  console.log('Usando cscript de System32 (64 bits)');
+}
 
 ADODB.debug = true;
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-
-
+// Ruta a la base de datos Access
 const dbFile = '\\\\192.168.1.81\\Compartido\\PRODUCCION_MONCADA\\CONTROL_PRODUCCION_MONCADA_V40.accdb';
 
+// Verificar si el archivo existe antes de intentar conectarse
+try {
+  if (!fs.existsSync(dbFile)) {
+    console.error(`La base de datos no existe en la ruta: ${dbFile}`);
+    process.exit(1);
+  } else {
+    console.log(`Base de datos encontrada en: ${dbFile}`);
+  }
+} catch (err) {
+  console.error(`Error al verificar la existencia de la base de datos: ${err.message}`);
+  process.exit(1);
+}
 
-// Abre la conexión OLEDB apuntando al archivo correcto
+// Abre la conexión OLEDB con opciones adicionales para gestionar el acceso compartido
 const connection = ADODB.open(
-  `Provider=Microsoft.ACE.OLEDB.12.0;Data Source=${dbFile};Persist Security Info=False;`
+  `Provider=Microsoft.ACE.OLEDB.12.0;Data Source=${dbFile};Mode=Share Deny None;Persist Security Info=False;`
 );
 
 app.get('/api/pedidos', async (_, res) => {
