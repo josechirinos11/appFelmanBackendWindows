@@ -6,6 +6,8 @@ ADODB.debug = true;
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// 1. Fuerzo a node-adodb a usar cscript de System32 (64 bits)
+process.env.ADODB_CSCRIPT = 'C:\\Windows\\System32\\cscript.exe';
 
 
 const dbFile = '\\\\192.168.1.81\\Compartido\\PRODUCCION_MONCADA\\CONTROL_PRODUCCION_MONCADA_V40.accdb';
