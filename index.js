@@ -234,6 +234,27 @@ app.get('/api/controlEntregaDiaria', async (_, res) => {
 });
 
 
-
+app.get('/api/test', async (_, res) => {
+  try {
+    // Intenta hacer una consulta simple
+    const testResult = await connection.query('SELECT COUNT(*) as count FROM BPedidos');
+    res.json({
+      status: 'ok',
+      message: 'Conexión exitosa a la base de datos Access',
+      dbFile: dbFile,
+      totalPedidos: testResult[0].count,
+      timestamp: new Date().toISOString()
+    });
+  } catch (err) {
+    console.error('Error en prueba de conexión:', err);
+    res.status(500).json({
+      status: 'error',
+      message: 'Error al conectar con la base de datos',
+      error: err.message,
+      dbFile: dbFile,
+      timestamp: new Date().toISOString()
+    });
+  }
+});
 
 app.listen(PORT, () => console.log(`Proxy Access corriendo en puerto ${PORT}`));
