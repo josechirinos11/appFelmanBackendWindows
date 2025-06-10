@@ -264,7 +264,7 @@ app.get('/api/controlEntregaDiariaA1DIA', async (_, res) => {
       WHERE DED.FechaEnvio = (
         SELECT MAX(FechaEnvio)
         FROM DEntregasDiarias
-        WHERE FechaEnvio >= DateAdd('d', -2, Date())
+        WHERE FechaEnvio >= DateAdd('d', -90, Date())
           AND FechaEnvio <= Date()
       )
     `);
