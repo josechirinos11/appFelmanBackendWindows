@@ -259,16 +259,12 @@ app.get('/api/controlEntregaDiariaA1DIA', async (_, res) => {
       FROM ((((DEntregasDiarias AS DED
         INNER JOIN DEntregasLineas AS DEL ON DED.Id_Entrega = DEL.Id_Entrega)
         INNER JOIN BPedidos ON DEL.Id_Pedido = BPedidos.Id_Pedido)
-        INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente)
-        INNER JOIN AComerciales ON AClientes.Id_Comercial = AComerciales.Id_Comercial)
-      WHERE DED.FechaEnvio = (
-        SELECT MAX(FechaEnvio)
-        FROM DEntregasDiarias
-        WHERE FechaEnvio >= DateAdd('d', -90, Date())
-          AND FechaEnvio <= Date()
-      )
+        INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente)        INNER JOIN AComerciales ON AClientes.Id_Comercial = AComerciales.Id_Comercial)
+      WHERE DED.FechaEnvio >= DateAdd('d', -90, Date()) 
+        AND DED.FechaEnvio <= Date()
+      ORDER BY DED.FechaEnvio DESC
     `);
-    console.log(`Control Entrega Diaria Anterior (${rows.length} registros):`, rows.slice(0, 5));
+    console.log(`Control Entrega Diaria Últimos 90 días (${rows.length} registros):`, rows.slice(0, 5));
     res.json(rows);
   } catch (err) {
     console.error('Error al consultar Access (controlEntregaDiariaA1DIA):', err);
