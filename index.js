@@ -118,6 +118,38 @@ app.get('/api/controlPedidoInicio', async (_, res) => {
   }
 });
 
+app.get('/api/controlPedidoInicio40Registro', async (_, res) => {
+  try {
+    const rows = await connection.query(`
+      SELECT TOP 40
+        [BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido] AS NoPedido,
+        ASecciones.Seccion,
+        AClientes.NombreCliente AS Cliente,
+        BPedidos.RefCliente,
+        BPedidos.FechaCompromiso AS Compromiso,
+        BCM.Id_ControlMat,
+        AM.Material,
+        AP.Proveedor,
+        BCM.FechaPrevista,
+        BCM.Recibido
+      FROM ((((BPedidos
+        INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente)
+        INNER JOIN ASecciones ON BPedidos.Id_Seccion = ASecciones.Id_Seccion)
+        LEFT JOIN BControlMateriales AS BCM ON BPedidos.Id_Pedido = BCM.Id_Pedido)
+        LEFT JOIN AMateriales AS AM ON BCM.Id_Material = AM.Id_Material)
+        LEFT JOIN AProveedores AS AP ON BCM.Id_Proveedor = AP.Id_Proveedor
+      WHERE BCM.FechaPrevista >= Date()
+      ORDER BY BCM.FechaPrevista
+    `);
+    console.log(`Control Pedidos 40 registros (${rows.length} registros):`, rows.slice(0, 5));
+    res.json(rows);
+  } catch (err) {
+    console.error('Error al consultar Access:', err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
 
 
 
