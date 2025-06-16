@@ -123,6 +123,57 @@ app.get('/api/controlPedidoInicio', async (_, res) => {
 
 
 
+app.get('/api/controlPedidoInicio40Registro', async (_, res) => {
+  try {
+    const rows = await connection.query(`
+      SELECT TOP 40
+        [BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido] AS NoPedido,
+        [ASecciones].[Seccion],
+        [AClientes].[NombreCliente] AS Cliente,
+        [BPedidos].[RefCliente],
+        [BPedidos].[FechaCompromiso] AS Compromiso,
+        [AE].[Estado] AS EstadoPedido,
+        [BCM].[Id_ControlMat],
+        [AM].[Material],
+        [AP].[Proveedor],
+        [BCM].[FechaPrevista],
+        [BCM].[Recibido]
+      FROM
+        (
+          (
+            (
+              [BPedidos]
+              INNER JOIN [AClientes]   ON [BPedidos].[Id_Cliente]      = [AClientes].[Id_Cliente]
+            )
+            INNER JOIN [ASecciones]  ON [BPedidos].[Id_Seccion]      = [ASecciones].[Id_Seccion]
+          )
+          INNER JOIN [AEstadosPedido] AS [AE] ON [BPedidos].[Id_EstadoPedido] = [AE].[Id_EstadoPedido]
+        )
+        LEFT JOIN
+          (
+            (
+              [BControlMateriales] AS [BCM]
+              LEFT JOIN [AMateriales] AS [AM] ON [BCM].[Id_Material]    = [AM].[Id_Material]
+            )
+            LEFT JOIN [AProveedores] AS [AP] ON [BCM].[Id_Proveedor]   = [AP].[Id_Proveedor]
+          )
+        ON [BPedidos].[Id_Pedido] = [BCM].[Id_Pedido]
+      WHERE
+        [AE].[Estado] <> 'SERVIDO'
+        AND [BCM].[FechaPrevista] >= Date()
+      ORDER BY
+        [BCM].[FechaPrevista] ASC
+    `);
+    console.log(`Control Pedidos 40 registros (${rows.length} registros):`, rows.slice(0, 5));
+    res.json(rows);
+  } catch (err) {
+    console.error('Error al consultar Access:', err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
+
 app.get('/api/controlPedidoInicio__EJEMPLO', async (_, res) => {
   try {
     const rows = await connection.query(`
@@ -152,7 +203,7 @@ app.get('/api/controlPedidoInicio__EJEMPLO', async (_, res) => {
   }
 });
 
-app.get('/api/controlPedidoInicio40Registro', async (_, res) => {
+app.get('/api/controlPedidoInicio40Registro__EJEMPLO', async (_, res) => {
   try {
     const rows = await connection.query(`
       SELECT TOP 40
@@ -182,6 +233,9 @@ app.get('/api/controlPedidoInicio40Registro', async (_, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
+
+
 
 
 
