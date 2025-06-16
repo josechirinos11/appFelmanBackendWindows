@@ -104,13 +104,13 @@ app.get('/api/controlPedidoInicio', async (_, res) => {
         [AP].[Proveedor],
         [BCM].[FechaPrevista],
         [BCM].[Recibido]
-      FROM [BPedidos]
-        INNER JOIN [AClientes] ON [BPedidos].[Id_Cliente] = [AClientes].[Id_Cliente]
-        INNER JOIN [ASecciones] ON [BPedidos].[Id_Seccion] = [ASecciones].[Id_Seccion]
-        INNER JOIN [AEstadosPedido] AS [AE] ON [BPedidos].[Id_EstadoPedido] = [AE].[Id_EstadoPedido]
-        LEFT JOIN [BControlMateriales] AS [BCM] ON [BPedidos].[Id_Pedido] = [BCM].[Id_Pedido]
-        LEFT JOIN [AMateriales] AS [AM] ON [BCM].[Id_Material] = [AM].[Id_Material]
-        LEFT JOIN [AProveedores] AS [AP] ON [BCM].[Id_Proveedor] = [AP].[Id_Proveedor]
+      FROM (((((([BPedidos]
+          INNER JOIN [AClientes]   ON [BPedidos].[Id_Cliente]      = [AClientes].[Id_Cliente])
+          INNER JOIN [ASecciones]  ON [BPedidos].[Id_Seccion]      = [ASecciones].[Id_Seccion])
+          INNER JOIN [AEstadosPedido] AS [AE] ON [BPedidos].[Id_EstadoPedido] = [AE].[Id_EstadoPedido])
+          LEFT JOIN [BControlMateriales] AS [BCM] ON [BPedidos].[Id_Pedido]     = [BCM].[Id_Pedido])
+          LEFT JOIN [AMateriales]       AS [AM]  ON [BCM].[Id_Material]    = [AM].[Id_Material])
+          LEFT JOIN [AProveedores]      AS [AP]  ON [BCM].[Id_Proveedor]   = [AP].[Id_Proveedor])
       WHERE [AE].[Estado] <> 'SERVIDO';
     `);
     console.log(`Control Pedidos (${rows.length} registros):`, rows.slice(0, 5));
@@ -120,6 +120,7 @@ app.get('/api/controlPedidoInicio', async (_, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
 
 
 app.get('/api/controlPedidoInicio__EJEMPLO', async (_, res) => {
