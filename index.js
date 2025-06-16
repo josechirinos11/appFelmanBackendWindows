@@ -288,32 +288,40 @@ app.get('/api/pedidosComerciales', async (_, res) => {
   try {
     const rows = await connection.query(`
       SELECT
-  [BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido] AS NoPedido,
-  ASecciones.Seccion,
-  AClientes.NombreCliente AS Cliente,
-  AComerciales.Comercial,
-  BPedidos.RefCliente,
-  BPedidos.FechaCompromiso AS Compromiso,
-  BCM.Id_ControlMat,
-  AM.Material,
-  AP.Proveedor,
-  BCM.FechaPrevista,
-  BCM.Recibido
-FROM (((((BPedidos
-  INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente)
-  INNER JOIN AComerciales ON AClientes.Id_Comercial = AComerciales.Id_Comercial)
-  INNER JOIN ASecciones ON BPedidos.Id_Seccion = ASecciones.Id_Seccion)
-  LEFT JOIN BControlMateriales AS BCM ON BPedidos.Id_Pedido = BCM.Id_Pedido)
-  LEFT JOIN AMateriales AS AM ON BCM.Id_Material = AM.Id_Material)
-  LEFT JOIN AProveedores AS AP ON BCM.Id_Proveedor = AP.Id_Proveedor
+        [BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido] AS NoPedido,
+        [ASecciones].[Seccion],
+        [AClientes].[NombreCliente] AS Cliente,
+        [AComerciales].[Comercial],
+        [BPedidos].[RefCliente],
+        [BPedidos].[FechaCompromiso] AS Compromiso,
+        [AE].[Estado] AS EstadoPedido,
+        [BCM].[Id_ControlMat],
+        [AM].[Material],
+        [AP].[Proveedor],
+        [BCM].[FechaPrevista],
+        [BCM].[Recibido]
+      FROM (((((( 
+          [BPedidos]
+          INNER JOIN [AClientes]     ON [BPedidos].[Id_Cliente]   = [AClientes].[Id_Cliente])
+          INNER JOIN [AComerciales]  ON [AClientes].[Id_Comercial] = [AComerciales].[Id_Comercial])
+          INNER JOIN [ASecciones]    ON [BPedidos].[Id_Seccion]   = [ASecciones].[Id_Seccion])
+          INNER JOIN [AEstadosPedido] AS [AE] ON [BPedidos].[Id_EstadoPedido] = [AE].[Id_EstadoPedido])
+          LEFT JOIN [BControlMateriales] AS [BCM] ON [BPedidos].[Id_Pedido] = [BCM].[Id_Pedido])
+          LEFT JOIN [AMateriales]          AS [AM]  ON [BCM].[Id_Material]  = [AM].[Id_Material])
+          LEFT JOIN [AProveedores]         AS [AP]  ON [BCM].[Id_Proveedor] = [AP].[Id_Proveedor])
+      WHERE
+        [AE].[Estado] <> 'SERVIDO'
     `);
-    console.log(`Pedidos Comercial (${rows.length} registros):`, rows.slice(0, 5));
+    console.log(`Pedidos Comerciales (${rows.length} registros):`, rows.slice(0, 5));
     res.json(rows);
   } catch (err) {
     console.error('Error al consultar Access:', err);
     res.status(500).json({ error: err.message });
   }
 });
+
+
+
 
 app.get('/api/pedidosComerciales40Registro', async (_, res) => {
   try {
@@ -325,21 +333,24 @@ app.get('/api/pedidosComerciales40Registro', async (_, res) => {
         [AComerciales].[Comercial],
         [BPedidos].[RefCliente],
         [BPedidos].[FechaCompromiso] AS Compromiso,
+        [AE].[Estado] AS EstadoPedido,
         [BCM].[Id_ControlMat],
         [AM].[Material],
         [AP].[Proveedor],
         [BCM].[FechaPrevista],
         [BCM].[Recibido]
-      FROM ((((( 
+      FROM (((((( 
           [BPedidos]
           INNER JOIN [AClientes]     ON [BPedidos].[Id_Cliente]   = [AClientes].[Id_Cliente])
           INNER JOIN [AComerciales]  ON [AClientes].[Id_Comercial] = [AComerciales].[Id_Comercial])
           INNER JOIN [ASecciones]    ON [BPedidos].[Id_Seccion]   = [ASecciones].[Id_Seccion])
+          INNER JOIN [AEstadosPedido] AS [AE] ON [BPedidos].[Id_EstadoPedido] = [AE].[Id_EstadoPedido])
           LEFT JOIN [BControlMateriales] AS [BCM] ON [BPedidos].[Id_Pedido] = [BCM].[Id_Pedido])
           LEFT JOIN [AMateriales]          AS [AM]  ON [BCM].[Id_Material]  = [AM].[Id_Material])
           LEFT JOIN [AProveedores]         AS [AP]  ON [BCM].[Id_Proveedor] = [AP].[Id_Proveedor])
       WHERE
-        [BCM].[FechaPrevista] >= Date()
+        [AE].[Estado] <> 'SERVIDO'
+        AND [BCM].[FechaPrevista] >= Date()
       ORDER BY
         [BCM].[FechaPrevista] ASC
     `);
@@ -350,6 +361,7 @@ app.get('/api/pedidosComerciales40Registro', async (_, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
 
 
 
