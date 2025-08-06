@@ -95,27 +95,16 @@ app.get("/api/pedidos", async (_, res) => {
   }
 });
 
-app.get("/api/webhook", (_, res) => {
-  const projectPath = "D:\\Compartido\\AppFelmanAccessMySQL\\access-proxy"; // ⚠️ Ruta exacta del proyecto
-
-  console.log("📦 Webhook recibido en Windows para Access Proxy");
-
-  // Ejecutar git pull
-  exec(`cd ${projectPath} && git pull`, (err, stdout, stderr) => {
-    if (err) {
-      console.error("❌ Error al hacer git pull:", err);
-      return res.status(500).json({ error: err.message });
+app.get("/api/webhook", (req, res) => {
+  console.log("🔁 Recibido webhook de GitHub, reiniciando AppFelmanWindows...");
+  exec("pm2 restart AppFelmanWindows", (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error al reiniciar con PM2: ${error.message}`);
+      return res.status(500).json({ error: error.message });
     }
-
-    console.log("✅ Git pull ejecutado en Access Proxy:");
-    console.log(stdout);
-
-    // Si usas pm2 en Windows, puedes agregar esto:
-    // exec("pm2 restart access-proxy && pm2 save", ...)
-
-    res
-      .status(200)
-      .json({ message: "Git pull ejecutado correctamente", output: stdout });
+    console.log(`stdout: ${stdout}`);
+    if (stderr) console.error(`stderr: ${stderr}`);
+    res.json({ message: "AppFelmanWindows reiniciada exitosamente" });
   });
 });
 
