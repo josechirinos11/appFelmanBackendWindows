@@ -96,15 +96,20 @@ app.get("/api/pedidos", async (_, res) => {
 });
 
 app.get("/api/webhook", (req, res) => {
-  console.log("🔁 Recibido webhook de GitHub, reiniciando AppFelmanWindows...");
-  exec("pm2 restart AppFelmanWindows", (error, stdout, stderr) => {
+  console.log(
+    "🔁 Recibido webhook desde Linux, reiniciando AppFelmanWindows..."
+  );
+
+  exec("pm2 restart AppFelmanWindows && pm2 save", (error, stdout, stderr) => {
     if (error) {
-      console.error(`Error al reiniciar con PM2: ${error.message}`);
+      console.error(`❌ Error al reiniciar: ${error.message}`);
       return res.status(500).json({ error: error.message });
     }
-    console.log(`stdout: ${stdout}`);
     if (stderr) console.error(`stderr: ${stderr}`);
-    res.json({ message: "AppFelmanWindows reiniciada exitosamente" });
+    console.log(`stdout: ${stdout}`);
+    res.json({
+      message: "✅ AppFelmanWindows reiniciada exitosamente desde webhook",
+    });
   });
 });
 
