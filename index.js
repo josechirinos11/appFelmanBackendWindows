@@ -1,13 +1,14 @@
 ﻿// Configuración del entorno para node-adodb
-const fs = require('fs');
-const path = require('path');
-const express = require('express');
-const ADODB = require('node-adodb');
-const cors = require('cors');
+const fs = require("fs");
+const path = require("path");
+const express = require("express");
+const ADODB = require("node-adodb");
+const cors = require("cors");
+const { exec } = require("child_process");
 
 // Forzar el uso de la versión de 64 bits de cscript.exe
-process.env.ADODB_CSCRIPT = 'C:\\Windows\\System32\\cscript.exe';
-console.log('Forzando el uso de cscript de System32 (64 bits)');
+process.env.ADODB_CSCRIPT = "C:\\Windows\\System32\\cscript.exe";
+console.log("Forzando el uso de cscript de System32 (64 bits)");
 
 ADODB.debug = true;
 const app = express();
@@ -17,31 +18,41 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 
 // Ruta a la base de datos Access - Usar una copia local si es posible
-const originDbFile = '\\\\192.168.1.81\\Compartido\\PRODUCCION_MONCADA\\CONTROL_PRODUCCION_MONCADA_V40.accdb';
-const localDbCopy = path.join(__dirname, 'CONTROL_PRODUCCION_MONCADA_V40_LOCAL.accdb');
+const originDbFile =
+  "\\\\192.168.1.81\\Compartido\\PRODUCCION_MONCADA\\CONTROL_PRODUCCION_MONCADA_V40.accdb";
+const localDbCopy = path.join(
+  __dirname,
+  "CONTROL_PRODUCCION_MONCADA_V40_LOCAL.accdb"
+);
 
 // Crear una copia local de la base de datos para evitar problemas de bloqueo
 try {
   if (fs.existsSync(originDbFile)) {
     console.log(`Base de datos remota encontrada en: ${originDbFile}`);
-    console.log('Creando copia local para evitar problemas de bloqueo...');
+    console.log("Creando copia local para evitar problemas de bloqueo...");
     fs.copyFileSync(originDbFile, localDbCopy);
     console.log(`Copia local creada en: ${localDbCopy}`);
   } else {
-    console.error(`La base de datos remota no existe en la ruta: ${originDbFile}`);
+    console.error(
+      `La base de datos remota no existe en la ruta: ${originDbFile}`
+    );
     if (!fs.existsSync(localDbCopy)) {
-      console.error('No existe una copia local de respaldo. Imposible continuar.');
+      console.error(
+        "No existe una copia local de respaldo. Imposible continuar."
+      );
       process.exit(1);
     } else {
-      console.log('Usando la copia local existente como respaldo.');
+      console.log("Usando la copia local existente como respaldo.");
     }
   }
 } catch (err) {
   console.error(`Error al intentar crear copia local: ${err.message}`);
   if (fs.existsSync(localDbCopy)) {
-    console.log('Usando la copia local existente como respaldo.');
+    console.log("Usando la copia local existente como respaldo.");
   } else {
-    console.error('No hay copia local disponible. Intentando usar la remota directamente.');
+    console.error(
+      "No hay copia local disponible. Intentando usar la remota directamente."
+    );
   }
 }
 
@@ -56,7 +67,7 @@ function createConnection() {
       `Provider=Microsoft.ACE.OLEDB.12.0;Data Source=${dbFile};Mode=Share Deny None;Jet OLEDB:Database Password=;User Id=Admin;Password=;`
     );
   } catch (error) {
-    console.error('Error al crear la conexión:', error);
+    console.error("Error al crear la conexión:", error);
     // Intentar una configuración alternativa si la primera falla
     return ADODB.open(
       `Provider=Microsoft.ACE.OLEDB.12.0;Data Source=${dbFile};Mode=Read;Persist Security Info=False;`
@@ -67,7 +78,7 @@ function createConnection() {
 // Crear la conexión
 const connection = createConnection();
 
-app.get('/api/pedidos', async (_, res) => {
+app.get("/api/pedidos", async (_, res) => {
   try {
     const rows = await connection.query(`SELECT
       [Ejercicio] & '-' & [Serie] & '-' & [NPedido] AS NºPedido,
@@ -78,18 +89,37 @@ app.get('/api/pedidos', async (_, res) => {
     LEFT JOIN AEstadosPedido ON BPedidos.Id_EstadoPedido = AEstadosPedido.Id_EstadoPedido`);
     console.log(`Consulta a api/pedidos`);
     res.json(rows);
-
   } catch (err) {
-    console.error('Error al consultar Access:', err);
+    console.error("Error al consultar Access:", err);
     res.status(500).json({ error: err.message });
   }
 });
 
+app.get("/api/webhook", (_, res) => {
+  const projectPath = "D:\\Compartido\\AppFelmanAccessMySQL\\access-proxy"; // ⚠️ Ruta exacta del proyecto
 
+  console.log("📦 Webhook recibido en Windows para Access Proxy");
 
+  // Ejecutar git pull
+  exec(`cd ${projectPath} && git pull`, (err, stdout, stderr) => {
+    if (err) {
+      console.error("❌ Error al hacer git pull:", err);
+      return res.status(500).json({ error: err.message });
+    }
 
+    console.log("✅ Git pull ejecutado en Access Proxy:");
+    console.log(stdout);
 
-app.get('/api/controlPedidoInicio', async (_, res) => {
+    // Si usas pm2 en Windows, puedes agregar esto:
+    // exec("pm2 restart access-proxy && pm2 save", ...)
+
+    res
+      .status(200)
+      .json({ message: "Git pull ejecutado correctamente", output: stdout });
+  });
+});
+
+app.get("/api/controlPedidoInicio", async (_, res) => {
   try {
     const rows = await connection.query(`
       SELECT
@@ -113,17 +143,18 @@ app.get('/api/controlPedidoInicio', async (_, res) => {
           LEFT JOIN [AProveedores]      AS [AP]  ON [BCM].[Id_Proveedor]   = [AP].[Id_Proveedor])
       WHERE [AE].[Estado] <> 'SERVIDO';
     `);
-    console.log(`Control Pedidos (${rows.length} registros):`, rows.slice(0, 5));
+    console.log(
+      `Control Pedidos (${rows.length} registros):`,
+      rows.slice(0, 5)
+    );
     res.json(rows);
   } catch (err) {
-    console.error('Error al consultar Access:', err);
+    console.error("Error al consultar Access:", err);
     res.status(500).json({ error: err.message });
   }
 });
 
-
-
-app.get('/api/controlPedidoInicio40Registro', async (_, res) => {
+app.get("/api/controlPedidoInicio40Registro", async (_, res) => {
   try {
     const rows = await connection.query(`
       SELECT TOP 40
@@ -164,17 +195,18 @@ app.get('/api/controlPedidoInicio40Registro', async (_, res) => {
       ORDER BY
         [BCM].[FechaPrevista] ASC
     `);
-    console.log(`Control Pedidos 40 registros (${rows.length} registros):`, rows.slice(0, 5));
+    console.log(
+      `Control Pedidos 40 registros (${rows.length} registros):`,
+      rows.slice(0, 5)
+    );
     res.json(rows);
   } catch (err) {
-    console.error('Error al consultar Access:', err);
+    console.error("Error al consultar Access:", err);
     res.status(500).json({ error: err.message });
   }
 });
 
-
-
-app.get('/api/controlPedidoInicio__EJEMPLO', async (_, res) => {
+app.get("/api/controlPedidoInicio__EJEMPLO", async (_, res) => {
   try {
     const rows = await connection.query(`
       SELECT
@@ -198,12 +230,12 @@ app.get('/api/controlPedidoInicio__EJEMPLO', async (_, res) => {
     console.log(`Contrl Pedidos (${rows.length} registros):`, rows.slice(0, 5));
     res.json(rows);
   } catch (err) {
-    console.error('Error al consultar Access:', err);
+    console.error("Error al consultar Access:", err);
     res.status(500).json({ error: err.message });
   }
 });
 
-app.get('/api/controlPedidoInicio40Registro__EJEMPLO', async (_, res) => {
+app.get("/api/controlPedidoInicio40Registro__EJEMPLO", async (_, res) => {
   try {
     const rows = await connection.query(`
       SELECT TOP 40
@@ -226,30 +258,30 @@ app.get('/api/controlPedidoInicio40Registro__EJEMPLO', async (_, res) => {
       WHERE BCM.FechaPrevista >= Date()
       ORDER BY BCM.FechaPrevista
     `);
-    console.log(`Control Pedidos 40 registros (${rows.length} registros):`, rows.slice(0, 5));
+    console.log(
+      `Control Pedidos 40 registros (${rows.length} registros):`,
+      rows.slice(0, 5)
+    );
     res.json(rows);
   } catch (err) {
-    console.error('Error al consultar Access:', err);
+    console.error("Error al consultar Access:", err);
     res.status(500).json({ error: err.message });
   }
 });
 
-
-
-
-
-
-
-
-app.get('/api/incidencia', async (_, res) => {
+app.get("/api/incidencia", async (_, res) => {
   try {
     // 1. Obtener los NPedido donde Incidencia = 'si'
-    const pedidosConIncidencia = await connection.query(`SELECT NPedido FROM BPedidos WHERE Incidencia = 'si'`);
+    const pedidosConIncidencia = await connection.query(
+      `SELECT NPedido FROM BPedidos WHERE Incidencia = 'si'`
+    );
     if (!pedidosConIncidencia.length) return res.json([]);
 
     // 2. Extraer NPedido y construir cláusula WHERE
-    const pedidos = pedidosConIncidencia.map(p => p.NPedido);
-    const whereClause = pedidos.map(n => `[BPedidos].[NPedido] = ${n}`).join(' OR ');
+    const pedidos = pedidosConIncidencia.map((p) => p.NPedido);
+    const whereClause = pedidos
+      .map((n) => `[BPedidos].[NPedido] = ${n}`)
+      .join(" OR ");
 
     // 3. Consultar los datos completos
     const query = `
@@ -272,19 +304,17 @@ app.get('/api/incidencia', async (_, res) => {
         LEFT JOIN AProveedores AS AP ON BCM.Id_Proveedor = AP.Id_Proveedor
       WHERE ${whereClause}
     `;
-    
+
     const rows = await connection.query(query);
     console.log(`Incidencias (${rows.length} registros):`, rows.slice(0, 5));
     res.json(rows);
   } catch (err) {
-    console.error('Error al consultar Access:', err);
+    console.error("Error al consultar Access:", err);
     res.status(500).json({ error: err.message });
   }
 });
 
-
-
-app.get('/api/pedidosComerciales', async (_, res) => {
+app.get("/api/pedidosComerciales", async (_, res) => {
   try {
     const rows = await connection.query(`
       SELECT
@@ -321,19 +351,18 @@ app.get('/api/pedidosComerciales', async (_, res) => {
         ON [BPedidos].[Id_Pedido] = [BCM].[Id_Pedido]
       WHERE [AE].[Estado] <> 'SERVIDO';
     `);
-    console.log(`Pedidos Comerciales (${rows.length} registros):`, rows.slice(0, 5));
+    console.log(
+      `Pedidos Comerciales (${rows.length} registros):`,
+      rows.slice(0, 5)
+    );
     res.json(rows);
   } catch (err) {
-    console.error('Error al consultar Access:', err);
+    console.error("Error al consultar Access:", err);
     res.status(500).json({ error: err.message });
   }
 });
 
-
-
-
-
-app.get('/api/pedidosComerciales40Registro', async (_, res) => {
+app.get("/api/pedidosComerciales40Registro", async (_, res) => {
   try {
     const rows = await connection.query(`
       SELECT TOP 40
@@ -364,20 +393,18 @@ app.get('/api/pedidosComerciales40Registro', async (_, res) => {
       ORDER BY
         [BCM].[FechaPrevista] ASC
     `);
-    console.log(`Pedidos Comerciales 40 (${rows.length} registros):`, rows.slice(0, 5));
+    console.log(
+      `Pedidos Comerciales 40 (${rows.length} registros):`,
+      rows.slice(0, 5)
+    );
     res.json(rows);
   } catch (err) {
-    console.error('Error al consultar Access:', err);
+    console.error("Error al consultar Access:", err);
     res.status(500).json({ error: err.message });
   }
 });
 
-
-
-
-
-
-app.get('/api/controlEntregaDiaria', async (_, res) => {
+app.get("/api/controlEntregaDiaria", async (_, res) => {
   try {
     const rows = await connection.query(`
       SELECT
@@ -406,15 +433,18 @@ app.get('/api/controlEntregaDiaria', async (_, res) => {
         INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente)
         INNER JOIN AComerciales ON AClientes.Id_Comercial = AComerciales.Id_Comercial)
     `);
-    console.log(`Control Entrega Diaria (${rows.length} registros):`, rows.slice(0, 5));
+    console.log(
+      `Control Entrega Diaria (${rows.length} registros):`,
+      rows.slice(0, 5)
+    );
     res.json(rows);
   } catch (err) {
-    console.error('Error al consultar Access (controlEntregaDiaria):', err);
+    console.error("Error al consultar Access (controlEntregaDiaria):", err);
     res.status(500).json({ error: err.message });
   }
 });
 
-app.get('/api/controlEntregaDiariaA1DIA', async (_, res) => {
+app.get("/api/controlEntregaDiariaA1DIA", async (_, res) => {
   try {
     const rows = await connection.query(`
       SELECT
@@ -445,19 +475,23 @@ app.get('/api/controlEntregaDiariaA1DIA', async (_, res) => {
         AND DED.FechaEnvio <= Date()
       ORDER BY DED.FechaEnvio DESC
     `);
-    console.log(`Control Entrega Diaria Últimos 90 días (${rows.length} registros):`, rows.slice(0, 5));
+    console.log(
+      `Control Entrega Diaria Últimos 90 días (${rows.length} registros):`,
+      rows.slice(0, 5)
+    );
     res.json(rows);
   } catch (err) {
-    console.error('Error al consultar Access (controlEntregaDiariaA1DIA):', err);
+    console.error(
+      "Error al consultar Access (controlEntregaDiariaA1DIA):",
+      err
+    );
     res.status(500).json({ error: err.message });
   }
 });
 
-
-
-app.get('/api/test-access', (_, res) => {
+app.get("/api/test-access", (_, res) => {
   console.log("Probando acceso a Access");
-  res.send('acceso a access');
+  res.send("acceso a access");
 });
 
 app.listen(PORT, () => console.log(`Proxy Access corriendo en puerto ${PORT}`));
