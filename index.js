@@ -95,7 +95,7 @@ app.get("/api/pedidos", async (_, res) => {
   }
 });
 
-app.get("/api/webhook", (req, res) => {
+app.post("/api/webhook", (req, res) => {
   console.log(
     "🔁 Recibido webhook desde Linux, reiniciando AppFelmanWindows..."
   );
