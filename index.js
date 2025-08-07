@@ -16,6 +16,7 @@ const PORT = process.env.PORT || 3001;
 
 // Habilitar CORS para todas las rutas
 app.use(cors());
+app.use(express.json());
 
 // Ruta a la base de datos Access - Usar una copia local si es posible
 const originDbFile =
