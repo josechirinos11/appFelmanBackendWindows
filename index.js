@@ -103,24 +103,7 @@ app.get("/api/pedidos", async (_, res) => {
 });
 
 
-app.post("/api/webhook", (req, res) => {
-  console.log("🔁 Recibido webhook desde Linux, cuerpo:", req.body);
 
-  // Responder rápido para evitar timeout en GitHub
-  res.json({ message: "✅ Webhook recibido, reiniciando AppFelmanWindows..." });
-
-  // Reiniciar el proceso en segundo plano
-  setTimeout(() => {
-    exec("pm2 restart AppFelmanWindows && pm2 save", (error, stdout, stderr) => {
-      if (error) {
-        console.error(`❌ Error al reiniciar: ${error.message}`);
-        return;
-      }
-      if (stderr) console.error(`stderr: ${stderr}`);
-      console.log(`✅ AppFelmanWindows reiniciado:\n${stdout}`);
-    });
-  }, 1000);
-});
 
 
 app.get("/api/controlPedidoInicio", async (_, res) => {
@@ -497,5 +480,23 @@ app.get("/api/test-access", (_, res) => {
   console.log("Probando acceso a Access");
   res.send("acceso a access");
 });
+
+app.post("/api/webhook", (req, res) => {
+  console.log("🔁 Recibido webhook desde Linux, cuerpo:", req.body);
+
+  res.json({ message: "✅ Webhook recibido, reiniciando AppFelmanWindows..." });
+
+  setTimeout(() => {
+    exec("pm2 restart AppFelmanWindows && pm2 save", (error, stdout, stderr) => {
+      if (error) {
+        console.error(`❌ Error al reiniciar: ${error.message}`);
+        return;
+      }
+      if (stderr) console.error(`stderr: ${stderr}`);
+      console.log(`✅ AppFelmanWindows reiniciado:\n${stdout}`);
+    });
+  }, 1000);
+});
+
 
 app.listen(PORT, () => console.log(`Proxy Access corriendo en puerto ${PORT}`));
