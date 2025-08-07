@@ -17,9 +17,11 @@ const PORT = process.env.PORT || 3001;
 // Habilitar CORS para todas las rutas
 app.use(cors());
 app.use(express.json());
-app.use((req, res, next) => {
-  console.log(`📡 Solicitud recibida: ${req.method} ${req.url}`);
-  next();
+app.post("/api/webhook", (req, res) => {
+  console.log("🔁 Recibido webhook desde Linux, cuerpo:", req.body);
+  res.json({
+    message: "✅ Webhook recibido, sin reiniciar AppFelmanWindows"
+  });
 });
 
 // Ruta a la base de datos Access - Usar una copia local si es posible
