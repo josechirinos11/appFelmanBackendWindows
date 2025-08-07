@@ -479,16 +479,27 @@ app.get("/api/test-access", (_, res) => {
 app.post("/api/webhook", (req, res) => {
   console.log("🔁 Recibido webhook desde Linux, cuerpo:", req.body);
 
-  res.json({ message: "✅ Webhook recibido, reiniciando AppFelmanWindows..." });
+  // Respuesta rápida al webhook
+  res.json({ message: "✅ Webhook recibido, actualizando proyecto..." });
 
+  // Ejecutar git pull y reiniciar pm2
   setTimeout(() => {
-    exec("pm2 restart AppFelmanWindows && pm2 save", (error, stdout, stderr) => {
-      if (error) {
-        console.error(`❌ Error al reiniciar: ${error.message}`);
+    exec("cd D:/Compartido/AppFelmanAccessMySQL/access-proxy && git pull", (err, stdout, stderr) => {
+      if (err) {
+        console.error("❌ Error en git pull:", err.message);
         return;
       }
-      if (stderr) console.error(`stderr: ${stderr}`);
-      console.log(`✅ AppFelmanWindows reiniciado:\n${stdout}`);
+      console.log("✅ git pull completado:\n", stdout);
+
+      // Luego reinicia PM2
+      exec("pm2 restart AppFelmanWindows && pm2 save", (error, out, err2) => {
+        if (error) {
+          console.error("❌ Error al reiniciar con pm2:", error.message);
+          return;
+        }
+        if (err2) console.error("stderr pm2:", err2);
+        console.log("✅ AppFelmanWindows reiniciado:\n", out);
+      });
     });
   }, 1000);
 });
