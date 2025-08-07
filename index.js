@@ -102,25 +102,26 @@ app.get("/api/pedidos", async (_, res) => {
   }
 });
 
+ap
 app.post("/api/webhook", (req, res) => {
   console.log("🔁 Recibido webhook desde Linux, cuerpo:", req.body);
 
-  // Responder primero al cliente
-  res.json({
-    message: "✅ Webhook recibido, reiniciando AppFelmanWindows..."
-  });
+  // Responder rápido para evitar timeout en GitHub
+  res.json({ message: "✅ Webhook recibido, reiniciando AppFelmanWindows..." });
 
-  // Ejecutar el reinicio con un pequeño delay para evitar cortar la conexión
+  // Reiniciar el proceso en segundo plano
   setTimeout(() => {
     exec("pm2 restart AppFelmanWindows && pm2 save", (error, stdout, stderr) => {
       if (error) {
-        return console.error(`❌ Error al reiniciar: ${error.message}`);
+        console.error(`❌ Error al reiniciar: ${error.message}`);
+        return;
       }
       if (stderr) console.error(`stderr: ${stderr}`);
       console.log(`✅ AppFelmanWindows reiniciado:\n${stdout}`);
     });
   }, 1000);
 });
+
 
 app.get("/api/controlPedidoInicio", async (_, res) => {
   try {
