@@ -1,0 +1,283 @@
+[VARIABLES]                                                  
+PERFHORI=Perfil horizontal en uso
+NPERF=Número perfiles
+INVPOSI=Invertir interior y exterior
+INVLADO=Invertir lado  
+UCA=Acotación 
+ACABADO=Acabado del perfil                  
+ACABADOA=Acab.Accesorios
+UNDER=Unión derecha                                                                                        
+UNIZQ=Unión izquierda
+EXPANDHSUP=Expandir en superior                 
+EXPANDHDER=Expandir a derecha   
+EXPANDHINF=Expandir en inferior  
+EXPANDHIZQ=Expandir a izquierda
+MOVZPERFHORI=Mover eje Z 
+DIBUJADO=Dibujado
+MANOOBRA=Mano de obra                      
+CANTMOBRA=Minutos mano de obra
+MANOOBRA2=Mano de obra 2
+CANTMOBRA2=Minutos mano de obra 2  
+ACCE1=Accesorio 1
+ACCE1C=Cantidad accesorio 1 
+ACCE1L=Long acce 1 solo gomas   
+ACCE2=Accesorio 2
+ACCE2C=Cantidad accesorio 2 
+ACCE2L=Long acce 2 solo gomas  
+ACCE3=Accesorio 3
+ACCE3C=Cantidad accesorio 3
+ACCE3L=Long acce 3 solo gomas  
+ACCE4=Accesorio 4
+ACCE4C=Cantidad accesorio 4 
+ACCE4L=Long acce 4 solo gomas  
+ACCE5=Accesorio 5
+ACCE5C=Cantidad accesorio 5   
+ACCE5L=Long acce 5 solo gomas  
+                   
+                                     
+[INICIAL]    
+
+[VISIBILIDAD]      
+(CANTMOBRA=0):MANOOBRA2_INVISIBLE=1:CANTMOBRA2_INVISIBLE=1;
+(CANTMOBRA#0):MANOOBRA2_INVISIBLE=0:CANTMOBRA2_INVISIBLE=0;
+ 
+(ACCE1C#0):ACCE2_INVISIBLE=0:ACCE2C_INVISIBLE=0:ACCE2L_INVISIBLE=0;
+(ACCE1C=0):ACCE2_INVISIBLE=1:ACCE2C_INVISIBLE=1:ACCE2L_INVISIBLE=1; 
+                                                                 
+(ACCE2C#0):ACCE3_INVISIBLE=0:ACCE3C_INVISIBLE=0:ACCE3L_INVISIBLE=0;  
+(ACCE2C=0):ACCE3_INVISIBLE=1:ACCE3C_INVISIBLE=1:ACCE3L_INVISIBLE=1;  
+
+(ACCE3C#0):ACCE4_INVISIBLE=0:ACCE4C_INVISIBLE=0:ACCE4L_INVISIBLE=0;  
+(ACCE3C=0):ACCE4_INVISIBLE=1:ACCE4C_INVISIBLE=1:ACCE4L_INVISIBLE=1;
+  
+(ACCE4C#0):ACCE5_INVISIBLE=0:ACCE5C_INVISIBLE=0:ACCE5L_INVISIBLE=0;
+(ACCE4C=0):ACCE5_INVISIBLE=1:ACCE5C_INVISIBLE=1:ACCE5L_INVISIBLE=1;     
+
+                                              
+                                      
+[DEFAULT]         
+PERFHORI1000=1
+PERFHORI2000=1001                                       
+PERFHORI3000=2001                        
+PERFHORI4000=3001
+PERFHORI5000=4001 
+PERFHORI6000=5001
+PERFHORI7000=6001   
+                  
+
+                                        
+[ACABADO] ACABADO PERFILES                          
+Acabado de Perfiles=0            
+
+[ACABADOA] ACABADO ACCESORIOS INDIVIDUAL
+Acabado de accesorios=1                         
+
+[PERFHORI]
+""Sin perfil asignado=0                           
+"EXT7437_H"U Travesaño Horizontal Barrotes=1
+"EXT7440_V"Pasamanos Barandilla Rectangular=10  
+ 
+
+[NPERF] DATO
+Numero de perfiles=1   
+
+[UCA]                             
+Automática=0
+Manual=1               
+ 
+[INVPOSI]
+No=0
+Si=1
+
+[INVLADO]
+No=0
+Si=1 
+               
+[UNDER]
+Segun union=0  
+Inglete Inf=1
+Inglete Sup=2
+Recto 90º=3
+
+[UNIZQ]
+Segun union=0  
+Inglete Inf=1
+Inglete Sup=2
+Recto 90º=3 
+
+[EXPANDHSUP] DATO
+Expandir=0
+
+[EXPANDHDER] DATO
+Expandir=0
+
+[EXPANDHINF] DATO
+Expandir=0   
+
+[EXPANDHIZQ] DATO
+Expandir=0  
+
+[MOVZPERFHORI] DATO
+Valor=0   
+
+[DIBUJADO] 1
+Detras del hueco=0
+Mostrar al frente=1
+No dibujar=2 
+
+[DESP] DATO
+Valor=0                                        
+        
+[MANOOBRA] LISTA TIEMPOS
+No aplicar mano de obra=""     
+
+[CANTMOBRA] DATO  
+Numero de Minutos=0   
+
+[MANOOBRA2] LISTA TIEMPOS
+No aplicar mano de obra 2=""     
+
+[CANTMOBRA2] DATO                      
+Minutos mano de obra 2=0  
+
+[ACCE1] DATO
+Valor="Indicar codigo entre comillas dobles" 
+
+[ACCE1C] DATO
+Cantidad=0
+
+[ACCE1L] DATO
+Cantidad=0
+
+[ACCE2] DATO
+Valor="Indicar codigo entre comillas dobles"  
+           
+[ACCE2C] DATO
+Cantidad=0
+
+[ACCE2L] DATO
+Cantidad=0
+
+[ACCE3] DATO
+Valor="Indicar codigo entre comillas dobles"  
+
+[ACCE3C] DATO
+Cantidad=0
+
+[ACCE3L] DATO
+Cantidad=0
+
+[ACCE4] DATO
+Valor="Indicar codigo entre comillas dobles"  
+
+[ACCE4C] DATO
+Cantidad=0
+
+[ACCE4L] DATO
+Cantidad=0
+
+[ACCE5] DATO
+Valor="Indicar codigo entre comillas dobles"  
+
+[ACCE5C] DATO
+Cantidad=0
+
+[ACCE5L] DATO
+Cantidad=0
+
+;-------------------------------------------------------------------------------------
+[AYUDA_NOMBRE]
+NOMBRE.
+Descripción de la figura que estamos empleando.
+
+[AYUDA_SERIE]
+SERIE.
+Permite seleccionar en que serie diseñar la figura, "Serie1" o "Serie2",
+las cuales deben estar definidas en la línea.
+
+[AYUDA_PERFHORI]
+Permite definir el perfil a emplear. 
+
+[AYUDA_UCA]
+Acotación.
+Permite decidir la medida a la que se colocará el poste. Cuando insertamos el
+poste se generan una cota, esta centrará el poste haciendo huecos
+iguales. Si la opción de acotación es "Manual" podremos variar el valor de esta
+cota y así situar el poste. Si queremos que el poste se mantenga centrado
+dejando huecos iguales, debemos modificar la opción de "Acotación" de "Manual" a
+"Automática", así pese a que modifiquemos el tamaño del cerramiento el poste
+siempre quedará centrado con respecto al hueco manteniendo huecos iguales.
+
+[AYUDA_ACABADO]
+Acabado del Poste.
+Permite seleccionar el acabado para el perfil de poste. La selección se realiza
+entre los acabados definidos anteriormente en la línea, en la pestaña de "Acabados"
+"Perfiles".
+
+[AYUDA_ACABADOA]
+Acab.de Accesorios.
+Permite seleccionar el acabado para los accesorios empleados en la figura. La seleccción define el
+ acabado interior y exterior, y asignará el acabado al articulo según su posición. Asi los
+topes de fijacion serán en el color definido al interior y las tapas de desagüe serán del
+color definido al exterior.La selección se realiza entre los acabados definidos anteriormente
+ en la línea, en la pestaña de "Acabados" "Accesorios".
+
+[AYUDA_COTA]
+Cota. Nos indica que cota se esta empleado para establecer la posición del poste y permite la alineación. Si se ha insertado otro poste anteriormente, y este debe alinearse al él, haciendo clic accedemos a todas las cotas existentes y sustituiremos la que se está empleando por la del poste al que queremos alinear.
+
+[AYUDA_NPERF]
+Numero de perfiles que queremos insertar
+
+[AYUDA_HORINVPOSI]
+Permite voltear el perfil en el sentido interior y exterior
+
+[AYUDA_HORINVLADO]
+Permite voltear el perfil en el sentido superior e inferior
+
+[AYUDA_UNDER]
+Permite decidir el tipo de corte en derecha del perfil
+
+[AYUDA_UNIZQ]
+Permite decidir el tipo de corte en izquierda del perfil
+
+[AYUDA_EXPANDHSUP]
+Exandir en superior. Solo afecta al perfil usado no a los huecos hijos. 
+                     
+
+[AYUDA_EXPANDHDER]
+Exandir a derecha. Solo afecta al perfil usado no a los huecos hijos.
+                                                               
+
+[AYUDA_EXPANDHINF]
+Exandir a izquierda. Solo afecta al perfil usado no a los huecos hijos.
+
+
+[AYUDA_EXPANDHIZQ]
+Exandir en inferior. Solo afecta al perfil usado no a los huecos hijos.    
+                                                               
+
+[AYUDA_MOVZPERFHORI]
+Permite manipular el eje z de toda la figura  
+
+[AYUDA_MANOOBRA]
+Permite seleccionar el tipo de mano de obra a utilizar
+
+[AYUDA_CANTMOBRA]
+Permite asigna la cantidad de minutos para la mano de obra seleccionada anteriormente 
+
+[GENERAL]
+GENERAR_DESCOMP_AUTO=0;
+@PERFHORI   
+GRUPO="VENTANAS"                
+FIGURA="PERFHORI" 
+MOVZ=MOVZPERFHORI;
+INVL=HORINVLADO;
+INV=HORINVPOSI;
+(NPERF>50):?"!El numero de perfiles esta limitado a 50"
+(NPERF>50):NPERF=50;   
+(CANTMOBRA=0):MANOOBRA="":MANOOBRA2=0:CANTMOBRA2="";  
+(ACCE1C=0):ACCE2="":ACCE2C=0;   
+(ACCE2C=0):ACCE3="":ACCE3C=0;  
+(ACCE3C=0):ACCE4="":ACCE4C=0; 
+(ACCE4C=0):ACCE5="":ACCE5C=0;
+MODODIBUJO=DIBUJADO;

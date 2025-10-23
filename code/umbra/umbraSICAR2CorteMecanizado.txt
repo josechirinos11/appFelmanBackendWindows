@@ -1,0 +1,30 @@
+# Listado de Perfiles, Cortes y Mecanizados (23F_3416.xml - SICAR2)
+
+Formato:
+- Perfil: [Código] - [Descripción]
+  - Corte: IL=[Longitud Interna], OL=[Longitud Externa], Ángulos=[ANGL]/[ANGR]
+    - Mecanizados: [Lista de mecanizados con WCODE y OFFSET]
+
+---
+Perfil: PI65002 - Perfil union 2 hojas
+  - Corte: IL=2121.0, OL=2121.0, Ángulos=90/90
+    - Mecanizados: Ninguno
+  - Corte: IL=2141.0, OL=2141.0, Ángulos=90/90
+    - Mecanizados: Ninguno
+
+Perfil: PI65008 - Marco guia superior
+  - Corte: IL=3185.0, OL=3185.0, Ángulos=90/90
+    - Mecanizados: Ninguno
+
+Perfil: PI65010 - Hoja ajunquillada
+  - Corte: IL=615.1, OL=505.1, Ángulos=135/135
+    - Mecanizados: Ninguno
+  - Corte: IL=2141.0, OL=2031.0, Ángulos=135/135
+    - Mecanizados: Ninguno
+
+Perfil: PI65013 - Guia empotrada UMBRA
+  - Corte: IL=3221.0, OL=3181.0, Ángulos=158.96/158.96
+    - Mecanizados: Ninguno
+
+---
+Nota: En SICAR2 todos los mecanizados están vacíos, solo se muestran los cortes.

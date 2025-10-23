@@ -1,0 +1,1000 @@
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Tabla: DEntregasDiarias                                                                                  Página: 1
+
+
+
+
+Propiedades
+
+AlternateBackShade:          95                           AlternateBackThemeCol       1
+AlternateBackTint:           100                          Attributes:                 Vinculado
+BackShade:                   100                          BackTint:                   100
+
+Connect:                     ;DATABASE=\\192.168.1.       DatasheetForeThemeCo        0
+                             81\Compartido\PRODUCC
+                             ION_MONCADA\DataBas
+                             e_CONTROL_PRODUCCI
+                             ON_MONCADA.accdb
+DatasheetGridlinesThe        3                            DateCreated:                20/11/2024 16:25:23
+DefaultView:                 2                            DisplayViewsOnShareP        1
+
+FilterOnLoad:                Falso                        GUID:                       {guid {D6514B36-85C0-
+                                                                                      4A86-B08F-
+HideNewField:                Falso                        LastUpdated:                20/11/2024 16:25:23
+
+NameMap:                     Datos binarios largos        OrderByOn:                  Falso
+OrderByOnLoad:               Verdadero                    Orientation:                De izquieda a derecha
+PublishToWeb:                1                            ReadOnlyWhenDisconn         Falso
+
+RecordCount:                 -1                           SourceTableName:            DEntregasDiarias
+ThemeFontIndex:              1                            TotalsRow:                  Falso
+
+Updatable:                   Falso
+
+
+
+Columnas
+          Nombre                                                    Tip                          Tamaño
+
+
+          Id_Entrega                                                Entero largo                                4
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Falso
+                   AppendOnly:               Falso
+
+                   Attributes:               Tamaño fijo; Autoincremento
+
+                   CollatingOrder:           3082
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   GUID:                     {guid {FA47AB54-67D6-4593-B33D-2D3BDBEBC203}}
+                   OrdinalPosition:          0
+
+                   Precision:                3082
+
+                   Required:                 Falso
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              Id_Entrega
+
+                   SourceTable:              DEntregasDiarias
+                   TextAlign:                General
+
+
+          FechaEnvio                                                Fecha con hora                              8
+
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Falso
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Tabla: DEntregasDiarias                                                                                  Página: 2
+
+
+                   AppendOnly:               Falso
+                   Attributes:               Tamaño fijo
+
+                   CollatingOrder:           3082
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   Format:                   Short Date
+
+                   GUID:                     {guid {77235143-3406-4680-95EA-9BA74933DF6A}}
+                   IMEMode:                  0
+
+                   IMESentenceMode:          3
+                   OrdinalPosition:          1
+
+                   Precision:                3082
+                   Required:                 Falso
+
+                   ResultType:               0
+                   Scale:                    0
+
+                   ShowDatePicker:           Para fechas
+
+                   SourceField:              FechaEnvio
+                   SourceTable:              DEntregasDiarias
+
+                   TextAlign:                General
+
+
+          EntregaConfirmada                                         Entero largo                                4
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Falso
+
+                   AppendOnly:               Falso
+                   Attributes:               Tamaño fijo
+
+                   CollatingOrder:           3082
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   DecimalPlaces:            Automático
+
+                   Description:              Sí(-1) No (0)
+                   DisplayControl:           Cuadro de texto
+
+                   GUID:                     {guid {A64C0027-C8FC-41F0-A7DB-12C73547F0CC}}
+                   OrdinalPosition:          2
+
+                   Precision:                3082
+                   Required:                 Falso
+
+                   ResultType:               0
+                   Scale:                    0
+
+                   SourceField:              EntregaConfirmada
+
+                   SourceTable:              DEntregasDiarias
+                   TextAlign:                General
+
+
+
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Tabla: DEntregasDiarias                                                                                  Página: 3
+
+
+          EstadoCarga                                               Texto corto                                20
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Verdadero
+                   AppendOnly:               Falso
+
+                   Attributes:               Longitud variable
+
+                   CollatingOrder:           3082
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   Description:              Pdte de Carga o Cargado
+                   DisplayControl:           Cuadro de texto
+
+                   GUID:                     {guid {2B64FA86-D623-45F8-8666-B03874CE05BC}}
+
+                   IMEMode:                  0
+                   IMESentenceMode:          3
+
+                   OrdinalPosition:          3
+                   Precision:                3082
+
+                   Required:                 Verdadero
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              EstadoCarga
+
+                   SourceTable:              DEntregasDiarias
+
+                   TextAlign:                General
+                   UnicodeCompression:       Verdadero
+
+
+          ObservaGral                                               Texto largo                                 -
+
+                   AggregateType:            -1
+                   AllowZeroLength:          Verdadero
+
+                   AppendOnly:               Falso
+
+                   Attributes:               Longitud variable
+                   CollatingOrder:           3082
+
+                   ColumnHidden:             Falso
+                   ColumnOrder:              Predeterminado
+
+                   ColumnWidth:              Predeterminado
+                   CurrencyLCID:             0
+
+                   DataUpdatable:            Falso
+                   Description:              Observaciones generales en la entrega. Materiales sin
+
+                   GUID:                     {guid {CED97E03-3010-42E8-A2A3-21B73E5DCDF7}}
+
+                   IMEMode:                  0
+                   IMESentenceMode:          3
+
+                   OrdinalPosition:          4
+                   Precision:                3082
+
+                   Required:                 Falso
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              ObservaGral
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Tabla: DEntregasDiarias                                                                                  Página: 4
+
+
+
+                   SourceTable:              DEntregasDiarias
+
+                   TextAlign:                General
+                   TextFormat:               Texto sin formato
+
+                   UnicodeCompression:       Verdadero
+
+
+
+
+
+
+
+Índices de tabla
+
+          Nombr                                      Número de
+
+          PrimaryKey                                 1
+
+                   Clustered:                Falso
+                   DistinctCount:            647
+
+                   Foreign:                  Falso
+                   IgnoreNulls:              Falso
+
+                   Name:                     PrimaryKey
+                   Primary:                  Verdadero
+
+                   Required:                 Verdadero
+                   Unique:                   Verdadero
+                    Campos:
+
+                    Id_Entrega                  Ascendente
+
+
+
+
+
+
+
+
+
+Permisos de usuario
+
+          admin                     Eliminar; Leer permisos; Establecer permisos; Cambiar propietario,
+                                    Leer definición; Escribir definición; Leer datos; Insertar datos;
+                                    Actualizar datos; Eliminar datos
+
+
+
+Permisos de grupo
+
+          Admins                    Eliminar; Leer permisos; Establecer permisos; Cambiar propietario,
+                                    Leer definición; Escribir definición; Leer datos; Insertar datos;
+                                    Actualizar datos; Eliminar datos
+          Users                     Eliminar; Leer permisos; Establecer permisos; Cambiar propietario,
+                                    Leer definición; Escribir definición; Leer datos; Insertar datos;
+                                    Actualizar datos; Eliminar datos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Tabla: DEntregasLineas                                                                                   Página: 5
+
+
+
+
+Propiedades
+
+AlternateBackShade:          95                           AlternateBackThemeCol       1
+AlternateBackTint:           100                          Attributes:                 Vinculado
+BackShade:                   100                          BackTint:                   100
+
+Connect:                     ;DATABASE=\\192.168.1.       DatasheetForeThemeCo        0
+                             81\Compartido\PRODUCC
+                             ION_MONCADA\DataBas
+                             e_CONTROL_PRODUCCI
+                             ON_MONCADA.accdb
+DatasheetGridlinesThe        3                            DateCreated:                20/11/2024 16:25:26
+DefaultView:                 2                            DisplayViewsOnShareP        1
+
+FilterOnLoad:                Falso                        GUID:                       {guid {B09F8A53-B17F-
+                                                                                      4185-BEC7-
+HideNewField:                Falso                        LastUpdated:                20/11/2024 16:25:26
+
+NameMap:                     Datos binarios largos        OrderByOn:                  Falso
+OrderByOnLoad:               Verdadero                    Orientation:                De izquieda a derecha
+PublishToWeb:                1                            ReadOnlyWhenDisconn         Falso
+
+RecordCount:                 -1                           SourceTableName:            DEntregasLineas
+ThemeFontIndex:              1                            TotalsRow:                  Falso
+
+Updatable:                   Falso
+
+
+
+Columnas
+          Nombre                                                    Tip                          Tamaño
+
+
+          Id_LineaEntrega                                           Entero largo                                4
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Falso
+                   AppendOnly:               Falso
+
+                   Attributes:               Tamaño fijo; Autoincremento
+
+                   CollatingOrder:           3082
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   GUID:                     {guid {1D739488-AFE1-45AC-8343-8DA2585D3AC6}}
+                   OrdinalPosition:          0
+
+                   Precision:                3082
+
+                   Required:                 Falso
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              Id_LineaEntrega
+
+                   SourceTable:              DEntregasLineas
+                   TextAlign:                General
+
+
+          Id_Entrega                                                Entero largo                                4
+
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Falso
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Tabla: DEntregasLineas                                                                                   Página: 6
+
+
+                   AppendOnly:               Falso
+                   Attributes:               Tamaño fijo
+
+                   CollatingOrder:           3082
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   DecimalPlaces:            Automático
+
+                   DisplayControl:           Cuadro de texto
+                   GUID:                     {guid {76B4A601-9B2E-4A76-A84D-C2DD4D8A8EF7}}
+
+                   OrdinalPosition:          1
+                   Precision:                3082
+
+                   Required:                 Verdadero
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              Id_Entrega
+
+                   SourceTable:              DEntregasLineas
+
+                   TextAlign:                General
+
+          Id_Pedido                                                 Entero largo                                4
+
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Falso
+                   AppendOnly:               Falso
+
+                   Attributes:               Tamaño fijo
+
+                   CollatingOrder:           3082
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   DecimalPlaces:            Automático
+                   DisplayControl:           Cuadro de texto
+
+                   GUID:                     {guid {844E711A-008F-408D-85F4-F5349FD5AA68}}
+
+                   OrdinalPosition:          2
+                   Precision:                3082
+
+                   Required:                 Verdadero
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              Id_Pedido
+
+                   SourceTable:              DEntregasLineas
+                   TextAlign:                General
+
+
+          Observaciones                                             Texto largo                                 -
+
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Verdadero
+                   AppendOnly:               Falso
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Tabla: DEntregasLineas                                                                                   Página: 7
+
+
+
+                   Attributes:               Longitud variable
+
+                   CollatingOrder:           3082
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   GUID:                     {guid {659E39A4-4DC4-4FB5-B453-8B7C42386129}}
+
+                   IMEMode:                  0
+                   IMESentenceMode:          3
+
+                   OrdinalPosition:          3
+                   Precision:                3082
+
+                   Required:                 Falso
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              Observaciones
+
+                   SourceTable:              DEntregasLineas
+
+                   TextAlign:                General
+                   TextFormat:               Texto sin formato
+
+                   UnicodeCompression:       Verdadero
+
+
+          NCaballetes                                               Entero largo                                4
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Falso
+
+                   AppendOnly:               Falso
+                   Attributes:               Tamaño fijo
+
+                   CollatingOrder:           3082
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   DecimalPlaces:            Automático
+
+                   DisplayControl:           Cuadro de texto
+                   GUID:                     {guid {CAEE294F-611A-4003-A167-48F72491B91E}}
+
+                   OrdinalPosition:          4
+                   Precision:                3082
+
+                   Required:                 Falso
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              NCaballetes
+
+                   SourceTable:              DEntregasLineas
+
+                   TextAlign:                General
+
+
+          NBultos                                                   Entero largo                                4
+                   AggregateType:            -1
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Tabla: DEntregasLineas                                                                                   Página: 8
+
+
+
+                   AllowZeroLength:          Falso
+
+                   AppendOnly:               Falso
+                   Attributes:               Tamaño fijo
+
+                   CollatingOrder:           3082
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+
+                   DataUpdatable:            Falso
+                   DecimalPlaces:            Automático
+
+                   DisplayControl:           Cuadro de texto
+                   GUID:                     {guid {29E22073-771C-461E-891F-C6826F0F2C1C}}
+
+                   OrdinalPosition:          5
+                   Precision:                3082
+
+                   Required:                 Falso
+                   ResultType:               0
+
+                   Scale:                    0
+
+                   SourceField:              NBultos
+                   SourceTable:              DEntregasLineas
+
+                   TextAlign:                General
+
+
+          Id_ResponsableEnvio                                       Entero largo                                4
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Falso
+
+                   AppendOnly:               Falso
+                   Attributes:               Tamaño fijo
+
+                   CollatingOrder:           3082
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   DecimalPlaces:            Automático
+
+                   DisplayControl:           Cuadro de texto
+                   GUID:                     {guid {F0351ED8-EB1A-4FEA-BDBC-AE8F745B2437}}
+
+                   OrdinalPosition:          6
+                   Precision:                3082
+
+                   Required:                 Verdadero
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              Id_ResponsableEnvio
+
+                   SourceTable:              DEntregasLineas
+
+                   TextAlign:                General
+
+
+          Id_EstadoEntrega                                          Entero largo                                4
+                   AggregateType:            -1
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Tabla: DEntregasLineas                                                                                   Página: 9
+
+
+
+                   AllowZeroLength:          Falso
+
+                   AppendOnly:               Falso
+                   Attributes:               Tamaño fijo
+
+                   CollatingOrder:           3082
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              1980
+
+                   CurrencyLCID:             0
+
+                   DataUpdatable:            Falso
+                   DecimalPlaces:            Automático
+
+                   Description:              Entrega Parcial, completa o resto
+                   DisplayControl:           Cuadro de texto
+
+                   GUID:                     {guid {51E4BB25-A365-4EC3-BFDE-AB6D3B6479A2}}
+                   OrdinalPosition:          7
+
+                   Precision:                3082
+                   Required:                 Verdadero
+
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              Id_EstadoEntrega
+
+                   SourceTable:              DEntregasLineas
+                   TextAlign:                General
+
+
+          DocuAdjunta                                               Entero largo                                4
+
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Falso
+                   AppendOnly:               Falso
+
+                   Attributes:               Tamaño fijo
+                   CollatingOrder:           3082
+
+                   ColumnHidden:             Falso
+                   ColumnOrder:              Predeterminado
+
+                   ColumnWidth:              Predeterminado
+                   CurrencyLCID:             0
+
+                   DataUpdatable:            Falso
+
+                   DecimalPlaces:            Automático
+                   Description:              Con Documentación Si (-1), No (0)
+
+                   DisplayControl:           Cuadro de texto
+                   GUID:                     {guid {E8BBF3F3-9DA2-4C7A-815B-7BF10A987253}}
+
+                   OrdinalPosition:          8
+                   Precision:                3082
+
+                   Required:                 Falso
+                   ResultType:               0
+
+                   Scale:                    0
+
+                   SourceField:              DocuAdjunta
+                   SourceTable:              DEntregasLineas
+
+                   TextAlign:                General
+
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Tabla: DEntregasLineas                                                                                  Página: 10
+
+
+          Id_LugarEntrega                                           Entero largo                                4
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Falso
+                   AppendOnly:               Falso
+
+                   Attributes:               Tamaño fijo
+
+                   CollatingOrder:           3082
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   DecimalPlaces:            Automático
+                   DisplayControl:           Cuadro de texto
+
+                   GUID:                     {guid {8B1D1550-B1C3-4E21-BAE4-C4745847CDCE}}
+
+                   OrdinalPosition:          9
+                   Precision:                3082
+
+                   Required:                 Verdadero
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              Id_LugarEntrega
+
+                   SourceTable:              DEntregasLineas
+                   TextAlign:                General
+
+
+          NSCaballetes                                              Texto largo                                 -
+
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Verdadero
+                   AppendOnly:               Falso
+
+                   Attributes:               Longitud variable
+                   CollatingOrder:           3082
+
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   Description:              Numero de Serie Caballetes
+                   GUID:                     {guid {ECF29678-534E-4859-AB95-288D082F307B}}
+
+                   IMEMode:                  0
+                   IMESentenceMode:          3
+
+                   OrdinalPosition:          10
+
+                   Precision:                3082
+                   Required:                 Falso
+
+                   ResultType:               0
+                   Scale:                    0
+
+                   SourceField:              NSCaballetes
+                   SourceTable:              DEntregasLineas
+
+                   TextAlign:                General
+                   TextFormat:               Texto sin formato
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Tabla: DEntregasLineas                                                                                  Página: 11
+
+
+
+                   UnicodeCompression:       Verdadero
+
+
+
+
+
+
+
+Relaciones
+
+
+
+         DLugarEntregaDEntregasLineas
+
+                          DLugarEntrega                       DEntregasLineas
+
+
+                    Id_LugarEntrega                         Id_LugarEntrega
+
+
+                  Attributes:                No forzado; Heredado
+
+                  RelationshipType:          Uno a varios (Externo)
+
+
+
+
+
+         DRespEntregaDEntregasLineas
+
+                           DRespEntrega                       DEntregasLineas
+
+                    Id_ResponsableEnvio                     Id_ResponsableEnvio
+
+
+
+                  Attributes:                No forzado; Heredado
+
+                  RelationshipType:          Uno a varios (Externo)
+
+
+
+
+
+         BPedidosDEntregasLineas
+
+                             BPedidos                         DEntregasLineas
+
+                    Id_Pedido                               Id_Pedido
+
+
+
+                  Attributes:                No forzado; Heredado
+                  RelationshipType:          Uno a varios (Externo)
+
+
+
+
+
+
+Índices de tabla
+          Nombr                                      Número de
+
+          Id_Entrega                                 1
+
+                   Clustered:                Falso
+                   DistinctCount:            616
+
+                   Foreign:                  Falso
+                   IgnoreNulls:              Falso
+
+                   Name:                     Id_Entrega
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Tabla: DEntregasLineas                                                                                  Página: 12
+
+
+
+                   Primary:                  Falso
+
+                   Required:                 Falso
+                   Unique:                   Falso
+                    Campos:
+
+                    Id_Entrega                  Ascendente
+
+
+
+
+
+
+          Id_LineaEntrega                            1
+                   Clustered:                Falso
+
+                   DistinctCount:            2147
+                   Foreign:                  Falso
+
+                   IgnoreNulls:              Falso
+                   Name:                     Id_LineaEntrega
+
+                   Primary:                  Falso
+                   Required:                 Falso
+
+                   Unique:                   Falso
+                    Campos:
+                    Id_LineaEntrega             Ascendente
+
+
+
+
+
+
+          Id_LugarEntrega                            1
+
+                   Clustered:                Falso
+                   DistinctCount:            7
+
+                   Foreign:                  Falso
+                   IgnoreNulls:              Falso
+
+                   Name:                     Id_LugarEntrega
+                   Primary:                  Falso
+
+                   Required:                 Falso
+                   Unique:                   Falso
+                    Campos:
+
+                    Id_LugarEntrega             Ascendente
+
+
+
+
+
+
+          Id_Pedido                                  1
+                   Clustered:                Falso
+
+                   DistinctCount:            2090
+                   Foreign:                  Falso
+
+                   IgnoreNulls:              Falso
+                   Name:                     Id_Pedido
+
+                   Primary:                  Falso
+                   Required:                 Falso
+
+                   Unique:                   Falso
+
+
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Tabla: DEntregasLineas                                                                                  Página: 13
+
+
+                    Campos:
+                    Id_Pedido                   Ascendente
+
+
+
+
+
+
+          Id_ResponsableEnvio                        1
+                   Clustered:                Falso
+
+                   DistinctCount:            16
+                   Foreign:                  Falso
+
+                   IgnoreNulls:              Falso
+                   Name:                     Id_ResponsableEnvio
+
+                   Primary:                  Falso
+                   Required:                 Falso
+
+                   Unique:                   Falso
+                    Campos:
+                    Id_ResponsableEnvio         Ascendente
+
+
+
+
+
+
+          PrimaryKey                                 1
+
+                   Clustered:                Falso
+                   DistinctCount:            2147
+
+                   Foreign:                  Falso
+                   IgnoreNulls:              Falso
+
+                   Name:                     PrimaryKey
+                   Primary:                  Verdadero
+
+                   Required:                 Verdadero
+                   Unique:                   Verdadero
+
+                    Campos:
+                    Id_LineaEntrega             Ascendente
+
+
+
+
+
+
+
+
+
+Permisos de usuario
+
+          admin                     Eliminar; Leer permisos; Establecer permisos; Cambiar propietario,
+                                    Leer definición; Escribir definición; Leer datos; Insertar datos;
+                                    Actualizar datos; Eliminar datos
+
+
+
+Permisos de grupo
+
+          Admins                    Eliminar; Leer permisos; Establecer permisos; Cambiar propietario,
+                                    Leer definición; Escribir definición; Leer datos; Insertar datos;
+                                    Actualizar datos; Eliminar datos
+          Users                     Eliminar; Leer permisos; Establecer permisos; Cambiar propietario,
+                                    Leer definición; Escribir definición; Leer datos; Insertar datos;
+                                    Actualizar datos; Eliminar datos

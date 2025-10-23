@@ -1,0 +1,1810 @@
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                       Página: 1
+
+
+
+
+Propiedades
+
+AllowAdditions:              Verdadero                    AllowDatasheetView:         Verdadero
+AllowDeletions:              Verdadero                    AllowDesignChanges:         Verdadero
+AllowEditing:                Verdadero                    AllowEdits:                 Verdadero
+
+AllowFilters:                Verdadero                    AllowFormView:              Verdadero
+AllowLayoutView:             Verdadero                    AllowPivotChartView:        Falso
+
+AllowPivotTableView:         Falso                        AllowUpdating:              No
+AlternateBackShade:          95                           AlternateBackThemeCol       1
+AlternateBackTint:           100                          AutoCenter:                 Verdadero
+
+AutoResize:                  Verdadero                    BackShade:                  100
+BackThemeColorIndex:         1                            BackTint:                   100
+
+BorderShade:                 100                          BorderStyle:                Ajustable
+BorderThemeColorIndex        3                            BorderTint:                 100
+CloseButton:                 Verdadero                    Container:                  Forms
+
+ControlBox:                  Verdadero                    Count:                      13
+CurrentView:                 0                            Cycle:                      Todos los registros
+
+DataEntry:                   Falso                        DatasheetAlternateBack      15921906
+DatasheetBackColor:          16777215                     DatasheetBackShade:         100
+
+DatasheetBackThemeC          1                            DatasheetBackTint:          100
+DatasheetBorderLineSty       1                            DatasheetCellsEffect:       Normal
+DatasheetColumnHeade         1                            DatasheetFontHeight:        11
+
+DatasheetFontItalic:         Falso                        DatasheetFontName:          Calibri
+DatasheetFontUnderline       Falso                        DatasheetFontWeight:        Normal
+
+DatasheetForeColor:          0                            DatasheetForeShade:         100
+DatasheetForeThemeCo         0                            DatasheetForeTint:          100
+DatasheetGridlinesBeha       Ambas                        DatasheetGridlinesColor     15132391
+
+DatasheetGridlinesShad       100                          DatasheetGridlinesThe       3
+DatasheetGridlinesTint:      100                          DateCreated:                15/06/2022 4:48:18
+
+DefaultEditing:              2                            DefaultView:                Un único formulario
+DisplayOnSharePointSit       Seguir configuración de      DividingLines:              Falso
+FastLaserPrinting:           Verdadero                    FetchDefaults:              Verdadero
+
+Filter:                      [Auxiliar]=0                 FilterOn:                   Verdadero
+FilterOnLoad:                Verdadero                    FitToScreen:                Verdadero
+
+ForeShade:                   100                          ForeThemeColorIndex:        0
+ForeTint:                    100                          FrozenColumns:              1
+
+GridX:                       10                           GridY:                      10
+GUID:                        {guid {3742BEA0-49D6-        HasEdgeBrowser:             0
+                             40B6-B44A-
+                             3175BDC592B6}}
+HasIvyChart:                 0                            HasModule:                  Verdadero
+HelpContextId:               0                            HorizontalDatasheetGrid     1
+Hwnd:                        17828680                     InsideHeight:               7740
+
+InsideWidth:                 16290                        KeyPreview:                 Falso
+LastUpdated:                 22/05/2024 12:01:28          LayoutForPrint:             Falso
+
+LogicalPageWidth:            11186                        MaxButton:                  Verdadero
+MinButton:                   Verdadero                    MinMaxButtons:              Ambos habilitados
+Modal:                       Falso                        Moveable:                   Verdadero
+
+NameMap:                     Datos binarios largos        NavigationButtons:          Falso
+OrderByOn:                   Falso                        OrderByOnLoad:              Verdadero
+
+Orientation:                 De izquieda a derecha        Owner:                      admin
+Painting:                    Verdadero
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                       Página: 2
+
+
+                                                          PaletteSource:              (Predeterminado)
+Picture:                     (ninguna)                    PictureAlignment:           Esquina superior derecha
+PictureSizeMode:             Recortar                     PictureTiling:              Falso
+
+PictureType:                 0                            PopUp:                      Verdadero
+PrtDevMode:                  Datos binarios largos        PrtDevModeW:                Datos binarios largos
+
+PrtDevNames:                 Datos binarios largos        PrtDevNamesW:               Datos binarios largos
+PrtMip:                      Datos binarios largos        PublishToWeb:               1
+RecordLocks:                 Sin bloquear                 RecordSelectors:            Falso
+
+RecordsetType:               Dynaset                      RowHeight:                  Predeterminado
+SaveSplitterBarPosition:     Verdadero                    ScrollBars:                 Ambas
+
+ShortcutMenu:                Verdadero                    ShowGrid:                   Verdadero
+SplitFormDatasheet:          Permitir ediciones           SplitFormOrientation:       Hoja de datos arriba
+SplitFormPrinting:           solo formulario              SplitFormSize:              0
+
+SplitFormSplitterBar:        Verdadero                    SubdatasheetExpanded        Falso
+SubdatasheetHeight:          0                            ThemeFontIndex:             1
+
+ThemeResourceName:           [Use DB Theme]               TimerInterval:              0
+UseDefaultPaperSize:         Falso                        UserName:                   admin
+
+VerticalDatasheetGridlin     1                            ViewsAllowed:               Ambas
+Visible:                     Falso                        WaitForPostProcessing       Falso
+Width:                       24321                        WindowHeight:               7995
+
+WindowLeft:                  0                            WindowTop:                  0
+WindowWidth:                 16545
+
+
+
+
+Objetos
+
+Sección: Detalle
+
+AlternateBackC     16777215                           AlternateBackS     100
+AlternateBackT     -1                                 AlternateBackTi    100
+hemeColorIndex
+:
+AutoHeight:        Falso                              BackColor:         16777215
+
+BackShade:         100                                BackThemeColo      -1
+                                                      rIndex:
+BackTint:          100                                CanGrow:           Verdadero
+
+CanShrink:         Falso                              DisplayWhen:       Siempre
+
+EventProcPrefix    Detalle                            ForceNewPage:      Ninguno
+HasContinued:      Falso                              Height:            9808
+
+InSelection:       Falso                              KeepTogether:      Falso
+Name:              Detalle                            NewRowOrCol:       Ninguno
+
+SpecialEffect:     Sin relieve                        Visible:           Verdadero
+WillContinue:      Falso
+
+
+Sección: EncabezadoDelFormulario
+AlternateBackS     95                                 AlternateBackT     1
+                                                      hemeColorIndex
+                                                      :
+AlternateBackTi    100                                AutoHeight:        Falso
+
+BackColor:         -2147483612                        BackShade:         100
+BackThemeColo      -1                                 BackTint:          100
+rIndex:
+
+CanGrow:           Verdadero                          CanShrink:         Falso
+DisplayWhen:       Siempre
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                       Página: 3
+
+
+                                                      EventProcPrefix    EncabezadoDelFormulario
+ForceNewPage:      Ninguno                            HasContinued:      Falso
+
+Height:            1882                               InSelection:       Falso
+KeepTogether:      Falso                              Name:              EncabezadoDelFormulario
+
+NewRowOrCol:       Ninguno                            SpecialEffect:     Sin relieve
+Visible:           Verdadero                          WillContinue:      Falso
+
+
+Sección: PieDelFormulario
+AlternateBackS     95                                 AlternateBackT     1
+                                                      hemeColorIndex
+                                                      :
+AlternateBackTi    100                                AutoHeight:        Falso
+
+BackColor:         -2147483612                        BackShade:         100
+BackThemeColo      -1                                 BackTint:          100
+rIndex:
+
+CanGrow:           Falso                              CanShrink:         Falso
+
+DisplayWhen:       Siempre                            EventProcPrefix    PieDelFormulario
+ForceNewPage:      Ninguno                            HasContinued:      Falso
+
+Height:            0                                  InSelection:       Falso
+KeepTogether:      Falso                              Name:              PieDelFormulario
+
+NewRowOrCol:       Ninguno                            SpecialEffect:     Sin relieve
+Visible:           Verdadero                          WillContinue:      Falso
+
+
+Botón de comando: cmd_AbrirPedido
+Alignment:         2                                  AutoRepeat:        Falso
+
+BackColor:         14461583                           BackShade:         100
+BackStyle:         Normal                             BackThemeColo      4
+                                                      rIndex:
+
+BackTint:          60                                 Bevel:             0
+
+BorderColor:       14461583                           BorderLineStyle    Sólido
+BorderShade:       100                                BorderStyle:       0
+
+BorderThemeCo      4                                  BorderTint:        60
+lorIndex:
+BorderWidth:       Trazo fino                         BottomPadding:     30
+
+Cancel:            Falso                              Caption:           ABRIR PEDIDO
+
+ColumnEnd:         0                                  ColumnStart:       0
+ControlType:       104                                CursorOnHover:     0
+
+Default:           Falso                              DisplayWhen:       Siempre
+Enabled:           Verdadero                          EventProcPrefix    cmd_AbrirPedido
+
+FontBold:          No                                 FontItalic:        Falso
+FontName:          Calibri                            FontSize:          11
+
+FontUnderline:     Falso                              FontWeight:        Normal
+ForeColor:         4210752                            ForeShade:         100
+
+ForeThemeColor     0                                  ForeTint:          75
+Index:
+
+Glow:              0                                  Gradient:          12
+GridlineColor:     10921638                           GridlineShade:     65
+
+GridlineStyleBot   Transparente                       GridlineStyleLeft  Transparente
+tom:
+
+GridlineStyleRig   Transparente                       GridlineStyleTop   Transparente
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                       Página: 4
+
+
+GridlineThemeC     1                                  GridlineTint:      100
+olorIndex:
+GridlineWidthBo    1                                  GridlineWidthLef   1
+ttom:
+
+GridlineWidthRi    1                                  GridlineWidthTo    1
+
+Height:            673                                HelpContextId:     0
+HorizontalAncho    Izquierda                          HoverColor:        15189940
+
+HoverForeColor:    4210752                            HoverForeShade     100
+HoverForeThem      0                                  HoverForeTint:     75
+eColorIndex:
+
+HoverShade:        100                                HoverThemeCol      4
+                                                      orIndex:
+
+HoverTint:         40                                 Layout:            0
+LayoutID:          0                                  Left:              283
+
+LeftPadding:       30                                 Name:              cmd_AbrirPedido
+OldBorderStyle:    1                                  OnClick:           [Macro incrustada]
+
+OnClickEmMacr      Version =196611
+                   ColumnsShown =0
+                   Begin
+                       Action ="OpenForm"
+                       Argument ="PEDIDOS"
+                       Argument ="0"
+                       Argument =""
+                       Argument ="=\"[Id_Pedido] =\"
+                    &
+                   Nz([SubformPedidos].Form!Id_Pe
+                   dido,0)"
+                       Argument ="1"
+                       Argument ="3"
+                   End
+                   Begin
+                       Comment ="_AXL:<?xml
+                   version=\"1.0\" encoding=\"UTF-
+                   16\"
+                   standalone=\"no\"?>\015\012<Us
+                   erI"
+                           "nterfaceMacro
+                   For=\"cmd_AbrirPedido\"
+                   Event=\"OnClick\"
+                   xmlns=\"http://schemas.m"
+
+                   "icrosoft.com/office/accessservic
+                   es/2009/11/application\"><State
+                   ments><Action Nam"
+
+                   "e=\"OpenForm\"><Argument
+                   Name=\"Fo"
+                   End
+                   Begin
+                       Comment
+                   ="_AXL:rmName\">PEDIDOS</A
+                   rgument><Argument
+                   Name=\"WhereCondition\">=\"[Id
+                   _Pedido]"
+                           " =\" &amp;
+                   Nz([SubformPedidos].Form!Id_Pe
+                   dido,0)</Argument><Argument
+                   Name=\"Data"
+
+                   "Mode\">Edit</Argument><Argu
+                   ment
+                   Name=\"WindowMode\">Dialog<
+                   /Argument></Action></"
+                           "Statements></UserInter"
+                   End
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                       Página: 5
+
+
+o:                 Begin                              Picture:           (ninguna)
+                       Comment
+                   ="_AXL:faceMacro>"
+                   End
+
+PictureCaptionA    0                                  PictureType:       0
+rrangement:
+PressedColor:      9917743                            PressedForeCol     4210752
+
+PressedForeSh      100                                PressedForeThe     0
+                                                      meColorIndex:
+
+PressedForeTint    75                                 PressedShade:      75
+PressedTheme       4                                  PressedTint:       100
+ColorIndex:
+
+QuickStyle:        0                                  QuickStyleMas      0
+
+ReadingOrder:      Contexto                           RightPadding:      30
+RowEnd:            0                                  RowStart:          0
+
+Section:           1                                  Shadow:            0
+Shape:             1                                  SoftEdges:         0
+
+TabIndex:          0                                  TabStop:           Verdadero
+TextFontCharSe     0                                  ThemeFontInde      1
+
+Top:               907                                TopPadding:        30
+Transparent:       Falso                              UseTheme:          Verdadero
+
+VerticalAnchor:    Superior                           Visible:           Verdadero
+
+Width:             1701
+
+Botón de comando: cmd_Cerrar
+Alignment:         2                                  AutoRepeat:        Falso
+
+BackColor:         14461583                           BackShade:         100
+
+BackStyle:         Normal                             BackThemeColo      4
+                                                      rIndex:
+BackTint:          60                                 Bevel:             0
+
+BorderColor:       14461583                           BorderLineStyle    Sólido
+BorderShade:       100                                BorderStyle:       0
+
+BorderThemeCo      4                                  BorderTint:        60
+lorIndex:
+
+BorderWidth:       Trazo fino                         BottomPadding:     30
+Cancel:            Falso                              Caption:           Comando11
+
+ColumnEnd:         0                                  ColumnStart:       0
+ControlTipText:    Cerrar formulario                  ControlType:       104
+
+CursorOnHover:     0                                  Default:           Falso
+DisplayWhen:       Siempre                            Enabled:           Verdadero
+
+EventProcPrefix    cmd_Cerrar                         FontBold:          No
+
+FontItalic:        Falso                              FontName:          Calibri
+FontSize:          11                                 FontUnderline:     Falso
+
+FontWeight:        Normal                             ForeColor:         4210752
+ForeShade:         100                                ForeThemeColor     0
+                                                      Index:
+
+ForeTint:          75                                 Glow:              0
+
+Gradient:          12                                 GridlineColor:     10921638
+GridlineShade:     65                                 GridlineStyleBot   Transparente
+                                                      tom:
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                       Página: 6
+
+
+                                                      GridlineStyleLeft  Transparente
+GridlineStyleRig   Transparente                       GridlineStyleTop   Transparente
+
+GridlineThemeC     1                                  GridlineTint:      100
+olorIndex:
+
+GridlineWidthBo    1                                  GridlineWidthLef   1
+ttom:
+GridlineWidthRi    1                                  GridlineWidthTo    1
+
+Height:            681                                HelpContextId:     0
+HorizontalAncho    Izquierda                          HoverColor:        15189940
+
+HoverForeColor:    4210752                            HoverForeShade     100
+HoverForeThem      0                                  HoverForeTint:     75
+eColorIndex:
+
+HoverShade:        100                                HoverThemeCol      4
+                                                      orIndex:
+
+HoverTint:         40                                 ImageData:         Datos binarios largos
+
+Layout:            0                                  LayoutID:          0
+Left:              8220                               LeftPadding:       30
+
+Name:              cmd_Cerrar                         OldBorderStyle:    1
+OnClick:           [Macro incrustada]                 OnClickEmMacr      Version =196611
+                                                                         ColumnsShown =0
+                                                                         Begin
+                                                                             Action ="Close"
+                                                                             Argument ="2"
+                                                                             Argument
+                                                                         ="ControlPedidosFabricar"
+                                                                             Argument ="0"
+                                                                         End
+                                                                         Begin
+                                                                             Action ="OpenForm"
+                                                                             Argument
+                                                                         ="PANELDECONTROL"
+                                                                             Argument ="0"
+                                                                             Argument =""
+                                                                             Argument =""
+                                                                             Argument ="-1"
+                                                                             Argument ="3"
+                                                                         End
+                                                                         Begin
+                                                                             Comment ="_AXL:<?xml
+                                                                         version=\"1.0\" encoding=\"UTF-
+                                                                         16\"
+                                                                         standalone=\"no\"?>\015\012<Us
+                                                                         erI"
+                                                                                 "nterfaceMacro
+                                                                         For=\"cmd_Cerrar\"
+                                                                         Event=\"OnClick\"
+                                                                         xmlns=\"http://schemas.micros"
+
+                                                                         "oft.com/office/accessservices/20
+                                                                         09/11/application\"><Statements
+                                                                         ><Action Name=\"C"
+                                                                                 "loseWindow\"><Argument
+                                                                         Name=\"Obje"
+                                                                         End
+                                                                         Begin
+                                                                             Comment
+                                                                         ="_AXL:ctType\">Form</Argume
+                                                                         nt><Argument
+                                                                         Name=\"ObjectName\">ControlP
+                                                                         edidosFabrica"
+
+                                                                         "r</Argument></Action><Action
+                                                                         Name=\"OpenForm\"><Argument
+                                                                          Name=\"FormName\">PANEL"
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                       Página: 7
+
+
+o:                                                    Picture:           (imagen)
+                   "DECONTROL</Argument><Arg
+                   ument
+                   Name=\"WindowMode\">Dialog<
+                   /Argument></Action></St"
+                           "atements></UserInterfa"
+                   End
+                   Begin
+                       Comment ="_AXL:ceMacro>"
+                   End
+
+
+
+PictureCaptionA    0                                  PictureData:       Datos binarios largos
+rrangement:
+
+PictureType:       0                                  PressedColor:      9917743
+PressedForeCol     4210752                            PressedForeSh      100
+
+PressedForeThe     0                                  PressedForeTint    75
+meColorIndex:
+
+PressedShade:      75                                 PressedTheme       4
+                                                      ColorIndex:
+PressedTint:       100                                QuickStyle:        0
+
+QuickStyleMas      0                                  ReadingOrder:      Contexto
+RightPadding:      30                                 RowEnd:            0
+
+RowStart:          0                                  Section:           1
+
+Shadow:            0                                  Shape:             1
+SoftEdges:         0                                  TabIndex:          2
+
+TabStop:           Verdadero                          TextFontCharSe     0
+ThemeFontInde      1                                  Top:               907
+
+TopPadding:        30                                 Transparent:       Falso
+UseTheme:          Verdadero                          VerticalAnchor:    Superior
+
+Visible:           Verdadero                          Width:             1191
+
+Botón de comando: cmd_FiltroNuevo
+
+Alignment:         2                                  AutoRepeat:        Falso
+BackColor:         14461583                           BackShade:         100
+
+BackStyle:         Normal                             BackThemeColo      4
+                                                      rIndex:
+
+BackTint:          60                                 Bevel:             0
+BorderColor:       14461583                           BorderLineStyle    Sólido
+
+BorderShade:       100                                BorderStyle:       0
+BorderThemeCo      4                                  BorderTint:        60
+lorIndex:
+
+BorderWidth:       Trazo fino                         BottomPadding:     30
+
+Cancel:            Falso                              Caption:           Nuevos - Revisar
+ColumnEnd:         0                                  ColumnStart:       0
+
+ControlType:       104                                CursorOnHover:     0
+Default:           Falso                              DisplayWhen:       Siempre
+
+Enabled:           Verdadero                          EventProcPrefix    cmd_FiltroNuevo
+FontBold:          No                                 FontItalic:        Falso
+
+FontName:          Calibri                            FontSize:          11
+FontUnderline:     Falso                              FontWeight:        Normal
+
+ForeColor:         4210752
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                       Página: 8
+
+
+                                                      ForeShade:         100
+ForeThemeColor     0                                  ForeTint:          75
+Index:
+
+Glow:              0                                  Gradient:          12
+
+GridlineColor:     10921638                           GridlineShade:     65
+GridlineStyleBot   Transparente                       GridlineStyleLeft  Transparente
+tom:
+
+GridlineStyleRig   Transparente                       GridlineStyleTop   Transparente
+GridlineThemeC     1                                  GridlineTint:      100
+olorIndex:
+
+GridlineWidthBo    1                                  GridlineWidthLef   1
+ttom:
+
+GridlineWidthRi    1                                  GridlineWidthTo    1
+Height:            464                                HelpContextId:     0
+
+HorizontalAncho    Izquierda                          HoverColor:        15189940
+
+HoverForeColor:    4210752                            HoverForeShade     100
+HoverForeThem      0                                  HoverForeTint:     75
+eColorIndex:
+
+HoverShade:        100                                HoverThemeCol      4
+                                                      orIndex:
+
+HoverTint:         40                                 Layout:            0
+LayoutID:          0                                  Left:              12805
+
+LeftPadding:       30                                 Name:              cmd_FiltroNuevo
+OldBorderStyle:    1                                  OnClick:           [Macro incrustada]
+
+OnClickEmMacr      Version =196611
+                   ColumnsShown =0
+                   Begin
+                       Action ="ApplyFilter"
+                       Argument ="PNuevos"
+                       Argument ="[Comprobado]=0"
+                       Argument ="SubformPedidos"
+                   End
+                   Begin
+                       Comment ="_AXL:<?xml
+                   version=\"1.0\" encoding=\"UTF-
+                   16\"
+                   standalone=\"no\"?>\015\012<Us
+                   erI"
+                           "nterfaceMacro
+                   For=\"cmd_FiltroNuevo\"
+                   Event=\"OnClick\"
+                   xmlns=\"http://schemas.m"
+
+                   "icrosoft.com/office/accessservic
+                   es/2009/11/application\"><State
+                   ments><Action Nam"
+
+                   "e=\"ApplyFilter\"><Argument
+                   Name="
+                   End
+                   Begin
+                       Comment
+                   ="_AXL:\"FilterName\">PNuevos
+                   </Argument><Argument
+                   Name=\"WhereCondition\">[Com
+                   prob"
+
+                   "ado]=0</Argument><Argument
+                   Name=\"ControlName\">Subform
+                   Pedidos</Argument></Actio"
+
+                   "n></Statements></UserInterfac
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                       Página: 9
+
+
+o:                 eMacro>"                           Picture:           (ninguna)
+                   End
+
+
+
+PictureCaptionA    0                                  PictureType:       0
+rrangement:
+PressedColor:      9917743                            PressedForeCol     4210752
+
+PressedForeSh      100                                PressedForeThe     0
+                                                      meColorIndex:
+
+PressedForeTint    75                                 PressedShade:      75
+PressedTheme       4                                  PressedTint:       100
+ColorIndex:
+
+QuickStyle:        0                                  QuickStyleMas      0
+
+ReadingOrder:      Contexto                           RightPadding:      30
+RowEnd:            0                                  RowStart:          0
+
+Section:           1                                  Shadow:            0
+Shape:             1                                  SoftEdges:         0
+
+TabIndex:          6                                  TabStop:           Verdadero
+TextFontCharSe     0                                  ThemeFontInde      1
+
+Top:               168                                TopPadding:        30
+Transparent:       Falso                              UseTheme:          Verdadero
+
+VerticalAnchor:    Superior                           Visible:           Verdadero
+
+Width:             2602
+
+Botón de comando: cmd_FiltroPdteFab
+Alignment:         2                                  AutoRepeat:        Falso
+
+BackColor:         14461583                           BackShade:         100
+
+BackStyle:         Normal                             BackThemeColo      4
+                                                      rIndex:
+BackTint:          60                                 Bevel:             0
+
+BorderColor:       14461583                           BorderLineStyle    Sólido
+BorderShade:       100                                BorderStyle:       0
+
+BorderThemeCo      4                                  BorderTint:        60
+lorIndex:
+
+BorderWidth:       Trazo fino                         BottomPadding:     30
+Cancel:            Falso                              Caption:           Pdte Fabricar
+
+ColumnEnd:         0                                  ColumnStart:       0
+ControlType:       104                                CursorOnHover:     0
+
+Default:           Falso                              DisplayWhen:       Siempre
+Enabled:           Verdadero                          EventProcPrefix    cmd_FiltroPdteFab
+
+FontBold:          No                                 FontItalic:        Falso
+
+FontName:          Calibri                            FontSize:          11
+FontUnderline:     Falso                              FontWeight:        Normal
+
+ForeColor:         4210752                            ForeShade:         100
+ForeThemeColor     0                                  ForeTint:          75
+Index:
+
+Glow:              0                                  Gradient:          12
+
+GridlineColor:     10921638                           GridlineShade:     65
+GridlineStyleBot   Transparente
+tom:
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                      Página: 10
+
+
+                                                      GridlineStyleLeft  Transparente
+GridlineStyleRig   Transparente                       GridlineStyleTop   Transparente
+
+GridlineThemeC     1                                  GridlineTint:      100
+olorIndex:
+
+GridlineWidthBo    1                                  GridlineWidthLef   1
+ttom:
+GridlineWidthRi    1                                  GridlineWidthTo    1
+
+Height:            463                                HelpContextId:     0
+HorizontalAncho    Izquierda                          HoverColor:        15189940
+
+HoverForeColor:    4210752                            HoverForeShade     100
+HoverForeThem      0                                  HoverForeTint:     75
+eColorIndex:
+
+HoverShade:        100                                HoverThemeCol      4
+                                                      orIndex:
+
+HoverTint:         40                                 Layout:            0
+
+LayoutID:          0                                  Left:              9921
+LeftPadding:       30                                 Name:              cmd_FiltroPdteFab
+
+OldBorderStyle:    1                                  OnClick:           [Macro incrustada]
+OnClickEmMacr      Version =196611
+                   ColumnsShown =0
+                   Begin
+                       Action ="SetFilter"
+                       Argument ="PdteFabricar"
+                       Argument
+                   ="[Id_EstadoPedido]=1 Or
+                   [Id_EstadoPedido]=2 Or
+                   [Id_EstadoPedido]=3 Or
+                   [Id_EstadoP"
+                           "edido]=4 Or
+                   [Id_EstadoPedido]=7 Or
+                   [Id_EstadoPedido]=8 Or
+                   [Id_EstadoPedido]=10 O"
+                           "r [Id_EstadoPedido]=12 Or
+                    [Id_EstadoPedido]=13"
+                       Argument ="SubformPedidos"
+                   End
+                   Begin
+                       Action ="SetOrderBy"
+                       Argument ="[Seccion],
+                   [FechaCompromiso]"
+                       Argument ="SubformPedidos"
+                   End
+                   Begin
+                       Comment ="_AXL:<?xml
+                   version=\"1.0\" encoding=\"UTF-
+                   16\"
+                   standalone=\"no\"?>\015\012<Us
+                   erI"
+                           "nterfaceMacro
+                   For=\"cmd_FiltroPdteFab\"
+                   Event=\"OnClick\"
+                   xmlns=\"http://schemas"
+
+                   ".microsoft.com/office/accessser
+                   vices/2009/11/application\"><Sta
+                   tements><Action N"
+
+                   "ame=\"SetFilter\"><Argument
+                   Name="
+                   End
+                   Begin
+                       Comment
+                   ="_AXL:\"FilterName\">PdteFabri
+                   car</Argument><Argument
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                      Página: 11
+
+
+o:                 Name=\"WhereCondition\">[Id"       Picture:           (ninguna)
+                           "_EstadoPedido]=1 Or
+                   [Id_EstadoPedido]=2 Or
+                   [Id_EstadoPedido]=3 Or
+                   [Id_EstadoPedi"
+                           "do]=4 Or
+                   [Id_EstadoPedido]=7 Or
+                   [Id_EstadoPedido]=8 Or
+                   [Id_EstadoPedido]=10 Or ["
+                           "Id_EstadoPedido]="
+                   End
+                   Begin
+                       Comment ="_AXL:12 Or
+                   [Id_EstadoPedido]=13</Argumen
+                   t><Argument
+                   Name=\"ControlName\">Subform
+                   "
+
+                   "Pedidos</Argument></Action><
+                   Action
+                   Name=\"SetOrderBy\"><Argume
+                   nt Name=\"OrderBy\""
+                           ">&lt;Ordering
+                   xmlns=\"http://schemas.microsof
+                   t.com/office/accessservices/2010
+                   /12"
+                           "/application\"&gt;&l"
+                   End
+                   Begin
+                       Comment ="_AXL:t;Order
+                   Name=\"[Seccion]\"
+                   Direction=\"Ascending\"/&gt;&lt;
+                   Order Name=\"[Fe"
+                           "chaCompromiso]\"
+                   Direction=\"Ascending\"/&gt;&lt;/
+                   Ordering&gt;</Argument><Argu
+                   me"
+                           "nt
+                   Name=\"ControlName\">Subform
+                   Pedidos</Argument></Action></
+                   Statements></UserInt"
+                           "erfaceMacro>"
+                   End
+
+
+
+PictureCaptionA    0                                  PictureType:       0
+rrangement:
+
+PressedColor:      9917743                            PressedForeCol     4210752
+
+PressedForeSh      100                                PressedForeThe     0
+                                                      meColorIndex:
+PressedForeTint    75                                 PressedShade:      75
+
+PressedTheme       4                                  PressedTint:       100
+ColorIndex:
+
+QuickStyle:        0                                  QuickStyleMas      0
+ReadingOrder:      Contexto                           RightPadding:      30
+
+RowEnd:            0                                  RowStart:          0
+Section:           1                                  Shadow:            0
+
+Shape:             1                                  SoftEdges:         0
+TabIndex:          3                                  TabStop:           Verdadero
+
+TextFontCharSe     0                                  ThemeFontInde      1
+Top:               170                                TopPadding:        30
+
+Transparent:       Falso                              UseTheme:          Verdadero
+
+VerticalAnchor:    Superior
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                      Página: 12
+
+
+                                                      Visible:           Verdadero
+Width:             2602
+
+
+Botón de comando: cmd_FiltroServidos
+Alignment:         2                                  AutoRepeat:        Falso
+
+BackColor:         14461583                           BackShade:         100
+BackStyle:         Normal                             BackThemeColo      4
+                                                      rIndex:
+
+BackTint:          60                                 Bevel:             0
+
+BorderColor:       14461583                           BorderLineStyle    Sólido
+BorderShade:       100                                BorderStyle:       0
+
+BorderThemeCo      4                                  BorderTint:        60
+lorIndex:
+BorderWidth:       Trazo fino                         BottomPadding:     30
+
+Cancel:            Falso                              Caption:           Servidos
+
+ColumnEnd:         0                                  ColumnStart:       0
+ControlType:       104                                CursorOnHover:     0
+
+Default:           Falso                              DisplayWhen:       Siempre
+Enabled:           Verdadero                          EventProcPrefix    cmd_FiltroServidos
+
+FontBold:          No                                 FontItalic:        Falso
+FontName:          Calibri                            FontSize:          11
+
+FontUnderline:     Falso                              FontWeight:        Normal
+ForeColor:         4210752                            ForeShade:         100
+
+ForeThemeColor     0                                  ForeTint:          75
+Index:
+
+Glow:              0                                  Gradient:          12
+GridlineColor:     10921638                           GridlineShade:     65
+
+GridlineStyleBot   Transparente                       GridlineStyleLeft  Transparente
+tom:
+
+GridlineStyleRig   Transparente                       GridlineStyleTop   Transparente
+GridlineThemeC     1                                  GridlineTint:      100
+olorIndex:
+
+GridlineWidthBo    1                                  GridlineWidthLef   1
+ttom:
+
+GridlineWidthRi    1                                  GridlineWidthTo    1
+Height:            463                                HelpContextId:     0
+
+HorizontalAncho    Izquierda                          HoverColor:        15189940
+HoverForeColor:    4210752                            HoverForeShade     100
+
+HoverForeThem      0                                  HoverForeTint:     75
+eColorIndex:
+
+HoverShade:        100                                HoverThemeCol      4
+                                                      orIndex:
+HoverTint:         40                                 Layout:            0
+
+LayoutID:          0                                  Left:              9930
+LeftPadding:       30                                 Name:              cmd_FiltroServidos
+
+OldBorderStyle:    1                                  OnClick:           [Macro incrustada]
+
+OnClickEmMacr      Version =196611
+                   ColumnsShown =0
+                   Begin
+                       Action ="SetFilter"
+                       Argument ="PdteFabricar"
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                      Página: 13
+
+
+o:                     Argument                       Picture:           (ninguna)
+                   ="[Id_EstadoPedido]=6 Or
+                   [Id_EstadoPedido]=8 Or
+                   [Id_EstadoPedido]=7"
+                       Argument ="SubformPedidos"
+                   End
+                   Begin
+                       Comment ="_AXL:<?xml
+                   version=\"1.0\" encoding=\"UTF-
+                   16\"
+                   standalone=\"no\"?>\015\012<Us
+                   erI"
+                           "nterfaceMacro
+                   For=\"cmd_FiltroServidos\"
+                   Event=\"OnClick\"
+                   xmlns=\"http://schema"
+
+                   "s.microsoft.com/office/accessse
+                   rvices/2009/11/application\"><St
+                   atements><Action "
+
+                   "Name=\"SetFilter\"><Argument
+                   Name"
+                   End
+                   Begin
+                       Comment
+                   ="_AXL:=\"FilterName\">PdteFab
+                   ricar</Argument><Argument
+                   Name=\"WhereCondition\">[I"
+                           "d_EstadoPedido]=6 Or
+                   [Id_EstadoPedido]=8 Or
+                   [Id_EstadoPedido]=7</Argument
+                   ><Argum"
+                           "ent
+                   Name=\"ControlName\">Subform
+                   Pedidos</Argument></Action></
+                   Statements></UserIn"
+                           "terfaceMacro>"
+                   End
+
+
+
+
+
+PictureCaptionA    0                                  PictureType:       0
+rrangement:
+
+PressedColor:      9917743                            PressedForeCol     4210752
+PressedForeSh      100                                PressedForeThe     0
+                                                      meColorIndex:
+
+PressedForeTint    75                                 PressedShade:      75
+PressedTheme       4                                  PressedTint:       100
+ColorIndex:
+
+QuickStyle:        0                                  QuickStyleMas      0
+
+ReadingOrder:      Contexto                           RightPadding:      30
+RowEnd:            0                                  RowStart:          0
+
+Section:           1                                  Shadow:            0
+Shape:             1                                  SoftEdges:         0
+
+TabIndex:          5                                  TabStop:           Verdadero
+
+TextFontCharSe     0                                  ThemeFontInde      1
+Top:               1305                               TopPadding:        30
+
+Transparent:       Falso                              UseTheme:          Verdadero
+VerticalAnchor:    Superior                           Visible:           Verdadero
+
+Width:             2602
+Botón de comando: cmd_FiltroTerminado
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                      Página: 14
+
+
+
+
+Alignment:         2                                  AutoRepeat:        Falso
+BackColor:         14461583                           BackShade:         100
+
+BackStyle:         Normal                             BackThemeColo      4
+                                                      rIndex:
+
+BackTint:          60                                 Bevel:             0
+BorderColor:       14461583                           BorderLineStyle    Sólido
+
+BorderShade:       100                                BorderStyle:       0
+BorderThemeCo      4                                  BorderTint:        60
+lorIndex:
+
+BorderWidth:       Trazo fino                         BottomPadding:     30
+
+Cancel:            Falso                              Caption:           Terminados
+ColumnEnd:         0                                  ColumnStart:       0
+
+ControlType:       104                                CursorOnHover:     0
+Default:           Falso                              DisplayWhen:       Siempre
+
+Enabled:           Verdadero                          EventProcPrefix    cmd_FiltroTerminado
+FontBold:          No                                 FontItalic:        Falso
+
+FontName:          Calibri                            FontSize:          11
+
+FontUnderline:     Falso                              FontWeight:        Normal
+ForeColor:         4210752                            ForeShade:         100
+
+ForeThemeColor     0                                  ForeTint:          75
+Index:
+Glow:              0                                  Gradient:          12
+
+GridlineColor:     10921638                           GridlineShade:     65
+GridlineStyleBot   Transparente                       GridlineStyleLeft  Transparente
+tom:
+
+GridlineStyleRig   Transparente                       GridlineStyleTop   Transparente
+
+GridlineThemeC     1                                  GridlineTint:      100
+olorIndex:
+
+GridlineWidthBo    1                                  GridlineWidthLef   1
+ttom:
+GridlineWidthRi    1                                  GridlineWidthTo    1
+
+Height:            463                                HelpContextId:     0
+HorizontalAncho    Izquierda                          HoverColor:        15189940
+
+HoverForeColor:    4210752                            HoverForeShade     100
+HoverForeThem      0                                  HoverForeTint:     75
+eColorIndex:
+
+HoverShade:        100                                HoverThemeCol      4
+                                                      orIndex:
+
+HoverTint:         40                                 Layout:            0
+
+LayoutID:          0                                  Left:              9930
+LeftPadding:       30                                 Name:              cmd_FiltroTerminado
+
+OldBorderStyle:    1                                  OnClick:           [Macro incrustada]
+OnClickEmMacr      Version =196611
+                   ColumnsShown =0
+                   Begin
+                       Action ="SetFilter"
+                       Argument ="PdteFabricar"
+                       Argument
+                   ="[Id_EstadoPedido]=5 Or
+                   [Id_EstadoPedido]=7 Or
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                      Página: 15
+
+
+o:                 [Id_EstadoPedido]=9"               Picture:           (ninguna)
+                       Argument ="SubformPedidos"
+                   End
+                   Begin
+                       Comment ="_AXL:<?xml
+                   version=\"1.0\" encoding=\"UTF-
+                   16\"
+                   standalone=\"no\"?>\015\012<Us
+                   erI"
+                           "nterfaceMacro
+                   For=\"cmd_FiltroTerminado\"
+                   Event=\"OnClick\"
+                   xmlns=\"http://schem"
+
+                   "as.microsoft.com/office/accesss
+                   ervices/2009/11/application\"><S
+                   tatements><Action"
+                           "
+                   Name=\"SetFilter\"><Argument
+                   Nam"
+                   End
+                   Begin
+                       Comment
+                   ="_AXL:e=\"FilterName\">PdteFa
+                   bricar</Argument><Argument
+                   Name=\"WhereCondition\">["
+                           "Id_EstadoPedido]=5 Or
+                   [Id_EstadoPedido]=7 Or
+                   [Id_EstadoPedido]=9</Argument
+                   ><Argu"
+                           "ment
+                   Name=\"ControlName\">Subform
+                   Pedidos</Argument></Action></
+                   Statements></UserI"
+                           "nterfaceMacro>"
+                   End
+
+
+
+PictureCaptionA    0                                  PictureType:       0
+rrangement:
+
+PressedColor:      9917743                            PressedForeCol     4210752
+PressedForeSh      100                                PressedForeThe     0
+                                                      meColorIndex:
+
+PressedForeTint    75                                 PressedShade:      75
+
+PressedTheme       4                                  PressedTint:       100
+ColorIndex:
+QuickStyle:        0                                  QuickStyleMas      0
+
+ReadingOrder:      Contexto                           RightPadding:      30
+
+RowEnd:            0                                  RowStart:          0
+Section:           1                                  Shadow:            0
+
+Shape:             1                                  SoftEdges:         0
+TabIndex:          4                                  TabStop:           Verdadero
+
+TextFontCharSe     0                                  ThemeFontInde      1
+Top:               735                                TopPadding:        30
+
+Transparent:       Falso                              UseTheme:          Verdadero
+VerticalAnchor:    Superior                           Visible:           Verdadero
+
+Width:             2602
+
+Botón de comando: cmd_NuevoPedido
+
+Alignment:         2                                  AutoRepeat:        Falso
+BackColor:         14461583
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                      Página: 16
+
+
+                                                      BackShade:         100
+BackStyle:         Normal                             BackThemeColo      4
+                                                      rIndex:
+
+BackTint:          60                                 Bevel:             0
+
+BorderColor:       14461583                           BorderLineStyle    Sólido
+BorderShade:       100                                BorderStyle:       0
+
+BorderThemeCo      4                                  BorderTint:        60
+lorIndex:
+BorderWidth:       Trazo fino                         BottomPadding:     30
+
+Cancel:            Falso                              Caption:           NUEVO PEDIDO
+ColumnEnd:         0                                  ColumnStart:       0
+
+ControlType:       104                                CursorOnHover:     0
+
+Default:           Falso                              DisplayWhen:       Siempre
+Enabled:           Verdadero                          EventProcPrefix    cmd_NuevoPedido
+
+FontBold:          No                                 FontItalic:        Falso
+FontName:          Calibri                            FontSize:          11
+
+FontUnderline:     Falso                              FontWeight:        Normal
+ForeColor:         4210752                            ForeShade:         100
+
+ForeThemeColor     0                                  ForeTint:          75
+Index:
+
+Glow:              0                                  Gradient:          12
+GridlineColor:     10921638                           GridlineShade:     65
+
+GridlineStyleBot   Transparente                       GridlineStyleLeft  Transparente
+tom:
+
+GridlineStyleRig   Transparente                       GridlineStyleTop   Transparente
+GridlineThemeC     1                                  GridlineTint:      100
+olorIndex:
+
+GridlineWidthBo    1                                  GridlineWidthLef   1
+ttom:
+
+GridlineWidthRi    1                                  GridlineWidthTo    1
+Height:            690                                HelpContextId:     0
+
+HorizontalAncho    Izquierda                          HoverColor:        15189940
+HoverForeColor:    4210752                            HoverForeShade     100
+
+HoverForeThem      0                                  HoverForeTint:     75
+eColorIndex:
+
+HoverShade:        100                                HoverThemeCol      4
+                                                      orIndex:
+HoverTint:         40                                 Layout:            0
+
+LayoutID:          0                                  Left:              2040
+LeftPadding:       30                                 Name:              cmd_NuevoPedido
+
+OldBorderStyle:    1                                  OnClick:           [Macro incrustada]
+
+OnClickEmMacr      Version =196611
+                   ColumnsShown =0
+                   Begin
+                       Action ="OpenForm"
+                       Argument ="PEDIDOS"
+                       Argument ="0"
+                       Argument =""
+                       Argument =""
+                       Argument ="0"
+                       Argument ="3"
+                   End
+                   Begin
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                      Página: 17
+
+
+o:                     Comment ="_AXL:<?xml           Picture:           (ninguna)
+                   version=\"1.0\" encoding=\"UTF-
+                   16\"
+                   standalone=\"no\"?>\015\012<Us
+                   erI"
+                           "nterfaceMacro
+                   For=\"cmd_NuevoPedido\"
+                   Event=\"OnClick\"
+                   xmlns=\"http://schemas.m"
+
+                   "icrosoft.com/office/accessservic
+                   es/2009/11/application\"><State
+                   ments><Action Nam"
+
+                   "e=\"OpenForm\"><Argument
+                   Name=\"Fo"
+                   End
+                   Begin
+                       Comment
+                   ="_AXL:rmName\">PEDIDOS</A
+                   rgument><Argument
+                   Name=\"DataMode\">Add</Argu
+                   ment><Argum"
+                           "ent
+                   Name=\"WindowMode\">Dialog<
+                   /Argument></Action></Statemen
+                   ts></UserInterfaceMa"
+                           "cro>"
+                   End
+
+
+
+
+
+PictureCaptionA    0                                  PictureType:       0
+rrangement:
+
+PressedColor:      9917743                            PressedForeCol     4210752
+
+PressedForeSh      100                                PressedForeThe     0
+                                                      meColorIndex:
+PressedForeTint    75                                 PressedShade:      75
+
+PressedTheme       4                                  PressedTint:       100
+ColorIndex:
+
+QuickStyle:        0                                  QuickStyleMas      0
+ReadingOrder:      Contexto                           RightPadding:      30
+
+RowEnd:            0                                  RowStart:          0
+Section:           1                                  Shadow:            0
+
+Shape:             1                                  SoftEdges:         0
+TabIndex:          1                                  TabStop:           Verdadero
+
+TextFontCharSe     0                                  ThemeFontInde      1
+
+Top:               907                                TopPadding:        30
+Transparent:       Falso                              UseTheme:          Verdadero
+
+VerticalAnchor:    Superior                           Visible:           Verdadero
+Width:             1755
+
+
+Botón de comando: Comando17
+Alignment:         2                                  AutoRepeat:        Falso
+
+BackColor:         14461583                           BackShade:         100
+BackStyle:         Normal                             BackThemeColo      4
+                                                      rIndex:
+
+BackTint:          60
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                      Página: 18
+
+
+                                                      Bevel:             0
+BorderColor:       14461583                           BorderLineStyle    Sólido
+
+BorderShade:       100                                BorderStyle:       0
+BorderThemeCo      4                                  BorderTint:        60
+lorIndex:
+
+BorderWidth:       Trazo fino                         BottomPadding:     30
+
+Cancel:            Falso                              Caption:           Todo el Material Recibido
+ColumnEnd:         0                                  ColumnStart:       0
+
+ControlType:       104                                CursorOnHover:     0
+Default:           Falso                              DisplayWhen:       Siempre
+
+Enabled:           Verdadero                          EventProcPrefix    Comando17
+FontBold:          No                                 FontItalic:        Falso
+
+FontName:          Calibri                            FontSize:          11
+
+FontUnderline:     Falso                              FontWeight:        Normal
+ForeColor:         4210752                            ForeShade:         100
+
+ForeThemeColor     0                                  ForeTint:          75
+Index:
+Glow:              0                                  Gradient:          12
+
+GridlineColor:     10921638                           GridlineShade:     65
+GridlineStyleBot   Transparente                       GridlineStyleLeft  Transparente
+tom:
+
+GridlineStyleRig   Transparente                       GridlineStyleTop   Transparente
+
+GridlineThemeC     1                                  GridlineTint:      100
+olorIndex:
+
+GridlineWidthBo    1                                  GridlineWidthLef   1
+ttom:
+GridlineWidthRi    1                                  GridlineWidthTo    1
+
+Height:            464                                HelpContextId:     0
+HorizontalAncho    Izquierda                          HoverColor:        15189940
+
+HoverForeColor:    4210752                            HoverForeShade     100
+HoverForeThem      0                                  HoverForeTint:     75
+eColorIndex:
+
+HoverShade:        100                                HoverThemeCol      4
+                                                      orIndex:
+
+HoverTint:         40                                 Layout:            0
+
+LayoutID:          0                                  Left:              12804
+LeftPadding:       30                                 Name:              Comando17
+
+OldBorderStyle:    1                                  OnClick:           [Event Procedure]
+Picture:           (ninguna)                          PictureCaptionA    0
+                                                      rrangement:
+
+PictureType:       0                                  PressedColor:      9917743
+
+PressedForeCol     4210752                            PressedForeSh      100
+PressedForeThe     0                                  PressedForeTint    75
+meColorIndex:
+
+PressedShade:      75                                 PressedTheme       4
+                                                      ColorIndex:
+
+PressedTint:       100                                QuickStyle:        0
+QuickStyleMas      0                                  ReadingOrder:      Contexto
+
+RightPadding:      30                                 RowEnd:            0
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                      Página: 19
+
+
+RowStart:          0                                  Section:           1
+Shadow:            0                                  Shape:             1
+
+SoftEdges:         0                                  TabIndex:          7
+TabStop:           Verdadero                          TextFontCharSe     0
+
+ThemeFontInde      1                                  Top:               733
+TopPadding:        30                                 Transparent:       Falso
+
+UseTheme:          Verdadero                          VerticalAnchor:    Superior
+
+Visible:           Verdadero                          Width:             2601
+
+Botón de comando: Comando18
+Alignment:         2                                  AutoRepeat:        Falso
+
+BackColor:         10856415                           BackShade:         100
+
+BackStyle:         Normal                             BackThemeColo      -1
+                                                      rIndex:
+BackTint:          100                                Bevel:             0
+
+BorderColor:       14461583                           BorderLineStyle    Sólido
+BorderShade:       100                                BorderStyle:       0
+
+BorderThemeCo      4                                  BorderTint:        60
+lorIndex:
+
+BorderWidth:       Trazo fino                         BottomPadding:     30
+Cancel:            Falso                              Caption:           Quitar Filtros
+
+ColumnEnd:         0                                  ColumnStart:       0
+ControlType:       104                                CursorOnHover:     0
+
+Default:           Falso                              DisplayWhen:       Siempre
+
+Enabled:           Verdadero                          EventProcPrefix    Comando18
+FontBold:          No                                 FontItalic:        Falso
+
+FontName:          Calibri                            FontSize:          11
+FontUnderline:     Falso                              FontWeight:        Normal
+
+ForeColor:         4210752                            ForeShade:         100
+ForeThemeColor     0                                  ForeTint:          75
+Index:
+
+Glow:              0                                  Gradient:          0
+
+GridlineColor:     10921638                           GridlineShade:     65
+GridlineStyleBot   Transparente                       GridlineStyleLeft  Transparente
+tom:
+
+GridlineStyleRig   Transparente                       GridlineStyleTop   Transparente
+GridlineThemeC     1                                  GridlineTint:      100
+olorIndex:
+
+GridlineWidthBo    1                                  GridlineWidthLef   1
+ttom:
+
+GridlineWidthRi    1                                  GridlineWidthTo    1
+Height:            464                                HelpContextId:     0
+
+HorizontalAncho    Izquierda                          HoverColor:        15189940
+
+HoverForeColor:    4210752                            HoverForeShade     100
+HoverForeThem      0                                  HoverForeTint:     75
+eColorIndex:
+
+HoverShade:        100                                HoverThemeCol      4
+                                                      orIndex:
+
+HoverTint:         40                                 Layout:            0
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                      Página: 20
+
+
+LayoutID:          0                                  Left:              12804
+LeftPadding:       30                                 Name:              Comando18
+
+OldBorderStyle:    1                                  OnClick:           [Event Procedure]
+Picture:           (ninguna)                          PictureCaptionA    0
+                                                      rrangement:
+
+PictureType:       0                                  PressedColor:      9917743
+
+PressedForeCol     4210752                            PressedForeSh      100
+PressedForeThe     0                                  PressedForeTint    75
+meColorIndex:
+
+PressedShade:      75                                 PressedTheme       4
+                                                      ColorIndex:
+
+PressedTint:       100                                QuickStyle:        0
+QuickStyleMas      0                                  ReadingOrder:      Contexto
+
+RightPadding:      30                                 RowEnd:            0
+RowStart:          0                                  Section:           1
+
+Shadow:            0                                  Shape:             1
+SoftEdges:         0                                  TabIndex:          8
+
+TabStop:           Verdadero                          TextFontCharSe     0
+
+ThemeFontInde      1                                  Top:               1303
+TopPadding:        30                                 Transparent:       Falso
+
+UseTheme:          Verdadero                          VerticalAnchor:    Superior
+Visible:           Verdadero                          Width:             2602
+
+
+Rectángulo: Cuadro10
+BackColor:         -2147483611                        BackShade:         100
+
+BackStyle:         Normal                             BackThemeColo      -1
+                                                      rIndex:
+BackTint:          100                                BorderColor:       10921638
+
+BorderLineStyle    Sólido                             BorderShade:       65
+
+BorderStyle:       0                                  BorderThemeCo      1
+                                                      lorIndex:
+BorderTint:        100                                BorderWidth:       1
+
+BottomPadding:     30                                 ColumnEnd:         0
+ColumnStart:       0                                  ControlType:       101
+
+DisplayWhen:       Siempre                            EventProcPrefix    Cuadro10
+
+GridlineColor:     10921638                           GridlineShade:     65
+GridlineStyleBot   Transparente                       GridlineStyleLeft  Transparente
+tom:
+
+GridlineStyleRig   Transparente                       GridlineStyleTop   Transparente
+GridlineThemeC     1                                  GridlineTint:      100
+olorIndex:
+
+GridlineWidthBo    1                                  GridlineWidthLef   1
+ttom:
+
+GridlineWidthRi    1                                  GridlineWidthTo    1
+Height:            1826                               HorizontalAncho    Izquierda
+
+Layout:            0                                  LayoutID:          0
+
+Left:              9637                               LeftPadding:       30
+Name:              Cuadro10                           OldBorderStyle:    1
+
+RightPadding:      30                                 RowEnd:            0
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                      Página: 21
+
+
+RowStart:          0                                  Section:           1
+SpecialEffect:     Con relieve                        Top:               56
+
+TopPadding:        30                                 VerticalAnchor:    Superior
+Visible:           Verdadero                          Width:             14606
+
+
+Rectángulo: Cuadro9
+BackColor:         -2147483613                        BackShade:         100
+
+BackStyle:         Normal                             BackThemeColo      -1
+                                                      rIndex:
+
+BackTint:          100                                BorderColor:       10921638
+BorderLineStyle    Sólido                             BorderShade:       65
+
+BorderStyle:       0                                  BorderThemeCo      1
+                                                      lorIndex:
+BorderTint:        100                                BorderWidth:       1
+
+BottomPadding:     30                                 ColumnEnd:         0
+
+ColumnStart:       0                                  ControlType:       101
+DisplayWhen:       Siempre                            EventProcPrefix    Cuadro9
+
+GridlineColor:     10921638                           GridlineShade:     65
+GridlineStyleBot   Transparente                       GridlineStyleLeft  Transparente
+tom:
+
+GridlineStyleRig   Transparente                       GridlineStyleTop   Transparente
+GridlineThemeC     1                                  GridlineTint:      100
+olorIndex:
+
+GridlineWidthBo    1                                  GridlineWidthLef   1
+ttom:
+
+GridlineWidthRi    1                                  GridlineWidthTo    1
+
+Height:            9808                               HorizontalAncho    Izquierda
+Layout:            0                                  LayoutID:          0
+
+Left:              0                                  LeftPadding:       30
+Name:              Cuadro9                            OldBorderStyle:    1
+
+RightPadding:      30                                 RowEnd:            0
+RowStart:          0                                  Section:           0
+
+SpecialEffect:     Con relieve                        Top:               0
+TopPadding:        30                                 VerticalAnchor:    Superior
+
+Visible:           Verdadero                          Width:             24192
+
+Etiqueta: Etiqueta1
+
+BackColor:         16777215                           BackShade:         100
+BackStyle:         Transparente                       BackThemeColo      1
+                                                      rIndex:
+
+BackTint:          100                                BorderColor:       8355711
+
+BorderLineStyle    Sólido                             BorderShade:       100
+BorderStyle:       Transparente                       BorderThemeCo      0
+                                                      lorIndex:
+
+BorderTint:        50                                 BorderWidth:       Trazo fino
+
+BottomMargin:      0                                  BottomPadding:     30
+Caption:           CONTROL DE PEDIDOS PARA            ColumnEnd:         0
+
+ColumnStart:       0                                  ControlType:       100
+DisplayWhen:       Siempre                            EventProcPrefix    Etiqueta1
+
+FontBold:          Sí
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                      Página: 22
+
+
+                                                      FontItalic:        Verdadero
+FontName:          Calibri                            FontSize:          28
+
+FontUnderline:     Falso                              FontWeight:        Negrita
+ForeColor:         0                                  ForeShade:         100
+
+ForeThemeColor     0                                  ForeTint:          100
+Index:
+
+GridlineColor:     10921638                           GridlineShade:     65
+GridlineStyleBot   Transparente                       GridlineStyleLeft  Transparente
+tom:
+
+GridlineStyleRig   Transparente                       GridlineStyleTop   Transparente
+GridlineThemeC     1                                  GridlineTint:      100
+olorIndex:
+
+GridlineWidthBo    1                                  GridlineWidthLef   1
+ttom:
+
+GridlineWidthRi    1                                  GridlineWidthTo    1
+
+Height:            735                                HelpContextId:     0
+HorizontalAncho    Izquierda                          Layout:            0
+
+LayoutID:          0                                  Left:              283
+LeftMargin:        0                                  LeftPadding:       30
+
+LineSpacing:       0                                  Name:              Etiqueta1
+NumeralShapes      Sistema                            OldBorderStyle:    0
+
+ReadingOrder:      Contexto                           RightMargin:       0
+RightPadding:      30                                 RowEnd:            0
+
+RowStart:          0                                  Section:           1
+
+SpecialEffect:     Sin relieve                        TextAlign:         General
+TextFontCharSe     0                                  ThemeFontInde      1
+
+Top:               56                                 TopMargin:         0
+TopPadding:        30                                 Vertical:          Falso
+
+VerticalAnchor:    Superior                           Visible:           Verdadero
+Width:             9105
+
+
+Subformulario/Subinforme: SubformPedidos
+BorderColor:       10921638                           BorderLineStyle    Sólido
+
+BorderShade:       65                                 BorderStyle:       0
+BorderThemeCo      1                                  BorderTint:        100
+lorIndex:
+
+BorderWidth:       Trazo fino                         BottomPadding:     30
+
+CanGrow:           Verdadero                          CanShrink:         Falso
+ColumnEnd:         0                                  ColumnStart:       0
+
+ControlType:       112                                DisplayWhen:       Siempre
+Enabled:           Verdadero                          EventProcPrefix    SubformPedidos
+
+FilterOnEmptyM     Verdadero                          GridlineColor:     10921638
+aster:
+
+GridlineShade:     65                                 GridlineStyleBot   Transparente
+                                                      tom:
+GridlineStyleLeft  Transparente                       GridlineStyleRig   Transparente
+
+GridlineStyleTop   Transparente                       GridlineThemeC     1
+                                                      olorIndex:
+
+GridlineTint:      100                                GridlineWidthBo    1
+                                                      ttom:
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                      Página: 23
+
+
+                                                      GridlineWidthLef   1
+GridlineWidthRi    1                                  GridlineWidthTo    1
+
+Height:            9645                               HorizontalAncho    Izquierda
+Layout:            0                                  LayoutID:          0
+
+Left:              56                                 LeftPadding:       30
+Locked:            Falso                              Name:              SubformPedidos
+
+OldBorderStyle:    1                                  RightPadding:      30
+
+RowEnd:            0                                  RowStart:          0
+Section:           0                                  ShowPageHead       Verdadero
+                                                      erAndPageFoot
+                                                      er:
+SourceObject:      Subformulario Pedidos Consulta     SpecialEffect:     Sin relieve
+TabIndex:          0                                  TabStop:           Verdadero
+
+Top:               56                                 TopPadding:        30
+
+VerticalAnchor:    Superior                           Visible:           Verdadero
+Width:             24075
+
+
+
+
+Código
+
+            1  VERSION 1.0 CLASS
+
+            2  BEGIN
+            3    MultiUse = -1  'True
+
+            4  END
+
+            5  Attribute VB_Name = "Form_ControlPedidosFabricar"
+            6  Attribute VB_GlobalNameSpace = False
+
+            7  Attribute VB_Creatable = True
+            8  Attribute VB_PredeclaredId = True
+
+            9  Attribute VB_Exposed = False
+
+           10  Option Compare Database
+           11
+
+           12  Private Sub Comando17_Click()
+
+           13      Dim Filtro1 As String, Filtro2 As String
+           14      Me.SubformPedidos.SourceObject = "Subformulario Pedidos MatOK Consulta"
+
+           15      Filtro1 = "Estado <> 6"
+           16      Filtro2 = "MaterialOK <> -1"
+
+           17  '   Me.Filter = Filtro1 & " AND " & Filtro2
+
+           18  '   Me.SubformPedidos.Form.Filter = Filtro1 & " AND " & Filtro2
+           19      Me.SubformPedidos.Form.Filter = "Id_EstadoPedido <> 6 AND MaterialOK = 0"
+
+           20  '    AND MaterialOK = 0"
+
+           21      Me.SubformPedidos.Form.FilterOn = True
+           22
+
+           23  End Sub
+           24
+
+           25  Private Sub Comando18_Click()
+
+           26      Me.SubformPedidos.SourceObject = "Subformulario Pedidos Consulta"
+           27      DoCmd.ShowAllRecords
+
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       martes, 27 de mayo de 2025
+ Formulario: ControlPedidosFabricar                                                                      Página: 24
+
+
+           28  End Sub
+
+
+
+
+
+
+
+
+
+
+
+Permisos de usuario
+
+          admin                     Eliminar; Leer permisos; Establecer permisos; Cambiar propietario,
+                                    Leer definición; Modificar definición; Ejecutar
+
+
+
+
+Permisos de grupo
+
+          Admins                    Eliminar; Leer permisos; Establecer permisos; Cambiar propietario,
+                                    Leer definición; Modificar definición; Ejecutar
+          Users                     Eliminar; Leer permisos; Establecer permisos; Cambiar propietario,
+                                    Leer definición; Modificar definición; Ejecutar
+

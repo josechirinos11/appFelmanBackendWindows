@@ -1,0 +1,147 @@
+;***********************************************************************************************
+;*******************PROCESOS VINCULADOS AL PERFIL TRAVE Y POSTE*****************************
+;*********************************************************************************************** 
+                   
+  
+;------------------------------------------------------- 
+;DESAGUES  - SOLO APLICABLES A PERFIL EN HORIZONTAL ES DECIR TRAVESA                   
+;------------------------------------------------------- 
+;Desagues exteriores en apertura interior para travesas bajo hojas    
+PR.DES_EXT_TRAVE=1; {Activacion de los procesos}                                                 
+PR.DES_EXT_TRAVE="DesExtTrave"; {Desagüe frontal a aplicar cuando no lleva condensacion}                      
+PR.DES_EXT_TRAVE_MIN=150; {Si entre desgues queda menos de esta medida se mete un solo desagüe}   
+PR.DES_EXT_TRAVE_MAX=780; {Mete los desagues necesarios para que entre ellos quede menos de esta medida}     
+PR.DES_EXT_TRAVE_DES=214; {Eje de posicion del desagüe desde la esquina} 
+                          
+;Desagues exteriores en apertura exterior para travesas bajo hojas
+PR.DES_EXT_TRAVEEXT=1; {Activacion de los procesos} 
+PR.DES_EXT_TRAVEEXT="DesExtTraveExt"; {Desagüe frontal a aplicar cuando no lleva condensacion}                                                                                                                                                                                           
+PR.DES_EXT_TRAVEEXT_MIN=150; {Si entre desgues queda menos de esta medida se mete un solo desagüe}                  
+PR.DES_EXT_TRAVEEXT_MAX=780; {Mete los desagues necesarios para que entre ellos quede menos de esta medida}    
+PR.DES_EXT_TRAVEEXT_DES=214; {Eje de posicion del desagüe desde la esquina}  
+
+                         
+;En las travesas bajo cristal es probable que se use un desague distino o que incluso no se haga desague
+;A continuacion los desagües exteriores lanzados desde el cristal contra el travesa                                                                                      
+;Desagues exteriores en apertura interior para travesas bajo vidrio    
+PR.DES_EXT_TRAVECR=1; {Activacion de los procesos}                                                 
+PR.DES_EXT_TRAVECR="DesExtTrave"; {Desagüe frontal a aplicar cuando no lleva condensacion}                      
+PR.DES_EXT_TRAVECR_MIN=150; {Si entre desgues queda menos de esta medida se mete un solo desagüe}   
+PR.DES_EXT_TRAVECR_MAX=780; {Mete los desagues necesarios para que entre ellos quede menos de esta medida}     
+PR.DES_EXT_TRAVECR_DES=214; {Eje de posicion del desagüe desde la esquina} 
+                           
+;Desagues exteriores en apertura exterior para para travesas bajo vidrio 
+PR.DES_EXT_TRAVECREXT=1; {Activacion de los procesos} 
+PR.DES_EXT_TRAVECREXT="DesExtTraveCrExt"; {Desagüe frontal a aplicar cuando no lleva condensacion}                                                                                                                                                                                           
+PR.DES_EXT_TRAVECREXT_MIN=150; {Si entre desgues queda menos de esta medida se mete un solo desagüe}                  
+PR.DES_EXT_TRAVECREXT_MAX=780; {Mete los desagues necesarios para que entre ellos quede menos de esta medida}    
+PR.DES_EXT_TRAVECREXT_DES=214; {Eje de posicion del desagüe desde la esquina} 
+                                                                             
+;Los procesos de desague son generados desde el hueco interior de hojas o vidrio - chapa o panel.
+;por ello se suma a ese punto el ancho del perfil al que une, para guardar alineación con los desagues
+;generados desde al marco. Asi si es una ventana con un fijo superior o inferior los desagues iran alineados
+;NOTA - PARA ESTRUCTURAS COMPLEJAS NO ES POSIBLE LA ALINEACION YA QUE LOS DESAGUE DEL MARCO SE CALCULAN
+;SEGUN LA MEDIDA DE LA PIEZA Y LOS DE LAS TRAVESAS A PARTIR DEL PERFIL ADJUNTO
+                        
+;-------------------------------------------------------                                                                                                                                                       
+;Desagues interiores en apertura interior                                                 
+PR.DES_INT_TRAVE=1; {Activacion de los procesos}                                                            
+PR.DES_INT_TRAVE="DesIntTrave";  {Desagüe interior}     
+PR.DES_INT_TRAVE_MIN=150;  {Si entre desgues queda menos de esta medida se mete un solo desagüe}                                                                                                                                                                             
+PR.DES_INT_TRAVE_MAX=520; {Mete los desagues necesarios para que entre ellos quede menos de esta medida}     
+PR.DES_INT_TRAVE_DES=35+30;   {Eje de posicion del desagüe desde hueco} 
+
+;Desagues interiores en apertura exterior                                                 
+PR.DES_INT_TRAVEEXT=1; {Activacion de los procesos}                                                            
+PR.DES_INT_TRAVEEXT="DesIntTraveExt";  {Desagüe interior}                                            
+PR.DES_INT_TRAVEEXT_MIN=150;  {Si entre desgues queda menos de esta medida se mete un solo desagüe}                                                                                                                                                                          
+PR.DES_INT_TRAVEEXT_MAX=520; {Mete los desagues necesarios para que entre ellos quede menos de esta medida}     
+PR.DES_INT_TRAVEEXT_DES=35+30;   {Eje de posicion del desagüe desde hueco} 
+  
+ 
+;-------------------------------------------------------------------------------            
+;VENTILACIONES EN TRAVESA 
+;La ventilacion solo se aplica al tavesaño por su parte inferior 
+;------------------------------------------------------------------------------- 
+
+;Ventilaciones exteriores en apertura interior
+PR.VEN_EXT_TRAVE=1; {Activacion de los procesos} 
+PR.VEN_EXT_TRAVE="VenExtTrave"; {Ventilación}                                                   
+PR.VEN_EXT_TRAVE_MIN=150; {Si entre ventilaciones queda menos de esta medida se mete una sola}
+PR.VEN_EXT_TRAVE_MAX=9999; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida}     
+PR.VEN_EXT_TRAVE_DES=214; {Eje de posicion de la ventilacion desde la esquina}
+                                                               
+;Ventilaciones exteriores marco en apertura exterior               
+PR.VEN_EXT_TRAVEEXT=1; {Activacion de los procesos}  
+PR.VEN_EXT_TRAVEEXT="VenExtTraveExt"; {Ventilación}                                                  
+PR.VEN_EXT_TRAVEEXT_MIN=150; {Si entre ventilaciones queda menos de esta medida se mete una sola}
+PR.VEN_EXT_TRAVEEXT_MAX=780; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida}         
+PR.VEN_EXT_TRAVEEXT_DES=214 {Eje de posicion de la ventilacion desde la esquina}  
+                          
+;Ventilaciones exteriores en apertura interior     
+PR.VEN_EXT_TRAVECR=1; {Activacion de los procesos} 
+PR.VEN_EXT_TRAVECR="VenExtTraveCrExt"; {Ventilación}                                                   
+PR.VEN_EXT_TRAVECR_MIN=150; {Si entre ventilaciones queda menos de esta medida se mete una sola}
+PR.VEN_EXT_TRAVECR_MAX=780; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida}     
+PR.VEN_EXT_TRAVECR_DES=214; {Eje de posicion de la ventilacion desde la esquina}  
+                        
+;Ventilaciones exteriores travesaño en apertura exterior               
+PR.VEN_EXT_TRAVECREXT=0; {Activacion de los procesos}  
+PR.VEN_EXT_TRAVECREXT="VenExtTraveCrExt"; {Ventilación}                                                  
+PR.VEN_EXT_TRAVECREXT_MIN=250; {Si entre ventilaciones queda menos de esta medida se mete una sola}
+PR.VEN_EXT_TRAVECREXT_MAX=780; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida}         
+PR.VEN_EXT_TRAVECREXT_DES=214; {Eje de posicion de la ventilacion desde la esquina}    
+                                                                                     
+                                                                                                                 
+-------------------------------------------------------                                                                                                                                                                                                       
+;Ventilaciones interiores en apertura interior 
+PR.VEN_INT_TRAVE=1; {Activacion de los procesos}                                                                           
+PR.VEN_INT_TRAVE="VenIntTrave"; {Ventilación}                  
+PR.VEN_INT_TRAVE_MIN=150; {Si entre ventilaciones queda menos de esta medida se mete una sola} 
+PR.VEN_INT_TRAVE_MAX=520; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medid
+PR.VEN_INT_TRAVE_DES=35+30;  {Eje de posicion de la ventilacion desde la esquina  luz interior hueco }    
+
+;Ventilaciones interiores en apertura exterior                                                                                                             
+PR.VEN_INT_TRAVEEXT=1; {Activacion y seleccion de tipo en lateral. 1 Simétrica como ventilación en uperior o 2 una única ventilacion en X desde arriba}                                        
+PR.VEN_INT_TRAVEEXT="VenIntTraveExt";  {Ventilación}                 
+PR.VEN_INT_TRAVEEXT_MIN=150; {Si entre ventilaciones queda menos de esta medida se mete una sola}  
+PR.VEN_INT_TRAVEEXT_MAX=520; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida}  
+PR.VEN_INT_TRAVEEXT_DES=35+30;  {Eje de posicion de la ventilacion desde la esquina  luz interior hueco }  
+          
+;-------------------------------------------------------------------------------            
+;VENTILACIONES EN POSTE 
+;El los postes se aplican por dereca e izquierda, siendo dos procesos separados
+;uno por cara, aunque el mecanizado final sea igual.
+;-------------------------------------------------------------------------------           
+PR.VENLAT_EXT_POSTE=1; {Activacion y seleccion de tipo en lateral. 1 Simétrica como ventilación en uperior o 2 una única ventilacion en X desde arriba} 
+PR.VENLAT_EXT_POSTE_IZQ=""; {Ventilación}  
+PR.VENLAT_EXT_POSTE_DER=""; {Ventilación}                                                  
+PR.VENLAT_EXT_POSTE_MIN=150; {Si entre ventilaciones queda menos de esta medida se mete una sola solo para el caso 1}
+PR.VENLAT_EXT_POSTE_MAX=780; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida solo para el caso 1}     
+PR.VENLAT_EXT_POSTE_DES=214; {Eje de posicion de la ventilacion desde la esquina, tanto en el caso 1 como 2}   
+                     
+;Ventilaciones laterales exteriores en apertura exterior                                                    
+PR.VENLAT_EXT_POSTEEXT=1;{Activacion y seleccion de tipo en lateral. 1 Simétrica como ventilación en uperior o 2 una única ventilacion en X desde arriba} 
+PR.VENLAT_EXT_POSTEEXT_IZQ=""; {Ventilación}   
+PR.VENLAT_EXT_POSTEEXT_DER=""; {Ventilación}                                                  
+PR.VENLAT_EXT_POSTEEXT_MIN=150; {Si entre ventilaciones queda menos de esta medida se mete una sola solo para el caso 1}
+PR.VENLAT_EXT_POSTEEXT_MAX=780; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida solo para el caso 1}     
+PR.VENLAT_EXT_POSTEEXT_DES=214; {Eje de posicion de la ventilacion desde la esquina, tanto en el caso 1 como 2}                                                                                                                  
+-------------------------------------------------------                                                                                                                                                                                                       
+
+;Ventilaciones laterales interiores en apertura interior 
+PR.VENLAT_INT_POSTE=1; {Activacion y seleccion de tipo en lateral. 1 Simétrica como ventilación en uperior o 2 una única ventilacion en X desde arriba}   
+PR.VENLAT_INT_POSTE_IZQ="VenIntPoste_CI"; {Ventilación}     
+PR.VENLAT_INT_POSTE_DER="VenIntPoste_CE"; {Ventilación}                
+PR.VENLAT_INT_POSTE_MIN=150; {Si entre ventilaciones queda menos de esta medida se mete una sola} 
+PR.VENLAT_INT_POSTE_MAX=9999; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medid
+PR.VENLAT_INT_POSTE_DES=35+30;  {Eje de posicion de la ventilacion desde la esquina  luz interior hueco } 
+
+
+;Ventilaciones laterales interiores en apertura exterior 
+PR.VENLAT_INT_POSTEEXT=1; {Activacion de los procesos}      
+PR.VENLAT_INT_POSTEEXT_IZQ="VenIntPosteExt_CI";  {Ventilación}   
+PR.VENLAT_INT_POSTEEXT_DER="VenIntPosteExt_CE";  {Ventilación}                
+PR.VENLAT_INT_POSTEEXT_MIN=150; {Si entre ventilaciones queda menos de esta medida se mete una sola}  
+PR.VENLAT_INT_POSTEEXT_MAX=9999; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida}  
+PR.VENLAT_INT_POSTEEXT_DES=35+30;  {Eje de posicion de la ventilacion desde la esquina  luz interior hueco }

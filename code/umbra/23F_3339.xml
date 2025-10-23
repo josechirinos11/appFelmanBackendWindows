@@ -1,0 +1,884 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<JOB>
+	<JINF>
+		<NUM>1</NUM>
+	</JINF>
+	<VER>
+		<MJ>1</MJ>
+		<MN>0</MN>
+	</VER>
+	<HEAD>
+		<PDAT>
+			<CODE>PI65002</CODE>
+			<DESC>Perfil union 2 hojas</DESC>
+			<DICL>ANODPL</DICL>
+			<DOCL>ANODPL</DOCL>
+			<BQTY>1</BQTY>
+		</PDAT>
+		<PDAT>
+			<CODE>PI65008</CODE>
+			<DESC>Marco guia superior</DESC>
+			<DICL>ANODPL</DICL>
+			<DOCL>ANODPL</DOCL>
+			<BQTY>1</BQTY>
+		</PDAT>
+		<PDAT>
+			<CODE>PI65013</CODE>
+			<DESC>Guia empotrada UMBRA</DESC>
+			<DICL>ANODPL</DICL>
+			<DOCL>ANODPL</DOCL>
+			<BQTY>1</BQTY>
+		</PDAT>
+		<PDAT>
+			<CODE>65017</CODE>
+			<DESC>Hoja ajunquillada de puerta</DESC>
+			<DICL>ANODPL</DICL>
+			<DOCL>ANODPL</DOCL>
+			<BQTY>5</BQTY>
+		</PDAT>
+	</HEAD>
+	<BODY>
+		<BAR>
+			<BRAN>FELMAN</BRAN>
+			<SYST></SYST>
+			<CODE>PI65002</CODE>
+			<DICL>ANODPL</DICL>
+			<DOCL></DOCL>
+			<LEN>6500</LEN>
+			<LENR>4565</LENR>
+			<H>22</H>
+			<W>19.5</W>
+			<MLT>1</MLT>
+			<CUT>
+				<ANGL>90</ANGL>
+				<ANGR>90</ANGR>
+				<IL>1925.0 </IL>
+				<OL>1925.0 </OL>
+				<BCOD>3339000100000100260001</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>0</IDQUADRO>
+				<DESC>Aux de Inversor 1</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>1</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Perfil union 2 hojas - Aux de Inversor 1</LBL>
+				<LBL></LBL>
+				<LBL></LBL>
+				<LBL>0</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.1</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+		</BAR>
+		<BAR>
+			<BRAN>FELMAN</BRAN>
+			<SYST></SYST>
+			<CODE>PI65008</CODE>
+			<DICL>ANODPL</DICL>
+			<DOCL></DOCL>
+			<LEN>6500</LEN>
+			<LENR>3530</LENR>
+			<H>50</H>
+			<W>47</W>
+			<MLT>1</MLT>
+			<CUT>
+				<ANGL>90</ANGL>
+				<ANGR>90</ANGR>
+				<IL>2960.0 </IL>
+				<OL>2960.0 </OL>
+				<BCOD>3339000100070100010002</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>7</IDQUADRO>
+				<DESC>marco</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>1</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Marco guia superior - marco</LBL>
+				<LBL></LBL>
+				<LBL>SUPERIOR</LBL>
+				<LBL>7</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.1</LBL>
+				<MACHININGS>
+						<Comentario1>FijacionMT_ Fijación 1: TalFijaMarco01</Comentario1>
+						<MACHINING WCODE="#0" VAR1="2.5" ANGLE="0" VERPERC="0"  FACE="4" OFFSET="8" OFFSETY="40.5" OFFSETZ="0" CODUTENSILE="13" 
+							SGRAVANZ="100" FINAVANZ="100" ORDINEESECSRG="99999" ORDINEESECFIN="99999" CILINLAV="2" OFFSETFIN="0" CODUTEFIN="-1" CILLAVFIN="0">
+							<PIANI>
+								<PIANO START="0" THICK="40" AVANZAMENTO="100"/>
+							</PIANI>
+						</MACHINING>
+						<Comentario1>FijacionMT_ Fijación 1: TalFijaMarco02</Comentario1>
+						<MACHINING WCODE="#0" VAR1="2.5" ANGLE="0" VERPERC="0"  FACE="4" OFFSET="8" OFFSETY="13.5" OFFSETZ="0" CODUTENSILE="13" 
+							SGRAVANZ="100" FINAVANZ="100" ORDINEESECSRG="99999" ORDINEESECFIN="99999" CILINLAV="2" OFFSETFIN="0" CODUTEFIN="-1" CILLAVFIN="0">
+							<PIANI>
+								<PIANO START="0" THICK="40" AVANZAMENTO="100"/>
+							</PIANI>
+						</MACHINING>
+						<Comentario1>FijacionMT_ Fijación 2: TalFijaMarco01</Comentario1>
+						<MACHINING WCODE="#0" VAR1="2.5" ANGLE="0" VERPERC="0"  FACE="4" OFFSET="26" OFFSETY="40.5" OFFSETZ="0" CODUTENSILE="13" 
+							SGRAVANZ="100" FINAVANZ="100" ORDINEESECSRG="99999" ORDINEESECFIN="99999" CILINLAV="2" OFFSETFIN="0" CODUTEFIN="-1" CILLAVFIN="0">
+							<PIANI>
+								<PIANO START="0" THICK="40" AVANZAMENTO="100"/>
+							</PIANI>
+						</MACHINING>
+						<Comentario1>FijacionMT_ Fijación 2: TalFijaMarco02</Comentario1>
+						<MACHINING WCODE="#0" VAR1="2.5" ANGLE="0" VERPERC="0"  FACE="4" OFFSET="26" OFFSETY="13.5" OFFSETZ="0" CODUTENSILE="13" 
+							SGRAVANZ="100" FINAVANZ="100" ORDINEESECSRG="99999" ORDINEESECFIN="99999" CILINLAV="2" OFFSETFIN="0" CODUTEFIN="-1" CILLAVFIN="0">
+							<PIANI>
+								<PIANO START="0" THICK="40" AVANZAMENTO="100"/>
+							</PIANI>
+						</MACHINING>
+						<Comentario1>FijacionMT_ Fijación 1: TalFijaMarco01</Comentario1>
+						<MACHINING WCODE="#0" VAR1="2.5" ANGLE="0" VERPERC="0"  FACE="4" OFFSET="2934" OFFSETY="40.5" OFFSETZ="0" CODUTENSILE="13" 
+							SGRAVANZ="100" FINAVANZ="100" ORDINEESECSRG="99999" ORDINEESECFIN="99999" CILINLAV="2" OFFSETFIN="0" CODUTEFIN="-1" CILLAVFIN="0">
+							<PIANI>
+								<PIANO START="0" THICK="40" AVANZAMENTO="100"/>
+							</PIANI>
+						</MACHINING>
+						<Comentario1>FijacionMT_ Fijación 1: TalFijaMarco02</Comentario1>
+						<MACHINING WCODE="#0" VAR1="2.5" ANGLE="0" VERPERC="0"  FACE="4" OFFSET="2934" OFFSETY="13.5" OFFSETZ="0" CODUTENSILE="13" 
+							SGRAVANZ="100" FINAVANZ="100" ORDINEESECSRG="99999" ORDINEESECFIN="99999" CILINLAV="2" OFFSETFIN="0" CODUTEFIN="-1" CILLAVFIN="0">
+							<PIANI>
+								<PIANO START="0" THICK="40" AVANZAMENTO="100"/>
+							</PIANI>
+						</MACHINING>
+						<Comentario1>FijacionMT_ Fijación 2: TalFijaMarco01</Comentario1>
+						<MACHINING WCODE="#0" VAR1="2.5" ANGLE="0" VERPERC="0"  FACE="4" OFFSET="2952" OFFSETY="40.5" OFFSETZ="0" CODUTENSILE="13" 
+							SGRAVANZ="100" FINAVANZ="100" ORDINEESECSRG="99999" ORDINEESECFIN="99999" CILINLAV="2" OFFSETFIN="0" CODUTEFIN="-1" CILLAVFIN="0">
+							<PIANI>
+								<PIANO START="0" THICK="40" AVANZAMENTO="100"/>
+							</PIANI>
+						</MACHINING>
+						<Comentario1>FijacionMT_ Fijación 2: TalFijaMarco02</Comentario1>
+						<MACHINING WCODE="#0" VAR1="2.5" ANGLE="0" VERPERC="0"  FACE="4" OFFSET="2952" OFFSETY="13.5" OFFSETZ="0" CODUTENSILE="13" 
+							SGRAVANZ="100" FINAVANZ="100" ORDINEESECSRG="99999" ORDINEESECFIN="99999" CILINLAV="2" OFFSETFIN="0" CODUTEFIN="-1" CILLAVFIN="0">
+							<PIANI>
+								<PIANO START="0" THICK="40" AVANZAMENTO="100"/>
+							</PIANI>
+						</MACHINING>
+				</MACHININGS>
+			</CUT>
+		</BAR>
+		<BAR>
+			<BRAN>FELMAN</BRAN>
+			<SYST></SYST>
+			<CODE>PI65013</CODE>
+			<DICL>ANODPL</DICL>
+			<DOCL></DOCL>
+			<LEN>6500</LEN>
+			<LENR>3530</LENR>
+			<H>20</H>
+			<W>50</W>
+			<MLT>1</MLT>
+			<CUT>
+				<ANGL>90</ANGL>
+				<ANGR>90</ANGR>
+				<IL>2960.0 </IL>
+				<OL>2960.0 </OL>
+				<BCOD>3339000100070100030003</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>7</IDQUADRO>
+				<DESC>marco</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>1</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Guia empotrada UMBRA - marco</LBL>
+				<LBL></LBL>
+				<LBL>INFERIOR</LBL>
+				<LBL>7</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.1</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+		</BAR>
+		<BAR>
+			<BRAN>FELMAN</BRAN>
+			<SYST></SYST>
+			<CODE>65017</CODE>
+			<DICL>ANODPL</DICL>
+			<DOCL></DOCL>
+			<LEN>6500</LEN>
+			<LENR>202</LENR>
+			<H>70.6</H>
+			<W>40</W>
+			<MLT>1</MLT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>570.6  </IL>
+				<OL>429.4  </OL>
+				<BCOD>3339000100380100160004</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>38</IDQUADRO>
+				<DESC>hoja 1 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>1</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Hoja ajunquillada de puerta - hoja 1 de 5</LBL>
+				<LBL></LBL>
+				<LBL>SUPERIOR</LBL>
+				<LBL>38</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.1</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>570.6  </IL>
+				<OL>429.4  </OL>
+				<BCOD>3339000100380100220005</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>38</IDQUADRO>
+				<DESC>hoja 1 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>1</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Hoja ajunquillada de puerta - hoja 1 de 5</LBL>
+				<LBL></LBL>
+				<LBL>INFERIOR</LBL>
+				<LBL>38</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.1</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>570.6  </IL>
+				<OL>429.4  </OL>
+				<BCOD>3339000100390100280006</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>39</IDQUADRO>
+				<DESC>hoja 2 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>2</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Hoja ajunquillada de puerta - hoja 2 de 5</LBL>
+				<LBL></LBL>
+				<LBL>SUPERIOR</LBL>
+				<LBL>39</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.2</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>570.6  </IL>
+				<OL>429.4  </OL>
+				<BCOD>3339000100390100340007</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>39</IDQUADRO>
+				<DESC>hoja 2 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>2</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Hoja ajunquillada de puerta - hoja 2 de 5</LBL>
+				<LBL></LBL>
+				<LBL>INFERIOR</LBL>
+				<LBL>39</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.2</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>1962.0 </IL>
+				<OL>1820.8 </OL>
+				<BCOD>3339000100380100130008</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>38</IDQUADRO>
+				<DESC>hoja 1 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>1</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Hoja ajunquillada de puerta - hoja 1 de 5</LBL>
+				<LBL></LBL>
+				<LBL>IZQUIERDO</LBL>
+				<LBL>38</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.1</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>1962.0 </IL>
+				<OL>1820.8 </OL>
+				<BCOD>3339000100380100190009</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>38</IDQUADRO>
+				<DESC>hoja 1 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>1</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Hoja ajunquillada de puerta - hoja 1 de 5</LBL>
+				<LBL></LBL>
+				<LBL>DERECHO</LBL>
+				<LBL>38</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.1</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+		</BAR>
+		<BAR>
+			<BRAN>FELMAN</BRAN>
+			<SYST></SYST>
+			<CODE>65017</CODE>
+			<DICL>ANODPL</DICL>
+			<DOCL></DOCL>
+			<LEN>6500</LEN>
+			<LENR>202</LENR>
+			<H>70.6</H>
+			<W>40</W>
+			<MLT>1</MLT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>570.6  </IL>
+				<OL>429.4  </OL>
+				<BCOD>3339000100400100400010</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>40</IDQUADRO>
+				<DESC>hoja 3 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>3</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Hoja ajunquillada de puerta - hoja 3 de 5</LBL>
+				<LBL></LBL>
+				<LBL>SUPERIOR</LBL>
+				<LBL>40</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.3</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>570.6  </IL>
+				<OL>429.4  </OL>
+				<BCOD>3339000100400100460011</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>40</IDQUADRO>
+				<DESC>hoja 3 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>3</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Hoja ajunquillada de puerta - hoja 3 de 5</LBL>
+				<LBL></LBL>
+				<LBL>INFERIOR</LBL>
+				<LBL>40</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.3</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>570.6  </IL>
+				<OL>429.4  </OL>
+				<BCOD>3339000100410100520012</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>41</IDQUADRO>
+				<DESC>hoja 4 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>4</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Hoja ajunquillada de puerta - hoja 4 de 5</LBL>
+				<LBL></LBL>
+				<LBL>SUPERIOR</LBL>
+				<LBL>41</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.4</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>570.6  </IL>
+				<OL>429.4  </OL>
+				<BCOD>3339000100410100580013</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>41</IDQUADRO>
+				<DESC>hoja 4 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>4</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Hoja ajunquillada de puerta - hoja 4 de 5</LBL>
+				<LBL></LBL>
+				<LBL>INFERIOR</LBL>
+				<LBL>41</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.4</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>1962.0 </IL>
+				<OL>1820.8 </OL>
+				<BCOD>3339000100390100310014</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>39</IDQUADRO>
+				<DESC>hoja 2 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>2</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Hoja ajunquillada de puerta - hoja 2 de 5</LBL>
+				<LBL></LBL>
+				<LBL>DERECHO</LBL>
+				<LBL>39</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.2</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>1962.0 </IL>
+				<OL>1820.8 </OL>
+				<BCOD>3339000100390100370015</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>39</IDQUADRO>
+				<DESC>hoja 2 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>2</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Hoja ajunquillada de puerta - hoja 2 de 5</LBL>
+				<LBL></LBL>
+				<LBL>IZQUIERDO</LBL>
+				<LBL>39</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.2</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+		</BAR>
+		<BAR>
+			<BRAN>FELMAN</BRAN>
+			<SYST></SYST>
+			<CODE>65017</CODE>
+			<DICL>ANODPL</DICL>
+			<DOCL></DOCL>
+			<LEN>6500</LEN>
+			<LENR>569</LENR>
+			<H>70.6</H>
+			<W>40</W>
+			<MLT>1</MLT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>1962.0 </IL>
+				<OL>1820.8 </OL>
+				<BCOD>3339000100400100430016</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>40</IDQUADRO>
+				<DESC>hoja 3 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>3</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Hoja ajunquillada de puerta - hoja 3 de 5</LBL>
+				<LBL></LBL>
+				<LBL>DERECHO</LBL>
+				<LBL>40</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.3</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>1962.0 </IL>
+				<OL>1820.8 </OL>
+				<BCOD>3339000100400100490017</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>40</IDQUADRO>
+				<DESC>hoja 3 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>3</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Hoja ajunquillada de puerta - hoja 3 de 5</LBL>
+				<LBL></LBL>
+				<LBL>IZQUIERDO</LBL>
+				<LBL>40</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.3</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>1962.0 </IL>
+				<OL>1820.8 </OL>
+				<BCOD>3339000100410100550018</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>41</IDQUADRO>
+				<DESC>hoja 4 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>4</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Hoja ajunquillada de puerta - hoja 4 de 5</LBL>
+				<LBL></LBL>
+				<LBL>DERECHO</LBL>
+				<LBL>41</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.4</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+		</BAR>
+		<BAR>
+			<BRAN>FELMAN</BRAN>
+			<SYST></SYST>
+			<CODE>65017</CODE>
+			<DICL>ANODPL</DICL>
+			<DOCL></DOCL>
+			<LEN>6500</LEN>
+			<LENR>569</LENR>
+			<H>70.6</H>
+			<W>40</W>
+			<MLT>1</MLT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>1962.0 </IL>
+				<OL>1820.8 </OL>
+				<BCOD>3339000100410100610019</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>41</IDQUADRO>
+				<DESC>hoja 4 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>4</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Hoja ajunquillada de puerta - hoja 4 de 5</LBL>
+				<LBL></LBL>
+				<LBL>IZQUIERDO</LBL>
+				<LBL>41</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.4</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>1962.0 </IL>
+				<OL>1820.8 </OL>
+				<BCOD>3339000100420100670020</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>42</IDQUADRO>
+				<DESC>hoja 5 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>5</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Hoja ajunquillada de puerta - hoja 5 de 5</LBL>
+				<LBL></LBL>
+				<LBL>DERECHO</LBL>
+				<LBL>42</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.5</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>1962.0 </IL>
+				<OL>1820.8 </OL>
+				<BCOD>3339000100420100730021</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>42</IDQUADRO>
+				<DESC>hoja 5 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>5</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Hoja ajunquillada de puerta - hoja 5 de 5</LBL>
+				<LBL></LBL>
+				<LBL>IZQUIERDO</LBL>
+				<LBL>42</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.5</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+		</BAR>
+		<BAR>
+			<BRAN>FELMAN</BRAN>
+			<SYST></SYST>
+			<CODE>65017</CODE>
+			<DICL>ANODPL</DICL>
+			<DOCL></DOCL>
+			<LEN>6500</LEN>
+			<LENR>5328</LENR>
+			<H>70.6</H>
+			<W>40</W>
+			<MLT>1</MLT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>570.6  </IL>
+				<OL>429.4  </OL>
+				<BCOD>3339000100420100640022</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>42</IDQUADRO>
+				<DESC>hoja 5 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>5</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Hoja ajunquillada de puerta - hoja 5 de 5</LBL>
+				<LBL></LBL>
+				<LBL>SUPERIOR</LBL>
+				<LBL>42</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.5</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>570.6  </IL>
+				<OL>429.4  </OL>
+				<BCOD>3339000100420100700023</BCOD>
+				<ORCD>23F_3339</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>HERMAHER CARPINTERIA METALICA  S L </CSNA>
+				<CSNU>CLI00824</CSNU>
+				<IDQUADRO>42</IDQUADRO>
+				<DESC>hoja 5 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>5</SLOT>
+				<LBL>2025_40_646 (23FBA/3339)</LBL>
+				<LBL>HERMAHER CARPINTERIA METALICA  S L  / </LBL>
+				<LBL>Hoja ajunquillada de puerta - hoja 5 de 5</LBL>
+				<LBL></LBL>
+				<LBL>INFERIOR</LBL>
+				<LBL>42</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.5</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+		</BAR>
+	</BODY>
+</JOB>

@@ -1,0 +1,2446 @@
+[GENERAL] 
+NUMSERIE=611;
+SECCIONBASE=61;
+NUMPROV=1;
+PREHER="HGU";
+PREHERAUX="";
+PERAU=60;
+PERMON=100;
+INCLAMA_L=30;
+RET=4,75;
+DTL=15;
+DTH=15;
+BAT=6,1;
+SOLD=0;
+KITSOLDCOD="";
+LUZ=6;
+ANULA_RP=0;
+TIPINV=0;
+DINS=27,5;
+DINI=27,5;
+DINIP=0;
+CRI=23;
+OPC_VIDDOBLE=0;
+SELEC_GAS=0;
+OPC_VIDDOBLE_MULT=0;
+OPC_VIDDOBLE_SIG=0;
+ICONO_CONTRA=0;
+ICONO_CONTRA_SEPLAT=0;
+ICONO_CONTRA_SEPHOR=0;
+SELEC_REMAUNICO=0;
+SELECTOR_CERSEGU=0;
+KIT_FALSA_MANI="";
+VERKIT_AIREAHOJA=0;
+VERKIT_AIREAMARCO=0;
+SELECTOR_VHOJAS=0;
+MOSTRAR_VIH=0;
+PASOLIBRE=0;
+PASOLIBRE_TEXTO="0";
+SELECTOR_BOMB=0;
+SELECTOR_BM=1;
+SELECTOR_PANCON=0;
+PROTER_SELINST=1;
+INCVIDCOLOCAR="COSTEDIRECTO";
+LAM_DTL=0;
+LAM_DTH=0;
+VARJUN=1;
+VARHUECOJUN=0;
+CALZOV="";
+NUMCALZOV=2;
+CALZOV_AUX="";
+NUMCALZOV_AUX=2;
+PUL_AVISO=0;
+PUL_AVISO_TEXTO="RECOMENDABLE PULIR LOS CANTOS DEL VIDRIO";
+PUL_LONCRI=0;
+PUL_PESO=0;
+PUL_M2=0;
+AUM_GOMI=50;
+AUM_GOME=50;
+KITESPHUECO="";
+CHA=25;
+PAN=25;
+SI_KITFIJO=0;
+GRCRIMIN=0;
+GRCRIMAX=100;
+GRCHAMIN=0;
+GRCHAMAX=100;
+GRPANMIN=0;
+GRPANMAX=100;
+INC_CURVAS=500;
+REC_CURVAS=0;
+REC_CORTES=0;
+ACTIVAR_EMPOTRE=1;
+ACT_AVISOS_HOJAP_MARCO=1;
+FONDOC=25;
+FONDOB=3040;
+CANAL=16;
+FONDOAG=0;
+TIPMANV=20;
+LAMA_MAN=0;
+LAMA_MANSEG=15;
+ANUL_GOMS=0;
+ANUL_GOCI=0;
+ANUL_GOMI=0;
+RESTOGM=50;
+RESTOGH=50;
+RESTOGC=50;
+ANGVUL="";
+TDM1="ITEAC44035";
+TDM2="ITEAC44035";
+LON_TDM3=2000;
+LON_TDM4=3000;
+LON_TDM5=4000;
+EJ="ESQJUN";
+SEC_ESQ=19;
+PRE_F="KITPREMA";
+PRE_G="";
+RECO_ALTO=200;
+RECO_ANCHO=40;
+RECO_CINTA=18;
+RECO_SEP=20;
+RECO_TIPO=1;
+VER_GRADOSMANU=1;
+GMDES=0;
+PC=1;
+OCULTAR_SIN=0;
+MB_POS_DOBLEREC=0;
+MB_VER_UNAGUIA=0;
+MB_OCULTAR_ACAB_CAJON=0;
+MB_OCULTAR_ACAB_RESTO=1;
+MB_OCULTAR_AUMENTOS=1;
+MB_OCULTAR_AIREADOR=1;
+MB_OCULTAR_MOSQUITERA=0;
+MB_OCULTAR_COMPLEMENTOS=1;
+KITUNIONCD="";
+KITUNIONCS="";
+SISCOLESP=0;
+AUTODESC_RECER=0;
+AUTODESC_RECER1="SIN COLOCAR";
+AUTODESC_RECER2="COLOCADO EN TALLER";
+AUTODESC_RECER3="COLOCADO EN OBRA";
+AUTODESC_RECERCH=0;
+AUTODESC_RECERCH1="SIN COLOCAR";
+AUTODESC_RECERCH2="COLOCADO EN TALLER";
+AUTODESC_RECERCH3="COLOCADO EN OBRA";
+AUTODESC_JAMBA=0;
+AUTODESC_JAMBA1="SIN COLOCAR";
+AUTODESC_JAMBA2="COLOCADO EN TALLER";
+AUTODESC_JAMBA3="COLOCADO EN OBRA";
+CODCOSTE1="";
+UNDCOSTE1=0;
+CODCOSTE2="";
+UNDCOSTE2=0;
+CODCOSTE3="";
+UNDCOSTE3=0;
+T_RECERCADO=20;
+T_PREMARCO=20;
+T_PREMARCO_PA=5;
+T_GUIA_OBRA=35;
+T_TAPAGUIA=5;
+T_CAJON_OBRA=25;
+T_LAMA_OBRA=25;
+T_GUIA_REG=35;
+T_TAPAREG=5;
+T_CAJON_REG=25;
+T_LAMA_REG=25;
+T_JUN_RECTOS=10;
+T_JUN_REDGRAPA=20;
+T_JUN_REDCLIP=20;
+T_UNION=15;
+T_GOM_VIDRIO_INT=1;
+T_GOM_VIDRIO_EXT=1;
+T_CAJON_MONOB=35;
+T_GUIA_MONOB=5;
+T_GUIAC_MONOB=5;
+T_JAMBA=35;
+T_CONDE=5;
+T_ALARG=3;
+T_VIDRIO_M2=1;
+T_VIDRIO=15;
+T_VIDRIO_M2MIN=0,5;
+T_VIDRIO_PORPESO=0;
+T_VIDRIO_PESO1=30;
+T_VIDRIO_TPESO1=15;
+T_VIDRIO_PESO2=50;
+T_VIDRIO_TPESO2=15;
+T_CHAPA=20;
+T_CHAPA_M2=0;
+T_CHAPA_M2MIN=1;
+T_PANEL=60;
+T_BARROT=5;
+T_MARCO_VENTANA=40;
+T_MARCO_BALCONERA=40;
+T_MARCO_PUERTA=30;
+T_UMBRAL=20;
+T_HOJA_VENTANA=45;
+T_HOJA_BALCONERA=45;
+T_HOJA_PUERTA=45;
+T_HOJA_ZOCALO=40;
+T_MARCO_PROYECTANTE=25;
+T_HOJA_PROYECTANTE=50;
+T_HOJA_PIVOTANTE=100;
+T_INVERSOR=15;
+T_POSTE=15;
+T_ZOCALO=15;
+T_HER_PUERTA_1H=50;
+T_HER_PUERTA_2H=70;
+T_HER_PUERTA_3H=100;
+T_HER_PUERTA_4H=120;
+T_HER_POSTIGO_1P=80;
+T_HER_POSTIGO_1B=80;
+T_HER_PRACTICABLE_1H=40;
+T_HER_PRACTICABLE_2H=60;
+T_HER_PRACTICABLE_3H=70;
+T_HER_PRACTICABLE_4H=80;
+T_HER_OSCILO_1H=60;
+T_HER_OSCILO_2H=70;
+T_HER_BALCON_1H=50;
+T_HER_BALCON_2H=70;
+T_HER_BALCON_3H=100;
+T_HER_BALCON_4H=120;
+T_HER_SERVICIO_1H=50;
+T_HER_SERVICIO_2H=70;
+T_HER_SERVICIO_3H=100;
+T_HER_SERVICIO_4H=120;
+T_HER_ABATIBLE_SUP=40;
+T_HER_ABATIBLE_INF=40;
+T_HER_PROYE_COMPAS=50;
+T_HER_PROYE_BIELA=50;
+T_HER_PIVOTANTE=40;
+T_HER_PARALELA=120;
+T_ACTIVAR_GOMAS=0;
+T_GOM_HOJA=2;
+T_GOM_MARCO=2;
+T_GOM_CENTRAL=3;
+T_CAJON_MONOF=10;
+T_TEJIDO_MONOF=10;
+T_DISTANCIADOR_MONOF=10;
+EJECRIMURO=0;
+ACT_SECACRI_MAX=0;
+TT_ACTIVAR=0;
+TT_MAR_VEN_COR=10;
+TT_MAR_VEN_MEC=15;
+TT_MAR_VEN_ARM=15;
+TT_MAR_BAL_COR=10;
+TT_MAR_BAL_MEC=15;
+TT_MAR_BAL_ARM=15;
+TT_MAR_PUE_COR=10;
+TT_MAR_PUE_MEC=15;
+TT_MAR_PUE_ARM=15;
+TT_UMBRAL_COR=3;
+TT_UMBRAL_MEC=0;
+TT_UMBRAL_ARM=17;
+TT_HOJ_VEN_COR=10;
+TT_HOJ_VEN_MEC=18;
+TT_HOJ_VEN_ARM=18;
+TT_HOJ_BAL_COR=10;
+TT_HOJ_BAL_MEC=18;
+TT_HOJ_BAL_ARM=18;
+TT_HOJ_PUE_COR=10;
+TT_HOJ_PUE_MEC=18;
+TT_HOJ_PUE_ARM=18;
+TT_HOJ_ZOC_COR=10;
+TT_HOJ_ZOC_MEC=15;
+TT_HOJ_ZOC_ARM=15;
+TT_MAR_PRO_COR=10;
+TT_MAR_PRO_MEC=15;
+TT_MAR_PRO_ARM=15;
+TT_HOJ_PRO_COR=10;
+TT_HOJ_PRO_MEC=15;
+TT_HOJ_PRO_ARM=15;
+TT_HOJ_PIV_COR=10;
+TT_HOJ_PIV_MEC=15;
+TT_HOJ_PIV_ARM=15;
+TT_INVERSOR_COR=5;
+TT_INVERSOR_MEC=5;
+TT_INVERSOR_ARM=5;
+TT_HER_PUE_1H_COR=0;
+TT_HER_PUE_1H_MEC=25;
+TT_HER_PUE_1H_ARM=25;
+TT_HER_PUE_2H_COR=0;
+TT_HER_PUE_2H_MEC=35;
+TT_HER_PUE_2H_ARM=35;
+TT_HER_PUE_3H_COR=0;
+TT_HER_PUE_3H_MEC=50;
+TT_HER_PUE_3H_ARM=50;
+TT_HER_PUE_4H_COR=0;
+TT_HER_PUE_4H_MEC=60;
+TT_HER_PUE_4H_ARM=60;
+TT_HER_BAL_1H_COR=0;
+TT_HER_BAL_1H_MEC=25;
+TT_HER_BAL_1H_ARM=25;
+TT_HER_BAL_2H_COR=0;
+TT_HER_BAL_2H_MEC=35;
+TT_HER_BAL_2H_ARM=35;
+TT_HER_BAL_3H_COR=0;
+TT_HER_BAL_3H_MEC=50;
+TT_HER_BAL_3H_ARM=50;
+TT_HER_BAL_4H_COR=0;
+TT_HER_BAL_4H_MEC=60;
+TT_HER_BAL_4H_ARM=60;
+TT_HER_SER_1H_COR=0;
+TT_HER_SER_1H_MEC=25;
+TT_HER_SER_1H_ARM=25;
+TT_HER_SER_2H_COR=0;
+TT_HER_SER_2H_MEC=35;
+TT_HER_SER_2H_ARM=35;
+TT_HER_SER_3H_COR=0;
+TT_HER_SER_3H_MEC=50;
+TT_HER_SER_3H_ARM=50;
+TT_HER_SER_4H_COR=0;
+TT_HER_SER_4H_MEC=60;
+TT_HER_SER_4H_ARM=60;
+TT_HER_POS_1P_COR=0;
+TT_HER_POS_1P_MEC=40;
+TT_HER_POS_1P_ARM=40;
+TT_HER_POS_1B_COR=0;
+TT_HER_POS_1B_MEC=40;
+TT_HER_POS_1B_ARM=40;
+TT_HER_PRA_1H_COR=0;
+TT_HER_PRA_1H_MEC=20;
+TT_HER_PRA_1H_ARM=20;
+TT_HER_PRA_2H_COR=0;
+TT_HER_PRA_2H_MEC=30;
+TT_HER_PRA_2H_ARM=30;
+TT_HER_PRA_3H_COR=0;
+TT_HER_PRA_3H_MEC=35;
+TT_HER_PRA_3H_ARM=35;
+TT_HER_PRA_4H_COR=0;
+TT_HER_PRA_4H_MEC=40;
+TT_HER_PRA_4H_ARM=40;
+TT_HER_OSC_1H_COR=0;
+TT_HER_OSC_1H_MEC=30;
+TT_HER_OSC_1H_ARM=30;
+TT_HER_OSC_2H_COR=0;
+TT_HER_OSC_2H_MEC=35;
+TT_HER_OSC_2H_ARM=35;
+TT_HER_ABA_SUP_COR=0;
+TT_HER_ABA_SUP_MEC=20;
+TT_HER_ABA_SUP_ARM=20;
+TT_HER_ABA_INF_COR=0;
+TT_HER_ABA_INF_MEC=20;
+TT_HER_ABA_INF_ARM=20;
+TT_HER_PRO_COMPAS_COR=0;
+TT_HER_PRO_COMPAS_MEC=20;
+TT_HER_PRO_COMPAS_ARM=20;
+TT_HER_PRO_BIELA_COR=0;
+TT_HER_PRO_BIELA_MEC=25;
+TT_HER_PRO_BIELA_ARM=25;
+TT_HER_PIV_COR=0;
+TT_HER_PIV_MEC=25;
+TT_HER_PIV_ARM=25;
+TT_HER_PAR_COR=0;
+TT_HER_PAR_MEC=60;
+TT_HER_PAR_ARM=60;
+TT_POSTE_COR=5;
+TT_POSTE_MEC=5;
+TT_POSTE_ARM=5;
+TT_ZOCALO_COR=5;
+TT_ZOCALO_MEC=5;
+TT_ZOCALO_ARM=5;
+TT_UNION_COR=5;
+TT_UNION_MEC=0;
+TT_UNION_ARM=10;
+TT_CAJON_MONOB_COR=5;
+TT_CAJON_MONOB_MEC=0;
+TT_CAJON_MONOB_ARM=10;
+TT_GUIA_MONOB_COR=2;
+TT_GUIA_MONOB_MEC=0;
+TT_GUIA_MONOB_ARM=5;
+TT_GUIA_MONOBC_COR=2;
+TT_GUIA_MONOBC_MEC=0;
+TT_GUIA_MONOBC_ARM=5;
+TT_JAMBA_COR=5;
+TT_JAMBA_MEC=0;
+TT_JAMBA_ARM=20;
+TT_CONDE_COR=2;
+TT_CONDE_MEC=0;
+TT_CONDE_ARM=5;
+TT_ALARG_COR=2;
+TT_ALARG_MEC=0;
+TT_ALARG_ARM=5;
+TT_GUIA_OBRA_COR=2;
+TT_GUIA_OBRA_MEC=0;
+TT_GUIA_OBRA_ARM=5;
+TT_TAPAGUIA_OBRA_COR=2;
+TT_TAPAGUIA_OBRA_MEC=0;
+TT_TAPAGUIA_OBRA_ARM=5;
+TT_RECERCADO_COR=10;
+TT_RECERCADO_MEC=0;
+TT_RECERCADO_ARM=10;
+TT_PREMARCO_COR=10;
+TT_PREMARCO_MEC=0;
+TT_PREMARCO_ARM=10;
+TT_PREMARCO_PA_COR=10;
+TT_PREMARCO_PA_MEC=0;
+TT_PREMARCO_PA_ARM=10;
+TT_JUN_RECTOS_COR=5;
+TT_JUN_RECTOS_MEC=0;
+TT_JUN_RECTOS_ARM=5;
+TT_JUN_REDGRAPA_COR=10;
+TT_JUN_REDGRAPA_MEC=0;
+TT_JUN_REDGRAPA_ARM=10;
+TT_JUN_REDCLIP_COR=10;
+TT_JUN_REDCLIP_MEC=0;
+TT_JUN_REDCLIP_ARM=10;
+TT_CHAPA_COR=15;
+TT_CHAPA_MEC=0;
+TT_CHAPA_ARM=5;
+TT_PANEL_COR=25;
+TT_PANEL_MEC=0;
+TT_PANEL_ARM=5;
+MODELOMANILLAVENTANA=0;
+MODELOMANILLAPUERTA=0;
+MODELOBISAGRAVENTANA=0;
+MODELOBISAGRAPUERTA=0;
+ALTO_BISAGRA_VEN_SUP=80;
+ANCHO_BISAGRA_VEN_SUP=16;
+ALTO_BISAGRA_VEN_INF=80;
+ANCHO_BISAGRA_VEN_INF=16;
+ALTO_BISAGRA_PUE_SUP=100;
+ANCHO_BISAGRA_PUE_SUP=30;
+ALTO_BISAGRA_PUE_INF=100;
+ANCHO_BISAGRA_PUE_INF=30;
+DIST_BISAGRA_INF_VEN=0;
+DIST_BISAGRA_SUP_VEN=0;
+DIST_BISAGRA_INF_PUE=150;
+DIST_BISAGRA_SUP_PUE=200;
+BISAGRA_VEN_CUA=0;
+BISAGRA_PUE_CUA=1;
+BISAGRA_PALA_VEN=0;
+BISAGRA_PALA_PUE=1;
+ANCHO_BISAGRA_PALA_VEN=40;
+ALTO_BISAGRA_PALA_VEN=30;
+ANCHO_BISAGRA_PALA_PUE=50;
+ALTO_BISAGRA_PALA_PUE=50;
+LIMITE1BISAGRA=350;
+LIMITE2BISAGRAS=1500;
+LIMITE3BISAGRAS=1900;
+LIMITE4BISAGRAS=2500;
+LIMITE1BISAGRAP=350;
+LIMITE2BISAGRASP=1500;
+LIMITE3BISAGRASP=2400;
+LIMITE4BISAGRASP=3000;
+BISPUEDISTRIB=1;
+BISESCLAVAPUE=250;
+VER_SELBIS=0;
+VER_SELBISDISTRIB=0;
+VER_SELBISFORZARNUM=0;
+MOTOR_SEP_LAT=20;
+MOTOR_SEP_VER=1000;
+MOTOR_SEP_LAT_PUL=20;
+TORNO_SEP_LAT=20;
+TORNO_SEP_VER=1000;
+CARDAN_SEP_LAT=10;
+CARDAN_SEP_VER=10;
+CARDAN_LON_TOTAL=1800;
+CARDAN_LON_MANI=100;
+DIST_MANILLA_VEN=20;
+DIST_MANILLA_PUE=20;
+DIF3H=54;
+DIF4H=54;
+UCA=0;
+GRAVENCOR=0;
+GRAPUECOR=1;
+HOLGMH=3,4;
+EJEH=4,2;
+GIRO3D_X=0;
+GIRO3D_Y=0;
+GIRO3D_Z=0;
+;
+T.MARC=100;T.ZOCA=110;T.POST=150;T.TRAV=151;T.COND=700;T.DINT=725;
+T.HOJA=200;T.GUIA=750;T.JUNQ=1000;T.UNHO=1100;T.UNVE=1101;
+T.ESTV=1201;T.ESTH=1200;T.PREM=1300;
+LL=1;
+NHOJAS=0;
+GRUPO="VENTANAS"
+FIGURA="BASE"
+;Activacion txtcliente fijo
+INITERMINALES=0;
+;----------------SOLAPES -------------------
+TAR_JAMBA="JAMBA";
+TAR_T_JAMBA="JAMBA";
+TAR_TT_JAMBA_COR="JAMBA";
+TAR_TT_JAMBA_MEC="JAMBA";
+TAR_TT_JAMBA_ARM="JAMBA";
+;----------------ZOCALO EN MARCO -------------------
+TAR_ZOCALO="ZOCALO";
+TAR_T_ZOCALO="ZOCALO";
+TAR_TT_ZOCALO_COR="ZOCALO";
+TAR_TT_ZOCALO_MEC="ZOCALO";
+TAR_TT_ZOCALO_ARM="ZOCALO";
+;----------------POSTES Y TRAVESAÑOS -------------------
+TAR_POSTE="ZANCAS";
+TAR_T_POSTE="ZANCAS";
+TAR_TT_POSTE_COR="ZANCAS";
+TAR_TT_POSTE_MEC="ZANCAS";
+TAR_TT_POSTE_ARM="ZANCAS";
+dale
+TAR_TRAVE="ZANCAS";
+TAR_T_TRAVE="ZANCAS";
+TAR_TT_TRAVE_COR="ZANCAS";
+TAR_TT_TRAVE_MEC="ZANCAS";
+TAR_TT_TRAVE_ARM="ZANCAS";
+;----------------MONOBLOCK -------------------
+TAR_TPM="COMPACTOMB";
+TAR_T_CAJON_MONOB="COMPACTOMB";
+TAR_TT_CAJON_MONOB_COR="COMPACTOMB";
+TAR_TT_CAJON_MONOB_MEC="COMPACTOMB";
+TAR_TT_CAJON_MONOB_ARM="COMPACTOMB";
+TAR_MOSQ="COMPACTOMB";
+TAR_PASADORMB="COMPACTOMB";
+TAR_GDM="GUIASMB";
+TAR_GZM="GUIASMB";
+TAR_T_GUIA_MONOB="GUIASMB";
+TAR_TT_GUIA_MONOB_COR="GUIASMB";
+TAR_TT_GUIA_MONOB_MEC="GUIASMB";
+TAR_TT_GUIA_MONOB_ARM="GUIASMB";
+TAR_GCM="GUIASMB";
+TAR_T_GUIA_MONOBC="GUIASMB";
+TAR_TT_GUIA_MONOBC_COR="GUIASMB";
+TAR_TT_GUIA_MONOBC_MEC="GUIASMB";
+TAR_TT_GUIA_MONOBC_ARM="GUIASMB";
+TAR_CO="CONDENSACION";
+TAR_T_CONDE="CONDENSACION";
+TAR_TT_CONDE_COR="CONDENSACION";
+TAR_TT_CONDE_MEC="CONDENSACION";
+TAR_TT_CONDE_ARM="CONDENSACION";
+TAR_AL="ALARGADERA";
+TAR_T_ALARG="ALARGADERA";
+TAR_TT_ALARG_COR="ALARGADERA";
+TAR_TT_ALARG_MEC="ALARGADERA";
+TAR_TT_ALARG_ARM="ALARGADERA";
+TAR_COMB="COMPACTOMB";
+TAR_AIRMONOB="COMPACTOMB";
+;-----------MARCO VENTANA ----------------------
+TAR_MAR_VENT="MARCOS";
+TAR_MAR_VENT_TAPDES="MARCOS";
+TAR_T_MARCO_VENTANA="MARCOS";
+TAR_TT_MAR_VEN_COR="MARCOS";
+TAR_TT_MAR_VEN_MEC="MARCOS";
+TAR_TT_MAR_VEN_ARM="MARCOS";
+TAR_MARVENT_KITINST="MARCOS";
+TAR_MARVENT_KITSOLD="MARCOS";
+;-----------MARCO BALCONERA ----------------------
+TAR_MAR_BAL="MARCOS";
+TAR_MAR_BAL_TAPDES="MARCOS";
+TAR_T_MARCO_BALCONERA="MARCOS";
+TAR_TT_MAR_BAL_COR="MARCOS";
+TAR_TT_MAR_BAL_MEC="MARCOS";
+TAR_TT_MAR_BAL_ARM="MARCOS";
+TAR_MARBAL_KITINST="MARCOS";
+TAR_MARBAL_KITSOLD="MARCOS";
+;-----------MARCO PUERTA ----------------------
+TAR_MAR_PUE="MARCOS";
+TAR_T_MARCO_PUERTA="MARCOS";
+TAR_TT_MAR_PUE_COR="MARCOS";
+TAR_TT_MAR_PUE_MEC="MARCOS";
+TAR_TT_MAR_PUE_ARM="MARCOS";
+TAR_MARPUE_KITINST="MARCOS";
+TAR_MARPUE_KITSOLD="MARCOS";
+;--------- COMUN EN TODOS LOS MARCOS MARCOS ----------------------
+TAR_GOMABAT_MARCO="GOMABATMARCO";
+TAR_T_GOM_MARCO="GOMABATMARCO";
+TAR_GOMACEN_MARCO="GOMACENTRAL";
+TAR_T_GOM_CENTRAL="GOMACENTRAL";
+TAR_AIRMARCO="MARCOS";
+;---------HOJA PUERTA ---------------------------------------------
+TAR_HOJA_PUE_ACT="HOJA_ACT";
+TAR_T_HOJA_PUERTA_ACT="HOJA_ACT";
+TAR_TT_HOJ_PUE_COR_ACT="HOJA_ACT";
+TAR_TT_HOJ_PUE_MEC_ACT="HOJA_ACT";
+TAR_TT_HOJ_PUE_ARM_ACT="HOJA_ACT";
+TAR_HOJA_PUE_PAS="HOJA_PAS";
+TAR_T_HOJA_PUERTA_PAS="HOJA_PAS";
+TAR_TT_HOJ_PUE_COR_PAS="HOJA_PAS";
+TAR_TT_HOJ_PUE_MEC_PAS="HOJA_PAS";
+TAR_TT_HOJ_PUE_ARM_PAS="HOJA_PAS";
+TAR_HOJPUE_KITSOLD_ACT="HOJA_ACT";
+TAR_HOJPUE_KITSOLD_PAS="HOJA_PAS";
+;Para el zocalo en hoja
+TAR_HOJA_PUE_ACT_ZOC="HOJA_ACT";
+TAR_HOJA_PUE_PAS_ZOC="HOJA_PAS";
+; ------------- INVERSOR EN PUERTA------------------------
+TAR_INV_PUE="INVERSOR";
+TAR_T_INV_PUE="INVERSOR";
+TAR_TT_INV_PUE_COR="INVERSOR";
+TAR_TT_INV_PUE_MEC="INVERSOR";
+TAR_TT_INV_PUE_ARM="INVERSOR";
+TAR_T_GOM_BAT_INV_PUE="INVERSOR";
+TAR_T_GOM_CENTRAL_INV_PUE="INVERSOR";
+;----------HOJAS BALCONERA -------------------------------------------------------
+TAR_HOJA_BAL_ACT="HOJA_ACT";
+TAR_T_HOJA_BALCONERA_ACT="HOJA_ACT";
+TAR_TT_HOJ_BAL_COR_ACT="HOJA_ACT";
+TAR_TT_HOJ_BAL_MEC_ACT="HOJA_ACT";
+TAR_TT_HOJ_BAL_ARM_ACT="HOJA_ACT";
+TAR_HOJA_BAL_PAS="HOJA_PAS";
+TAR_T_HOJA_BALCONERA_PAS="HOJA_PAS";
+TAR_TT_HOJ_BAL_COR_PAS="HOJA_PAS";
+TAR_TT_HOJ_BAL_MEC_PAS="HOJA_PAS";
+TAR_TT_HOJ_BAL_ARM_PAS="HOJA_PAS";
+TAR_HOJBAL_KITSOLD_ACT="HOJA_ACT";
+TAR_HOJBAL_KITSOLD_PAS="HOJA_PAS";
+; ------------- INVERSOR EN BALCONERA------------------------
+TAR_INV_BAL="INVERSOR";
+TAR_T_INV_BAL="INVERSOR";
+TAR_TT_INV_BAL_COR="INVERSOR";
+TAR_TT_INV_BAL_MEC="INVERSOR";
+TAR_TT_INV_BAL_ARM="INVERSOR";
+TAR_T_GOM_BAT_INV_BAL="INVERSOR";
+TAR_T_GOM_CENTRAL_INV_BAL="INVERSOR";
+;--------- HOJAS VENTANA ----------------------------------------------------------
+TAR_HOJA_VENT_ACT="HOJA_ACT";
+TAR_T_HOJA_VENTANA_ACT="HOJA_ACT";
+TAR_TT_HOJ_VEN_COR_ACT="HOJA_ACT";
+TAR_TT_HOJ_VEN_MEC_ACT="HOJA_ACT";
+TAR_TT_HOJ_VEN_ARM_ACT="HOJA_ACT";
+TAR_HOJA_VENT_PAS="HOJA_PAS";
+TAR_T_HOJA_VENTANA_PAS="HOJA_PAS";
+TAR_TT_HOJ_VEN_COR_PAS="HOJA_PAS";
+TAR_TT_HOJ_VEN_MEC_PAS="HOJA_PAS";
+TAR_TT_HOJ_VEN_ARM_PAS="HOJA_PAS";
+TAR_HOJVENT_KITSOLD_ACT="HOJA_ACT";
+TAR_HOJVENT_KITSOLD_PAS="HOJA_PAS";
+; ------------- INVERSOR EN VENTANA------------------------
+TAR_INV_VENT="INVERSOR";
+TAR_T_INV_VEN="INVERSOR";
+TAR_TT_INV_VEN_COR="INVERSOR";
+TAR_TT_INV_VEN_MEC="INVERSOR";
+TAR_TT_INV_VEN_ARM="INVERSOR";
+TAR_T_GOM_BAT_INV_VEN="INVERSOR";
+TAR_T_GOM_CENTRAL_INV_VEN="INVERSOR";
+;------- COMUNES EN HOJAS --------------------------------------------------------------------
+TAR_T_GOM_HOJA_ACT="HOJA_ACT";
+TAR_T_GOM_HOJA_PAS="HOJA_PAS";
+TAR_VIH_ACT="HOJA_ACT";
+TAR_VIH_PAS="HOJA_PAS";
+;--------HERRAJE -------------------------------------------------------------------------------------
+;Articulos de Herraje....
+TAR_HER_1VEN="HERRAJE";
+TAR_HER_1VEN_AUX="HERRAJE";
+TAR_HER_2VEN="HERRAJE";
+TAR_HER_2VEN_AUX="HERRAJE";
+TAR_HER_2BAL="HERRAJE";
+TAR_HER_2BAL_AUX="HERRAJE";
+TAR_HER_1BAL="HERRAJE";
+TAR_HER_1BAL_AUX="HERRAJE";
+TAR_HER_1PUE="HERRAJE";
+TAR_HER_1PUE_AUX="HERRAJE";
+TAR_HER_2PUE="HERRAJE";
+TAR_HER_2PUE_AUX="HERRAJE";
+;Articulos de Otros kits de herraje .... (vinculados al NUM rectangulo de la hoja activa)
+TAR_MANILLA_VEN="HOJA_ACT_HERRAJE";
+TAR_MANILLA_OSCPAR="HOJA_ACT_HERRAJE";
+TAR_MANILLA_PUE="HOJA_ACT_HERRAJE";
+TAR_CERRADURA="HOJA_ACT_HERRAJE";
+TAR_CERRADURA_AUX="HOJA_ACT_HERRAJE";
+TAR_TIR="HOJA_ACT_HERRAJE";
+TAR_RETENEDOR="HOJA_ACT_HERRAJE";
+;-----Asignacion de los tiempos a tareas 1 hoja
+TAR_T_HER_PRACTICABLE_1H="HERRAJE";
+TAR_TT_HER_PRA_1H_COR="HERRAJE";
+TAR_TT_HER_PRA_1H_MEC="HERRAJE";
+TAR_TT_HER_PRA_1H_ARM="HERRAJE";
+TAR_T_HER_OSCILO_1H="HERRAJE";
+TAR_TT_HER_OSC_1H_COR="HERRAJE";
+TAR_TT_HER_OSC_1H_MEC="HERRAJE";
+TAR_TT_HER_OSC_1H_ARM="HERRAJE";
+TAR_T_HER_ABATIBLE_SUP="HERRAJE";
+TAR_TT_HER_ABA_SUP_COR="HERRAJE";
+TAR_TT_HER_ABA_SUP_MEC="HERRAJE";
+TAR_TT_HER_ABA_SUP_ARM="HERRAJE";
+TAR_T_HER_ABATIBLE_INF="HERRAJE";
+TAR_TT_HER_ABA_INF_COR="HERRAJE";
+TAR_TT_HER_ABA_INF_MEC="HERRAJE";
+TAR_TT_HER_ABA_INF_ARM="HERRAJE";
+TAR_T_HER_BALCON_1H="HERRAJE";
+TAR_TT_HER_BAL_1H_COR="HERRAJE";
+TAR_TT_HER_BAL_1H_MEC="HERRAJE";
+TAR_TT_HER_BAL_1H_ARM="HERRAJE";
+TAR_T_HER_PUERTA_1H="HERRAJE";
+TAR_TT_HER_PUE_1H_COR="HERRAJE";
+TAR_TT_HER_PUE_1H_MEC="HERRAJE";
+TAR_TT_HER_PUE_1H_ARM="HERRAJE";
+TAR_T_HER_SERVICIO_1H="HERRAJE";
+TAR_TT_HER_SER_1H_COR="HERRAJE";
+TAR_TT_HER_SER_1H_MEC="HERRAJE";
+TAR_TT_HER_SER_1H_ARM="HERRAJE";
+TAR_T_HER_PARALELA="HERRAJE";
+TAR_TT_HER_PAR_COR="HERRAJE";
+TAR_TT_HER_PAR_MEC="HERRAJE";
+TAR_TT_HER_PAR_ARM="HERRAJE";
+;-----Asignacion de los tiempos a tareas 2 hojas
+TAR_T_HER_PRACTICABLE_2H="HERRAJE";
+TAR_TT_HER_PRA_2H_COR="HERRAJE";
+TAR_TT_HER_PRA_2H_MEC="HERRAJE";
+TAR_TT_HER_PRA_2H_ARM="HERRAJE";
+TAR_T_HER_OSCILO_2H="HERRAJE";
+TAR_TT_HER_OSC_2H_COR="HERRAJE";
+TAR_TT_HER_OSC_2H_MEC="HERRAJE";
+TAR_TT_HER_OSC_2H_ARM="HERRAJE";
+TAR_T_HER_PARALELA="HERRAJE";
+TAR_TT_HER_PAR_COR="HERRAJE";
+TAR_TT_HER_PAR_MEC="HERRAJE";
+TAR_TT_HER_PAR_ARM="HERRAJE";
+TAR_T_HER_BALCON_2H="HERRAJE";
+TAR_TT_HER_BAL_2H_COR="HERRAJE";
+TAR_TT_HER_BAL_2H_MEC="HERRAJE";
+TAR_TT_HER_BAL_2H_ARM="HERRAJE";
+TAR_T_HER_PUERTA_2H="HERRAJE";
+TAR_TT_HER_PUE_2H_COR="HERRAJE";
+TAR_TT_HER_PUE_2H_MEC="HERRAJE";
+TAR_TT_HER_PUE_2H_ARM="HERRAJE";
+TAR_T_HER_SERVICIO_2H="HERRAJE";
+TAR_TT_HER_SER_2H_COR="HERRAJE";
+TAR_TT_HER_SER_2H_MEC="HERRAJE";
+TAR_TT_HER_SER_2H_ARM="HERRAJE";
+TAR_T_HER_PARALELA_2H="HERRAJE";
+TAR_TT_HER_PAR_2H_COR="HERRAJE";
+TAR_TT_HER_PAR_2H_MEC="HERRAJE";
+TAR_TT_HER_PAR_2H_ARM="HERRAJE";
+;--------- ACRISTALAMIENTO ------------------------------------------------------------------
+TAR_VIDRIO="VIDRIOS";
+TAR_T_VIDRIO="VIDRIOS";
+TAR_GOMA_CRI_EXT="VIDRIOS";
+TAR_T_GOM_VIDRIO_EXT="VIDRIOS";
+TAR_GOMA_CRI_INT="VIDRIOS";
+TAR_T_GOM_VIDRIO_INT="VIDRIOS";
+TAR_JUNQUILLOS="VIDRIOS";
+TAR_T_JUN_RECTOS="VIDRIOS";
+TAR_TT_JUN_RECTOS_COR="VIDRIOS";
+TAR_TT_JUN_RECTOS_MEC="VIDRIOS";
+TAR_TT_JUN_RECTOS_ARM="VIDRIOS";
+TAR_T_JUN_REDGRAPA="VIDRIOS";
+TAR_TT_JUN_REDGRAPA_COR="VIDRIOS";
+TAR_TT_JUN_REDGRAPA_MEC="VIDRIOS";
+TAR_TT_JUN_REDGRAPA_ARM="VIDRIOS";
+TAR_T_JUN_REDCLIP="VIDRIOS";
+TAR_TT_JUN_REDCLIP_COR="VIDRIOS";
+TAR_TT_JUN_REDCLIP_MEC="VIDRIOS";
+TAR_TT_JUN_REDCLIP_ARM="VIDRIOS";
+;La contra esta vinculada al rectangulo donde va metida. Tiene el mismo Numero de rectangulo que su contenedor.
+TAR_CONTRA="CONTRAVIDRIO";
+TAR_KITESPHUECO_CRI="VIDRIOS";
+TAR_LAMINAVID="VIDRIOS";
+TAR_KITFIJO="VIDRIOS";
+;Este articulo se usa sobre todo en corredera. Es para adaptar el hueco de hoja a otro tamaño, el vidrio.
+;Por ejemplo adaptar la hoja de luna a doble cristal o la hoja para doble cristal a luna. Esto por deficiencias en la serie.
+TAR_ADAPTADOR_VID="VIDRIOS";
+;-------------------------------------------------------------------------------
+;-------------------CERRADEROS DE PUERTA POSTIGO -------------------------------
+;-------------------------------------------------------------------------------
+; Solo lleva cerraderos en la hoja inferior. Los puede llevar en el lado que
+; va la cerradura segun apertura y en el lado del bisagra.
+PR.CERRADEROS_PPO=1;
+;Solo en hojas en contacto a marco bisagra
+PR.CERRA_BSO_PPO=1;
+;Solo si se quiere activar bisagra oculta en la hoja superior
+PR.CERRA_BSO_PPO_HSUP=0;
+PR.CERRA_BSO_PPO_LON=600;
+;LADO DE LA CERADURA DE LA HOJA INFERIOR- CONTRARIO A BISAGRA
+PR.CER_PPO_CER_NUM=2;
+PR.CER_PPO_CER_C1_LINI=0;
+PR.CER_PPO_CER_C1_LFIN=9999;
+PR.CER_PPO_CER_C1_HINI=0;
+PR.CER_PPO_CER_C1_HFIN=9999;
+PR.CER_PPO_CER_C1_ORI=0;
+PR.CER_PPO_CER_C1_POS=81+MEDCER;
+PR.CER_PPO_CER_C1_COD="STD";
+PR.CER_PPO_CER_C2_LINI=0;
+PR.CER_PPO_CER_C2_LFIN=9999;
+PR.CER_PPO_CER_C2_HINI=800;
+PR.CER_PPO_CER_C2_HFIN=9999;
+PR.CER_PPO_CER_C2_ORI=0;
+PR.CER_PPO_CER_C2_POS=500+MEDCER;
+PR.CER_PPO_CER_C2_COD="STD";
+;LADO BISAGRA DE LA HOJA INFERIOR - DEBERIA SER SIMETRICO A LADO CREMONA
+PR.CER_PPO_BIS_NUM=0;
+PR.CER_PPO_BIS_C1_LINI=0;
+PR.CER_PPO_BIS_C1_LFIN=9999;
+PR.CER_PPO_BIS_C1_HINI=0;
+PR.CER_PPO_BIS_C1_HFIN=9999;
+PR.CER_PPO_BIS_C1_ORI=0;
+PR.CER_PPO_BIS_C1_POS=67+MEDCER;
+PR.CER_PPO_BIS_C1_COD="STD";
+PR.CER_PPO_BIS_C2_LINI=0;
+PR.CER_PPO_BIS_C2_LFIN=9999;
+PR.CER_PPO_BIS_C2_HINI=800;
+PR.CER_PPO_BIS_C2_HFIN=9999;
+PR.CER_PPO_BIS_C2_ORI=0;
+PR.CER_PPO_BIS_C2_POS=550+MEDCER;
+PR.CER_PPO_BIS_C2_COD="STD";
+;***********************************************************************************************
+;**********************************INICIO DE MECANIZACIONES*************************************
+;***********************************************************************************************
+;-----------------------------------------------------------------------------------------------
+;Tornillos de refuerzo
+;Matener siempre el artornillado activo, se usa para otras acciones necesarias
+;Si se quiere anular el refuerzo poner a cero el PR.TOR_REFUERZO
+PR.REFUERZO=1;
+PR.TOR_REFUERZO=1;
+PR.TOR_REFUERZO="TorRefuerzo";
+PR.TOR_MINIMO=70;
+PR.TOR_MAX_COLOR=250;
+PR.TOR_MAX_BLANCO=300;
+PR.TOR_INVERSOR=1;
+;Perfiles con posicion especial del tornillo inicial
+PR.TOR_MINIMO_PVCMARCO=120;
+PR.TOR_MINIMO_PVCHOJAINTV=200;
+;------------------------------------------------------------------------------
+;-------------------AIREACIONES INTERIORES POR COLOR ESPECIAL------------------
+;------------------------------------------------------------------------------
+;Los colores indicados a continuación quedarán exentos de aireaciones
+;Se tienen en cuena para aplicar aireacion el color exterior unicamente
+COLORBASE="";
+COLORBASE2="";
+COLORBASE3="";
+;Parametros de aplicacion del procesos
+PR.AIREACION_DES=150;
+PR.AIREACION_MIN=350;
+PR.AIREACION_MAX=1200;
+PR.AIREACION_LONMIN=450;
+;Activar procesos en cada posicion
+;Para cualquier tipo de perfil
+PR.AIREACIONES=0;
+PR.AIREACIONES_ENHOJA=0;
+;Activar o anular segun posición
+PR.AIREACION_SUP=1;
+PR.AIREACION_VER=1;
+PR.AIREACION_INF=1;
+;Aireaciones en el marco si esta situado en apertura interior
+PR.AIREACION_MARCO_SUP="";
+PR.AIREACION_MARCO_VER="";
+PR.AIREACION_MARCO_INF="";
+;Aireaciones en el marco si esta situado en apertura exterior
+PR.AIREACION_MARCOEXT_SUP="";
+PR.AIREACION_MARCOEXT_VER="";
+PR.AIREACION_MARCOEXT_INF="";
+;Aireaciones en la hoja si esta situada en apertura interior
+PR.AIREACION_HOJA_SUP="AireacionHoja";
+PR.AIREACION_HOJA_VER="AireacionHoja";
+PR.AIREACION_HOJA_INF="AireacionHoja";
+;Aireaciones en la hoja si esta situada en apertura interior
+PR.AIREACION_HOJAEXT_SUP="AireacionHoja";
+PR.AIREACION_HOJAEXT_VER="AireacionHoja";
+PR.AIREACION_HOJAEXT_INF="AireacionHoja";
+;Aireaciones en poste o travesano si esta en apertura interior
+PR.AIREACION_TRAVE_INF="";
+PR.AIREACION_TRAVE_SUP="";
+PR.AIREACION_POSTE_IZQ="";
+PR.AIREACION_POSTE_DER="";
+;Aireaciones en poste o travesano si esta en apertura exterior
+PR.AIREACION_TRAVEEXT_INF="";
+PR.AIREACION_TRAVEEXT_SUP="";
+PR.AIREACION_POSTEEXT_IZQ="";
+PR.AIREACION_POSTEEXT_DER="";
+;Aireaciones en el marco si esta situado en apertura interior
+PR.AIREACION_ZOCAL_SUP="";
+PR.AIREACION_ZOCAL_VER="";
+PR.AIREACION_ZOCAL_INF="";
+;Aireaciones en el marco si esta situado en apertura exterior
+PR.AIREACION_ZOCALEXT_SUP="";
+PR.AIREACION_ZOCALEXT_VER="";
+PR.AIREACION_ZOCALEXT_INF="";
+PR.FORMATOETIQUETA=0;
+PR.ORDENARPOSICIONES=1;
+;---------------------------------------------------------------------------------------
+;------------- ESCUADRAS DE FIJACION - SOLO PARA PERFILES USO MARCO O HOJA--------------
+;---------------------------------------------------------------------------------------
+;---------------------Escuadras ----------------------
+PR.ESCUADRA=1;
+;Activa 1 o desactiva 0 de proceso de escuadra
+PR.ESCUADRA_INI="EscuadraIni";
+;Proceso de escuadra al inicio del perfil
+;Origen de proces punta larga
+PR.ESCUADRA_FIN="EscuadraFin";
+;Proceso de escuadra al final de perfil
+;Origen de proceso punta larga
+;Si se quieren procesosde escuadras diferentes.
+;Verticales
+PR.ESCUADRA_VER_INI="";
+PR.ESCUADRA_VER_FIN="";
+;Horizontales
+PR.ESCUADRA_HOR_INI="";
+PR.ESCUADRA_HOR_FIN="";
+;---------------------------------------------------------------------------------------
+;-------------------PROCESOS VINCULADOS AL PERFIL CON O SIN GOMA------------------------
+;---------------------------------------------------------------------------------------
+;Proceso aplicado al perfil al inicio o al fin de este para la limpieza de goma
+;Solo en aquellos perfiles donde se ha indicado en el acabado del mismo que es con goma
+;Si el acabado no tiene marcado el check con goma, se anula el proceso aotomaticamente.
+PR.LIMP_GOMA=1;
+PR.LIMP_GOMA_INI="LimpGomaIni";
+PR.LIMP_GOMA_FIN="LimpGomaFin";
+;Proceso aplicado al perfil con goma contactado por un poste o travesaño.
+;Para que el poste o travesaño apoye correctamente contra el perfil contactado
+;a este ultimo hay que cortarle la goma al ancho del cuerpo del poste aproximadamente
+;En cada perfil poste o travesa o zocalo ha de indicarse el ancho de referencia para ese proceso
+;de manera que el sistema cortará la goma la mitad a cada lado desde el eje de poste o travesa.
+;Si el acabado del perfil contactado no tiene marcado el check con goma, se anula el proceso automaticamente.
+;Necesario indicar este dato en variables del perfil poste o travesa. Variable a definir GOMACORTE
+PR.CORTE_GOMA=1;
+PR.CORTE_GOMA_MARCO="";
+PR.CORTE_GOMA_HOJA="";
+PR.CORTE_GOMA_TRAVE_SUP="";
+PR.CORTE_GOMA_TRAVE_INF="";
+PR.CORTE_GOMA_POSTE_DER="";
+PR.CORTE_GOMA_POSTE_IZQ="";
+;Este proceso se aplica por el mismo motivo que el anterior, pero se aplica cuando ambos perfiles
+;no llevan goma, ni el poste o travesa ni el perfil contactado.
+;Cuando es ese el caso se necesita cominicar el canal de goma del poste o travesa con el perfil
+;contactado para ello que se hace un pequeño vaciado el la parte superior del canal de goma de este perfil.
+;este canal se hace justo bajo el canal de goma del perfil poste o travesa utilizado para ello se necesita
+;saber el ancho exacto de canal a canal de goma del poste o travesa.
+;Necesario indicar este dato en variables del perfil poste o travesa. Variable a definir GOMACANAL
+PR.CANAL_GOMA=1;
+PR.CANAL_GOMA_MARCO="";
+PR.CANAL_GOMA_HOJA="";
+PR.CANAL_GOMA_TRAVE_SUP="";
+PR.CANAL_GOMA_TRAVE_INF="";
+PR.CANAL_GOMA_POSTE_DER="";
+PR.CANAL_GOMA_POSTE_IZQ="";
+;-----------------------------------------------------------------------------------------
+;-----------------------------------------------------------------------------------------
+;-----------AIREACIONES APLICADAS POR FIJACION DE POSTE O TRAVESA  O ZOCALO --------------
+;-----------------------------------------------------------------------------------------
+;Aireaciones aplicadas contra el perfil contactado por el poste o travesa.
+;Se hacen sobre el ala interior del perfil contactado conocido como labio, bajo el poste o travesa.
+;Se aplican desde eje de contacto entre poste o travesa en funcion de los valores indicados en variables del perfil
+;poste o travesa utilizado. Las variables son POSI_AIRESP1,POSI_AIRESP2,POSI_AIRESP3,POSI_AIRESP4
+;Si en una variable se asigna 0 como valor el proces vinculado a esa variable quedaría anulado.
+;de esta forma podemos indicar que el proceso se haga hasta cuatro veces a x distancias.
+PR.FIJ_POSTE_AIREA_LAB=1;
+PR.FIJ_POSTE_MARCO_AIRLAB="AirLabMarcoFijT";
+PR.FIJ_POSTE_HOJA_AIRLAB="AirLabHojaFijT";
+PR.FIJ_POSTE_TRAVE_AIRLAB_INF="AirLabTraveFijTInf";
+PR.FIJ_POSTE_TRAVE_AIRLAB_SUP="AirLabTraveFijTSup";
+PR.FIJ_TRAVE_AIREA_LAB=1;
+PR.FIJ_TRAVE_MARCO_AIRLAB="AirLabMarcoFijT";
+PR.FIJ_TRAVE_HOJA_AIRLAB="AirLabHojaFijT";
+PR.FIJ_TRAVE_POSTE_AIRLAB_DER="AirLabPosteFijTDer";
+PR.FIJ_TRAVE_POSTE_AIRLAB_IZQ="AirLabPosteFijTIzq";
+PR.FIJ_ZOCAL_AIREA_LAB=1;
+PR.FIJ_ZOCAL_MARCO_AIRLAB="AirLabMarcoFijT";
+PR.FIJ_ZOCAL_HOJA_AIRLAB="AirLabHojaFijT";
+PR.FIJ_ZOCAL_POSTE_AIRLAB_DER="AirLabPosteFijTDer";
+PR.FIJ_ZOCAL_POSTE_AIRLAB_IZQ="AirLabPosteFijTIzq";
+PR.FIJ_ZOCAL_TRAVE_AIRLAB_INF="AirLabTraveFijTInf";
+PR.FIJ_ZOCAL_TRAVE_AIRLAB_SUP="AirLabTraveFijTSup";
+;-----------------------------------------------------------------------------------------
+;-----------------------------------------------------------------------------------------
+;-------------------------------PROCESOS EN PERFIL INVERSOR ------------------------------
+;-----------------------------------------------------------------------------------------
+PR.FIJACION_INVERSOR=1;
+PR.FIJACION_INVERSOR="FijacionInversor";
+PR.FIJACION_INVERSOR_DES=200;
+PR.FIJACION_INVERSOR_SEP1=1100;
+PR.FIJACION_INVERSOR_SEP2=1700;
+;Activacion Procesos Cerradura en Inversor
+PR.CER_INVERSOR=1;
+;Procesos y posiciones de los pasadores de puerta
+PR.INV_PAS_SUP="FijaPasPuertaSup";
+PR.INV_PAS_SUP_DES=200;
+PR.INV_PAS_INF="FijaPasPuertaInf";
+PR.INV_PAS_INF_DES=200;
+;-----------------------------------------------------------------------------------------
+;---------------------------------------MONOBLOCK ----------------------------------
+;-----------------------------------------------------------------------------------------
+PR.RECOGEDOR_INT_MARCO=1;
+PR.RECOGEDOR_INT_ALTO=160;
+PR.RECOGEDOR_INT_MARCO="RecogedorIntMarco";
+PR.RECOGEDOR_INT2_MARCO="";
+PR.RECOGEDOR_INT3_MARCO="";
+PR.RECOGEDOR_PROCESOS="RecogedorIntMarco";
+PR.RECOGEDOR_MIN_REF_DOBLE=120;
+PR.RECOGEDOR_INT_ALTO=145;
+;Parametros de control y aviso de riesgo de colision entre mecanizado recogedor y bisagras
+PR.RECOGEDOR_AVISO=0;
+PR.RECOGEDOR_INT_ALTO=175;
+PR.ALTO_BISAGRA=105;
+PR.DISTSEG_BISREC=10;
+;Fijacion de la guia monobloc a traves de taladros para anclaje de tornillo cabezon.
+PR.FIJACION_GUIA=1;
+;MECANIZADO CONFIGURADO EN LA FIGURA MONOBLOC
+PR.FIJACION_GUIA_MAR="";
+PR.FIJACION_GUIA_MAR_INI=80;
+PR.FIJACION_GUIA_MAR_DES=200;
+;-----------------------------------------------------------------------------------------
+;---------------------------------------FIJACION A OBRA ----------------------------------
+;-----------------------------------------------------------------------------------------
+;Activacion de procesos de fijacion a obra general
+;Las posiciones son a partir del el hueco interior del marco
+PR.FIJACION_A_OBRA=1;
+;Parametros para piezas verticales
+PR.FIJACION_A_OBRA_DER=1;
+PR.FIJACION_A_OBRA_IZQ=1;
+PR.FIJACION_A_OBRA_VER="FijacionAObra";
+PR.FIJACION_A_OBRA_VER_DES=90;
+PR.FIJACION_A_OBRA_VER_SEP=500;
+PR.FIJACION_A_OBRA_VER_CEN=0;
+;Parametros para piezas horizontales
+PR.FIJACION_A_OBRA_SUP=1;
+PR.FIJACION_A_OBRA_INF=1;
+PR.FIJACION_A_OBRA_HOR="FijacionAObra";
+PR.FIJACION_A_OBRA_HOR_DES=90;
+PR.FIJACION_A_OBRA_HOR_SEP=500;
+PR.FIJACION_A_OBRA_HOR_CEN=0;
+;-----------------------------------------------------------------------------------------
+;Parametros para activar la fijacion en marco del asa de transporte.
+;Normalmente se atornilla al marco un asa hecha con cintra de persiana o un sistema similar.
+PR.ASA_TRANSPORTE_VEN=1;
+PR.ASA_TRANSPORTE_PUE=1;
+PR.ASA_TRANSPORTE_BAL=1;
+PR.ASA_TRANSPORTE="AsaTransporte";
+PR.ASA_TRANSPORTE_DES=600;
+PR.ASA_TRANSPORTE_MIN=200;
+;-----------------------------------------------------------------------------------------
+;Fijacion del remate a pavimento
+PR.FIJ_RPAVI_MARCO="FijarRpaviM";
+PR.FIJ_RPAVI_POSTE="FijarRpaviP";
+;-----------------------------------------------------------------------------------------
+;Parametros de contra interior
+PR.BIS_CONTRA="BisContraInt";
+PR.BIS_CONTRA_MAX=1400;
+PR.BIS_CONTRA_DES=90;
+;-----------------------------------------------------------------------------------------
+;Parametros de oscilo paralela
+PR.PARALELA=1;
+PR.PARALELA_RANURA="CreParRanura";
+PR.PARALELA_TM1="CreParT1";
+PR.PARALELA_TM2="CreParT2";
+PR.PARALELA_TM3="";
+PR.PARALELA_TM4="";
+;-----------------------------------------------------------------------------------------
+;-----------------------------------------------------------------------------------------
+;------------------MARCA O TALADRO DE FIJACION DE GRAPA SOLAPE AL MARCO ------------------
+;-----------------------------------------------------------------------------------------
+PR.FIJAR_SOLAPE=1;
+PR.FIJAR_SOLAPE_SUP="FijacionGrapaSolape";
+PR.FIJAR_SOLAPE_DER="FijacionGrapaSolape";
+PR.FIJAR_SOLAPE_INF="FijacionGrapaSolape";
+PR.FIJAR_SOLAPE_IZQ="FijacionGrapaSolape";
+PR.FIJAR_SOLAPE_MIN=200;
+PR.FIJAR_SOLAPE_DES=20;
+PR.FIJAR_SOLAPE_SEP=400;
+;-----------------------------------------------------------------------------------------
+;---------------------------- DATOS EXTRA DE LA SERIE ------------------------------------
+;-----------------------------------------------------------------------------------------
+;Posición cremona en hojas apertura exterior para determinar el herraej correcto
+XFONDOCRE=52;
+;***********************************************************************************************
+;*******************PROCESOS VICULADOS AL PERFIL MARCO *****************************************
+;***********************************************************************************************
+;-------------------------------------------------------
+;DESAGUES
+;-------------------------------------------------------
+;Desagues exteriores en apertura interior
+PR.DES_EXT_MARCO=0;
+PR.DES_EXT_MARCO="DesExtMarco";
+PR.DES_EXT_ESP_MARCO="DesExtEspMarco";
+PR.DES_EXT_MARCO_MIN=150;
+PR.DES_EXT_MARCO_MAX=1500;
+PR.DES_EXT_MARCO_DES=95;
+;Desagues exteriores en apertura exterior
+PR.DES_EXT_MARCOEXT=0;
+PR.DES_EXT_MARCOEXT="DesExtMarcoExt";
+PR.DES_EXT_ESP_MARCOEXT="DesExtEspMarcoExt";
+PR.DES_EXT_MARCOEXT_MIN=150;
+PR.DES_EXT_MARCOEXT_MAX=780;
+PR.DES_EXT_MARCOEXT_DES=214;
+-------------------------------------------------------
+;Desagues interiores en apertura interior
+PR.DES_INT_MARCO=1;
+PR.DES_INT_MARCO="DesIntMarco";
+PR.DES_INT_MARCO_MIN=150;
+PR.DES_INT_MARCO_MAX=1500;
+PR.DES_INT_MARCO_DES=95;
+;Desagues interiores en apertura exterior
+PR.DES_INT_MARCOEXT=1;
+PR.DES_INT_MARCOEXT="DesIntMarcoExt";
+PR.DES_INT_MARCOEXT_MIN=150;
+PR.DES_INT_MARCOEXT_MAX=1500;
+PR.DES_INT_MARCOEXT_DES=95;
+;-------------------------------------------------------
+;VENTILACIONES
+;-------------------------------------------------------
+;Ventilaciones exteriores en apertura interior
+PR.VEN_EXT_MARCO=0;
+PR.VEN_EXT_MARCO="VenExtMarco";
+PR.VEN_EXT_MARCO_MIN=150;
+PR.VEN_EXT_MARCO_MAX=9999;
+PR.VEN_EXT_MARCO_DES=150+30;
+;Ventilaciones laterales exteriores en apertura interior
+PR.VENLAT_EXT_MARCO=0;
+PR.VENLAT_EXT_MARCO="VentLatExt";
+PR.VENLAT_EXT_MARCO_MIN=150;
+PR.VENLAT_EXT_MARCO_MAX=9999;
+PR.VENLAT_EXT_MARCO_DES=150+30;
+;Ventilaciones exteriores marco en apertura exterior
+PR.VEN_EXT_MARCOEXT=0;
+PR.VEN_EXT_MARCOEXT="VenExtMarcoExt";
+PR.VEN_EXT_MARCOEXT_MIN=150;
+PR.VEN_EXT_MARCOEXT_MAX=9999;
+PR.VEN_EXT_MARCOEXT_DES=150+30;
+;Ventilaciones laterales exteriores en apertura exterior
+PR.VENLAT_EXT_MARCOEXT=0;
+PR.VENLAT_EXT_MARCOEXT="";
+PR.VENLAT_EXT_MARCOEXT_MIN=150;
+PR.VENLAT_EXT_MARCOEXT_MAX=9999;
+PR.VENLAT_EXT_MARCOEXT_DES=150+30;
+;---------------------------
+;Ventilaciones interiores en apertura interior
+PR.VEN_INT_MARCO=0;
+PR.VEN_INT_MARCO="VenIntMarco";
+PR.VEN_INT_MARCO_MIN=150;
+PR.VEN_INT_MARCO_MAX=9999;
+PR.VEN_INT_MARCO_DES=35+30;
+;Ventilaciones laterales interiores en apertura interior
+PR.VENLAT_INT_MARCO=0;
+PR.VENLAT_INT_MARCO="VenIntMarco";
+PR.VENLAT_INT_MARCO_MIN=150;
+PR.VENLAT_INT_MARCO_MAX=9999;
+PR.VENLAT_INT_MARCO_DES=35+30;
+;Ventilaciones interiores en apertura exterior
+PR.VEN_INT_MARCOEXT=0;
+PR.VEN_INT_MARCOEXT="VenIntMarcoExt";
+PR.VEN_INT_MARCOEXT_MIN=150;
+PR.VEN_INT_MARCOEXT_MAX=9999;
+PR.VEN_INT_MARCOEXT_DES=35+30;
+;Ventilaciones laterales interiores en apertura exterior
+PR.VENLAT_INT_MARCOEXT=0;
+PR.VENLAT_INT_MARCOEXT="VenIntMarcoExt";
+PR.VENLAT_INT_MARCOEXT_MIN=150;
+PR.VENLAT_INT_MARCOEXT_MAX=9999;
+PR.VENLAT_INT_MARCOEXT_DES=35+30;
+;***********************************************************************************************
+;*******************PROCESOS VICULADOS AL PERFIL HOJA  *****************************************
+;***********************************************************************************************
+;-------------------------------------------------------
+;DESAGUES
+;-------------------------------------------------------
+;Desagues exteriores en apertura interior
+PR.DES_EXT_HOJA=1;
+PR.DES_EXT_HOJA="DesExtHoja";
+PR.DES_EXT_HOJA_MIN=150;
+PR.DES_EXT_HOJA_MAX=900;
+PR.DES_EXT_HOJA_DES=214;
+;Desagues exteriores en apertura exterior
+PR.DES_EXT_HOJAEXT=1;
+PR.DES_EXT_HOJAEXT="DesExtHoja";
+PR.DES_EXT_HOJAEXT_MIN=150;
+PR.DES_EXT_HOJAEXT_MAX=900;
+PR.DES_EXT_HOJAEXT_DES=214;
+;Desague interior apertura interior
+PR.DES_INT_HOJA=1;
+PR.DES_INT_HOJA="DesIntHoja";
+PR.DES_INT_HOJA_MIN=150;
+PR.DES_INT_HOJA_MAX=600;
+PR.DES_INT_HOJA_DES=35;
+;Desague interior apertura exterior
+PR.DES_INT_HOJAEXT=1;
+PR.DES_INT_HOJAEXT="DesIntHoja";
+PR.DES_INT_HOJAEXT_MIN=150;
+PR.DES_INT_HOJAEXT_MAX=600;
+PR.DES_INT_HOJAEXT_DES=35;
+;------------------------------------------------------------------------------
+;-------------------MOVER DESAGUE CENTRAL INTERIOR BAJO DOS HOJAS -------------
+;------------------------------------------------------------------------------
+;Opcion que permite indicar cuanto y hacia donde mover el desgüe central cuya poscion
+;coincida debajo de la union entre hojas.
+DES_CENTRAL2H_INT_MOVER=1;
+DES_CENTRAL2H_INT_MOVER_RANGO=65;
+DES_CENTRAL2H_INT_MOVER_DES=95;
+DES_CENTRAL2H_INT_MOVER_ACT=0;
+DES_CENTRAL2H_INT_MOVER_PAR=1;
+;-------------------------------------------------------
+;VENTILACIONES
+;-------------------------------------------------------
+;Ventilaciones exterior en apertura interior
+PR.VEN_EXT_HOJA=1;
+PR.VEN_EXT_HOJA="VenExtHoja";
+PR.VEN_EXT_HOJA_MIN=150;
+PR.VEN_EXT_HOJA_MAX=900;
+PR.VEN_EXT_HOJA_DES=214;
+;Ventilaciones laterales exterior en apertura interior
+PR.VENLAT_EXT_HOJA=1;
+PR.VENLAT_EXT_HOJA="";
+PR.VENLAT_EXT_HOJA_MIN=150;
+PR.VENLAT_EXT_HOJA_MAX=9999;
+PR.VENLAT_EXT_HOJA_DES=214;
+;Ventilaciones interiores en apertura exterior
+PR.VEN_EXT_HOJAEXT=1;
+PR.VEN_EXT_HOJAEXT="VenExtHoja";
+PR.VEN_EXT_HOJAEXT_MIN=150;
+PR.VEN_EXT_HOJAEXT_MAX=900;
+PR.VEN_EXT_HOJAEXT_DES=214;
+;Ventilaciones laterales interiores en apertura exterior
+PR.VENLAT_EXT_HOJAEXT=1;
+PR.VENLAT_EXT_HOJAEXT="";
+PR.VENLAT_EXT_HOJAEXT_MIN=150;
+PR.VENLAT_EXT_HOJAEXT_MAX=9999;
+PR.VENLAT_EXT_HOJAEXT_DES=214;
+;Ventilaciones interiores en apertura interior
+PR.VEN_INT_HOJA=1;
+PR.VEN_INT_HOJA="VenIntHoja";
+PR.VEN_INT_HOJA_MIN=150;
+PR.VEN_INT_HOJA_MAX=600;
+PR.VEN_INT_HOJA_DES=35;
+;Ventilaciones laterales interiores en apertura interior
+PR.VENLAT_INT_HOJA=1;
+PR.VENLAT_INT_HOJA="VenIntHoja";
+PR.VENLAT_INT_HOJA_MIN=150;
+PR.VENLAT_INT_HOJA_MAX=600;
+PR.VENLAT_INT_HOJA_DES=35;
+;Ventilaciones interiores en apertura exterior
+PR.VEN_INT_HOJAEXT=1;
+PR.VEN_INT_HOJAEXT="VenIntHoja";
+PR.VEN_INT_HOJAEXT_MIN=150;
+PR.VEN_INT_HOJAEXT_MAX=600;
+PR.VEN_INT_HOJAEXT_DES=35;
+;Ventilaciones laterales interiores en apertura exterior
+PR.VENLAT_INT_HOJAEXT=1;
+PR.VENLAT_INT_HOJAEXT="VenIntHoja";
+PR.VENLAT_INT_HOJAEXT_MIN=150;
+PR.VENLAT_INT_HOJAEXT_MAX=600;
+PR.VENLAT_INT_HOJAEXT_DES=35;
+;***********************************************************************************************
+;*******************PROCESOS VINCULADOS AL PERFIL TRAVE Y POSTE*****************************
+;***********************************************************************************************
+;-------------------------------------------------------
+;DESAGUES  - SOLO APLICABLES A PERFIL EN HORIZONTAL ES DECIR TRAVESA
+;-------------------------------------------------------
+;Desagues exteriores en apertura interior para travesas bajo hojas
+PR.DES_EXT_TRAVE=0;
+PR.DES_EXT_TRAVE="DesExtTraveCr";
+PR.DES_EXT_TRAVE_MIN=150;
+PR.DES_EXT_TRAVE_MAX=1500;
+PR.DES_EXT_TRAVE_DES=210;
+;Desagues exteriores en apertura exterior para travesas bajo hojas
+PR.DES_EXT_TRAVEEXT=0;
+PR.DES_EXT_TRAVEEXT="DesExtTraveExt";
+PR.DES_EXT_TRAVEEXT_MIN=150;
+PR.DES_EXT_TRAVEEXT_MAX=1500;
+PR.DES_EXT_TRAVEEXT_DES=210;
+;En las travesas bajo cristal es probable que se use un desague distino o que incluso no se haga desague
+;A continuacion los desagües exteriores lanzados desde el cristal contra el travesa
+;Desagues exteriores en apertura interior para travesas bajo vidrio
+PR.DES_EXT_TRAVECR=0;
+PR.DES_EXT_TRAVECR="DesExtTraveCr";
+PR.DES_EXT_TRAVECR_MIN=150;
+PR.DES_EXT_TRAVECR_MAX=1200;
+PR.DES_EXT_TRAVECR_DES=210;
+;Desagues exteriores en apertura exterior para para travesas bajo vidrio
+PR.DES_EXT_TRAVECREXT=0;
+PR.DES_EXT_TRAVECREXT="DesExtTraveCrExt";
+PR.DES_EXT_TRAVECREXT_MIN=150;
+PR.DES_EXT_TRAVECREXT_MAX=1500;
+PR.DES_EXT_TRAVECREXT_DES=210;
+;Los procesos de desague son generados desde el hueco interior de hojas o vidrio - chapa o panel.
+;por ello se suma a ese punto el ancho del perfil al que une, para guardar alineación con los desagues
+;generados desde al marco. Asi si es una ventana con un fijo superior o inferior los desagues iran alineados
+;NOTA - PARA ESTRUCTURAS COMPLEJAS NO ES POSIBLE LA ALINEACION YA QUE LOS DESAGUE DEL MARCO SE CALCULAN
+;SEGUN LA MEDIDA DE LA PIEZA Y LOS DE LAS TRAVESAS A PARTIR DEL PERFIL ADJUNTO
+;-------------------------------------------------------
+;Desagues interiores en apertura interior
+PR.DES_INT_TRAVE=1;
+PR.DES_INT_TRAVE="DesIntTrave";
+PR.DES_INT_TRAVE_MIN=150;
+PR.DES_INT_TRAVE_MAX=1500;
+PR.DES_INT_TRAVE_DES=65;
+;Desagues interiores en apertura exterior
+PR.DES_INT_TRAVEEXT=0;
+PR.DES_INT_TRAVEEXT="DesIntTraveExt";
+PR.DES_INT_TRAVEEXT_MIN=150;
+PR.DES_INT_TRAVEEXT_MAX=1500;
+PR.DES_INT_TRAVEEXT_DES=65;
+;-------------------------------------------------------------------------------
+;VENTILACIONES EN TRAVESA
+;La ventilacion solo se aplica al tavesaño por su parte inferior
+;-------------------------------------------------------------------------------
+;Ventilaciones exteriores en apertura interior
+PR.VEN_EXT_TRAVE=0;
+PR.VEN_EXT_TRAVE="VenExtTrave";
+PR.VEN_EXT_TRAVE_MIN=150;
+PR.VEN_EXT_TRAVE_MAX=9999;
+PR.VEN_EXT_TRAVE_DES=214;
+;Ventilaciones exteriores marco en apertura exterior
+PR.VEN_EXT_TRAVEEXT=0;
+PR.VEN_EXT_TRAVEEXT="VenExtTraveExt";
+PR.VEN_EXT_TRAVEEXT_MIN=150;
+PR.VEN_EXT_TRAVEEXT_MAX=780;
+PR.VEN_EXT_TRAVEEXT_DES=214
+;Ventilaciones exteriores en apertura interior
+PR.VEN_EXT_TRAVECR=0;
+PR.VEN_EXT_TRAVECR="VenExtTraveCrExt";
+PR.VEN_EXT_TRAVECR_MIN=150;
+PR.VEN_EXT_TRAVECR_MAX=780;
+PR.VEN_EXT_TRAVECR_DES=214;
+;Ventilaciones exteriores travesaño en apertura exterior
+PR.VEN_EXT_TRAVECREXT=0;
+PR.VEN_EXT_TRAVECREXT="VenExtTraveCrExt";
+PR.VEN_EXT_TRAVECREXT_MIN=250;
+PR.VEN_EXT_TRAVECREXT_MAX=780;
+PR.VEN_EXT_TRAVECREXT_DES=214;
+-------------------------------------------------------
+;Ventilaciones interiores en apertura interior
+PR.VEN_INT_TRAVE=0;
+PR.VEN_INT_TRAVE="VenIntTrave";
+PR.VEN_INT_TRAVE_MIN=150;
+PR.VEN_INT_TRAVE_MAX=520;
+PR.VEN_INT_TRAVE_DES=35+30;
+;Ventilaciones interiores en apertura exterior
+PR.VEN_INT_TRAVEEXT=0;
+PR.VEN_INT_TRAVEEXT="VenIntTraveExt";
+PR.VEN_INT_TRAVEEXT_MIN=150;
+PR.VEN_INT_TRAVEEXT_MAX=520;
+PR.VEN_INT_TRAVEEXT_DES=35+30;
+;-------------------------------------------------------------------------------
+;VENTILACIONES EN POSTE
+;El los postes se aplican por dereca e izquierda, siendo dos procesos separados
+;uno por cara, aunque el mecanizado final sea igual.
+;-------------------------------------------------------------------------------
+PR.VENLAT_EXT_POSTE=0;
+PR.VENLAT_EXT_POSTE_IZQ="";
+PR.VENLAT_EXT_POSTE_DER="";
+PR.VENLAT_EXT_POSTE_MIN=150;
+PR.VENLAT_EXT_POSTE_MAX=780;
+PR.VENLAT_EXT_POSTE_DES=214;
+;Ventilaciones laterales exteriores en apertura exterior
+PR.VENLAT_EXT_POSTEEXT=0;
+PR.VENLAT_EXT_POSTEEXT_IZQ="";
+PR.VENLAT_EXT_POSTEEXT_DER="";
+PR.VENLAT_EXT_POSTEEXT_MIN=150;
+PR.VENLAT_EXT_POSTEEXT_MAX=780;
+PR.VENLAT_EXT_POSTEEXT_DES=214;
+-------------------------------------------------------
+;Ventilaciones laterales interiores en apertura interior
+PR.VENLAT_INT_POSTE=0;
+PR.VENLAT_INT_POSTE_IZQ="VenIntPoste_CI";
+PR.VENLAT_INT_POSTE_DER="VenIntPoste_CE";
+PR.VENLAT_INT_POSTE_MIN=150;
+PR.VENLAT_INT_POSTE_MAX=9999;
+PR.VENLAT_INT_POSTE_DES=35+30;
+;Ventilaciones laterales interiores en apertura exterior
+PR.VENLAT_INT_POSTEEXT=0;
+PR.VENLAT_INT_POSTEEXT_IZQ="VenIntPosteExt_CI";
+PR.VENLAT_INT_POSTEEXT_DER="VenIntPosteExt_CE";
+PR.VENLAT_INT_POSTEEXT_MIN=150;
+PR.VENLAT_INT_POSTEEXT_MAX=9999;
+PR.VENLAT_INT_POSTEEXT_DES=35+30;
+;***********************************************************************************************
+;*******************PROCESOS VICULADOS AL PERFIL ZOCALO*****************************************
+;***********************************************************************************************
+;-------------------------------------------------------
+;DESAGUES
+;-------------------------------------------------------
+;Desagues exteriores en apertura interior
+PR.DES_EXT_ZOCAL=0;
+PR.DES_EXT_ZOCAL="DesExtMarco";
+PR.DES_EXT_ESP_ZOCAL="DesExtEspMarco";
+PR.DES_EXT_ESPH_ZOCAL="DesExtEspMarco";
+PR.DES_EXT_ZOCAL_MIN=150;
+PR.DES_EXT_ZOCAL_MAX=1500;
+PR.DES_EXT_ZOCAL_DES=210;
+;Desagues exteriores en apertura exterior
+PR.DES_EXT_ZOCALEXT=0;
+PR.DES_EXT_ZOCALEXT="DesExtMarcoExt";
+PR.DES_EXT_ESP_ZOCALEXT="DesExtEspMarcoExt";
+PR.DES_EXT_ESPH_ZOCALEXT="DesExtEspMarcoExt";
+PR.DES_EXT_ZOCALEXT_MIN=150;
+PR.DES_EXT_ZOCALEXT_MAX=1500;
+PR.DES_EXT_ZOCALEXT_DES=210;
+;-------------------------------------------------------
+;Desagues interiores en apertura interior
+PR.DES_INT_ZOCAL=1;
+PR.DES_INT_ZOCAL="DesIntMarco";
+PR.DES_INT_ZOCAL_MIN=150;
+PR.DES_INT_ZOCAL_MAX=1500;
+PR.DES_INT_ZOCAL_DES=95;
+;Solo se haran en caso de ser un fijo, bajo hojas no se hacen
+PR.DESJC_INT_ZOCAL="";
+PR.DESJC_INT_ZOCAL_DES=0;"";
+;Desagues interiores en apertura exterior
+PR.DES_INT_ZOCALEXT=1;
+PR.DES_INT_ZOCALEXT="";
+PR.DES_INT_ZOCALEXT_MIN=150;
+PR.DES_INT_ZOCALEXT_MAX=1500;
+PR.DES_INT_ZOCALEXT_DES=95;
+;Solo se haran en caso de ser un fijo, bajo hojas no se hacen
+PR.DESJC_INT_ZOCALEXT="";
+PR.DESJC_INT_ZOCALEXT_DES=0;"";
+;-------------------------------------------------------
+;VENTILACIONES
+;-------------------------------------------------------
+;Ventilaciones exteriores en apertura interior
+PR.VEN_EXT_ZOCAL=0;
+PR.VEN_EXT_ZOCAL="VenExtMarco";
+PR.VEN_EXT_ZOCAL_MIN=150;
+PR.VEN_EXT_ZOCAL_MAX=900;
+PR.VEN_EXT_ZOCAL_DES=210;
+;Ventilaciones laterales exteriores en apertura interior
+PR.VENLAT_EXT_ZOCAL=0;
+PR.VENLAT_EXT_ZOCAL="VenExtMarco";
+PR.VENLAT_EXT_ZOCAL_MIN=150;
+PR.VENLAT_EXT_ZOCAL_MAX=900;
+PR.VENLAT_EXT_ZOCAL_DES=210;
+;Ventilaciones exteriores marco en apertura exterior
+PR.VEN_EXT_ZOCALEXT=0;
+PR.VEN_EXT_ZOCALEXT="VenExtMarcoExt";
+PR.VEN_EXT_ZOCALEXT_MIN=150;
+PR.VEN_EXT_ZOCALEXT_MAX=900;
+PR.VEN_EXT_ZOCALEXT_DES=210;
+;Ventilaciones laterales exteriores en apertura exterior
+PR.VENLAT_EXT_ZOCALEXT=1;
+PR.VENLAT_EXT_ZOCALEXT="VenExtMarcoExt";
+PR.VENLAT_EXT_ZOCALEXT_MIN=150;
+PR.VENLAT_EXT_ZOCALEXT_MAX=450;
+PR.VENLAT_EXT_ZOCALEXT_DES=210;
+;-------------------------------------------------------
+;Ventilaciones interiores en apertura interior
+PR.VEN_INT_ZOCAL=0;
+PR.VEN_INT_ZOCAL="VenIntMarco";
+PR.VEN_INT_ZOCAL_MIN=150;
+PR.VEN_INT_ZOCAL_MAX=600;
+PR.VEN_INT_ZOCAL_DES=65;
+;Ventilaciones laterales interiores en apertura interior
+PR.VENLAT_INT_ZOCAL=0;
+PR.VENLAT_INT_ZOCAL="VenIntMarco";
+PR.VENLAT_INT_ZOCAL_MIN=150;
+PR.VENLAT_INT_ZOCAL_MAX=600;
+PR.VENLAT_INT_ZOCAL_DES=65;
+;Ventilaciones interiores en apertura exterior
+PR.VEN_INT_ZOCALEXT=0;
+PR.VEN_INT_ZOCALEXT="VenIntMarcoExt";
+PR.VEN_INT_ZOCALEXT_MIN=150;
+PR.VEN_INT_ZOCALEXT_MAX=600;
+PR.VEN_INT_ZOCALEXT_DES=65;
+;Ventilaciones laterales interiores en apertura exterior
+PR.VENLAT_INT_ZOCALEXT=0;
+PR.VENLAT_INT_ZOCALEXT="VenIntMarcoExt";
+PR.VENLAT_INT_ZOCALEXT_MIN=150;
+PR.VENLAT_INT_ZOCALEXT_MAX=600;
+PR.VENLAT_INT_ZOCALEXT_DES=65;
+;------------------------------------------------------------------------------
+;------------------------------RETESTADOS--------------------------------------
+;------------------------------------------------------------------------------
+PR.RET_MARCO=1;
+PR.RET_MARCO="Retestado";
+PR.RET_TRAVE=1;
+PR.RET_TRAVE="Retestado";
+PR.RET_POSTE=1;
+PR.RET_POSTE="Retestado";
+PR.RET_ZOCAL=1;
+PR.RET_ZOCAL="Retestado";
+;------------------------------------------------------------------------------
+;------------------------------FIJACION DE MARCOS------------------------------
+;------------------------------------------------------------------------------
+;Contra marcos
+PR.FIJ_MARCO_MARCO_TT="FijacionTT";
+PR.FIJ_MARCO_MARCO_MT="FijacionMT";
+;Contra Zocalos
+PR.FIJ_MARCO_ZOCAL_TT="FijacionTT";
+PR.FIJ_MARCO_ZOCAL_MT="FijacionMT";
+;Contra Postes
+PR.FIJ_MARCO_POSTE_IZQ_TT="FijacionTT_CI";
+PR.FIJ_MARCO_POSTE_IZQ_MT="FijacionMT_CI";
+PR.FIJ_MARCO_POSTE_DER_TT="FijacionTT_CE";
+PR.FIJ_MARCO_POSTE_DER_MT="FijacionMT_CE";
+;Contra travesas
+PR.FIJ_MARCO_TRAVE_SUP_TT="FijacionTT_CI";
+PR.FIJ_MARCO_TRAVE_SUP_MT="FijacionMT_CI";
+PR.FIJ_MARCO_TRAVE_INF_TT="FijacionTT_CE";
+PR.FIJ_MARCO_TRAVE_INF_MT="FijacionMT_CE";
+;Procesos a aplicar para la fijacion de un tope dentro del marco
+;Proceso relativo a principio y fin. Usar  LPOS
+PR.FIJ_TOPINI_MARCO="FijaTopeMarcoIni";
+PR.FIJ_TOPFIN_MARCO="FijaTopeMarcoFin"
+;------------------------------------------------------------------------------
+;------------------------------FIJACION DE POSTES------------------------------
+;------------------------------------------------------------------------------
+;Contra marcos
+PR.FIJ_POSTE_MARCO_TT="FijacionTT";
+PR.FIJ_POSTE_MARCO_MT="FijacionMT";
+;Contra hojas
+PR.FIJ_POSTE_HOJA_TT="FijacionTT";
+PR.FIJ_POSTE_HOJA_MT="FijacionMT";
+;Contra Zocalos
+PR.FIJ_POSTE_ZOCAL_TT="FijacionTT";
+PR.FIJ_POSTE_ZOCAL_MT="FijacionMT";
+;Contra travesas
+PR.FIJ_POSTE_TRAVE_SUP_TT="FijacionTT_CI";
+PR.FIJ_POSTE_TRAVE_SUP_MT="FijacionMT_CI";
+PR.FIJ_POSTE_TRAVE_INF_TT="FijacionTT_CE";
+PR.FIJ_POSTE_TRAVE_INF_MT="FijacionMT_CE";
+;Procesos a aplicar para la fijacion de un tope dentro del poste
+;Proceso relativo a principio y fin. Usar LPOS
+PR.FIJ_TOPINI_POSTE_DER="FijaTopePosIniCE";
+PR.FIJ_TOPINI_POSTE_IZQ="FijaTopePosIniCI";
+PR.FIJ_TOPFIN_POSTE_DER="FijaTopePosFinCE";
+PR.FIJ_TOPFIN_POSTE_IZQ="FijaTopePosFinCI";
+;------------------------------------------------------------------------------
+;------------------------------FIJACION DE TRAVESAS----------------------------
+;------------------------------------------------------------------------------
+;Contra marcos
+PR.FIJ_TRAVE_MARCO_TT="FijacionTT";
+PR.FIJ_TRAVE_MARCO_MT="FijacionMT";
+;Contra Hojas
+PR.FIJ_TRAVE_HOJA_TT="FijacionTT";
+PR.FIJ_TRAVE_HOJA_MT="FijacionMT";
+;Contra marcos
+PR.FIJ_TRAVE_ZOCAL_TT="FijacionTT";
+PR.FIJ_TRAVE_ZOCAL_MT="FijacionMT";
+;Contra Postes
+PR.FIJ_TRAVE_POSTE_IZQ_TT="FijacionTT_CI";
+PR.FIJ_TRAVE_POSTE_IZQ_MT="FijacionMT_CI";
+PR.FIJ_TRAVE_POSTE_DER_TT="FijacionTT_CE";
+PR.FIJ_TRAVE_POSTE_DER_MT="FijacionMT_CE";
+;Procesos a aplicar para la fijacion de un tope dentro del poste
+;Proceso relativo a principio y fin. Usar LPOS
+PR.FIJ_TOPINI_TRAVE_SUP="FijaTopeTraIniCI ";
+PR.FIJ_TOPINI_TRAVE_INF="FijaTopeTraIniCE";
+PR.FIJ_TOPFIN_TRAVE_SUP="FijaTopeTraFinCI";
+PR.FIJ_TOPFIN_TRAVE_INF="FijaTopeTraFinCE";
+;------------------------------------------------------------------------------
+;------------------------------FIJACION DE ZOCALOS-----------------------------
+;------------------------------------------------------------------------------
+;Contra marcos
+PR.FIJ_ZOCAL_MARCO_TT="FijacionTT";
+PR.FIJ_ZOCAL_MARCO_MT="FijacionMT";
+;Contra hojas
+PR.FIJ_ZOCAL_HOJA_TT="FijacionTT";
+PR.FIJ_ZOCAL_HOJA_MT="FijacionMT";
+;Contra Zocalos
+PR.FIJ_ZOCAL_ZOCAL_TT="FijacionTT";
+PR.FIJ_ZOCAL_ZOCAL_MT="FijacionMT";
+;Contra Postes
+PR.FIJ_ZOCAL_POSTE_IZQ_TT="FijacionTT_CI";
+PR.FIJ_ZOCAL_POSTE_IZQ_MT="FijacionMT_CI";
+PR.FIJ_ZOCAL_POSTE_DER_TT="FijacionTT_CE";
+PR.FIJ_ZOCAL_POSTE_DER_MT="FijacionMT_CE";
+;Contra travesas
+PR.FIJ_ZOCAL_TRAVE_SUP_TT="FijacionTT_CI";
+PR.FIJ_ZOCAL_TRAVE_SUP_MT="FijacionMT_CI";
+PR.FIJ_ZOCAL_TRAVE_INF_TT="FijacionTT_CE";
+PR.FIJ_ZOCAL_TRAVE_INF_MT="FijacionMT_CE";
+;Procesos a aplicar para la fijacion de un tope dentro del poste
+;Proceso relativo a principio y fin. Usar LPOS
+PR.FIJ_TOPINI_ZOCAL="FijaTopeMarcoIni";
+PR.FIJ_TOPFIN_ZOCAL="FijaTopeMarcoFin";
+;-----------------------------------------------------------------------------------------
+;-----------AIREACIONES APLICADAS AL LABIO DEL PERFIL CONTACTADO -------------------------
+;----------------POR FIJACION DE POSTE O TRAVESA  O ZOCALO -------------------------------
+;-----------------------------------------------------------------------------------------
+;Aireaciones aplicadas contra el perfil contactado por el poste o travesa.
+;Se hacen sobre el ala interior del perfil contactado conocido como labio, bajo el poste o travesa.
+;Se aplican desde eje de contacto entre poste o travesa en funcion de los valores indicados en variables del perfil
+;poste o travesa utilizado. Las variables son POSI_AIRESP1,POSI_AIRESP2,POSI_AIRESP3,POSI_AIRESP4
+;Si en una variable se asigna 0 como valor el proces vinculado a esa variable quedaría anulado.
+;de esta forma podemos indicar que el proceso se haga hasta cuatro veces a x distancias.
+PR.FIJ_MARCO_AIREA_LAB=1;
+PR.FIJ_MARCO_MARCO_AIRLAB="AireaLab";
+PR.FIJ_MARCO_HOJA_AIRLAB="AireaLab";
+PR.FIJ_MARCO_ZOCAL_AIRLAB="AireaLab";
+PR.FIJ_MARCO_POSTE_AIRLAB_DER="AireaLab_Der";
+PR.FIJ_MARCO_POSTE_AIRLAB_IZQ="AireaLab_Izq";
+PR.FIJ_MARCO_TRAVE_AIRLAB_INF="AireaLab_Inf";
+PR.FIJ_MARCO_TRAVE_AIRLAB_SUP="AireaLab_Sup";
+PR.FIJ_POSTE_AIREA_LAB=1;
+PR.FIJ_POSTE_MARCO_AIRLAB="AireaLab";
+PR.FIJ_POSTE_HOJA_AIRLAB="AireaLab";
+PR.FIJ_POSTE_ZOCAL_AIRLAB="AireaLab";
+PR.FIJ_POSTE_TRAVE_AIRLAB_INF="AireaLab_Inf";
+PR.FIJ_POSTE_TRAVE_AIRLAB_SUP="AireaLab_Sup";
+PR.FIJ_TRAVE_AIREA_LAB=1;
+PR.FIJ_TRAVE_MARCO_AIRLAB="AireaLab";
+PR.FIJ_TRAVE_HOJA_AIRLAB="AireaLab";
+PR.FIJ_TRAVE_ZOCAL_AIRLAB="AireaLab";
+PR.FIJ_TRAVE_POSTE_AIRLAB_DER="AireaLab_Der";
+PR.FIJ_TRAVE_POSTE_AIRLAB_IZQ="AireaLab_Izq";
+PR.FIJ_ZOCAL_AIREA_LAB=1;
+PR.FIJ_ZOCAL_MARCO_AIRLAB="AireaLab";
+PR.FIJ_ZOCAL_HOJA_AIRLAB="AireaLab";
+PR.FIJ_ZOCAL_ZOCAL_AIRLAB="AireaLab";
+PR.FIJ_ZOCAL_POSTE_AIRLAB_DER="AireaLab_Der";
+PR.FIJ_ZOCAL_POSTE_AIRLAB_IZQ="AireaLab_Izq";
+PR.FIJ_ZOCAL_TRAVE_AIRLAB_INF="AireaLab_Inf";
+PR.FIJ_ZOCAL_TRAVE_AIRLAB_SUP="AireaLab_Sup";
+;-----------------------------------------------------------------------------------------
+;-----------------------------------------------------------------------------------------
+;----------- MECANIZADO ESPECIAL REALIZADO EN EL PERFIL CONTACTADO------------------------
+;--------LO GENERA EL POSTE, SOLO CONTRA EL PERFIL QUE CONTACTA EN LA PARTE INFERIOR -----
+;-----------------------------------------------------------------------------------------
+;Se usan para mecanizados especiales y su posicion es a centro del poste
+PR.FIJ_POSTEINF_MARCO="";
+PR.FIJ_POSTEINF_HOJA="";
+PR.FIJ_POSTEINF_ZOCAL="";
+PR.FIJ_POSTEINF_TRAVE="";
+;***********************************************************************************************
+;**********************************PROCESOS DE CREMONA Y MANILLA EN VENTANA  *******************
+;***********************************************************************************************
+;Lo primero es activar el proceso asignando valor 1 a PR.CRE_VENTANA
+;Declaracion de rangos de seleccion de cremona y asignacion de posicion de su manilla
+;Se define hasta que altura de galce estará activo el Rango y dentro de este
+;a que altura va la manilla.
+;Para sistema de conta variable asignar 0 en posicion de manilla y esta se mecanzará al centro
+PR.CRE_VENTANA=1;
+CREAG=15;
+;Si hay distintas opciones de aguja de cremona, se deberá declarar en el ini de la figura HOJV1A y HOJV2A
+;indicando en la seccion genera para cada hoja el valor para CREAG
+;---------------------------------------------------
+;-------------------- PROYECTANTE ------------------
+;---------------------------------------------------
+;DATOS INSERTADOS EN EL CORRESPONDIENTE SCRIPT
+;---------------------------------------------------
+;---------------- OSCILO PARALELA ------------------
+;---------------------------------------------------
+;Se pueden definir tantos rangos como sean necesarios
+;Rangos de eje de fijación de la manilla aplicables si HM es 0
+PR.CRE_OSCPAR_R0_MAX=1300;
+PR.CRE_OSCPAR_R0_POS=450;
+PR.CRE_OSCPAR_R1_MAX=1700;
+PR.CRE_OSCPAR_R1_POS=650;
+PR.CRE_OSCPAR_R2_MAX=9999;
+PR.CRE_OSCPAR_R2_POS=950;
+;***********************************************************************************************
+;**********************************PROCESOS DE BISAGRAS DE VENTANA *****************************
+;***********************************************************************************************
+;COFIGURACION GENERICA DE BISAGRAS
+;OPCIONES DE BISAGRA SEGUN VALORES DE PR.BIS_VEN
+;Valor 0 - Se anulan las bisagras.
+;Valor 1 - Una bisagra superior otra inferior y hasta 3 centrales si cumplen la condicion de altura de galce vertical hoja
+;en este caso las bisagras van equidistantes entre si
+;Valor 10 - Si hay una tercera bisagra está va directamente esclava de la superior a la medida indicada en PR.BIS_VEN_ESCLAVA_DES
+;si hay mas bisgras estas se situaran equidistantes entre la bisagra esclava y la inferior
+;Valor 20 - Si se da el caso de que por medida se añade una bisagra central, si es una sola se coloca al centro entre al superior e inferior
+;Si hay mas bisagras centrales, la primera pasa a ser esclava de la superior a la medida indicada en PR.BIS_VEN_ESCLAVA_DES
+;y el resto de bisagras dentrales, una o dos segun cada caso, se colocaran equidistantes entre si y entre la bisagra esclava y la bisagra inferior
+;COFIGURACION GENERICA DE BISAGRAS
+PR.BIS_VEN=1;
+PR.BIS_VEN_MAR_SUP_DES=37.5+3.5;
+PR.BIS_VEN_MAR_INF_DES=37.5+3.5;
+;Distancias en hojas - Si el eje coincide con marco asignar el mismo el mismo valor
+PR.BIS_VEN_HOJ_SUP_DES=37.5+3;
+PR.BIS_VEN_HOJ_INF_DES=54+3+1;
+;Valores de aplicacion de bisagras centrales
+;En una bisagra central el eje de proceso es el mismo para marco y hoja
+PR.BIS_VEN_CEN1_MIN=9999;
+PR.BIS_VEN_CEN2_MIN=9999;
+PR.BIS_VEN_CEN3_MIN=9999;
+;Distancia a donde va la bisagra esclava dede eje de  posicion de la bisagra superior
+PR.BIS_VEN_ESCLAVA_DES=200;
+;-----------------------------------------------------------------------------------------------------------------------
+;-------------------------------------------PROCESOS GENERICOS ---------------------------------------------------------
+;-----------------------------------------------------------------------------------------------------------------------
+;PARA ANULAR PROCESOS CONCRETOS DEFINIR COMO CODIGO DE PROCESO NO, ENTRE COMILLAS
+;EN MARCOS
+;Bisagra superior en marco
+PR.BIS_VEN_MAR_SUP_DER="BisVenMarco";
+PR.BIS_VEN_MAR_SUP_IZQ="BisVenMarco";
+;Bisagra inferior en marco
+PR.BIS_VEN_MAR_INF_DER="BisVenMarco";
+PR.BIS_VEN_MAR_INF_IZQ="BisVenMarco";
+;Bisagra central 1 en marco
+PR.BIS_VEN_MAR_CEN1_DER="BisVenCMarco";
+PR.BIS_VEN_MAR_CEN1_IZQ="BisVenCMarco";
+;Bisagra central 2 en marco
+PR.BIS_VEN_MAR_CEN2_DER="BisVenCMarco";
+PR.BIS_VEN_MAR_CEN2_IZQ="BisVenCMarco";
+;Bisagra central 3 en marco
+PR.BIS_VEN_MAR_CEN3_DER="BisVenCMarco";
+PR.BIS_VEN_MAR_CEN3_IZQ="BisVenCMarco";
+;EN POSTES
+;Bisagra superior en poste
+PR.BIS_VEN_POS_SUP_DER="BisVenPosteDer";
+PR.BIS_VEN_POS_SUP_IZQ="BisVenPosteIzq";
+;Bisagra inferior en poste
+PR.BIS_VEN_POS_INF_DER="BisVenPosteDer";
+PR.BIS_VEN_POS_INF_IZQ="BisVenPosteIzq";
+;Bisagra central 1 en poste
+PR.BIS_VEN_POS_CEN1_DER="BisVenCPosteDer";
+PR.BIS_VEN_POS_CEN1_IZQ="BisVenCPosteIzq";
+;Bisagra central 2 en poste
+PR.BIS_VEN_POS_CEN2_DER="BisVenCPosteDer";
+PR.BIS_VEN_POS_CEN2_IZQ="BisVenCPosteIzq";
+;Bisagra central 3 en poste
+PR.BIS_VEN_POS_CEN3_DER="BisVenCPosteDer";
+PR.BIS_VEN_POS_CEN3_IZQ="BisVenCPosteIzq";
+;EN HOJAS
+PR.BIS_VEN_HOJ_SUP="NO";
+PR.BIS_VEN_HOJ_INF="BisVenHoja";
+PR.BIS_VEN_HOJ_CEN1="BisVenCHoja";
+PR.BIS_VEN_HOJ_CEN2="BisVenCHoja";
+PR.BIS_VEN_HOJ_CEN3="BisVenCHoja";
+;DEFINICION DE PROCESOS ESPECIALES.
+;CONFIGURACION  ESPECIAL DE LA BISAGRA INFERIOR EN APERTURA EXTERIOR
+;Procesos bisagras abatible
+PR.BIS_VEN_ABA_DESP_MARCO=85;
+PR.BIS_VEN_ABA_MIN=1400;
+PR.BIS_VEN_ABA_MIN2=1800;
+PR.BIS_VEN_ABA_MARCO="BisVenMarcoAba";
+PR.BIS_VEN_ABA_TRAVE_SUP="BisVenTraveAbaSup";
+PR.BIS_VEN_ABA_TRAVE_INF="BisVenTraveAbaInf";
+PR.BIS_VEN_ABA_HOJA=1;
+PR.BIS_VEN_ABA_HOJA="BisVenHojaAba";
+;***********************************************************************************************
+;**********************************PROCESOS DE BISAGRAS DE PUERTA *****************************
+;***********************************************************************************************
+;COFIGURACION GENERICA DE BISAGRAS
+;OPCIONES DE BISAGRA SEGUN VALORES DE PR.BIS_PUE
+;Valor 0 - Se anulan las bisagras.
+;Valor 1 - Una bisagra superior otra inferior y hasta 3 centrales si cumplen la condicion de altura de galce vertical hoja
+;en este caso las bisagras van equidistantes entre si
+;Valor 10 - Si hay una tercera bisagra está va directamente esclava de la superior a la medida indicada en PR.BIS_PUE_ESCLAVA_DES
+;si hay mas bisgras estas se situaran equidistantes entre la bisagra esclava y la inferior
+;Valor 20 - Si se da el caso de que por medida se añade una bisagra central, si es una sola se coloca al centro entre al superior e inferior
+;Si hay mas bisagras centrales, la primera pasa a ser esclava de la superior a la medida indicada en PR.BIS_PUE_ESCLAVA_DES
+;y el resto de bisagras dentrales, una o dos segun cada caso, se colocaran equidistantes entre si y entre la bisagra esclava y la bisagra inferior
+;COFIGURACION GENERICA DE BISAGRAS
+PR.BIS_PUE=20;
+PR.BIS_PUE_MAR_SUP_DES=200;
+PR.BIS_PUE_MAR_INF_DES=200;
+;Distancias en hojas - Si el eje coincide con marco asignar el mismo el mismo valor
+PR.BIS_PUE_HOJ_SUP_DES=200;
+PR.BIS_PUE_HOJ_INF_DES=200;
+;Valores de aplicacion de bisagras centrales
+;En una bisagra central el eje de proceso es el mismo para marco y hoja
+PR.BIS_PUE_CEN1_MIN=1600;
+PR.BIS_PUE_CEN2_MIN=2300;
+PR.BIS_PUE_CEN3_MIN=2500;
+;Distancia a donde va la bisagra esclava dede eje de  posicion de la bisagra superior
+PR.BIS_PUE_ESCLAVA_DES=300;
+;-----------------------------------------------------------------------------------------------------------------------
+;-------------------------------------------PROCESOS GENERICOS ---------------------------------------------------------
+;-----------------------------------------------------------------------------------------------------------------------
+;PARA ANULAR PROCESOS CONCRETOS DEFINIR COMO CODIGO DE PROCESO NO, ENTRE COMILLAS
+;EN MARCOS
+;Bisagra superior en marco
+PR.BIS_PUE_MAR_SUP_DER="BisPueMarco";
+PR.BIS_PUE_MAR_SUP_IZQ="BisPueMarco";
+;Bisagra inferior en marco
+PR.BIS_PUE_MAR_INF_DER="BisPueMarco";
+PR.BIS_PUE_MAR_INF_IZQ="BisPueMarco";
+;Bisagra central 1 en marco
+PR.BIS_PUE_MAR_CEN1_DER="BisPueMarco";
+PR.BIS_PUE_MAR_CEN1_IZQ="BisPueMarco";
+;Bisagra central 2 en marco
+PR.BIS_PUE_MAR_CEN2_DER="BisPueMarco";
+PR.BIS_PUE_MAR_CEN2_IZQ="BisPueMarco";
+;Bisagra central 3 en marco
+PR.BIS_PUE_MAR_CEN3_DER="BisPueMarco";
+PR.BIS_PUE_MAR_CEN3_IZQ="BisPueMarco";
+;EN POSTES
+;Bisagra superior en poste
+PR.BIS_PUE_POS_SUP_DER="BisPuePosteDer";
+PR.BIS_PUE_POS_SUP_IZQ="BisPuePosteIzq";
+;Bisagra inferior en poste
+PR.BIS_PUE_POS_INF_DER="BisPuePosteDer";
+PR.BIS_PUE_POS_INF_IZQ="BisPuePosteIzq";
+;Bisagra central 1 en poste
+PR.BIS_PUE_POS_CEN1_DER="BisPuePosteDer";
+PR.BIS_PUE_POS_CEN1_IZQ="BisPuePosteIzq";
+;Bisagra central 2 en poste
+PR.BIS_PUE_POS_CEN2_DER="BisPuePosteDer";
+PR.BIS_PUE_POS_CEN2_IZQ="BisPuePosteIzq";
+;Bisagra central 3 en poste
+PR.BIS_PUE_POS_CEN3_DER="BisPuePosteDer";
+PR.BIS_PUE_POS_CEN3_IZQ="BisPuePosteIzq";
+;EN HOJAS
+PR.BIS_PUE_HOJ_SUP="BisPueHoja";
+PR.BIS_PUE_HOJ_INF="BisPueHoja";
+PR.BIS_PUE_HOJ_CEN1="BisPueHoja";
+PR.BIS_PUE_HOJ_CEN2="BisPueHoja";
+PR.BIS_PUE_HOJ_CEN3="BisPueHoja";
+;***********************************************************************************************
+;**********************************PROCESOS DE BISAGRAS DE BALCONERA *****************************
+;***********************************************************************************************
+;COFIGURACION GENERICA DE BISAGRAS
+;OPCIONES DE BISAGRA SEGUN VALORES DE PR.BIS_BAL
+;Valor 0 - Se anulan las bisagras.
+;Valor 1 - Una bisagra superior otra inferior y hasta 3 centrales si cumplen la condicion de altura de galce vertical hoja
+;en este caso las bisagras van equidistantes entre si
+;Valor 10 - Si hay una tercera bisagra está va directamente esclava de la superior a la medida indicada en PR.BIS_BAL_ESCLAVA_DES
+;si hay mas bisgras estas se situaran equidistantes entre la bisagra esclava y la inferior
+;Valor 20 - Si se da el caso de que por medida se añade una bisagra central, si es una sola se coloca al centro entre al superior e inferior
+;Si hay mas bisagras centrales, la primera pasa a ser esclava de la superior a la medida indicada en PR.BIS_BAL_ESCLAVA_DES
+;y el resto de bisagras dentrales, una o dos segun cada caso, se colocaran equidistantes entre si y entre la bisagra esclava y la bisagra inferior
+;COFIGURACION GENERICA DE BISAGRAS
+PR.BIS_BAL=1;
+PR.BIS_BAL_MAR_SUP_DES=37.5;
+PR.BIS_BAL_MAR_INF_DES=37.5;
+;Distancias en hojas - Si el eje coincide con marco asignar el mismo el mismo valor
+PR.BIS_BAL_HOJ_SUP_DES=37.5;
+PR.BIS_BAL_HOJ_INF_DES=54;
+;Valores de aplicacion de bisagras centrales
+;En una bisagra central el eje de proceso es el mismo para marco y hoja
+PR.BIS_BAL_CEN1_MIN=1600;
+PR.BIS_BAL_CEN2_MIN=2300;
+PR.BIS_BAL_CEN3_MIN=2500;
+;Distancia a donde va la bisagra esclava dede eje de  posicion de la bisagra superior
+PR.BIS_BAL_ESCLAVA_DES=300;
+;-----------------------------------------------------------------------------------------------------------------------
+;-------------------------------------------PROCESOS GENERICOS ---------------------------------------------------------
+;-----------------------------------------------------------------------------------------------------------------------
+;PARA ANULAR PROCESOS CONCRETOS DEFINIR COMO CODIGO DE PROCESO NO, ENTRE COMILLAS
+;EN MARCOS
+;Bisagra superior en marco
+PR.BIS_BAL_MAR_SUP_DER="BisVenMarco";
+PR.BIS_BAL_MAR_SUP_IZQ="BisVenMarco";
+;Bisagra inferior en marco
+PR.BIS_BAL_MAR_INF_DER="BisVenMarco";
+PR.BIS_BAL_MAR_INF_IZQ="BisVenMarco";
+;Bisagra central 1 en marco
+PR.BIS_BAL_MAR_CEN1_DER="BisVenMarco";
+PR.BIS_BAL_MAR_CEN1_IZQ="BisVenMarco";
+;Bisagra central 2 en marco
+PR.BIS_BAL_MAR_CEN2_DER="BisVenMarco";
+PR.BIS_BAL_MAR_CEN2_IZQ="BisVenMarco";
+;Bisagra central 3 en marco
+PR.BIS_BAL_MAR_CEN3_DER="BisVenMarco";
+PR.BIS_BAL_MAR_CEN3_IZQ="BisVenMarco";
+;EN POSTES
+;Bisagra superior en poste
+PR.BIS_BAL_POS_SUP_DER="BisVenPosteDer";
+PR.BIS_BAL_POS_SUP_IZQ="BisVenPosteIzq";
+;Bisagra inferior en poste
+PR.BIS_BAL_POS_INF_DER="BisVenPosteDer";
+PR.BIS_BAL_POS_INF_IZQ="BisVenPosteIzq";
+;Bisagra central 1 en poste
+PR.BIS_BAL_POS_CEN1_DER="BisVenPosteDer";
+PR.BIS_BAL_POS_CEN1_IZQ="BisVenPosteIzq";
+;Bisagra central 2 en poste
+PR.BIS_BAL_POS_CEN2_DER="BisVenPosteDer";
+PR.BIS_BAL_POS_CEN2_IZQ="BisVenPosteIzq";
+;Bisagra central 3 en poste
+PR.BIS_BAL_POS_CEN3_DER="BisVenPosteDer";
+PR.BIS_BAL_POS_CEN3_IZQ="BisVenPosteIzq";
+;EN HOJAS
+PR.BIS_BAL_HOJ_SUP="";
+PR.BIS_BAL_HOJ_INF="BisVenHoja";
+PR.BIS_BAL_HOJ_CEN1="";
+PR.BIS_BAL_HOJ_CEN2="";
+PR.BIS_BAL_HOJ_CEN3="";
+;***********************************************************************************************
+;**********************************POSICION GENERAL DE LOS CERRADEROS***************************
+;***********************************************************************************************
+;-------------- CERRADEROS---------------
+PR.CERRADEROS=0;
+PR.MAR.CERRA_STD=37;
+PR.MAR.CERRA_SEG=55;
+PR.MAR.CERRA_BAS="CerraBASMarco";
+PR.MAR.CERRA_STD="CerraSTDMarco";
+PR.MAR.CERRA_SEG="CerraSEGMarco";
+PR.POS.CERRA_STD_DER="CerraderoSTD_CE";
+PR.POS.CERRA_STD_IZQ="CerraderoSTD_CI";
+PR.TRA.CERRA_STD_SUP="CerraderoSTD_CI";
+PR.TRA.CERRA_STD_INF="CerraderoSTD_CE";
+PR.TRA.CERRA_SEG_SUP="CerraderoSEG_CI";
+PR.TRA.CERRA_SEG_INF="CerraderoSEG_CE";
+PR.TRA.CERRA_BAS_SUP="CerraderoBAS_CI";
+PR.MAR.CERRA_FMA=55;
+PR.MAR.CERRA_FMA="CerraFMAMarco";
+PR.POS.CERRA_FMA_DER="CerraderoFMA_CE";
+PR.POS.CERRA_FMA_IZQ="CerraderoFMA_CI";
+;--------------- PROCESOS DE BISAGRA OCULTA -------------------------
+PR.CERRA_BSO_PRA=1;
+PR.CERRA_BSO_PAS_PRA=1;
+PR.CERRA_BSO_PAS_OSC=1;
+PR.MAR.CERRA_BSO="BisOcultaMarco";
+PR.HOJ.CERRA_BSO="BisOcultaHoja";
+PR.POS.CERRA_BSO_DER="BisOculta_CE";
+PR.POS.CERRA_BSO_IZQ="BisOculta_CI";
+;------------------------------------------------------------------------------------------
+;Datos necesarios para el calculo de la posicion de los cerraderos
+HOLGGALCE=12;
+INVGALCE=34;
+DTOGALCE=39;
+SOLD90=0;
+;-----------------------------------------------------------------------------------------
+;----------------------------------------------------------------------------------
+;POSICION CERRADEROS OSCILO, SISTEMA CERRADEROS ESTANADAR SIN SEGURIDAD
+;----------------------------------------------------------------------------------
+MEDCER=(37/2);
+MEDBAS=(55/2);
+MEDSEG=(55/2);
+MEDFMA=(55/2);
+;OSCILO  LADO CREMONA
+PR.CER_OSC_CRE_NUM=15;
+PR.CER_OSC_CRE_C1_LINI=0;
+PR.CER_OSC_CRE_C1_LFIN=9999;
+PR.CER_OSC_CRE_C1_HINI=0;
+PR.CER_OSC_CRE_C1_HFIN=9999;
+PR.CER_OSC_CRE_C1_ORI=1;
+PR.CER_OSC_CRE_C1_POS=70.5-MEDCER;
+PR.CER_OSC_CRE_C1_COD="STD";
+PR.CER_OSC_CRE_C2_LINI=0;
+PR.CER_OSC_CRE_C2_LFIN=9999;
+PR.CER_OSC_CRE_C2_HINI=1350.01;
+PR.CER_OSC_CRE_C2_HFIN=9999;
+PR.CER_OSC_CRE_C2_ORI=0;
+PR.CER_OSC_CRE_C2_POS=319.5+MEDCER;
+PR.CER_OSC_CRE_C2_COD="STD";
+PR.CER_OSC_CRE_C3_LINI=0;
+PR.CER_OSC_CRE_C3_LFIN=9999;
+PR.CER_OSC_CRE_C3_HINI=720.01;
+PR.CER_OSC_CRE_C3_HFIN=850;
+PR.CER_OSC_CRE_C3_ORI=0;
+PR.CER_OSC_CRE_C3_POS=493.5+MEDCER;
+PR.CER_OSC_CRE_C3_COD="STD";
+PR.CER_OSC_CRE_C4_LINI=0;
+PR.CER_OSC_CRE_C4_LFIN=9999;
+PR.CER_OSC_CRE_C4_HINI=850.01;
+PR.CER_OSC_CRE_C4_HFIN=1100;
+PR.CER_OSC_CRE_C4_ORI=0;
+PR.CER_OSC_CRE_C4_POS=565.5+MEDCER;
+PR.CER_OSC_CRE_C4_COD="STD";
+PR.CER_OSC_CRE_C5_LINI=0;
+PR.CER_OSC_CRE_C5_LFIN=9999;
+PR.CER_OSC_CRE_C5_HINI=1100.01;
+PR.CER_OSC_CRE_C5_HFIN=1350;
+PR.CER_OSC_CRE_C5_ORI=0;
+PR.CER_OSC_CRE_C5_POS=665.5+MEDCER;
+PR.CER_OSC_CRE_C5_COD="STD";
+PR.CER_OSC_CRE_C6_LINI=0;
+PR.CER_OSC_CRE_C6_LFIN=9999;
+PR.CER_OSC_CRE_C6_HINI=1350.01;
+PR.CER_OSC_CRE_C6_HFIN=9999;
+PR.CER_OSC_CRE_C6_ORI=0;
+PR.CER_OSC_CRE_C6_POS=815.5+MEDCER;
+PR.CER_OSC_CRE_C6_COD="STD";
+PR.CER_OSC_CRE_C7_LINI=0;
+PR.CER_OSC_CRE_C7_LFIN=9999;
+PR.CER_OSC_CRE_C7_HINI=13560.01;
+PR.CER_OSC_CRE_C7_HFIN=1850;
+PR.CER_OSC_CRE_C7_ORI=0;
+PR.CER_OSC_CRE_C7_POS=1333.5+MEDCER;
+PR.CER_OSC_CRE_C7_COD="STD";
+PR.CER_OSC_CRE_C8_LINI=0;
+PR.CER_OSC_CRE_C8_LFIN=9999;
+PR.CER_OSC_CRE_C8_HINI=1850.01;
+PR.CER_OSC_CRE_C8_HFIN=9999;
+PR.CER_OSC_CRE_C8_ORI=0;
+PR.CER_OSC_CRE_C8_POS=1415.5+MEDCER;
+PR.CER_OSC_CRE_C8_COD="STD";
+PR.CER_OSC_CRE_C9_LINI=0;
+PR.CER_OSC_CRE_C9_LFIN=9999;
+PR.CER_OSC_CRE_C9_HINI=2100.01;
+PR.CER_OSC_CRE_C9_HFIN=9999;
+PR.CER_OSC_CRE_C9_ORI=0;
+PR.CER_OSC_CRE_C9_POS=1833.5+MEDCER;
+PR.CER_OSC_CRE_C9_COD="STD";
+PR.CER_OSC_CRE_C10_LINI=0;
+PR.CER_OSC_CRE_C10_LFIN=9999;
+PR.CER_OSC_CRE_C10_HINI=550;
+PR.CER_OSC_CRE_C10_HFIN=720;
+PR.CER_OSC_CRE_C10_ORI=0;
+PR.CER_OSC_CRE_C10_POS=249+MEDFMA;
+PR.CER_OSC_CRE_C10_COD="FMA";
+PR.CER_OSC_CRE_C11_LINI=0;
+PR.CER_OSC_CRE_C11_LFIN=9999;
+PR.CER_OSC_CRE_C11_HINI=720.01;
+PR.CER_OSC_CRE_C11_HFIN=850;
+PR.CER_OSC_CRE_C11_ORI=0;
+PR.CER_OSC_CRE_C11_POS=313+MEDFMA;
+PR.CER_OSC_CRE_C11_COD="FMA";
+PR.CER_OSC_CRE_C12_LINI=0;
+PR.CER_OSC_CRE_C12_LFIN=9999;
+PR.CER_OSC_CRE_C12_HINI=850.01;
+PR.CER_OSC_CRE_C12_HFIN=1100;
+PR.CER_OSC_CRE_C12_ORI=0;
+PR.CER_OSC_CRE_C12_POS=242+MEDFMA;
+PR.CER_OSC_CRE_C12_COD="FMA";
+PR.CER_OSC_CRE_C13_LINI=0;
+PR.CER_OSC_CRE_C13_LFIN=9999;
+PR.CER_OSC_CRE_C13_HINI=1100.01;
+PR.CER_OSC_CRE_C13_HFIN=1350;
+PR.CER_OSC_CRE_C13_ORI=0;
+PR.CER_OSC_CRE_C13_POS=313+MEDFMA;
+PR.CER_OSC_CRE_C13_COD="FMA";
+PR.CER_OSC_CRE_C14_LINI=0;
+PR.CER_OSC_CRE_C14_LFIN=9999;
+PR.CER_OSC_CRE_C14_HINI=1350.01;
+PR.CER_OSC_CRE_C14_HFIN=1850;
+PR.CER_OSC_CRE_C14_ORI=0;
+PR.CER_OSC_CRE_C14_POS=442+MEDFMA;
+PR.CER_OSC_CRE_C14_COD="FMA";
+PR.CER_OSC_CRE_C15_LINI=0;
+PR.CER_OSC_CRE_C15_LFIN=9999;
+PR.CER_OSC_CRE_C15_HINI=1850.01;
+PR.CER_OSC_CRE_C15_HFIN=9999;
+PR.CER_OSC_CRE_C15_ORI=0;
+PR.CER_OSC_CRE_C15_POS=589+MEDFMA;
+PR.CER_OSC_CRE_C15_COD="FMA";
+;OSCILO  LADO SUPERIOR
+PR.CER_OSC_SUP_NUM=2;
+PR.CER_OSC_SUP_C1_LINI=750.01;
+PR.CER_OSC_SUP_C1_LFIN=1200;
+PR.CER_OSC_SUP_C1_HINI=0;
+PR.CER_OSC_SUP_C1_HFIN=9999;
+PR.CER_OSC_SUP_C1_ORI=1;
+PR.CER_OSC_SUP_C1_POS=539.5-MEDCER;
+PR.CER_OSC_SUP_C1_COD="STD";
+PR.CER_OSC_SUP_C2_LINI=1200.01;
+PR.CER_OSC_SUP_C2_LFIN=9999;
+PR.CER_OSC_SUP_C2_HINI=0;
+PR.CER_OSC_SUP_C2_HFIN=9999;
+PR.CER_OSC_SUP_C2_ORI=1;
+PR.CER_OSC_SUP_C2_POS=699.5-MEDCER;
+PR.CER_OSC_SUP_C2_COD="STD";
+;OSCILO LADO INFERIOR
+PR.CER_OSC_INF_NUM=5;
+PR.CER_OSC_INF_C1_LINI=0;
+PR.CER_OSC_INF_C1_LFIN=9999;
+PR.CER_OSC_INF_C1_HINI=0;
+PR.CER_OSC_INF_C1_HFIN=9999;
+PR.CER_OSC_INF_C1_ORI=0;
+PR.CER_OSC_INF_C1_POS=142.5-MEDBAS;
+PR.CER_OSC_INF_C1_COD="BAS";
+PR.CER_OSC_INF_C2_LINI=750.01;
+PR.CER_OSC_INF_C2_LFIN=950;
+PR.CER_OSC_INF_C2_HINI=0;
+PR.CER_OSC_INF_C2_HFIN=9999;
+PR.CER_OSC_INF_C2_ORI=0;
+PR.CER_OSC_INF_C2_POS=432.5-MEDCER;
+PR.CER_OSC_INF_C2_COD="STD";
+PR.CER_OSC_INF_C3_LINI=950.01;
+PR.CER_OSC_INF_C3_LFIN=1200;
+PR.CER_OSC_INF_C3_HINI=0;
+PR.CER_OSC_INF_C3_HFIN=9999;
+PR.CER_OSC_INF_C3_ORI=0;
+PR.CER_OSC_INF_C3_POS=642.5-MEDCER;
+PR.CER_OSC_INF_C3_COD="STD";
+PR.CER_OSC_INF_C4_LINI=1200.01;
+PR.CER_OSC_INF_C4_LFIN=9999;
+PR.CER_OSC_INF_C4_HINI=0;
+PR.CER_OSC_INF_C4_HFIN=9999;
+PR.CER_OSC_INF_C4_ORI=0;
+PR.CER_OSC_INF_C4_POS=432.5-MEDCER;
+PR.CER_OSC_INF_C4_COD="STD";
+PR.CER_OSC_INF_C5_LINI=1200.01;
+PR.CER_OSC_INF_C5_LFIN=9999;
+PR.CER_OSC_INF_C5_HINI=0;
+PR.CER_OSC_INF_C5_HFIN=9999;
+PR.CER_OSC_INF_C5_ORI=0;
+PR.CER_OSC_INF_C5_POS=952.5-MEDCER;
+PR.CER_OSC_INF_C5_COD="STD";
+;OSCILO  LADO BISAGRAS
+PR.CER_OSC_BIS_NUM=9;
+PR.CER_OSC_BIS_C1_LINI=0;
+PR.CER_OSC_BIS_C1_LFIN=9999;
+PR.CER_OSC_BIS_C1_HINI=720.01;
+PR.CER_OSC_BIS_C1_HFIN=1100;
+PR.CER_OSC_BIS_C1_ORI=0;
+PR.CER_OSC_BIS_C1_POS=449.5+MEDCER;
+PR.CER_OSC_BIS_C1_COD="STD";
+PR.CER_OSC_BIS_C2_LINI=0;
+PR.CER_OSC_BIS_C2_LFIN=9999;
+PR.CER_OSC_BIS_C2_HINI=1100.01;
+PR.CER_OSC_BIS_C2_HFIN=1350;
+PR.CER_OSC_BIS_C2_ORI=0;
+PR.CER_OSC_BIS_C2_POS=659.5+MEDCER;
+PR.CER_OSC_BIS_C2_COD="STD";
+PR.CER_OSC_BIS_C3_LINI=0;
+PR.CER_OSC_BIS_C3_LFIN=9999;
+PR.CER_OSC_BIS_C3_HINI=1350.01;
+PR.CER_OSC_BIS_C3_HFIN=1850;
+PR.CER_OSC_BIS_C3_ORI=0;
+PR.CER_OSC_BIS_C3_POS=449.5+MEDCER;
+PR.CER_OSC_BIS_C3_COD="STD";
+PR.CER_OSC_BIS_C4_LINI=0;
+PR.CER_OSC_BIS_C4_LFIN=9999;
+PR.CER_OSC_BIS_C4_HINI=1850.01;
+PR.CER_OSC_BIS_C4_HFIN=2100;
+PR.CER_OSC_BIS_C4_ORI=0;
+PR.CER_OSC_BIS_C4_POS=659.5+MEDCER;
+PR.CER_OSC_BIS_C4_COD="STD";
+PR.CER_OSC_BIS_C5_LINI=0;
+PR.CER_OSC_BIS_C5_LFIN=9999;
+PR.CER_OSC_BIS_C5_HINI=2100.01;
+PR.CER_OSC_BIS_C5_HFIN=9999;
+PR.CER_OSC_BIS_C5_ORI=0;
+PR.CER_OSC_BIS_C5_POS=449.5+MEDCER;
+PR.CER_OSC_BIS_C5_COD="STD";
+PR.CER_OSC_BIS_C6_LINI=0;
+PR.CER_OSC_BIS_C6_LFIN=9999;
+PR.CER_OSC_BIS_C6_HINI=1350.01;
+PR.CER_OSC_BIS_C6_HFIN=1850;
+PR.CER_OSC_BIS_C6_ORI=0;
+PR.CER_OSC_BIS_C6_POS=1109.5+MEDCER;
+PR.CER_OSC_BIS_C6_COD="STD";
+PR.CER_OSC_BIS_C7_LINI=0;
+PR.CER_OSC_BIS_C7_LFIN=9999;
+PR.CER_OSC_BIS_C7_HINI=1850.01;
+PR.CER_OSC_BIS_C7_HFIN=2100;
+PR.CER_OSC_BIS_C7_ORI=0;
+PR.CER_OSC_BIS_C7_POS=1369.5+MEDCER;
+PR.CER_OSC_BIS_C7_COD="STD";
+PR.CER_OSC_BIS_C8_LINI=0;
+PR.CER_OSC_BIS_C8_LFIN=9999;
+PR.CER_OSC_BIS_C8_HINI=2100.01;
+PR.CER_OSC_BIS_C8_HFIN=9999;
+PR.CER_OSC_BIS_C8_ORI=0;
+PR.CER_OSC_BIS_C8_POS=1109.5+MEDCER;
+PR.CER_OSC_BIS_C8_COD="STD";
+PR.CER_OSC_BIS_C9_LINI=0;
+PR.CER_OSC_BIS_C9_LFIN=9999;
+PR.CER_OSC_BIS_C9_HINI=2100.01;
+PR.CER_OSC_BIS_C9_HFIN=9999;
+PR.CER_OSC_BIS_C9_ORI=0;
+PR.CER_OSC_BIS_C9_POS=1809.5+MEDCER;
+PR.CER_OSC_BIS_C9_COD="STD";
+;----------------------------------------------------------------------------------
+;POSICION CERRADEROS PRACTICABLE, SISTEMA CERRADEROS ESTANDAR SIN SEGURIDAD
+;----------------------------------------------------------------------------------
+MEDCER=(37/2);
+MEDBAS=(55/2);
+MEDSEG=(55/2);
+;PRACTICABLE  LADO CREMONA
+;OSCILO  LADO CREMONA
+PR.CER_PRA_CRE_NUM=9;
+PR.CER_PRA_CRE_C1_LINI=0;
+PR.CER_PRA_CRE_C1_LFIN=9999;
+PR.CER_PRA_CRE_C1_HINI=0;
+PR.CER_PRA_CRE_C1_HFIN=9999;
+PR.CER_PRA_CRE_C1_ORI=1;
+PR.CER_PRA_CRE_C1_POS=70.5-MEDCER;
+PR.CER_PRA_CRE_C1_COD="STD";
+PR.CER_PRA_CRE_C2_LINI=0;
+PR.CER_PRA_CRE_C2_LFIN=9999;
+PR.CER_PRA_CRE_C2_HINI=1350.01;
+PR.CER_PRA_CRE_C2_HFIN=9999;
+PR.CER_PRA_CRE_C2_ORI=0;
+PR.CER_PRA_CRE_C2_POS=319.5+MEDCER;
+PR.CER_PRA_CRE_C2_COD="STD";
+PR.CER_PRA_CRE_C3_LINI=0;
+PR.CER_PRA_CRE_C3_LFIN=9999;
+PR.CER_PRA_CRE_C3_HINI=720.01;
+PR.CER_PRA_CRE_C3_HFIN=850;
+PR.CER_PRA_CRE_C3_ORI=0;
+PR.CER_PRA_CRE_C3_POS=493.5+MEDCER;
+PR.CER_PRA_CRE_C3_COD="STD";
+PR.CER_PRA_CRE_C4_LINI=0;
+PR.CER_PRA_CRE_C4_LFIN=9999;
+PR.CER_PRA_CRE_C4_HINI=850.01;
+PR.CER_PRA_CRE_C4_HFIN=1100;
+PR.CER_PRA_CRE_C4_ORI=0;
+PR.CER_PRA_CRE_C4_POS=565.5+MEDCER;
+PR.CER_PRA_CRE_C4_COD="STD";
+PR.CER_PRA_CRE_C5_LINI=0;
+PR.CER_PRA_CRE_C5_LFIN=9999;
+PR.CER_PRA_CRE_C5_HINI=1100.01;
+PR.CER_PRA_CRE_C5_HFIN=1350;
+PR.CER_PRA_CRE_C5_ORI=0;
+PR.CER_PRA_CRE_C5_POS=665.5+MEDCER;
+PR.CER_PRA_CRE_C5_COD="STD";
+PR.CER_PRA_CRE_C6_LINI=0;
+PR.CER_PRA_CRE_C6_LFIN=9999;
+PR.CER_PRA_CRE_C6_HINI=1350.01;
+PR.CER_PRA_CRE_C6_HFIN=9999;
+PR.CER_PRA_CRE_C6_ORI=0;
+PR.CER_PRA_CRE_C6_POS=815.5+MEDCER;
+PR.CER_PRA_CRE_C6_COD="STD";
+PR.CER_PRA_CRE_C7_LINI=0;
+PR.CER_PRA_CRE_C7_LFIN=9999;
+PR.CER_PRA_CRE_C7_HINI=13560.01;
+PR.CER_PRA_CRE_C7_HFIN=1850;
+PR.CER_PRA_CRE_C7_ORI=0;
+PR.CER_PRA_CRE_C7_POS=1333.5+MEDCER;
+PR.CER_PRA_CRE_C7_COD="STD";
+PR.CER_PRA_CRE_C8_LINI=0;
+PR.CER_PRA_CRE_C8_LFIN=9999;
+PR.CER_PRA_CRE_C8_HINI=1850.01;
+PR.CER_PRA_CRE_C8_HFIN=9999;
+PR.CER_PRA_CRE_C8_ORI=0;
+PR.CER_PRA_CRE_C8_POS=1415.5+MEDCER;
+PR.CER_PRA_CRE_C8_COD="STD";
+PR.CER_PRA_CRE_C9_LINI=0;
+PR.CER_PRA_CRE_C9_LFIN=9999;
+PR.CER_PRA_CRE_C9_HINI=2100.01;
+PR.CER_PRA_CRE_C9_HFIN=9999;
+PR.CER_PRA_CRE_C9_ORI=0;
+PR.CER_PRA_CRE_C9_POS=1833.5+MEDCER;
+PR.CER_PRA_CRE_C9_COD="STD";
+;PRACTICABLE LADO SUPERIOR
+PR.CER_PRA_SUP_NUM=4;
+PR.CER_PRA_SUP_C2_LINI=750.01;
+PR.CER_PRA_SUP_C2_LFIN=950;
+PR.CER_PRA_SUP_C2_HINI=0;
+PR.CER_PRA_SUP_C2_HFIN=9999;
+PR.CER_PRA_SUP_C2_ORI=0;
+PR.CER_PRA_SUP_C2_POS=449.5+MEDCER;
+PR.CER_PRA_SUP_C2_COD="STD";
+PR.CER_PRA_SUP_C3_LINI=950.01;
+PR.CER_PRA_SUP_C3_LFIN=1200;
+PR.CER_PRA_SUP_C3_HINI=0;
+PR.CER_PRA_SUP_C3_HFIN=9999;
+PR.CER_PRA_SUP_C3_ORI=0;
+PR.CER_PRA_SUP_C3_POS=659.5+MEDCER;
+PR.CER_PRA_SUP_C3_COD="STD";
+PR.CER_PRA_SUP_C4_LINI=1200.01;
+PR.CER_PRA_SUP_C4_LFIN=9999;
+PR.CER_PRA_SUP_C4_HINI=0;
+PR.CER_PRA_SUP_C4_HFIN=9999;
+PR.CER_PRA_SUP_C4_ORI=0;
+PR.CER_PRA_SUP_C4_POS=449.5+MEDCER;
+PR.CER_PRA_SUP_C4_COD="STD";
+PR.CER_PRA_SUP_C5_LINI=1200.01;
+PR.CER_PRA_SUP_C5_LFIN=1060;
+PR.CER_PRA_SUP_C5_HINI=0;
+PR.CER_PRA_SUP_C5_HFIN=9999;
+PR.CER_PRA_SUP_C5_ORI=0;
+PR.CER_PRA_SUP_C5_POS=1109.5+MEDCER;
+PR.CER_PRA_SUP_C5_COD="STD";
+;PRACTICABLE LADO INFERIOR
+PR.CER_PRA_INF_NUM=5;
+PR.CER_PRA_INF_C1_LINI=0;
+PR.CER_PRA_INF_C1_LFIN=9999;
+PR.CER_PRA_INF_C1_HINI=0;
+PR.CER_PRA_INF_C1_HFIN=9999;
+PR.CER_PRA_INF_C1_ORI=0;
+PR.CER_PRA_INF_C1_POS=142.5-MEDCER;
+PR.CER_PRA_INF_C1_COD="STD";
+PR.CER_PRA_INF_C2_LINI=750.01;
+PR.CER_PRA_INF_C2_LFIN=950;
+PR.CER_PRA_INF_C2_HINI=0;
+PR.CER_PRA_INF_C2_HFIN=9999;
+PR.CER_PRA_INF_C2_ORI=0;
+PR.CER_PRA_INF_C2_POS=432.5-MEDCER;
+PR.CER_PRA_INF_C2_COD="STD";
+PR.CER_PRA_INF_C3_LINI=950.01;
+PR.CER_PRA_INF_C3_LFIN=1200;
+PR.CER_PRA_INF_C3_HINI=0;
+PR.CER_PRA_INF_C3_HFIN=9999;
+PR.CER_PRA_INF_C3_ORI=0;
+PR.CER_PRA_INF_C3_POS=642.5-MEDCER;
+PR.CER_PRA_INF_C3_COD="STD";
+PR.CER_PRA_INF_C4_LINI=1200.01;
+PR.CER_PRA_INF_C4_LFIN=9999;
+PR.CER_PRA_INF_C4_HINI=0;
+PR.CER_PRA_INF_C4_HFIN=9999;
+PR.CER_PRA_INF_C4_ORI=0;
+PR.CER_PRA_INF_C4_POS=432.5-MEDCER;
+PR.CER_PRA_INF_C4_COD="STD";
+PR.CER_PRA_INF_C5_LINI=1200.01;
+PR.CER_PRA_INF_C5_LFIN=1600;
+PR.CER_PRA_INF_C5_HINI=0;
+PR.CER_PRA_INF_C5_HFIN=9999;
+PR.CER_PRA_INF_C5_ORI=0;
+PR.CER_PRA_INF_C5_POS=952.5-MEDCER;
+PR.CER_PRA_INF_C5_COD="STD";
+;LADO BISAGRAS CON BISAGRA OCULTA IGUAL QUE SI FUESEN TIRANTES LATERALES
+PR.CER_PRA_BIS_NUM=9;
+PR.CER_PRA_BIS_C1_LINI=0;
+PR.CER_PRA_BIS_C1_LFIN=9999;
+PR.CER_PRA_BIS_C1_HINI=720.01;
+PR.CER_PRA_BIS_C1_HFIN=1100;
+PR.CER_PRA_BIS_C1_ORI=0;
+PR.CER_PRA_BIS_C1_POS=449.5+MEDCER;
+PR.CER_PRA_BIS_C1_COD="BSO";
+PR.CER_PRA_BIS_C2_LINI=0;
+PR.CER_PRA_BIS_C2_LFIN=9999;
+PR.CER_PRA_BIS_C2_HINI=1100.01;
+PR.CER_PRA_BIS_C2_HFIN=1350;
+PR.CER_PRA_BIS_C2_ORI=0;
+PR.CER_PRA_BIS_C2_POS=659.5+MEDCER;
+PR.CER_PRA_BIS_C2_COD="BSO";
+PR.CER_PRA_BIS_C3_LINI=0;
+PR.CER_PRA_BIS_C3_LFIN=9999;
+PR.CER_PRA_BIS_C3_HINI=1350.01;
+PR.CER_PRA_BIS_C3_HFIN=1850;
+PR.CER_PRA_BIS_C3_ORI=0;
+PR.CER_PRA_BIS_C3_POS=449.5+MEDCER;
+PR.CER_PRA_BIS_C3_COD="BSO";
+PR.CER_PRA_BIS_C4_LINI=0;
+PR.CER_PRA_BIS_C4_LFIN=9999;
+PR.CER_PRA_BIS_C4_HINI=1850.01;
+PR.CER_PRA_BIS_C4_HFIN=2100;
+PR.CER_PRA_BIS_C4_ORI=0;
+PR.CER_PRA_BIS_C4_POS=659.5+MEDCER;
+PR.CER_PRA_BIS_C4_COD="BSO";
+PR.CER_PRA_BIS_C5_LINI=0;
+PR.CER_PRA_BIS_C5_LFIN=9999;
+PR.CER_PRA_BIS_C5_HINI=2100.01;
+PR.CER_PRA_BIS_C5_HFIN=9999;
+PR.CER_PRA_BIS_C5_ORI=0;
+PR.CER_PRA_BIS_C5_POS=449.5+MEDCER;
+PR.CER_PRA_BIS_C5_COD="BSO";
+PR.CER_PRA_BIS_C6_LINI=0;
+PR.CER_PRA_BIS_C6_LFIN=9999;
+PR.CER_PRA_BIS_C6_HINI=1350.01;
+PR.CER_PRA_BIS_C6_HFIN=1850;
+PR.CER_PRA_BIS_C6_ORI=0;
+PR.CER_PRA_BIS_C6_POS=1109.5+MEDCER;
+PR.CER_PRA_BIS_C6_COD="BSO";
+PR.CER_PRA_BIS_C7_LINI=0;
+PR.CER_PRA_BIS_C7_LFIN=9999;
+PR.CER_PRA_BIS_C7_HINI=1850.01;
+PR.CER_PRA_BIS_C7_HFIN=2100;
+PR.CER_PRA_BIS_C7_ORI=0;
+PR.CER_PRA_BIS_C7_POS=1369.5+MEDCER;
+PR.CER_PRA_BIS_C7_COD="BSO";
+PR.CER_PRA_BIS_C8_LINI=0;
+PR.CER_PRA_BIS_C8_LFIN=9999;
+PR.CER_PRA_BIS_C8_HINI=2100.01;
+PR.CER_PRA_BIS_C8_HFIN=9999;
+PR.CER_PRA_BIS_C8_ORI=0;
+PR.CER_PRA_BIS_C8_POS=1109.5+MEDCER;
+PR.CER_PRA_BIS_C8_COD="BSO";
+PR.CER_PRA_BIS_C9_LINI=0;
+PR.CER_PRA_BIS_C9_LFIN=9999;
+PR.CER_PRA_BIS_C9_HINI=2100.01;
+PR.CER_PRA_BIS_C9_HFIN=9999;
+PR.CER_PRA_BIS_C9_ORI=0;
+PR.CER_PRA_BIS_C9_POS=1809.5+MEDCER;
+PR.CER_PRA_BIS_C9_COD="BSO";
+;----------------------------------------------------------------------------------
+;POSICION CERRADEROS HOJA PASIVA, SISTEMA CERRADEROS ESTANDAR SIN SEGURIDAD
+;----------------------------------------------------------------------------------
+MEDCER=(37/2);
+MEDBAS=(55/2);
+MEDSEG=(55/2);
+GALCEPAS=3+8+12;
+;GALCEPAS es BAT/2 + montante de hoja + holgura de galce entre hoja e inversor
+;PASIVA  LADO BISAGRAS
+PR.CER_PAS_BIS_NUM=8; 
+;Por defecto se anula primer marcado de bisagra oculta ya que no se usa con bisagra oculta
+;Esta reactivado en el kit especial perimetral
+PR.CER_PAS_BIS_C1_LINI=0; 
+PR.CER_PAS_BIS_C1_LFIN=9999; 
+PR.CER_PAS_BIS_C1_HINI=720.01; 
+PR.CER_PAS_BIS_C1_HFIN=1100; 
+PR.CER_PAS_BIS_C1_ORI=0; 
+PR.CER_PAS_BIS_C1_POS=433+MEDCER; 
+PR.CER_PAS_BIS_C1_COD="STD"; 
+PR.CER_PAS_BIS_C2_LINI=0; 
+PR.CER_PAS_BIS_C2_LFIN=9999; 
+PR.CER_PAS_BIS_C2_HINI=1100.01; 
+PR.CER_PAS_BIS_C2_HFIN=1350; 
+PR.CER_PAS_BIS_C2_ORI=0; 
+PR.CER_PAS_BIS_C2_POS=643+MEDCER; 
+PR.CER_PAS_BIS_C2_COD="STD"; 
+PR.CER_PAS_BIS_C3_LINI=0; 
+PR.CER_PAS_BIS_C3_LFIN=9999; 
+PR.CER_PAS_BIS_C3_HINI=1350.01; 
+PR.CER_PAS_BIS_C3_HFIN=1850; 
+PR.CER_PAS_BIS_C3_ORI=0; 
+PR.CER_PAS_BIS_C3_POS=433+MEDCER; 
+PR.CER_PAS_BIS_C3_COD="STD"; 
+PR.CER_PAS_BIS_C4_LINI=0; 
+PR.CER_PAS_BIS_C4_LFIN=9999; 
+PR.CER_PAS_BIS_C4_HINI=1700.01; 
+PR.CER_PAS_BIS_C4_HFIN=2100; 
+PR.CER_PAS_BIS_C4_ORI=0; 
+PR.CER_PAS_BIS_C4_POS=643+MEDCER; 
+PR.CER_PAS_BIS_C4_COD="STD"; 
+PR.CER_PAS_BIS_C5_LINI=0; 
+PR.CER_PAS_BIS_C5_LFIN=9999; 
+PR.CER_PAS_BIS_C5_HINI=2100; 
+PR.CER_PAS_BIS_C5_HFIN=9999; 
+PR.CER_PAS_BIS_C5_ORI=0; 
+PR.CER_PAS_BIS_C5_POS=433+MEDCER; 
+PR.CER_PAS_BIS_C5_COD="STD"; 
+PR.CER_PAS_BIS_C6_LINI=0; 
+PR.CER_PAS_BIS_C6_LFIN=9999; 
+PR.CER_PAS_BIS_C6_HINI=1350.01; 
+PR.CER_PAS_BIS_C6_HFIN=1850; 
+PR.CER_PAS_BIS_C6_ORI=0; 
+PR.CER_PAS_BIS_C6_POS=1093+MEDCER; 
+PR.CER_PAS_BIS_C6_COD="STD"; 
+PR.CER_PAS_BIS_C7_LINI=0; 
+PR.CER_PAS_BIS_C7_LFIN=9999; 
+PR.CER_PAS_BIS_C7_HINI=1700.01; 
+PR.CER_PAS_BIS_C7_HFIN=2100; 
+PR.CER_PAS_BIS_C7_ORI=0; 
+PR.CER_PAS_BIS_C7_POS=1353+MEDCER; 
+PR.CER_PAS_BIS_C7_COD="STD"; 
+PR.CER_PAS_BIS_C8_LINI=0; 
+PR.CER_PAS_BIS_C8_LFIN=9999; 
+PR.CER_PAS_BIS_C8_HINI=2100.01; 
+PR.CER_PAS_BIS_C8_HFIN=9999; 
+PR.CER_PAS_BIS_C8_ORI=0; 
+PR.CER_PAS_BIS_C8_POS=1793+MEDCER; 
+PR.CER_PAS_BIS_C8_COD="STD"; 
+;PASIVA LADO SUPERIOR
+PR.CER_PAS_SUP_NUM=5; 
+PR.CER_PAS_SUP_C1_LINI=0; 
+PR.CER_PAS_SUP_C1_LFIN=9999; 
+PR.CER_PAS_SUP_C1_HINI=0; 
+PR.CER_PAS_SUP_C1_HFIN=9999; 
+PR.CER_PAS_SUP_C1_ORI=0; 
+PR.CER_PAS_SUP_C1_POS=120+MEDCER+GALCEPAS; 
+PR.CER_PAS_SUP_C1_COD="STD"; 
+PR.CER_PAS_SUP_C2_LINI=750.01; 
+PR.CER_PAS_SUP_C2_LFIN=950; 
+PR.CER_PAS_SUP_C2_HINI=0; 
+PR.CER_PAS_SUP_C2_HFIN=9999; 
+PR.CER_PAS_SUP_C2_ORI=0; 
+PR.CER_PAS_SUP_C2_POS=410+MEDCER+GALCEPAS; 
+PR.CER_PAS_SUP_C2_COD="STD"; 
+PR.CER_PAS_SUP_C3_LINI=950.01; 
+PR.CER_PAS_SUP_C3_LFIN=1200; 
+PR.CER_PAS_SUP_C3_HINI=0; 
+PR.CER_PAS_SUP_C3_HFIN=9999; 
+PR.CER_PAS_SUP_C3_ORI=0; 
+PR.CER_PAS_SUP_C3_POS=620+MEDCER+GALCEPAS;
+PR.CER_PAS_SUP_C3_COD="STD"; 
+PR.CER_PAS_SUP_C4_LINI=1200.1; 
+PR.CER_PAS_SUP_C4_LFIN=9999; 
+PR.CER_PAS_SUP_C4_HINI=0; 
+PR.CER_PAS_SUP_C4_HFIN=9999; 
+PR.CER_PAS_SUP_C4_ORI=0; 
+PR.CER_PAS_SUP_C4_POS=410+MEDCER+GALCEPAS;
+PR.CER_PAS_SUP_C4_COD="STD"; 
+PR.CER_PAS_SUP_C5_LINI=1200.1; 
+PR.CER_PAS_SUP_C5_LFIN=9999; 
+PR.CER_PAS_SUP_C5_HINI=0; 
+PR.CER_PAS_SUP_C5_HFIN=9999; 
+PR.CER_PAS_SUP_C5_ORI=0; 
+PR.CER_PAS_SUP_C5_POS=930+MEDCER+GALCEPAS;
+PR.CER_PAS_SUP_C5_COD="STD"; 
+;PASIVA LADO INFERIOR
+PR.CER_PAS_INF_NUM=5; 
+PR.CER_PAS_INF_C1_LINI=0; 
+PR.CER_PAS_INF_C1_LFIN=9999; 
+PR.CER_PAS_INF_C1_HINI=0; 
+PR.CER_PAS_INF_C1_HFIN=9999; 
+PR.CER_PAS_INF_C1_ORI=0; 
+PR.CER_PAS_INF_C1_POS=120+MEDCER+GALCEPAS; 
+PR.CER_PAS_INF_C1_COD="STD"; 
+PR.CER_PAS_INF_C2_LINI=750.01; 
+PR.CER_PAS_INF_C2_LFIN=950; 
+PR.CER_PAS_INF_C2_HINI=0; 
+PR.CER_PAS_INF_C2_HFIN=9999; 
+PR.CER_PAS_INF_C2_ORI=0; 
+PR.CER_PAS_INF_C2_POS=410+MEDCER+GALCEPAS; 
+PR.CER_PAS_INF_C2_COD="STD"; 
+PR.CER_PAS_INF_C3_LINI=950.01; 
+PR.CER_PAS_INF_C3_LFIN=1200; 
+PR.CER_PAS_INF_C3_HINI=0; 
+PR.CER_PAS_INF_C3_HFIN=9999; 
+PR.CER_PAS_INF_C3_ORI=0; 
+PR.CER_PAS_INF_C3_POS=620+MEDCER+GALCEPAS;
+PR.CER_PAS_INF_C3_COD="STD"; 
+PR.CER_PAS_INF_C4_LINI=1200.01; 
+PR.CER_PAS_INF_C4_LFIN=9999; 
+PR.CER_PAS_INF_C4_HINI=0; 
+PR.CER_PAS_INF_C4_HFIN=9999; 
+PR.CER_PAS_INF_C4_ORI=0; 
+PR.CER_PAS_INF_C4_POS=410+MEDCER+GALCEPAS;
+PR.CER_PAS_INF_C4_COD="STD"; 
+PR.CER_PAS_INF_C5_LINI=1200.01; 
+PR.CER_PAS_INF_C5_LFIN=9999; 
+PR.CER_PAS_INF_C5_HINI=0; 
+PR.CER_PAS_INF_C5_HFIN=9999; 
+PR.CER_PAS_INF_C5_ORI=0; 
+PR.CER_PAS_INF_C5_POS=930+MEDCER+GALCEPAS;
+PR.CER_PAS_INF_C5_COD="STD"; 
+;--1-------------- MARCOS ----------------
+;Textos e imagenes para las tarea/puesto de marcos  
+(1):?"#MARCOS#Prueba de mensaje en marcoss"    
+(1):?"%MARCOS%ITEHC44550"   
+
+ 
+(1):?"#HOJAS#Prueba de mensaje en hojas"    
+(1):?"%HOJAS%GU6373550101"    
+
+      

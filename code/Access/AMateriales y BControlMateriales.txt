@@ -1,0 +1,1441 @@
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                    miércoles, 28 de mayo de 2025
+ Tabla: AMateriales                                                                                       Página: 1
+
+
+
+
+Propiedades
+
+AlternateBackShade:          95                           AlternateBackThemeCol       1
+AlternateBackTint:           100                          Attributes:                 Vinculado
+BackShade:                   100                          BackTint:                   100
+
+Connect:                     ;DATABASE=\\192.168.1.       DatasheetForeThemeCo        0
+                             81\Compartido\PRODUCC
+                             ION_MONCADA\DataBas
+                             e_CONTROL_PRODUCCI
+                             ON_MONCADA.accdb
+DatasheetGridlinesThe        3                            DateCreated:                20/11/2024 16:25:33
+DefaultView:                 2                            DisplayViewsOnShareP        1
+
+FilterOnLoad:                Falso                        GUID:                       {guid {01E4BDCA-F829-
+                                                                                      44D2-9A54-
+HideNewField:                Falso                        LastUpdated:                20/11/2024 16:25:34
+
+NameMap:                     Datos binarios largos        OrderByOn:                  Falso
+OrderByOnLoad:               Verdadero                    Orientation:                De izquieda a derecha
+PublishToWeb:                1                            ReadOnlyWhenDisconn         Falso
+
+RecordCount:                 -1                           SourceTableName:            AMateriales
+ThemeFontIndex:              1                            TotalsRow:                  Falso
+
+Updatable:                   Falso
+
+
+
+Columnas
+          Nombre                                                    Tip                          Tamaño
+
+
+          Id_Material                                               Entero largo                                4
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Falso
+                   AppendOnly:               Falso
+
+                   Attributes:               Tamaño fijo
+
+                   CollatingOrder:           General
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   DecimalPlaces:            Automático
+                   DisplayControl:           Cuadro de texto
+
+                   GUID:                     {guid {DCB45A8C-9DE9-493D-A092-8F2F722A50A8}}
+
+                   OrdinalPosition:          0
+                   Precision:                1033
+
+                   Required:                 Verdadero
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              Id_Material
+
+                   SourceTable:              AMateriales
+                   TextAlign:                General
+
+
+          Material                                                  Texto corto                               255
+
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                    miércoles, 28 de mayo de 2025
+ Tabla: AMateriales                                                                                       Página: 2
+
+
+                   AggregateType:            -1
+                   AllowZeroLength:          Falso
+
+                   AppendOnly:               Falso
+                   Attributes:               Longitud variable
+
+                   CollatingOrder:           3082
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              2475
+
+                   CurrencyLCID:             0
+
+                   DataUpdatable:            Falso
+                   DisplayControl:           Cuadro de texto
+
+                   GUID:                     {guid {5A88B1C1-A163-42A7-A6D9-E6E3E506562E}}
+                   IMEMode:                  0
+
+                   IMESentenceMode:          3
+                   OrdinalPosition:          1
+
+                   Precision:                3082
+                   Required:                 Verdadero
+
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              Material
+
+                   SourceTable:              AMateriales
+                   TextAlign:                General
+
+                   UnicodeCompression:       Verdadero
+
+
+
+
+
+
+
+Índices de tabla
+
+          Nombr                                      Número de
+
+          Id_TipoMaterial                            1
+
+                   Clustered:                Falso
+                   DistinctCount:            8
+
+                   Foreign:                  Falso
+                   IgnoreNulls:              Falso
+
+                   Name:                     Id_TipoMaterial
+                   Primary:                  Falso
+
+                   Required:                 Falso
+                   Unique:                   Verdadero
+                    Campos:
+
+                    Id_Material                 Ascendente
+
+
+
+
+
+
+          PrimaryKey                                 1
+                   Clustered:                Falso
+
+                   DistinctCount:            8
+                   Foreign:                  Falso
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                    miércoles, 28 de mayo de 2025
+ Tabla: AMateriales                                                                                       Página: 3
+
+
+
+                   IgnoreNulls:              Falso
+
+                   Name:                     PrimaryKey
+                   Primary:                  Verdadero
+
+                   Required:                 Verdadero
+                   Unique:                   Verdadero
+                    Campos:
+
+                    Id_Material                 Ascendente
+
+
+
+
+
+
+          TipoMaterial                               1
+                   Clustered:                Falso
+
+                   DistinctCount:            8
+                   Foreign:                  Falso
+
+                   IgnoreNulls:              Falso
+                   Name:                     TipoMaterial
+
+                   Primary:                  Falso
+                   Required:                 Falso
+
+                   Unique:                   Verdadero
+                    Campos:
+                    Material                    Ascendente
+
+
+
+
+
+
+
+
+
+
+Permisos de usuario
+
+          admin                     Eliminar; Leer permisos; Establecer permisos; Cambiar propietario,
+                                    Leer definición; Escribir definición; Leer datos; Insertar datos;
+                                    Actualizar datos; Eliminar datos
+
+
+
+Permisos de grupo
+
+          Admins                    Eliminar; Leer permisos; Establecer permisos; Cambiar propietario,
+                                    Leer definición; Escribir definición; Leer datos; Insertar datos;
+          Users                     Eliminar; Leer permisos; Establecer permisos; Cambiar propietario,
+                                    Leer definición; Escribir definición; Leer datos; Insertar datos;
+                                    Actualizar datos; Eliminar datos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                    miércoles, 28 de mayo de 2025
+ Tabla: BControlMateriales                                                                                Página: 4
+
+
+
+
+Propiedades
+
+AlternateBackShade:          100                          AlternateBackThemeCol       -1
+AlternateBackTint:           100                          Attributes:                 Vinculado
+BackShade:                   100                          BackTint:                   100
+
+Connect:                     ;DATABASE=\\192.168.1.       DatasheetForeThemeCo        -1
+                             81\Compartido\PRODUCC
+                             ION_MONCADA\DataBas
+                             e_CONTROL_PRODUCCI
+                             ON_MONCADA.accdb
+DatasheetGridlinesThe        -1                           DateCreated:                20/11/2024 16:25:52
+DefaultView:                 2                            DisplayViewsOnShareP        1
+
+FilterOnLoad:                Falso                        GUID:                       {guid {018B46FE-FEC9-
+                                                                                      43B1-AAF7-
+HideNewField:                Falso                        LastUpdated:                20/11/2024 16:25:52
+
+NameMap:                     Datos binarios largos        OrderByOn:                  Falso
+OrderByOnLoad:               Verdadero                    Orientation:                De izquieda a derecha
+PublishToWeb:                1                            ReadOnlyWhenDisconn         Falso
+
+RecordCount:                 -1                           SourceTableName:            BControlMateriales
+ThemeFontIndex:              -1                           TotalsRow:                  Falso
+
+Updatable:                   Falso
+
+
+
+Columnas
+          Nombre                                                    Tip                          Tamaño
+
+
+          Id_ControlMat                                             Entero largo                                4
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Falso
+                   AppendOnly:               Falso
+
+                   Attributes:               Tamaño fijo; Autoincremento
+
+                   CollatingOrder:           General
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              2745
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   Description:              Id único de registro del pedido a proveedor que relaciona
+                                             esta tabla con otras
+
+                   GUID:                     {guid {AA233400-E185-4B69-93EC-138FFCA4A9A1}}
+                   OrdinalPosition:          0
+
+                   Precision:                1033
+                   Required:                 Falso
+
+                   ResultType:               0
+                   Scale:                    0
+
+                   SourceField:              Id_ControlMat
+
+                   SourceTable:              BControlMateriales
+                   TextAlign:                General
+
+
+
+
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                    miércoles, 28 de mayo de 2025
+ Tabla: BControlMateriales                                                                                Página: 5
+
+
+          Id_Material                                               Entero largo                                4
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Falso
+                   AppendOnly:               Falso
+
+                   Attributes:               Tamaño fijo
+
+                   CollatingOrder:           General
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   DecimalPlaces:            Automático
+                   Description:              Id único que relaciona el campo con la tabla AMateriales
+
+                   DisplayControl:           Cuadro de texto
+
+                   GUID:                     {guid {91E8B9DC-7AA7-4A5A-8D4F-36C732DA071E}}
+                   OrdinalPosition:          1
+
+                   Precision:                1033
+                   Required:                 Verdadero
+
+                   ResultType:               0
+                   Scale:                    0
+
+                   SourceField:              Id_Material
+                   SourceTable:              BControlMateriales
+
+                   TextAlign:                General
+
+
+          Id_Pedido                                                 Entero largo                                4
+
+                   AggregateType:            -1
+                   AllowZeroLength:          Falso
+
+                   AppendOnly:               Falso
+                   Attributes:               Tamaño fijo
+
+                   CollatingOrder:           General
+
+                   ColumnHidden:             Falso
+                   ColumnOrder:              Predeterminado
+
+                   ColumnWidth:              Predeterminado
+                   CurrencyLCID:             0
+
+                   DataUpdatable:            Falso
+                   DecimalPlaces:            Automático
+
+                   Description:              Id único que relaciona el campo con la tabla BPedidos
+                   DisplayControl:           Cuadro de texto
+
+                   GUID:                     {guid {D4CC3464-E8BD-4BB4-B332-7845F6699F78}}
+
+                   OrdinalPosition:          2
+                   Precision:                1033
+
+                   Required:                 Verdadero
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              Id_Pedido
+
+                   SourceTable:              BControlMateriales
+                   TextAlign:                General
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                    miércoles, 28 de mayo de 2025
+ Tabla: BControlMateriales                                                                                Página: 6
+
+
+
+
+          Id_Proveedor                                              Entero largo                                4
+
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Falso
+                   AppendOnly:               Falso
+
+                   Attributes:               Tamaño fijo
+                   CollatingOrder:           General
+
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   DecimalPlaces:            Automático
+                   Description:              Id único que relaciona el campo con la tabla AProveedores
+
+                   DisplayControl:           Cuadro de texto
+                   GUID:                     {guid {CDE1B369-38B3-43FD-A983-727FC9C71604}}
+
+                   OrdinalPosition:          3
+
+                   Precision:                1033
+                   Required:                 Verdadero
+
+                   ResultType:               0
+                   Scale:                    0
+
+                   SourceField:              Id_Proveedor
+                   SourceTable:              BControlMateriales
+
+                   TextAlign:                General
+
+
+          Canal                                                     Texto corto                               255
+
+                   AggregateType:            -1
+                   AllowZeroLength:          Falso
+
+                   AppendOnly:               Falso
+                   Attributes:               Longitud variable
+
+                   CollatingOrder:           3082
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+
+                   ColumnWidth:              Predeterminado
+                   CurrencyLCID:             0
+
+                   DataUpdatable:            Falso
+                   Description:              Medio por el cual se realiza el pedido de materiales
+
+                   DisplayControl:           Cuadro de texto
+                   GUID:                     {guid {175C93E5-9346-41A6-92DB-E9AD85C9BA37}}
+
+                   IMEMode:                  0
+                   IMESentenceMode:          3
+
+                   OrdinalPosition:          4
+
+                   Precision:                3082
+                   Required:                 Verdadero
+
+                   ResultType:               0
+                   Scale:                    0
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                    miércoles, 28 de mayo de 2025
+ Tabla: BControlMateriales                                                                                Página: 7
+
+
+
+                   SourceField:              Canal
+
+                   SourceTable:              BControlMateriales
+                   TextAlign:                General
+
+                   UnicodeCompression:       Verdadero
+
+
+          Responsable                                               Texto corto                               255
+
+                   AggregateType:            -1
+                   AllowZeroLength:          Verdadero
+
+                   AppendOnly:               Falso
+                   Attributes:               Longitud variable
+
+                   CollatingOrder:           3082
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+
+                   DataUpdatable:            Falso
+                   Description:              Indica la persona Responsable del pedido
+
+                   DisplayControl:           Cuadro de texto
+                   GUID:                     {guid {A4656875-3943-4F47-B5BB-24C01D5489FE}}
+
+                   IMEMode:                  0
+                   IMESentenceMode:          3
+
+                   OrdinalPosition:          5
+                   Precision:                3082
+
+                   Required:                 Verdadero
+
+                   ResultType:               0
+                   RowSource:                "RAÚL";"PABLO";"MIREIA";"ESTHER"
+
+                   Scale:                    0
+                   SourceField:              Responsable
+
+                   SourceTable:              BControlMateriales
+                   TextAlign:                General
+
+                   UnicodeCompression:       Verdadero
+
+
+          FechaPedido                                               Fecha con hora                              8
+
+                   AggregateType:            -1
+                   AllowZeroLength:          Falso
+
+                   AppendOnly:               Falso
+                   Attributes:               Tamaño fijo
+
+                   CollatingOrder:           General
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+
+                   ColumnWidth:              Predeterminado
+                   CurrencyLCID:             0
+
+                   DataUpdatable:            Falso
+                   Description:              Fecha en la que se realiza el pedido a proveedor
+
+                   Format:                   Short Date
+                   GUID:                     {guid {022469A0-8D03-4265-9194-9E13717C3652}}
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                    miércoles, 28 de mayo de 2025
+ Tabla: BControlMateriales                                                                                Página: 8
+
+
+
+                   IMEMode:                  0
+
+                   IMESentenceMode:          3
+                   OrdinalPosition:          6
+
+                   Precision:                1033
+                   Required:                 Verdadero
+
+                   ResultType:               0
+                   Scale:                    0
+
+                   ShowDatePicker:           Para fechas
+
+                   SourceField:              FechaPedido
+                   SourceTable:              BControlMateriales
+
+                   TextAlign:                General
+
+
+          FechaPrevista                                             Fecha con hora                              8
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Falso
+
+                   AppendOnly:               Falso
+                   Attributes:               Tamaño fijo
+
+                   CollatingOrder:           General
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   Description:              Fecha estimada de recepción del material, para stock será
+                                             la misma fecha que el pedido
+
+                   Format:                   Short Date
+                   GUID:                     {guid {12B6A7A7-596B-4EDE-A632-85FFEBCFE571}}
+
+                   IMEMode:                  0
+                   IMESentenceMode:          3
+
+                   OrdinalPosition:          7
+
+                   Precision:                1033
+                   Required:                 Falso
+
+                   ResultType:               0
+                   Scale:                    0
+
+                   ShowDatePicker:           Para fechas
+                   SourceField:              FechaPrevista
+
+                   SourceTable:              BControlMateriales
+                   TextAlign:                General
+
+
+
+
+          FechaRecepcion                                            Fecha con hora                              8
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Falso
+                   AppendOnly:               Falso
+
+                   Attributes:               Tamaño fijo
+
+                   CollatingOrder:           General
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                    miércoles, 28 de mayo de 2025
+ Tabla: BControlMateriales                                                                                Página: 9
+
+
+                   ColumnHidden:             Falso
+                   ColumnOrder:              Predeterminado
+
+                   ColumnWidth:              Predeterminado
+                   CurrencyLCID:             0
+
+                   DataUpdatable:            Falso
+                   Description:              Fecha en la que se recibe el material en Fábrica
+
+                   Format:                   Short Date
+                   GUID:                     {guid {E54C19BC-5D4E-4A2D-A7D0-1EBFB419B7CB}}
+
+                   IMEMode:                  0
+
+                   IMESentenceMode:          3
+                   OrdinalPosition:          8
+
+                   Precision:                1033
+                   Required:                 Falso
+
+                   ResultType:               0
+                   Scale:                    0
+
+                   ShowDatePicker:           Para fechas
+                   SourceField:              FechaRecepcion
+
+                   SourceTable:              BControlMateriales
+
+                   TextAlign:                General
+
+          Recibido                                                  Entero largo                                4
+
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Falso
+                   AppendOnly:               Falso
+
+                   Attributes:               Tamaño fijo
+
+                   CollatingOrder:           General
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   DecimalPlaces:            Automático
+                   Description:              Campo que indica si el pedido se ha recibido -1 =Si , 0=No
+
+                   DisplayControl:           Cuadro de texto
+
+                   GUID:                     {guid {13FC407C-063B-4A75-A77B-649872111F45}}
+                   OrdinalPosition:          9
+
+                   Precision:                1033
+                   Required:                 Falso
+
+                   ResultType:               0
+                   Scale:                    0
+
+                   SourceField:              Recibido
+                   SourceTable:              BControlMateriales
+
+                   TextAlign:                General
+
+
+          Cotejado                                                  Entero largo                                4
+
+                   AggregateType:            -1
+                   AllowZeroLength:          Falso
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                    miércoles, 28 de mayo de 2025
+ Tabla: BControlMateriales                                                                               Página: 10
+
+
+
+                   AppendOnly:               Falso
+
+                   Attributes:               Tamaño fijo
+                   CollatingOrder:           General
+
+                   ColumnHidden:             Falso
+                   ColumnOrder:              Predeterminado
+
+                   ColumnWidth:              Predeterminado
+                   CurrencyLCID:             0
+
+                   DataUpdatable:            Falso
+
+                   DecimalPlaces:            Automático
+                   Description:              Indica si el pedido se ha comprobado
+
+                   DisplayControl:           Cuadro de texto
+                   GUID:                     {guid {79440ECF-332D-4840-84B4-699C4FCFD7DA}}
+
+                   OrdinalPosition:          10
+                   Precision:                1033
+
+                   Required:                 Falso
+                   ResultType:               0
+
+                   Scale:                    0
+
+                   SourceField:              Cotejado
+                   SourceTable:              BControlMateriales
+
+                   TextAlign:                General
+
+
+          Observaciones                                             Texto corto                               255
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Verdadero
+
+                   AppendOnly:               Falso
+                   Attributes:               Longitud variable
+
+                   CollatingOrder:           3082
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   Description:              Información adicional al pedido
+
+                   DisplayControl:           Cuadro de texto
+                   GUID:                     {guid {E1DD0BAE-06A6-4CFF-9AC6-A61087F77A8B}}
+
+                   IMEMode:                  0
+                   IMESentenceMode:          3
+
+                   OrdinalPosition:          11
+                   Precision:                3082
+
+                   Required:                 Falso
+                   ResultType:               0
+
+                   Scale:                    0
+
+                   SourceField:              Observaciones
+                   SourceTable:              BControlMateriales
+
+                   TextAlign:                General
+                   UnicodeCompression:       Verdadero
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                    miércoles, 28 de mayo de 2025
+ Tabla: BControlMateriales                                                                               Página: 11
+
+
+
+
+          NumeroPedido                                              Texto corto                               255
+
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Verdadero
+                   AppendOnly:               Falso
+
+                   Attributes:               Longitud variable
+                   CollatingOrder:           3082
+
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   Description:              Número Pedido SICAR
+                   DisplayControl:           Cuadro de texto
+
+                   GUID:                     {guid {88666DB6-D24A-4AD0-A12B-144BD0D58E91}}
+                   IMEMode:                  0
+
+                   IMESentenceMode:          3
+
+                   OrdinalPosition:          12
+                   Precision:                3082
+
+                   Required:                 Falso
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              NumeroPedido
+
+                   SourceTable:              BControlMateriales
+                   TextAlign:                General
+
+                   UnicodeCompression:       Verdadero
+
+
+          NumeroAfix                                                Texto corto                               255
+
+                   AggregateType:            -1
+                   AllowZeroLength:          Verdadero
+
+                   AppendOnly:               Falso
+                   Attributes:               Longitud variable
+
+                   CollatingOrder:           3082
+
+                   ColumnHidden:             Falso
+                   ColumnOrder:              Predeterminado
+
+                   ColumnWidth:              Predeterminado
+                   CurrencyLCID:             0
+
+                   DataUpdatable:            Falso
+                   Description:              Número pedido adicional AFIX
+
+                   DisplayControl:           Cuadro de texto
+                   GUID:                     {guid {EACE2AE2-DC61-4563-8AD3-86E7421E8717}}
+
+                   IMEMode:                  0
+
+                   IMESentenceMode:          3
+                   OrdinalPosition:          13
+
+                   Precision:                3082
+                   Required:                 Falso
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                    miércoles, 28 de mayo de 2025
+ Tabla: BControlMateriales                                                                               Página: 12
+
+
+
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              NumeroAfix
+
+                   SourceTable:              BControlMateriales
+                   TextAlign:                General
+
+                   UnicodeCompression:       Verdadero
+
+
+          CobroCliente                                              Texto corto                               255
+
+                   AggregateType:            -1
+                   AllowZeroLength:          Verdadero
+
+                   AppendOnly:               Falso
+                   Attributes:               Longitud variable
+
+                   CollatingOrder:           3082
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+
+                   ColumnWidth:              Predeterminado
+                   CurrencyLCID:             0
+
+                   DataUpdatable:            Falso
+                   Description:              Indica si se repercute o no el cobro al cliente del pedido
+
+                   DisplayControl:           Cuadro de texto
+                   GUID:                     {guid {241F27A6-64A4-41A9-944F-7F29B1D6547D}}
+
+                   IMEMode:                  0
+                   IMESentenceMode:          3
+
+                   OrdinalPosition:          14
+
+                   Precision:                3082
+                   Required:                 Falso
+
+                   ResultType:               0
+                   Scale:                    0
+
+                   SourceField:              CobroCliente
+                   SourceTable:              BControlMateriales
+
+                   TextAlign:                General
+                   UnicodeCompression:       Verdadero
+
+
+          MotivoPedidoAdicional                                     Texto largo                                 -
+
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Verdadero
+                   AppendOnly:               Falso
+
+                   Attributes:               Longitud variable
+                   CollatingOrder:           3082
+
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   Description:              Breve explicacion que ha motivado ese pedido adicional
+                   GUID:                     {guid {3D762EB6-B051-4096-85DF-D11086A4E9B6}}
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                    miércoles, 28 de mayo de 2025
+ Tabla: BControlMateriales                                                                               Página: 13
+
+
+
+                   IMEMode:                  0
+
+                   IMESentenceMode:          3
+                   OrdinalPosition:          15
+
+                   Precision:                3082
+                   Required:                 Falso
+
+                   ResultType:               0
+                   Scale:                    0
+
+                   SourceField:              MotivoPedidoAdicional
+
+                   SourceTable:              BControlMateriales
+                   TextAlign:                General
+
+                   TextFormat:               Texto sin formato
+                   UnicodeCompression:       Verdadero
+
+
+          Tipo                                                      Texto corto                               255
+
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Verdadero
+                   AppendOnly:               Falso
+
+                   Attributes:               Longitud variable
+                   CollatingOrder:           3082
+
+                   ColumnHidden:             Falso
+                   ColumnOrder:              Predeterminado
+
+                   ColumnWidth:              Predeterminado
+                   CurrencyLCID:             0
+
+                   DataUpdatable:            Falso
+
+                   Description:              Indica Tipo de Pedido (NORMAL/INCIDENCIA/STOCK)
+                   DisplayControl:           Cuadro de texto
+
+                   GUID:                     {guid {6D440CD9-6320-475C-92AF-632611BC4E10}}
+                   IMEMode:                  0
+
+                   IMESentenceMode:          3
+                   OrdinalPosition:          16
+
+                   Precision:                3082
+                   Required:                 Falso
+
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              Tipo
+
+                   SourceTable:              BControlMateriales
+                   TextAlign:                General
+
+                   UnicodeCompression:       Verdadero
+
+
+          PreparadoAlmassera                                        Sí/No                                       1
+
+                   AggregateType:            -1
+                   AllowZeroLength:          Falso
+
+                   AppendOnly:               Falso
+                   Attributes:               Tamaño fijo
+
+                   CollatingOrder:           3082
+                   ColumnHidden:             Falso
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                    miércoles, 28 de mayo de 2025
+ Tabla: BControlMateriales                                                                               Página: 14
+
+
+
+                   ColumnOrder:              Predeterminado
+
+                   ColumnWidth:              Predeterminado
+                   CurrencyLCID:             0
+
+                   DataUpdatable:            Falso
+                   Description:              Indica si está preparado
+
+                   DisplayControl:           106
+                   Format:                   Yes/No
+
+                   GUID:                     {guid {5AC2A2A5-4C30-4344-A1EF-D7A693A39186}}
+
+                   OrdinalPosition:          17
+                   Precision:                3082
+
+                   Required:                 Falso
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              PreparadoAlmassera
+
+                   SourceTable:              BControlMateriales
+                   TextAlign:                General
+
+
+          PreparadoAlmasseraA                                       Sí/No                                       1
+
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Falso
+                   AppendOnly:               Falso
+
+                   Attributes:               Tamaño fijo
+                   CollatingOrder:           3082
+
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   DisplayControl:           106
+                   Format:                   Yes/No
+
+                   GUID:                     {guid {75A4FBBA-A3CF-48D7-B9B3-7CBE9E00058C}}
+                   OrdinalPosition:          18
+
+                   Precision:                3082
+
+                   Required:                 Falso
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              PreparadoAlmasseraA
+
+                   SourceTable:              BControlMateriales
+                   TextAlign:                General
+
+
+          PreparadoAlmasseraH                                       Sí/No                                       1
+
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Falso
+                   AppendOnly:               Falso
+
+                   Attributes:               Tamaño fijo
+                   CollatingOrder:           3082
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                    miércoles, 28 de mayo de 2025
+ Tabla: BControlMateriales                                                                               Página: 15
+
+
+
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   DisplayControl:           106
+                   Format:                   Yes/No
+
+                   GUID:                     {guid {62E1DC02-A455-4B43-A98C-219E01E00BFF}}
+
+                   OrdinalPosition:          19
+                   Precision:                3082
+
+                   Required:                 Falso
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              PreparadoAlmasseraH
+
+                   SourceTable:              BControlMateriales
+                   TextAlign:                General
+
+
+          PreparadoAlmasseraV                                       Sí/No                                       1
+
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Falso
+                   AppendOnly:               Falso
+
+                   Attributes:               Tamaño fijo
+                   CollatingOrder:           3082
+
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   DisplayControl:           106
+                   Format:                   Yes/No
+
+                   GUID:                     {guid {60231AC0-FF38-4B92-B438-F50AFF7E6F7C}}
+                   OrdinalPosition:          20
+
+                   Precision:                3082
+
+                   Required:                 Falso
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              PreparadoAlmasseraV
+
+                   SourceTable:              BControlMateriales
+                   TextAlign:                General
+
+
+          Completado                                                Sí/No                                       1
+
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Falso
+                   AppendOnly:               Falso
+
+                   Attributes:               Tamaño fijo
+                   CollatingOrder:           3082
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                    miércoles, 28 de mayo de 2025
+ Tabla: BControlMateriales                                                                               Página: 16
+
+
+
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   DisplayControl:           106
+                   Format:                   Yes/No
+
+                   GUID:                     {guid {7FCE8CA1-16C2-484C-896F-20328F5A486E}}
+
+                   OrdinalPosition:          21
+                   Precision:                3082
+
+                   Required:                 Falso
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              Completado
+
+                   SourceTable:              BControlMateriales
+                   TextAlign:                General
+
+
+          PorOptimizar                                              Sí/No                                       1
+
+                   AggregateType:            -1
+
+                   AllowZeroLength:          Falso
+                   AppendOnly:               Falso
+
+                   Attributes:               Tamaño fijo
+                   CollatingOrder:           3082
+
+                   ColumnHidden:             Falso
+
+                   ColumnOrder:              Predeterminado
+                   ColumnWidth:              Predeterminado
+
+                   CurrencyLCID:             0
+                   DataUpdatable:            Falso
+
+                   DisplayControl:           106
+                   Format:                   Yes/No
+
+                   GUID:                     {guid {912E63C3-5458-439A-8E49-E7FAEF404970}}
+                   OrdinalPosition:          22
+
+                   Precision:                3082
+
+                   Required:                 Falso
+                   ResultType:               0
+
+                   Scale:                    0
+                   SourceField:              PorOptimizar
+
+                   SourceTable:              BControlMateriales
+                   TextAlign:                General
+
+
+
+
+
+
+
+
+Índices de tabla
+          Nombr                                      Número de
+
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                    miércoles, 28 de mayo de 2025
+ Tabla: BControlMateriales                                                                               Página: 17
+
+
+          Canal                                      1
+                   Clustered:                Falso
+
+          e        DistinctCount:            3
+                   Foreign:                  Falso
+
+                   IgnoreNulls:              Falso
+                   Name:                     Canal
+
+                   Primary:                  Falso
+                   Required:                 Falso
+
+                   Unique:                   Falso
+                    Campos:
+
+                    Canal                       Ascendente
+
+
+
+
+
+          Control_PedidosId_Material                 1
+
+                   Clustered:                Falso
+                   DistinctCount:            9
+
+                   Foreign:                  Falso
+                   IgnoreNulls:              Falso
+
+                   Name:                     Control_PedidosId_Material
+                   Primary:                  Falso
+
+                   Required:                 Falso
+                   Unique:                   Falso
+
+                    Campos:
+                    Id_Material                 Ascendente
+
+
+
+
+
+
+          FechaPedido                                1
+                   Clustered:                Falso
+
+                   DistinctCount:            670
+                   Foreign:                  Falso
+
+                   IgnoreNulls:              Falso
+                   Name:                     FechaPedido
+
+                   Primary:                  Falso
+                   Required:                 Falso
+
+                   Unique:                   Falso
+                    Campos:
+
+                    FechaPedido                 Ascendente
+
+
+
+
+
+          FechaPrevista                              1
+
+                   Clustered:                Falso
+                   DistinctCount:            680
+
+                   Foreign:                  Falso
+                   IgnoreNulls:              Falso
+
+                   Name:                     FechaPrevista
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                    miércoles, 28 de mayo de 2025
+ Tabla: BControlMateriales                                                                               Página: 18
+
+
+
+                   Primary:                  Falso
+
+                   Required:                 Falso
+                   Unique:                   Falso
+                    Campos:
+
+                    FechaPrevista               Ascendente
+
+
+
+
+
+
+          FechaRecepcion                             1
+                   Clustered:                Falso
+
+                   DistinctCount:            642
+                   Foreign:                  Falso
+
+                   IgnoreNulls:              Falso
+                   Name:                     FechaRecepcion
+
+                   Primary:                  Falso
+                   Required:                 Falso
+
+                   Unique:                   Falso
+                    Campos:
+                    FechaRecepcion              Ascendente
+
+
+
+
+
+
+          Id_Evolucion                               1
+
+                   Clustered:                Falso
+                   DistinctCount:            3273
+
+                   Foreign:                  Falso
+                   IgnoreNulls:              Falso
+
+                   Name:                     Id_Evolucion
+                   Primary:                  Falso
+
+                   Required:                 Falso
+                   Unique:                   Falso
+                    Campos:
+
+                    Id_Pedido                   Ascendente
+
+
+
+
+
+
+          Id_Proveedor                               1
+                   Clustered:                Falso
+
+                   DistinctCount:            11
+                   Foreign:                  Falso
+
+                   IgnoreNulls:              Falso
+                   Name:                     Id_Proveedor
+
+                   Primary:                  Falso
+                   Required:                 Falso
+
+                   Unique:                   Falso
+
+
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                    miércoles, 28 de mayo de 2025
+ Tabla: BControlMateriales                                                                               Página: 19
+
+
+                    Campos:
+                    Id_Proveedor                Ascendente
+
+
+
+
+
+
+          Responsable                                1
+                   Clustered:                Falso
+
+                   DistinctCount:            9
+                   Foreign:                  Falso
+
+                   IgnoreNulls:              Falso
+                   Name:                     Responsable
+
+                   Primary:                  Falso
+                   Required:                 Falso
+
+                   Unique:                   Falso
+                    Campos:
+                    Responsable                 Ascendente
+
+
+
+
+
+
+
+
+
+
+Permisos de usuario
+
+          admin                     Eliminar; Leer permisos; Establecer permisos; Cambiar propietario,
+                                    Leer definición; Escribir definición; Leer datos; Insertar datos;
+                                    Actualizar datos; Eliminar datos
+
+
+
+Permisos de grupo
+
+          Admins                    Eliminar; Leer permisos; Establecer permisos; Cambiar propietario,
+                                    Leer definición; Escribir definición; Leer datos; Insertar datos;
+          Users                     Eliminar; Leer permisos; Establecer permisos; Cambiar propietario,
+                                    Leer definición; Escribir definición; Leer datos; Insertar datos;
+                                    Actualizar datos; Eliminar datos

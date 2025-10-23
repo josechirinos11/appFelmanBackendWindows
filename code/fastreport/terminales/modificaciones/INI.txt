@@ -1,0 +1,181 @@
+[HUECOS] 
+R8=440;Jamba o solape. Ancho 1070 alto 2340;;
+R31=10;Marco ventana. Ancho 1069,6 alto 2154,6;VEK101226;Marco SL70, 70mm
+R44=20;Hoja ventana pasiva apertura a izquierda. Ancho 490,8 alto 2072,6;VEK103232;Hoja SL/DJ 80mm
+R45=20;Hoja ventana activa apertura a derecha. Ancho 490,8 alto 2072,6;VEK103232;Hoja SL/DJ 80mm
+R93=520;Junquillo modurado a inglete <Vid.1>. Ancho 372,9 alto 1954,7;VEK107214;Junq. SL70 23 mm Softline
+R107=520;Junquillo modurado a inglete <Vid.2>. Ancho 372,9 alto 1954,7;VEK107214;Junq. SL70 23 mm Softline
+
+[MONOBLOCK] 
+DESPROF.Descripcion=monoblock de pvc curvo con lama de aluminio 45 de 1070 x 2340, con altura cajón de 185mm. Recojedor empotrado a la derecha a 800mm.
+DESPROF.Guias=Guia de 70x60.
+DESPROF.Guias2=Saliente de guia desde marco 70 mm.
+
+[PERFILESUSADOS] 
+R0.MARCO=VEK101226.Marco SL70, 70mm
+
+[INFORMACIONJOSECHIRINOS] 
+INFOJOSE=ENVIO info DESDE SICA
+
+[HERRAJE] 
+DESPROF.Manilla=MANILLA TOULON 7*32-42 M5*50
+DESPROF.EjeManilla=Posicion de la manilla a 1041,4 mm. Eje en perfil hoja 1000 mm
+R0.55=HGUOSC2ID;2;0;0;Kit 2h oscilo batiente interior derecha;NEGRO;;0;1;971,6;2056,6;0;;8
+R1.56=MKGU_CRE15_CF;2;0;0;Lado cremona CF AG15;NEGRO;;55;1;1;0;0;;8
+R1.57=GU6320210001;2;0;39;Transmision de angulo estandar 1Bc;AD;;56;1;0;0;0;;8
+R1.58=GUG221330001;2;0;4;Cremona C/Fij.E15 Ffh1851-2100;AD;;56;1;2100;0;0;;8
+R1.59=GU6299870001;2;0;0;Antifalsa-Maniobra-Elevad.Hoja;AD;;56;1;0;0;0;;8
+R1.60=GU6320120001;2;0;29;Tirante 215Dk 180º Ob Inferior;AD;;56;1;0;0;0;;8
+R1.61=MKGU_CERRBAS;2;0;0;Mini Kit GU cerradero basculación;NEGRO;;56;1;0;0;0;;8
+R1.62=GU6310670501;2;0;0;Cerradero Standard "SE";AD;;61;1;0;0;0;;8
+R1.63=MKGU_TIROBINF;0;0;0;Mini kit GU Tirante inferior OB;NEGRO;;55;1;0;0;0;;8
+R1.64=GU6320120001;2;0;29;Tirante 215Dk 180º Ob Inferior;AD;;63;1;0;0;0;;8
+R1.67=MKGU_OSCSUP;2;0;0;Mini Kit GU Oscilo Superior;NEGRO;;55;1;0;0;0;;8
+R1.68=GU6315120301;2;0;9;Pletina De Compas 280-500;AD;;67;1;0;0;0;;8
+R1.69=GU64024520R1;2;0;9;Brazo Comp.280-500 13*20 Unije;AD;;67;1;0;0;0;;8
+R1.70=MKGU_TIRLAT;2;0;0;Mini Kit GU Tirante lateral;NEGRO;;55;1;0;0;0;;8
+R1.79=GU6320751501;2;0;11;Tirante Standard 1450 2Bc;AD;;70;1;0;0;0;;8
+R1.80=MKGU_CERREST;2;0;0;Mini Kit GU cerradero estándar;NEGRO;;70;2;0;0;0;;8
+R2.82=MKGU_PASCRE_CF;2;0;0;Lado Cremoma Pasiva CF;NEGRO;;55;1;0;0;0;;8
+R2.83=GU6323030001;2;0;39;Terminal 180º Sin Bulon;AD;;82;1;0;0;0;;8
+R2.84=GUG221860001;2;0;4;Palanc.Rebajo ZH C/F 1851-2100;AD;;82;1;2100;0;0;;8
+R2.85=GU9401490001;2;0;0;Resbalon Apoyo Palanca ZH;AD;;82;1;0;0;0;;8
+R2.86=MKGU_PASSUP;2;0;0;Mini Kit GU Pasiva Superior;NEGRO;;55;1;0;0;0;;8
+R2.87=GU6320100001;2;0;41;Tirante 215 Se 180º FFB 280-750;AD;;86;1;0;0;0;;8
+R2.88=MKGU_CERREST;2;0;0;Mini Kit GU cerradero estándar;NEGRO;;86;1;0;0;0;;8
+R2.90=GU6391482001;2;0;9;Falso Compas 13*20 Uni-Jet D;AD;;86;1;0;0;0;;8
+R2.91=MKGU_PASLAT;2;0;0;Mini Kit GU Pasiva Lateral;NEGRO;;55;1;0;0;0;;8
+R2.92=GU6360260601;2;0;0;Soporte Compas D6 Uni-Jet D;AD;;91;1;0;0;0;;8
+R2.93=GU9488980001;2;0;0;Eje Soporte Compas Uni-Jet;AD;;91;1;0;0;0;;8
+R2.94=GU6368822207;2;0;0;Soporte Esquina Unijet D D6*22;PLATA;;91;1;0;0;0;;8
+R2.95=GU6361800101;2;0;19;Bisagra Al Canto Uni-Jet;AD;;91;1;0;0;0;;8
+R2.96=GU9426830007;2;0;0;Tapa Sopor.Esqui.Unijet;NEGRO;;91;1;0;0;0;;8
+R2.97=GU9473340107;2;0;0;Tapa Soporte Compas Unijet;NEGRO;;91;1;0;0;0;;8
+R2.98=GU9477950107;2;0;0;Tapa Bisa.Compas Unijet;NEGRO;;91;1;0;0;0;;8
+R2.99=GU9477830107;2;0;0;Tapa Bisag.Canto Unijet;NEGRO;;91;1;0;0;0;;8
+R2.100=GU6342290001;2;0;19;Bisagra Oculta Hoja 16mm Regul;AD;;91;3;0;0;0;;8
+R2.101=GU9408660001;2;0;0;Bisagra Oculta Marco;AD;;91;3;0;0;0;;8
+R2.102=MKGU_PASINF;2;0;0;Mini Kit GU Pasiva Inferior;NEGRO;;55;1;0;0;0;;8
+R2.103=GU6320100001;2;0;29;Tirante 215 Se 180º FFB 280-750;AD;;102;1;0;0;0;;8
+R2.104=MKGU_CERREST;2;0;0;Mini Kit GU cerradero estándar;NEGRO;;102;1;0;0;0;;8
+
+[ACRISTALAMIENTO] 
+DESPROF.Descripcion=Laminar Acustico 3+3 / Camara 14mm / Transparente 4mm.
+
+[COMPACTOMB] 
+R0.1=MONOBLOCKE0010;4;405;0;monoblock de pvc curvo con lama de aluminio 45;LAEMBERO;;0;1;1070;2340;0;;4
+R0.2=MK_INCCONGUIAS;0;0;0;Mini Kit incremento guias en monoblok;LAEMBERO;;1;1;10;0;0;;4
+
+[GUIASMB] 
+R22.3=GUIA70X60;1;420;4;Guia de 70x60;2178001;;0;1;2156;0;0;;4
+R23.4=GUIA70X60;1;420;2;Guia de 70x60;2178001;;0;1;2156;0;0;;4
+
+[MARCOS] 
+R31.11=VEK101226;1;10;4;Marco SL70, 70mm;2178001;2178001;0;1;2161;0;1000;Marco;5
+R31.12=VEK113025;1;400;4;Refuerzo Marco S70;AD;;11;1;2045;0;1019;Refuerzo;5
+R31.13=GUH013561602;2;0;4;Tonrillo para refuerzo;AD;;12;10;0;0;0;;5
+R31.14=VEK101226;1;10;1;Marco SL70, 70mm;2178001;2178001;0;1;1076;0;1000;Marco;5
+R31.15=VEK113025;1;400;1;Refuerzo Marco S70;AD;;14;1;960;0;1019;Refuerzo;5
+R31.16=GUH013561602;2;0;1;Tonrillo para refuerzo;AD;;15;5;0;0;0;;5
+R31.17=VEK101226;1;10;2;Marco SL70, 70mm;2178001;2178001;0;1;2161;0;1000;Marco;5
+R31.18=VEK113025;1;400;2;Refuerzo Marco S70;AD;;17;1;1230;675;1019;Refuerzo;5
+R31.19=GUH013561602;2;0;2;Tonrillo para refuerzo;AD;;18;10;0;0;0;;5
+R31.20=VEK101226;1;10;3;Marco SL70, 70mm;2178001;2178001;0;1;1076;0;1000;Marco;5
+R31.21=VEK113025;1;400;3;Refuerzo Marco S70;AD;;20;1;960;0;1019;Refuerzo;5
+R31.22=GUH013561602;2;0;3;Tonrillo para refuerzo;AD;;21;5;0;0;0;;5
+R0.23=VEK109076;2;0;0;Tapadesagües Veka;NEGRO;;0;2;0;0;0;;5
+R0.24=KITHUECOSOLDPVC;2;0;0;Control de medidas hueco soldadura PVC;2178001;;0;1;0;0;0;;5
+
+[HOJA_PAS] 
+R44.35=VEK103232;1;20;4;Hoja SL/DJ 80mm;2178001;2178001;0;1;2078,6;0;1001;Hoja;8
+R44.36=VEK113294;1;400;4;Refuerzo Hoja Ventana  S70 Para Color;AD;;35;1;1922,6;0;1019;Refuerzo;8
+R44.37=VEK103232;1;20;1;Hoja SL/DJ 80mm;2178001;2178001;0;1;496,8;0;1001;Hoja;8
+R44.38=VEK113294;1;400;1;Refuerzo Hoja Ventana  S70 Para Color;AD;;37;1;340,8;0;1019;Refuerzo;8
+R44.39=VEK103232;1;20;2;Hoja SL/DJ 80mm;2178001;2178001;0;1;2078,6;0;1001;Hoja;8
+R44.40=VEK113294;1;400;2;Refuerzo Hoja Ventana  S70 Para Color;AD;;39;1;1922,6;0;1019;Refuerzo;8
+R44.41=VEK103232;1;20;3;Hoja SL/DJ 80mm;2178001;2178001;0;1;496,8;0;1001;Hoja;8
+R44.42=VEK113294;1;400;3;Refuerzo Hoja Ventana  S70 Para Color;AD;;41;1;340,8;0;1019;Refuerzo;8
+R44.109=KITHUECOSOLDPVC;2;0;0;Control de medidas hueco soldadura PVC;NEGRO;;0;1;0;0;0;;8
+
+[HOJA_ACT] 
+R45.43=VEK103232;1;20;1;Hoja SL/DJ 80mm;2178001;2178001;0;1;496,8;0;1001;Hoja;8
+R45.44=VEK113294;1;400;1;Refuerzo Hoja Ventana  S70 Para Color;AD;;43;1;340,8;0;1019;Refuerzo;8
+R45.45=VEK103232;1;20;2;Hoja SL/DJ 80mm;2178001;2178001;0;1;2078,6;0;1001;Hoja;8
+R45.46=VEK113294;1;400;2;Refuerzo Hoja Ventana  S70 Para Color;AD;;45;1;1922,6;0;1019;Refuerzo;8
+R45.47=VEK103232;1;20;3;Hoja SL/DJ 80mm;2178001;2178001;0;1;496,8;0;1001;Hoja;8
+R45.48=VEK113294;1;400;3;Refuerzo Hoja Ventana  S70 Para Color;AD;;47;1;340,8;0;1019;Refuerzo;8
+R45.49=VEK103232;1;20;4;Hoja SL/DJ 80mm;2178001;2178001;0;1;2078,6;0;1001;Hoja;8
+R45.50=VEK113294;1;400;4;Refuerzo Hoja Ventana  S70 Para Color;AD;;49;1;1922,6;0;1019;Refuerzo;8
+R45.108=KITHUECOSOLDPVC;2;0;0;Control de medidas hueco soldadura PVC;NEGRO;;0;1;0;0;0;;8
+
+[INVERSOR] 
+R44.51=VEK102234;1;40;5;Batiente SL70, 64mm clip;2178001;2178001;0;1;2001,6;0;0;;8
+R44.52=VEK109598;2;0;5;Remate Batiente 102.234 (Par);CARAMELO;;51;1;0;0;0;;8
+R44.53=TORBCR5X60;2;0;5;Tornillo PVC 5x60 GS Bicro. (inversor);AD;;52;1;0;0;0;;8
+R44.54=VEK113028;1;400;5;Refuerzo 40/10/1,5mm;AD;;51;1;1931,6;0;1019;Refuerzo;8
+
+[MATRIMONIO] 
+R1.65=MKGU_CERRBAS;2;0;0;Mini Kit GU cerradero basculación;NEGRO;;63;1;0;0;0;;8
+R1.66=GU6310670501;2;0;0;Cerradero Standard "SE";AD;;65;1;0;0;0;;8
+R1.71=GU6360260601;2;0;0;Soporte Compas D6 Uni-Jet D;AD;;70;1;0;0;0;;8
+R1.72=GU9488980001;2;0;0;Eje Soporte Compas Uni-Jet;AD;;70;1;0;0;0;;8
+R1.73=GU6368822207;2;0;0;Soporte Esquina Unijet D D6*22;PLATA;;70;1;0;0;0;;8
+R1.74=GU6361800101;2;0;19;Bisagra Al Canto Uni-Jet;AD;;70;1;0;0;0;;8
+R1.75=GU9426830007;2;0;0;Tapa Sopor.Esqui.Unijet;NEGRO;;70;1;0;0;0;;8
+R1.76=GU9473340107;2;0;0;Tapa Soporte Compas Unijet;NEGRO;;70;1;0;0;0;;8
+R1.77=GU9477830107;2;0;0;Tapa Bisag.Canto Unijet;NEGRO;;70;1;0;0;0;;8
+R1.78=GU9477950107;2;0;0;Tapa Bisa.Compas Unijet;NEGRO;;70;1;0;0;0;;8
+R1.81=GU9429720001;2;0;0;Cerradero Standard;AD;;80;2;0;0;0;;8
+R2.89=GU9429720001;2;0;0;Cerradero Standard;AD;;88;1;0;0;0;;8
+R2.105=GU9429720001;2;0;0;Cerradero Standard;AD;;104;1;0;0;0;;8
+
+[HOJA_ACT_HERRAJE] 
+R45.106=KMANGUVEN002;2;0;0;MANILLA TOULON 7*32-42 M5*50;NEGRO;;0;1;0;0;0;;8
+R45.107=GU3937181;2;0;0;MANILLA TOULON 7*32-42 M5*50 - HOPPE 0737/US947;NEGRO;;106;1;0;0;2001;Manilla;8
+
+[VIDRIOS] 
+R1.122=VC_33AC14TR4;5;0;0;Laminar Acustico 3+3 / Camara 14mm / Transparente 4mm.;TR;;0;1;360,4;1942,2;5001;Doble;9
+R93.124=VEK107214;1;470;4;Junq. SL70 23 mm Softline;2178001;;0;1;1955,2;0;1028;Junquillo;9
+R93.125=VEK107214;1;470;1;Junq. SL70 23 mm Softline;2178001;;0;1;373,4;0;1028;Junquillo;9
+R93.126=VEK107214;1;470;2;Junq. SL70 23 mm Softline;2178001;;0;1;1955,2;0;1028;Junquillo;9
+R93.127=VEK107214;1;470;3;Junq. SL70 23 mm Softline;2178001;;0;1;373,4;0;1028;Junquillo;9
+R2.133=VC_33AC14TR4;5;0;0;Laminar Acustico 3+3 / Camara 14mm / Transparente 4mm.;TR;;0;1;360,4;1942,2;5001;Doble;10
+R107.135=VEK107214;1;470;1;Junq. SL70 23 mm Softline;2178001;;0;1;373,4;0;1028;Junquillo;10
+R107.136=VEK107214;1;470;2;Junq. SL70 23 mm Softline;2178001;;0;1;1955,2;0;1028;Junquillo;10
+R107.137=VEK107214;1;470;3;Junq. SL70 23 mm Softline;2178001;;0;1;373,4;0;1028;Junquillo;10
+R107.138=VEK107214;1;470;4;Junq. SL70 23 mm Softline;2178001;;0;1;1955,2;0;1028;Junquillo;10
+
+[ACRISTALADO] 
+R0.123=VEK109643;2;0;0;Puente Acristalar SL70 Base calzo;AD;;0;8;0;0;0;;9
+R0.134=VEK109643;2;0;0;Puente Acristalar SL70 Base calzo;AD;;0;8;0;0;0;;10
+
+[0] 
+R0.128=MPPOPVIDARMAD;3;0;0;M.P. Armado VID Operario;AD;;0;5;0;0;0;;9
+R0.129=MPPOPVIDJUNTA;3;0;0;M.P. Junta VID Operario;AD;;0;5;0;0;0;;9
+R0.130=MPPMQJUNCORTE;3;0;0;M.P. Corte JUN Máquina;AD;;0;5;0;0;0;;9
+R0.131=MPPOPJUNCORTE;3;0;0;M.P. Corte JUN Operario;AD;;0;5;0;0;0;;9
+R0.132=MPPOPJUNARMAD;3;0;0;M.P. Armado JUN Operario;AD;;0;5;0;0;0;;9
+R0.139=MPPOPVIDARMAD;3;0;0;M.P. Armado VID Operario;AD;;0;5;0;0;0;;10
+R0.140=MPPOPVIDJUNTA;3;0;0;M.P. Junta VID Operario;AD;;0;5;0;0;0;;10
+R0.141=MPPMQJUNCORTE;3;0;0;M.P. Corte JUN Máquina;AD;;0;5;0;0;0;;10
+R0.142=MPPOPJUNCORTE;3;0;0;M.P. Corte JUN Operario;AD;;0;5;0;0;0;;10
+R0.143=MPPOPJUNARMAD;3;0;0;M.P. Armado JUN Operario;AD;;0;5;0;0;0;;10
+
+[CARROSPERFILESA] 
+Carros=  1.1
+
+[CARROSINVERSORES] 
+Carros= 1.1
+
+[CARROSHOJA] 
+Carros= 1.1 1.2
+Rec44= 1.1
+Rec45= 1.2
+
+[CARROSMARCO] 
+Carros= 1.1
+Rec31= 1.1
+
+[CARROSJUNQUILLO] 
+Rec93=R01: A 1
+Rec107=R02: A 2

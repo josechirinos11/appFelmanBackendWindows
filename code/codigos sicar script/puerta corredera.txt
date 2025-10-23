@@ -1,0 +1,1035 @@
+uses  SysUtils, StrUtils, Huecos, Figuras , uSistema, uAnalizador, uCalculador, uDatosHueco,uglobal,
+Figura_Ventanas_Corredera_2Hojas,Figura_Ventanas_Vidrio,uAristas,uCIN_Ini ,uUtilidadesScripts,MyAccess, DB;
+
+
+function Calcula(pHueco : THueco; pFigura : TFigura; pSistema : TSistema;
+                  pAnalizador : TAnalizador; pId : Integer; pSerie : String;                                                                   
+                  pNumero : Integer; pLinea : Integer): Integer;
+                                            
+var
+  ENG, AcabI, AcabE, lGoma1, lGoma2, lGoma3,CodAsa , AAcabI, AAcabE : String;
+  HS, HD, HI, HZ, lTareaTerminal : String; //Por posiciones
+  CodKit, Descripcion,CodMObra,CodKitAux,CodKitAuxTemp : String;
+  TiempoMano, lAng, lSol : Double;
+  Hueco ,HOJA1_L , HOJA2_L  : THueco;
+  lTipo : Integer;
+  FHL,FHC,FRS,FRI,lTemp,FHP4,FHP2 : String;
+  NHL,NHC,NRS,NRI,NumAsa,AP,NHP4,NHP2 : Integer;
+  lTextHoja1,lTextHoja2 : String;
+
+  FAux : String; //Código del auxiliar del refuerzo
+  FNumAux : Integer; //Nº de auxiliares                       
+  FDesAux : Double; //Descuento en longitud en el auxiliar
+
+  lHuecoLat, lHuecoHor, lEng : Integer;
+  lLado : String;
+  lFig : TFigura_Ventanas_Vidrio;
+  lHoja : Integer; //Para el bucle
+  lFigura : TFigura_Ventanas_Corredera_2Hojas;
+  lVar : TPilaVariables;
+  lSumaVidrios : Double;
+  
+  //Informacion Ini txt cliente
+  lID,lLongId,lNumRec,lNumRec2,I,lXREC,lXRECeng :Integer;
+  lCarro,lCasilla ,lIDinicial,Ix : Integer;
+  lID_Rec,lID_Rec2,lManUso,Descripcion2 : String;
+  lTextHojaPos,lPosiRail,lMedidas,lDescCierre : String;
+  lConForma : Bolean;
+  lIni : TCIN_IniFile;
+  lSQL : TMyQuery; 
+  
+  //Para txt cliente herraje
+  lIDKit,lNumFigura : Integer;
+  lCodUnds,lCount,lCount1,lCount2,lCount3 : Integer;
+  lCodArti :String;  
+  
+  //Para Tiempos Teminales Especiales
+  lTT,TT_FIGURA_NUM : Integer;
+  TT_FIGURA,TT_MO,TT_MODESC : String;
+  TT_MIN : Double;
+  
+  //Para carga de kits espeicales a demanda
+  lKIT,KIT_FIGURA_NUM : Integer;
+  KIT_FIGURA,KIT_DESCINFO,KIT_COD,KIT_ACABI,KIT_ACABE : String;
+  KIT_ANCHO,KIT_ALTO : Double;
+  
+  //Descricpiones especiales añandidas desde el ini
+  DES_FIGURA_NUM,lDES,DES_FIGURA_TIPO : Integer;
+  DES_DATO : Double;
+  DES_DESCINFO,DES_DESCINFO2,DES_FIGURA,lDescripcionINI : String; 
+  
+  
+begin
+  Result := pID;
+
+  lFigura := pFigura;
+  ENG := pAnalizador.BVarn('ENG');
+  AcabI := pAnalizador.BVarn('ACABADO.I');
+  AcabE := pAnalizador.BVarn('ACABADO.E');
+  AAcabI := pAnalizador.BVarn('ACABADOA.I');
+  AAcabE := pAnalizador.BVarn('ACABADOA.E');
+  lTipo := pAnalizador.BVari('FTIPHOJCOR');
+  FHL := pAnalizador.BVarn('FHL');
+  FHC := pAnalizador.BVarn('FHC');
+  FRS := pAnalizador.BVarn('FRS');
+  FRI := pAnalizador.BVarn('FRI');
+  CodAsa := pAnalizador.BVarn('ASAC');
+  NumAsa := pAnalizador.BVar('NASAS');
+  lSol := pAnalizador.BVar('SOLD');
+  AP := pAnalizador.BVari('AP');
+
+  NHP4:=0;
+  NHP2:=0;
+  FHP4:='';
+  FHP2:='';
+
+  NHL := pAnalizador.BVari('N_FHL');
+  NHC := pAnalizador.BVari('N_FHC');
+  NRS := pAnalizador.BVari('N_FRS');
+  NRI := pAnalizador.BVari('N_FRI');
+
+  CodMObra:='';
+
+  CodKit := pAnalizador.BVarn('PREHER') + 'COR1PU'+pAnalizador.BVarn('KITESP');
+
+  //NUEVO 16/11/2017 - Lanzamiento de un kit auxiliar par alas hojas.
+  CodKitAuxTemp :='';//inicializo las variables
+  CodKitAux :='';//inicializo las variables
+  If (pAnalizador.BVarn('PREHERAUX')<>'') then
+    Begin
+      CodKitAuxTemp:= pAnalizador.BVarn('PREHERAUX') + 'COR1PU';
+      //Me dice si existe o no el codigo articulo CodKitAuxTemp que ese el codigo completo como un kit normal
+      IF DameNumeroRegistrosSql('SELECT Codigo FROM articulos WHERE Codigo=' + QuotedStr(CodKitAuxTemp)) > 0 then
+       begin
+         CodKitAux:=CodKitAuxTemp;
+       end  else
+       Begin
+          CodKitAuxTemp:=pAnalizador.BVarn('PREHERAUX');
+          //Como no hay kit completo ahora busco si hay kit codgio PREHERAUX
+          IF DameNumeroRegistrosSql('SELECT Codigo FROM articulos WHERE Codigo=' + QuotedStr(CodKitAuxTemp)) > 0 then
+           begin
+             CodKitAux:=CodKitAuxTemp;
+           end  else
+           Begin
+             //Si tampoco lo encuetra el pongo el articulo CodKitAux a comillas para no llamar a ningun kit.
+             CodKitAux:='';
+           end;
+       end;
+      //ShowMessage(CodKitAux);
+   end;
+
+ ///---- CARGA DE VARIABLES DE USO EN KITS DE HERRAJE -----------
+  HOJA1_L := pFigura.Hueco(5);//Medidas totales hoja, y al ancho incluye engatillado si fuese perimetral
+  pAnalizador.Obt_exp('HOJH1='+floattostr(HOJA1_L.ALTO));
+  pAnalizador.Obt_exp('HOJL1='+floattostr(HOJA1_L.ANCHO));
+
+ //---- PESOS DE LOS VIDRIOS POR HOJA ------
+  //Peso Vidrio 
+  pAnalizador.obt_exp('PVID1='+FloatToStr(CalculaPesoVidriosEnHueco(pFigura.Hueco(0))));
+
+
+    //Guardo la variable para la colocacion
+  pSistema.Calculador.DameAnalizador1.Obt_exp('COLOC1HPCOR=COLOC1HPCOR+1');
+
+//CALCULO DEL ESPESOR DEL VIDRIO--------------------------------------------------
+
+  //Busco el vidrio que va en esta hoja para obtener su espesor y asi poder usarlo
+  //en los herrajes: Ojo, los vidrios van de der a izq.
+  //Pero enumeramos las variables para los vidrios en los herrajes de izq a der
+  //para seguir siempre la misma norma
+
+  //Vidrio Der:
+  lSumaVidrios := 0;
+  If (pFigura.Hueco(0).Figura <> nil) then
+    begin
+      //Hay vidrio en la dcha, intento localizar o seu código:
+      if (pFigura.Hueco(0).Figura IS TFigura_Ventanas_Vidrio) then
+        begin
+          //Si es un vidrio estandard del sistema: //Calcula la suma del vidrio:
+          lVar := TFigura(pFigura.Hueco(0).Figura).PilaVariables;
+          lSumaVidrios := lVar.BVar('VIDRIO.INTERIOR') + lVar.BVar('VIDRIO.EXTERIOR');
+        end else
+      if (TFigura(pFigura.Hueco(0).Figura).NombreDeClase = 'TFigura_Acris_Fabric') then
+        begin
+          //Vidrio de Rios de figura personalizada: //Calcula la suma del vidrio:
+          lVar := TFigura(pFigura.Hueco(0).Figura).PilaVariables;
+          lSumaVidrios := lVar.BVar('VIDRIOINT.ESPESOR') + lVar.BVar('VIDRIOEXT.ESPESOR');
+        end;
+
+      //Mando al analizador el grosor total del cristal para que el kit calcule el peso:
+      pAnalizador.obt_exp('ESPV1='+FloatToStr(lSumaVidrios));
+    end;
+
+
+//FIN DEL CALCULO DEL ESPESOR DEL VIDRIO------------------------------------------
+
+
+//CALCULO DEL PESO DEL VIDRIO-----------------------------------------------------
+
+
+  //Genero los datos de todos los huecos ya que éstos contienen toda la información
+  //necesaria para generar los perfiles:
+  //11 = Hoja Derecha Laterales o Todo
+  //12 = Hoja Derecha Horizontaltes
+  //13 = Hoja Izquierda Laterales o Todo
+  //14 = Hoja Izquierda Horizontales
+  //15 = Engatillado Hoja Derecha
+  //16 = Engatillado Hoja Izquierda
+
+  lHoja :=1;
+  
+  // ******  PIEZAS HOJAS *******  
+  If TRUE OR (pAnalizador.BVar('GENERAR_DESCOMP_AUTO')=1) then
+  Begin
+    //Generacion de piezas en automatico
+    Result := GeneraDescompuestosAutomatico(pSistema,pFigura,pSerie,pNumero,pLinea,Result);
+  end else
+  //Generacion de piezas en manual  
+  begin
+      HS := lFigura.CodigoSup(lHoja);
+      HD := lFigura.CodigoDer(lHoja);
+      HI := lFigura.CodigoInf(lHoja);
+      HZ := lFigura.CodigoIzq(lHoja);
+  
+      
+      
+      if AP  = 2 then //OJO, Apertura hacia la izquierda...
+        begin
+          pAnalizador.obt_exp('HCORN=1'); //Indica el número de hoja en la que estoy
+          lHuecoLat := 11; lHuecoHor := 12; lLado := 'Der'; lEng := 15;
+          //Octubre 2015 por Ana: Indicar por hoja en que posición está la hoja
+          //                      central según el tipo de apertura (para la felpa)
+          NHP4:=NHC; NHP2:=NHL;  //Cantidad de felpas
+          FHP4:=FHC; FHP2:=FHL;  //Código de felpas
+        end
+      else
+        begin
+          pAnalizador.obt_exp('HCORN=1'); //Indica el número de hoja en la que estoy
+          lHuecoLat := 13; lHuecoHor := 14; lLado := 'Izq'; lEng := 16;
+          NHP4:=NHL; NHP2:=NHC; //Cantidad de felpas
+          FHP4:=FHL; FHP2:=FHC; //Código de felpas
+        end;      
+
+
+      lTareaTerminal:='';
+      lTareaTerminal:=pAnalizador.Obt_expn('TAR_HOJCOR_PUE');
+      Hueco := pFigura.Hueco(lHuecoLat);
+      Result := GeneraDescompuestos(pSistema,Hueco, pSerie, pNumero, pLinea, Result, pFigura.Id,
+                                     HS,HD,HI,HZ, AcabI, AcabE, '','', 'hoja ' + lLado,
+                                     0,lSol,True,True,False,
+                                     FHP2, FHP4, FRS, FRI, //Codigos
+                                     NHP2, NHP4, NRS, NRI, //Cantidades
+                                     2,   4,   1,   3, //Posiciones
+                                     false,'','',
+                                     AAcabI,AAcabI,AAcabI,AAcabI,lTareaTerminal); //Acabados accesorios
+
+      Hueco := pFigura.Hueco(lHuecoHor);
+      Result := GeneraDescompuestos(pSistema,Hueco, pSerie, pNumero, pLinea, Result, pFigura.Id,
+                                     HS,HD,HI,HZ, AcabI, AcabE, '','', 'hoja ' + lLado,
+                                     0,lSol, True,True,False,
+                                     '', '', FRS, FRI, //Codigos
+                                     0,   0, NRS, NRI, //Cantidades
+                                     0,   0,   1,   3,  //Posiciones
+                                     false,'','',
+                                     '','',AAcabI,AAcabI,lTareaTerminal); //Acabados accesorios
+
+      //Descompongo auxiliares de refuerzos (si los hay)
+      //LADO DERECHO DE LA HOJA X:
+      FAux := lFigura.CodigoAuxDer(lHoja);
+      FNumAux := lFigura.CodigoAuxDerUnd(lHoja);
+      FDesAux := lFigura.CodigoAuxDerDto(lHoja);
+      if lFigura.CodigoAuxDerC90(lHoja) then lAng := 90 else lAng := 45;
+
+      lTareaTerminal:='';
+      lTareaTerminal:=pAnalizador.Obt_expn('TAR_HOJCOR_PUE_AUX');
+      if FAux <> '' then
+      Result := pSistema.Calculador.AnadeComponente(pSerie, pNumero, pLinea, Result, pFigura.ID, //IDs de la pieza y la figura
+                                                 FAux, AcabI, AcabE, //Codigo de pieza y Acabados
+                                                 pFigura.Hueco(lHuecoLat).Alto-FDesAux,0,0, //Medidas A,B y C
+                                                 FNumAux,lAng,lAng, {Cantidad, Corte1 y Corte1}
+                                                 0,0, {LinkID y Situación}
+                                                 0, False, {Num Rectangulo y Si es exterior}
+                                                 True {Insertar sus auxiliares}, 'Refu. Hoja ' + IntToStr(lHoja) + ' Der' {Info},
+                                                 '' {Familia}, 0 {Grupo},0 {Tipo Segmento},
+                                                 0,0 {Tipos Cortes},nil,'',0,0,0,0,0,0,0,0,'',0,0,90,90,false,lTareaTerminal);
+
+      //LADO IZQUIERDO DE LA HOJA X:
+      FAux := lFigura.CodigoAuxIzq(lHoja);
+      FNumAux := lFigura.CodigoAuxIzqUnd(lHoja);
+      FDesAux := lFigura.CodigoAuxIzqDto(lHoja);
+      if lFigura.CodigoAuxIzqC90(lHoja) then lAng := 90 else lAng := 45;
+
+      if FAux <> '' then
+      Result := pSistema.Calculador.AnadeComponente(pSerie, pNumero, pLinea, Result, pFigura.ID, //IDs de la pieza y la figura
+                                                 FAux, AcabI, AcabE, //Codigo de pieza y Acabados
+                                                 pFigura.Hueco(lHuecoLat).Alto-FDesAux,0,0, //Medidas A,B y C
+                                                 FNumAux,lAng,lAng, {Cantidad, Corte1 y Corte1}
+                                                 0,0, {LinkID y Situación}
+                                                 0, False, {Num Rectangulo y Si es exterior}
+                                                 True {Insertar sus auxiliares}, 'Refu. Hoja ' + IntToStr(lHoja) + ' Izq' {Info},
+                                                 '' {Familia}, 0 {Grupo},0 {Tipo Segmento},
+                                                 0,0 {Tipos Cortes},nil,'',0,0,0,0,0,0,0,0,'',0,0,90,90,false,lTareaTerminal);
+
+
+      If ENG <> '' then
+        Begin
+          lTareaTerminal:='';
+          lTareaTerminal:=pAnalizador.Obt_expn('TAR_HOJCOR_PUE_ENG');        
+          Hueco := pFigura.Hueco(lEng);
+          Hueco.Contraer(pAnalizador.BVar('DINS'),0,pAnalizador.BVar('DINI'),0);  // en caso de las tapas del engatillado
+          Result := GeneraDescompuestos(pSistema,Hueco, pSerie, pNumero, pLinea, Result, pFigura.Id,
+                                         ENG,ENG,ENG,ENG, AcabI, AcabE, '','', 'Eng. Hoja ' + lLado,
+                                         0,0, True,True,False,                                         
+                                         '','','','',
+                                         0,0,0,0,
+                                         0,0,0,0, //Modos de aplicación
+                                         False, //Forzar perfiles "no generados"
+                                         '', '', //Acabado de escuadras y topes
+                                         '','','','',lTareaTerminal); //Acabado de los accesorios 1, 2,3 y 4 
+                                         
+        end;
+
+ end;
+
+  // ******  FIN PIEZAS HOJAS *******
+
+  //Añado el tiempo para la fabricacion de las 2 hojas
+  lTareaTerminal:='';
+  lTareaTerminal:=pAnalizador.Obt_expn('TAR_T_HOJCOR_PUE');  
+  TiempoMano := pAnalizador.BVar('T_HOJAS_V1');
+  If (TiempoMano <> 0 ) then 
+  Result := pSistema.Calculador.AnadeComponente(pSerie, pNumero, pLinea, Result, pFigura.ID, //IDs de la pieza y la figura
+                                             'MOFABRIC', '', '', //Codigo de pieza y Acabados
+                                             0,0,0, //Medidas A,B y C
+                                             TiempoMano {Cantidad},0,0 {Corte1 y 2},
+                                             0 {LinkID}, 0 {Situacion},
+                                             0 {Num Rectangulo}, False {Si es exterior},
+                                             True {Insertar sus auxiliares},'Tiempo 1 hoja' {Info},
+                                             '' {Familia}, 0 {Grupo},0 {Tipo Segmento},
+                                             0,0 {Tipos Cortes},nil,'',0,0,0,0,0,0,0,0,'',0,0,90,90,false,lTareaTerminal);
+
+      //MANO DE OBRA DE TIEMPOS DESGLOSADOS - O PARA TERMINALES.
+      If (pAnalizador.BVari('TT_ACTIVAR')=1) then
+      Begin
+          //Tiempo de corte----------------------------------------------------------------------------------------------------------------
+          If (pAnalizador.BVar('TT_HOJ_V1_COR')<> 0) then
+          Begin
+          lTareaTerminal:='';
+          lTareaTerminal:=pAnalizador.Obt_expn('TAR_TT_HOJCOR_PUE_COR');           
+          TiempoMano := pAnalizador.BVar('TT_HOJ_P1_COR');
+          If (pAnalizador.BVarn('TT_HOJ_P1_COR_MO')<>'') then CodMObra:= pAnalizador.BVarn('TT_HOJ_P1_COR_MO') else CodMObra:='MOCORTAR';
+          Result := pSistema.Calculador.AnadeComponente(pSerie, pNumero, pLinea, Result, pFigura.ID, //IDs de la pieza y la figura
+                                                     CodMObra, '', '', //Codigo de pieza y Acabados
+                                                     0,0,0, //Medidas A,B y C
+                                                     TiempoMano {Cantidad},0,0 {Corte1 y 2},
+                                                     0 {LinkID}, 0 {Situacion},
+                                                     0 {Num Rectangulo}, False {Si es exterior},
+                                                     True {Insertar sus auxiliares},'Puerta 1 h corr.Corte' {Info},
+                                                     '' {Familia}, 0 {Grupo},0 {Tipo Segmento},
+                                                     0,0 {Tipos Cortes},nil,'',0,0,0,0,0,0,0,0,'',0,0,90,90,false,lTareaTerminal);
+          end;
+
+          //Tiempo de mecanizado-------------------------------------------------------------------------------------------------------------
+          If (pAnalizador.BVar('TT_HOJ_P1_MEC')<> 0) then
+          Begin
+          lTareaTerminal:='';
+          lTareaTerminal:=pAnalizador.Obt_expn('TAR_TT_HOJCOR_PUE_MEC');          
+          TiempoMano := pAnalizador.BVar('TT_HOJ_P1_MEC');
+          If (pAnalizador.BVarn('TT_HOJ_P1_MEC_MO')<>'') then CodMObra:= pAnalizador.BVarn('TT_HOJ_P1_MEC_MO') else CodMObra:='MOMECANIZAR';
+          Result := pSistema.Calculador.AnadeComponente(pSerie, pNumero, pLinea, Result, pFigura.ID, //IDs de la pieza y la figura
+                                                     CodMObra, '', '', //Codigo de pieza y Acabados
+                                                     0,0,0, //Medidas A,B y C
+                                                     TiempoMano {Cantidad},0,0 {Corte1 y 2},
+                                                     0 {LinkID}, 0 {Situacion},
+                                                     0 {Num Rectangulo}, False {Si es exterior},
+                                                     True {Insertar sus auxiliares},'Puerta 1 h corr.Mecanizar' {Info},
+                                                     '' {Familia}, 0 {Grupo},0 {Tipo Segmento},
+                                                     0,0 {Tipos Cortes},nil,'',0,0,0,0,0,0,0,0,'',0,0,90,90,false,lTareaTerminal);
+          end;
+
+          //Tiempo de armar --------------------------------------------------------------------------------------------------------------------
+          If (pAnalizador.BVar('TT_HOJ_P1_ARM')<> 0) then
+          Begin
+          lTareaTerminal:='';
+          lTareaTerminal:=pAnalizador.Obt_expn('TAR_TT_HOJCOR_PUE_ARM');          
+          TiempoMano := pAnalizador.BVar('TT_HOJ_P1_ARM');
+          If (pAnalizador.BVarn('TT_HOJ_P1_ARM_MO')<>'') then CodMObra:= pAnalizador.BVarn('TT_HOJ_P1_ARM_MO') else CodMObra:='MOARMAR';
+          Result := pSistema.Calculador.AnadeComponente(pSerie, pNumero, pLinea, Result, pFigura.ID, //IDs de la pieza y la figura
+                                                     CodMObra, '', '', //Codigo de pieza y Acabados
+                                                     0,0,0, //Medidas A,B y C
+                                                     TiempoMano {Cantidad},0,0 {Corte1 y 2},
+                                                     0 {LinkID}, 0 {Situacion},
+                                                     0 {Num Rectangulo}, False {Si es exterior},
+                                                     True {Insertar sus auxiliares},'Puerta 1 h corr.Armar' {Info},
+                                                     '' {Familia}, 0 {Grupo},0 {Tipo Segmento},
+                                                     0,0 {Tipos Cortes},nil,'',0,0,0,0,0,0,0,0,'',0,0,90,90,false,lTareaTerminal);
+          end;
+    
+
+          //Al terminar vuelvo a inicializar la variable de codigo de mano de obra
+          CodMObra:='';
+      end;
+
+  //Añado asas y cantidad  OBSOLETO
+  if CodAsa <> '' then
+  {ShowMessage(CodAsa);
+  ShowMessage(NumAsa);}
+  Result := pSistema.Calculador.AnadeComponente(pSerie, pNumero, pLinea, Result, pFigura.ID, //IDs de la pieza y la figura
+                                             CodAsa, AAcabI,'', //Codigo de pieza y Acabados
+                                             0,0,0, //Medidas A,B y C
+                                             NumAsa,0,0, {Cantidad, Corte1 y Corte1}
+                                             0,0, {LinkID y Situación}
+                                             0, False, {Num Rectangulo y Si es exterior}
+                                             True {Insertar sus auxiliares}, 'Asa Corredera'{Info},
+                                             '' {Familia}, 0 {Grupo},0 {Tipo Segmento},
+                                             0,0 {Tipos Cortes});
+
+
+  //Añado el kit:
+  lTareaTerminal:='';
+  lTareaTerminal:=pAnalizador.Obt_expn('TAR_HOJCOR_PUE_HER');  
+  pSistema.Calculador.AnadeArticuloScriptMecanizado(CodKit);
+  lIDKit:=Result;
+  Result := pSistema.Calculador.AnadeComponente(pSerie, pNumero, pLinea, Result, pFigura.ID, //IDs de la pieza y la figura
+                                             CodKit, AAcabI, AAcabE, //Codigo de pieza y Acabados
+                                             pFigura.HuecoPadre.Ancho,pFigura.HuecoPadre.Alto,0, //Medidas A,B y C
+                                             1,0,0, {Cantidad, Corte1 y Corte1}
+                                             0,0, {LinkID y Situación}
+                                             0, False, {Num Rectangulo y Si es exterior}
+                                             True {Insertar sus auxiliares}, 'Kit Pue. Cor. 1 hoja'{Info},
+                                             '' {Familia}, 0 {Grupo},0 {Tipo Segmento},
+                                             0,0 {Tipos Cortes},nil,'',0,0,0,0,0,0,0,0,'',0,0,90,90,false,lTareaTerminal);
+                                             
+           //Guardo la descripcion en el txtcliente para usar en una descripcion en formato profesional
+           Descripcion:='';
+           Descripcion2:='';
+           Descripcion:= pSistema.Calculador.DameDescripcionTecnica(CodKit);
+           If (Descripcion<>'') then
+           Begin
+            lIni := pSistema.Calculador.DameIniTxTCliente;    
+            lIni.WriteStringSimple('HERRAJE','DESPROF.Descripcion='+Descripcion);
+            //Guardo el nuevo ini:
+            pSistema.Calculador.GuardaIniTxtCliente(lIni);    
+            //Importante!  
+            lIni.Free;
+           end;
+           //Si hay definido sistema de cierre en la hoja lo incorporo
+           lDescCierre:='';
+           If pAnalizador.BVari('HOF1')=0 then lDescCierre:=pSistema.Calculador.DameDescripcionValorIniSerie('HOP20',pFigura.DameSerie,'SCIEH1',pAnalizador.Obt_exp('SCIEH1'));
+           If (lDescCierre<>'') then
+           Begin
+            lIni := pSistema.Calculador.DameIniTxTCliente;  
+            lDescCierre:= lDescCierre+' en hoja.';
+            lIni.WriteStringSimple('HERRAJE','DESPROF.CierreH1='+lDescCierre);
+            //Guardo el nuevo ini:
+            pSistema.Calculador.GuardaIniTxtCliente(lIni);    
+            //Importante!  
+            lIni.Free;
+            If (pAnalizador.BVar('HM')<>0) then Descripcion2:= 'Eje en perfil hoja a '+FloatToStr(pAnalizador.BVar('HM'))+' mm.';
+            If (pAnalizador.BVar('HM')=0) then Descripcion2:= 'Centrado en perfil hoja a '+FloatToStr(pAnalizador.Obt_exp('HOJH1/2'))+' mm. - EJE CIERRE NO DECLARADO';
+           end;                       
+           If (Descripcion2<>'') then 
+            Begin
+            lIni := pSistema.Calculador.DameIniTxTCliente;    
+              If (pAnalizador.BVar('HM')<>0) then
+             Begin
+              lIni.WriteStringSimple('HERRAJE','DESPROF.EjeCierres= Posición del cierre a '+FloatToStr(pFigura.Hueco(5).AltoMinimo+pAnalizador.BVar('HM'))+' mm. '+Descripcion2);
+             end else
+             Begin
+              lIni.WriteStringSimple('HERRAJE','DESPROF.EjeCierres= Posición del cierre a '+FloatToStr(pFigura.Hueco(5).AltoMinimo+pAnalizador.Obt_exp('HOJH1/2'))+' mm. '+Descripcion2);             
+             end;
+            //Guardo el nuevo ini:
+            pSistema.Calculador.GuardaIniTxtCliente(lIni);    
+            //Importante!  
+            lIni.Free;            
+            end;                                                
+
+          If (CodKitAux <> '') then
+          Begin
+            lTareaTerminal:='';
+            lTareaTerminal:=pAnalizador.Obt_expn('TAR_HOJCOR_PUE_HERAUX');           
+            pSistema.Calculador.AnadeArticuloScriptMecanizado(CodKitAux);
+            Result := pSistema.Calculador.AnadeComponente(pSerie, pNumero, pLinea, Result, pFigura.ID, //IDs de la pieza y la figura
+                                                 CodKitAux, AAcabI, AAcabE, //Codigo de pieza y Acabados
+                                                 pFigura.HuecoPadre.Ancho,pFigura.HuecoPadre.Alto,0, //Medidas A,B y C
+                                                 1,0,0, {Cantidad, Corte1 y Corte1}
+                                                 0,0, {LinkID y Situación}
+                                                 0, False, {Num Rectangulo y Si es exterior}
+                                                 True {Insertar sus auxiliares}, 'Kit aux Pue. Cor. 1 hoja'{Info},
+                                                 '' {Familia}, 0 {Grupo},0 {Tipo Segmento},
+                                                 0,0 {Tipos Cortes},nil,'',0,0,0,0,0,0,0,0,'',0,0,90,90,false,lTareaTerminal);
+          end;
+          
+  //----------------------------------------------------------------------------
+  //------------------ TIEMPOS ESPECIALES PARA TERMINALES ----------------------
+  //----------------------------------------------------------------------------
+  TT_FIGURA_NUM:=0;
+  TT_FIGURA := pAnalizador.Obt_expn('FIGURA');
+  TT_FIGURA_NUM := pAnalizador.Obt_exp('TT_' + TT_FIGURA + '_NUM');
+
+  If (TT_FIGURA_NUM <> 0) then
+   Begin
+   //Inicializamos la variable
+   TT_MO := '';
+   TT_MIN := 0;
+   TT_MODESC := '';
+     //Analizamos el bucle
+     For lTT :=1 to TT_FIGURA_NUM do
+      Begin
+       TT_MO := pAnalizador.Obt_expn('TT_'+ TT_FIGURA + IntToStr(lTT) + '_COD');
+       TT_MODESC := pAnalizador.Obt_expn('TT_' + TT_FIGURA + IntToStr(lTT) + '_TEX');
+       TT_MIN := pAnalizador.Obt_exp('TT_' + TT_FIGURA +IntToStr(lTT) + '_UND');
+
+       //Generamos los tiempos
+       If (TT_MIN<>0) then
+        Begin
+         lTareaTerminal:='';
+         lTareaTerminal:=pAnalizador.Obt_expn('TT_'+ TT_FIGURA + IntToStr(lTT) + '_TAREA');         
+         TiempoMano := TT_MIN;
+         Result := pSistema.Calculador.AnadeComponente(pSerie, pNumero, pLinea, Result, pFigura.ID, //IDs de la pieza y la figura
+                                                 TT_MO, '', '', //Codigo de pieza y Acabados
+                                                 0,0,0, //Medidas A,B y C
+                                                 TiempoMano {Cantidad},0,0 {Corte1 y 2},
+                                                 0 {LinkID}, 0 {Situacion},
+                                                 0 {Num Rectangulo}, False {Si es exterior},
+                                                 True {Insertar sus auxiliares},TT_MODESC {Info},
+                                                 '' {Familia}, 0 {Grupo},0 {Tipo Segmento},
+                                                 0,0 {Tipos Cortes},nil,'',0,0,0,0,0,0,0,0,'',0,0,90,90,false,lTareaTerminal);
+        end;
+      end;
+   end; 
+   
+
+  //--------------------------------------------------------------------------------------------------------------------------------------
+  //------------------ AUTO CARGA DE KITS  ESPECIALES SEGUN NECESIDAD ----------------------
+  //--------------------------------------------------------------------------------------------------------------------------------------
+  KIT_FIGURA_NUM:=0;
+  KIT_FIGURA := pAnalizador.Obt_expn('FIGURA');
+  KIT_FIGURA_NUM := pAnalizador.Obt_exp('KIT_' + KIT_FIGURA + '_NUM');
+
+  If (KIT_FIGURA_NUM <> 0) then
+   Begin
+   //Inicializamos la variable
+   KIT_COD := '';
+   KIT_DESCINFO := '';
+   KIT_ANCHO:=0;
+   KIT_ALTO:=0;
+     //Analizamos el bucle
+     For lKIT :=1 to KIT_FIGURA_NUM do
+      Begin
+       KIT_COD := pAnalizador.Obt_expn('KIT_'+ KIT_FIGURA + IntToStr(lKIT) + '_COD');
+       KIT_DESCINFO := pAnalizador.Obt_expn('KIT_' + KIT_FIGURA + IntToStr(lKIT) + '_DESCINFO');
+       KIT_ANCHO := pAnalizador.Obt_exp('KIT_' + KIT_FIGURA +IntToStr(lKIT) + '_ANCHO');
+       KIT_ALTO := pAnalizador.Obt_exp('KIT_' + KIT_FIGURA +IntToStr(lKIT) + '_ALTO');
+       KIT_ACABI := pAnalizador.Obt_expn('KIT_' + KIT_FIGURA +IntToStr(lKIT) + '_ACABI');    
+       KIT_ACABE := pAnalizador.Obt_expn('KIT_' + KIT_FIGURA +IntToStr(lKIT) + '_ACABE'); 
+
+       //Generamos los kits
+       If (KIT_COD<>'') then
+        Begin
+         lTareaTerminal:='';
+         lTareaTerminal:=pAnalizador.Obt_expn('KIT_' + KIT_FIGURA +IntToStr(lKIT) + '_TAREA');         
+         Result := pSistema.Calculador.AnadeComponente(pSerie, pNumero, pLinea, Result, pFigura.ID, //IDs de la pieza y la figura
+                                                 KIT_COD, KIT_ACABI, KIT_ACABE, //Codigo de pieza y Acabados
+                                                 KIT_ANCHO,KIT_ALTO,0, //Medidas A,B y C
+                                                 1 {Cantidad},0,0 {Corte1 y 2},
+                                                 0 {LinkID}, 0 {Situacion},
+                                                 0 {Num Rectangulo}, False {Si es exterior},
+                                                 True {Insertar sus auxiliares},KIT_DESCINFO {Info},
+                                                 '' {Familia}, 0 {Grupo},0 {Tipo Segmento},
+                                                 0,0 {Tipos Cortes},nil,'',0,0,0,0,0,0,0,0,'',0,0,90,90,false,lTareaTerminal);
+        end;
+      end;
+   end;
+          
+
+  //Inicializo al descripcion del articulo
+  Descripcion := ' ';
+ 
+                                                                                                   
+  //Si hay descripcion del sistema de cierre, (herraje) la añado:
+  lTemp := pSistema.Calculador.DameDescripcionPresupuesto(CodKit);
+  If lTemp <> '' then Descripcion := ' [CON] ' + lTemp;                                                 
+  lTemp:='';
+  lTemp := pSistema.Calculador.DameDescripcionPresupuesto(CodAsa);                                     
+  If lTemp <> '' then Descripcion :=Descripcion+ ' [CON] ' + lTemp;
+                                                                                                                      
+                                                                                                       
+   //  If (AP=0)
+   //    then Descripcion:=Descripcion + ', hoja [DERECHA] al interior e [IZQUIERDA] al exterior '
+   //    else Descripcion:=Descripcion + ', hoja [IZQUIERDA] al interior [Y] [DERECHA] al exterior ';
+   
+
+  IF (pAnalizador.BVar('MICROV') <> 0) then
+   Begin
+    If (pAnalizador.BVarn('MICROV') <> '') then  Descripcion := Descripcion + ' [COMA] [CON] ' + pSistema.Calculador.DameDescripcionPresupuesto(pAnalizador.BVarn('MICROV')) else
+    Descripcion := Descripcion + ' [COMA] [CON] ' + ' Microventilación';
+   end;
+   
+
+      //Descripciones añadidas a desde el ini. 
+  //Si tipo es 0 lo escribe despues de la seccion automatica de la figura 1 lo escribira al final de la descripcion completa del modulo
+  //Si es 10 primero se anula la descripcion de la figura y luego se escribe al final de la descripcion completa del modulo 
+  DES_FIGURA_NUM:=0;
+  DES_FIGURA := pAnalizador.Obt_expn('FIGURA');
+  DES_FIGURA_NUM := pAnalizador.Obt_exp('DES_' + DES_FIGURA + '_NUM');
+  DES_FIGURA_TIPO := pAnalizador.Obt_exp('DES_' + DES_FIGURA + '_TIPO');
+  lDescripcionINI:='';
+  //Si existe la variable anular descripciones con valor 1 fuerzo la figura al tipo 10
+  If (pAnalizador.Obt_exp('ANULAR_DESCRIPCIONES')=1) then DES_FIGURA_TIPO:=10; 
+
+  If (DES_FIGURA_NUM <> 0) then
+   Begin
+    If (DES_FIGURA_TIPO<>0) then lDescripcionINI:='.'+#13#10; 
+     //Analizamos el bucle     
+     For lDES :=1 to DES_FIGURA_NUM do
+      Begin
+       //Inicializamos las variable
+       DES_DESCINFO := '';
+       DES_DATO:=0;
+       DES_DESCINFO2 := ''; 
+ 
+       DES_DESCINFO := pAnalizador.Obt_expn('DES_' + DES_FIGURA + IntToStr(lDES) + '_DESCINFO');
+       DES_DATO := pAnalizador.Obt_exp('DES_' + DES_FIGURA +IntToStr(lDES) + '_DATO');
+       DES_DESCINFO2 := pAnalizador.Obt_expn('DES_' + DES_FIGURA + IntToStr(lDES) + '_DESCINFO2'); 
+       If (DES_DESCINFO <>'') then 
+        Begin
+          If (DES_FIGURA_TIPO=0) then lDescripcionINI:= lDescripcionINI+ ' ' + DES_DESCINFO;
+          If (DES_FIGURA_TIPO<>0) then lDescripcionINI:= lDescripcionINI + DES_DESCINFO;
+          If (DES_DATO<>0) then lDescripcionINI:= lDescripcionINI +' '+ FloatToStr(DES_DATO); 
+          If (DES_DESCINFO2<>'') then lDescripcionINI:= lDescripcionINI +' '+ DES_DESCINFO2;
+         end; 
+       If (DES_FIGURA_TIPO<>0) then lDescripcionINI:=lDescripcionINI+#13#10; 
+      end;
+    end;  
+   //Sistema normal de descripcion cuando no hay textos declarados manualmente en el ini de la figura en curso
+   If (DES_FIGURA_TIPO=0) then  Descripcion:=Descripcion+lDescripcionINI;   
+   //Lanzo al final de todo la descripcion generadada desde el ini si asi que quiere
+   If (DES_FIGURA_TIPO<>0) then  pSistema.Calculador.AnadeDescAutoSecundaria('OTROS','',lDescripcionINI,True,False);
+
+      
+   //GENERO LA DESCRIPCION FINAL   
+   If (DES_FIGURA_TIPO<>10) then pSistema.Calculador.AnadeDescAuto('HOP20','[PUERTA] [CORREDERA] [DEUNAHOJA]',Descripcion,True,False);
+
+    //DESCRIPTIVO TALLER.
+    lTextHoja1:='';lTextHoja2:='';
+    psistema.Calculador.AnadeLineaTaller('Sistema 1 hoja Puerta');
+    lTextHoja1:='Hoja Izquierda ';
+    If (AP=0) Then lTextHoja1:=lTextHoja1+'posición exterior' else lTextHoja1:=lTextHoja1+' posición interior.';
+    lTextHoja1:=lTextHoja1+' '+ FloatToStr(pAnalizador.Obt_exp('HOJL1'))+'x'+FloatToStr(pAnalizador.Obt_exp('HOJH1'));
+    If (pAnalizador.Obt_exp('HOF1')=0) then lTextHoja1:=lTextHoja1 + ' ' else  lTextHoja1:=lTextHoja1 + ' (Fija)';
+    If (pAnalizador.Obt_exp('HOF1')=0) then lTextHoja1:=lTextHoja1 + ' Herraje '+ pSistema.Calculador.DameDescripcionValorIniSerie('HOP20',pFigura.DameSerie,'SCIEH1',pAnalizador.Obt_exp('SCIEH1'));
+    psistema.Calculador.AnadeLineaTaller(lTextHoja1);
+
+
+    lTextHoja2:='Hoja Derecha ';
+    If (AP=0) Then lTextHoja2:=lTextHoja2+'posición interior' else lTextHoja2:=lTextHoja2+' posición exterior.';
+    lTextHoja2:=lTextHoja2+' '+ FloatToStr(pAnalizador.Obt_exp('HOJL2'))+'x'+FloatToStr(pAnalizador.Obt_exp('HOJH2'));
+    If (pAnalizador.Obt_exp('HOF2')=0) then lTextHoja2:=lTextHoja2 + ' ' else  lTextHoja2:=lTextHoja2 + ' (Fija)';
+    If (pAnalizador.Obt_exp('HOF2')=0) then lTextHoja2:=lTextHoja2 + ' Herraje '+ pSistema.Calculador.DameDescripcionValorIniSerie('HOVP20',pFigura.DameSerie,'SCIEH2',pAnalizador.Obt_exp('SCIEH2'));
+    psistema.Calculador.AnadeLineaTaller(lTextHoja2);
+
+    //Describir la posición de la manilla
+    IF (pAnalizador.BVar('HM') <> 0) then
+    Begin
+     psistema.Calculador.AnadeLineaTaller ('Posicion Manilla: '+FloatToSTr(pAnalizador.BVar('HM')));
+    end;
+    
+    
+       //DATOS PARA TERMINALES. 
+  If(pAnalizador.BVar('INITERMINALES') = 1) then
+  BEGIN
+   lIni := pSistema.Calculador.DameIniTxTCliente; 
+   
+      
+      begin
+        lHoja :=1;
+        HS := lFigura.CodigoSup(lHoja);
+        HD := lFigura.CodigoDer(lHoja);
+        HI := lFigura.CodigoInf(lHoja);
+        HZ := lFigura.CodigoIzq(lHoja);
+        
+       
+        iF (AP=1) then
+        Begin
+          lXREC:=5;
+          lXRECeng:=7;
+          lTextHojaPos:=' izquierda';
+        end else
+        Begin
+          lXREC:=5;
+          lXRECeng:=7; 
+          lTextHojaPos:=' derecha';
+        end;
+        lDescCierre:='';
+        If (AP=0) then lPosiRail:='Rail Exterior' else lPosiRail:='Rail Interior';
+        lMedidas:=FloatToStr(HOJA1_L.ANCHO)+'x'+FloatToStr(HOJA1_L.ALTO);
+        lDescCierre:=pSistema.Calculador.DameDescripcionValorIniSerie('HOP10',pFigura.DameSerie,'SCIEH1',pAnalizador.Obt_exp('SCIEH1'));
+                
+
+        
+       lNumRec:= pFigura.Hueco(lXREC).Id;
+       If (ENG<>'') then lNumRec2:= pFigura.Hueco(lXRECeng).Id;
+       lID_Rec:='R'+IntToStr(lNumRec)+'.';
+       If (ENG<>'') then lID_Rec2:='R'+IntToStr(lNumRec)+'.';
+       
+       
+       //TIPO EN RECTANGULOS          
+       lIni.WriteStringSimple('RECTANGULOS',lID_Rec+'Tipo=Hoja Cor'); 
+       If (ENG<>'') then lIni.WriteStringSimple('RECTANGULOS',lID_Rec2+'Tipo=Eng Hoja Cor');
+       
+       
+       //lTextHojaPos := '';
+       Descripcion:='Hoja '+lTextHojaPos;
+       lIni.WriteStringSimple('HOJAS',lID_Rec+'Tipo='+Descripcion+' Rec.'+IntToStr(lNumRec));
+       lIni.WriteStringSimple('HERRAJEHOJA',lID_Rec+'Tipo='+Descripcion+' Rec.'+IntToStr(lNumRec));
+       lIni.WriteStringSimple('SOLDADORA',lID_Rec+'Tipo='+Descripcion+' Rec.'+IntToStr(lNumRec));
+       lIni.WriteStringSimple('MATRIMONIO',lID_Rec+'Tipo='+Descripcion+' Rec.'+IntToStr(lNumRec)); 
+       
+       //Dimension
+       Descripcion:=lMedidas;
+       lIni.WriteStringSimple('HOJAS',lID_Rec+'Dimension='+Descripcion);
+       lIni.WriteStringSimple('HERRAJEHOJA',lID_Rec+'Dimension='+Descripcion); 
+       lIni.WriteStringSimple('SOLDADORA',lID_Rec+'Dimension='+Descripcion);    
+       lIni.WriteStringSimple('MATRIMONIO',lID_Rec+'Dimension='+Descripcion);       
+       
+       //Posicion
+       Descripcion:=lPosiRail;
+       lIni.WriteStringSimple('HOJAS',lID_Rec+'Posicion='+Descripcion);
+       lIni.WriteStringSimple('HERRAJEHOJA',lID_Rec+'Posicion='+Descripcion);    
+       lIni.WriteStringSimple('MATRIMONIO',lID_Rec+'Posicion='+Descripcion);   
+       
+       
+       I:=0;        
+       //Perfil desc
+       //Codigo y Descripcion perfil empleado 
+       If (HS<>'') then 
+        Begin
+         Descripcion:='';
+         If (pSistema.Calculador.DameDescripcionTecnica(HS)<>'') then Descripcion:=HS+'_'+pSistema.Calculador.DameDescripcionTecnica(HS)
+         else If (pSistema.Calculador.DameDescripcionPresupuesto(HS)<>'') then Descripcion:=HS+'_'+pSistema.Calculador.DameDescripcionPresupuesto(HS)
+         else Descripcion:=HS+'_'+pSistema.Calculador.DameDescripcionArticulo(HS);
+         lIni.WriteStringSimple('HOJAS',lID_Rec+'Perfil='+Descripcion); 
+         lIni.WriteStringSimple('MATRIMONIO',lID_Rec+'Perfil='+Descripcion);
+         I:=I+1;
+        end; 
+        
+       If (HD<>'') and (HD<>HS) then 
+        Begin
+         Descripcion:='';
+         If (pSistema.Calculador.DameDescripcionTecnica(HD)<>'') then Descripcion:=HD+'_'+pSistema.Calculador.DameDescripcionTecnica(HD)
+         else If (pSistema.Calculador.DameDescripcionPresupuesto(HD)<>'') then Descripcion:=HD+'_'+pSistema.Calculador.DameDescripcionPresupuesto(HD)
+         else Descripcion:=HD+'_'+pSistema.Calculador.DameDescripcionArticulo(HD);
+         I:=I+1;
+         If I=1 then Descripcion2:='' else Descripcion2:=IntToStr(I);
+         lIni.WriteStringSimple('HOJAS',lID_Rec+'Perfil'+Descripcion2+'='+Descripcion); 
+         lIni.WriteStringSimple('MATRIMONIO',lID_Rec+'Perfil'+Descripcion2+'='+Descripcion); 
+        end;  
+        
+       If (HI<>'') and (HI<>HS) and (HI<>HD) then 
+        Begin
+         Descripcion:='';
+         If (pSistema.Calculador.DameDescripcionTecnica(HI)<>'') then Descripcion:=HI+'_'+pSistema.Calculador.DameDescripcionTecnica(HI)
+         else If (pSistema.Calculador.DameDescripcionPresupuesto(HI)<>'') then Descripcion:=HI+'_'+pSistema.Calculador.DameDescripcionPresupuesto(HI)
+         else Descripcion:=HI+'_'+pSistema.Calculador.DameDescripcionArticulo(HI);
+         I:=I+1;
+         If I=1 then Descripcion2:='' else Descripcion2:=IntToStr(I);
+         lIni.WriteStringSimple('HOJAS',lID_Rec+'Perfil'+Descripcion2+'='+Descripcion); 
+         lIni.WriteStringSimple('MATRIMONIO',lID_Rec+'Perfil'+Descripcion2+'='+Descripcion); 
+        end;  
+        
+       If (HZ<>'') and (HZ<>HS) and (HZ<>HD) and (HZ<>HI) then 
+        Begin
+         Descripcion:='';
+         If (pSistema.Calculador.DameDescripcionTecnica(HZ)<>'') then Descripcion:=HZ+'_'+pSistema.Calculador.DameDescripcionTecnica(HZ)
+         else If (pSistema.Calculador.DameDescripcionPresupuesto(HZ)<>'') then Descripcion:=HZ+'_'+pSistema.Calculador.DameDescripcionPresupuesto(HZ)
+         else Descripcion:=HZ+'_'+pSistema.Calculador.DameDescripcionArticulo(HZ);
+         I:=I+1;
+         If I=1 then Descripcion2:='' else Descripcion2:=IntToStr(I);
+         lIni.WriteStringSimple('HOJAS',lID_Rec+'Perfil'+Descripcion2+'='+Descripcion); 
+         lIni.WriteStringSimple('MATRIMONIO',lID_Rec+'Perfil'+Descripcion2+'='+Descripcion); 
+        end;    
+        
+        //ID Y MEDIDA DE LOS PERFILES USADOS.   
+        lIDinicial:=0;
+        //Perfil Superior
+        lID := pSistema.Calculador.DameIdDescompuestoMem(HS,1,pFigura.Hueco(lXREC+1).Id);
+        If (lID > 0) then
+        Begin
+        If (lIDinicial=0) or (lIDinicial>lID) then lIDinicial:=lID;
+        lLongId:=0;
+        lSQL := pSistema.Calculador.DameLineaDescompuestoMem(lID); 
+        if lSQL <> nil then
+          begin        
+            lLongId := (Round(lSQL.FieldByName('A').AsFloat*100))/100;                      
+            lSQL.Free; //Importante!
+          end;        
+          Descripcion:='_'+HS; 
+          lIni.WriteStringSimple('HOJAS',lID_Rec+'Superior=ID'+ IntToStr(lID)+Descripcion+'_Long='+FloatToStr(lLongId)); 
+          lIni.WriteStringSimple('SOLDADORA',lID_Rec+'Superior=ID'+ IntToStr(lID)+Descripcion+'_Long='+FloatToStr(lLongId));
+          lIni.WriteStringSimple('MATRIMONIO',lID_Rec+'Superior=ID'+ IntToStr(lID)+Descripcion+'_Long='+FloatToStr(lLongId)); 
+        end;     
+     
+        //Perfil Derecha
+        lID := pSistema.Calculador.DameIdDescompuestoMem(HD,2,pFigura.Hueco(lXREC).Id);
+        If (lID > 0) then
+        Begin
+        If (lIDinicial=0) or (lIDinicial>lID) then lIDinicial:=lID;
+        lLongId:=0;
+        lSQL := pSistema.Calculador.DameLineaDescompuestoMem(lID); 
+        if lSQL <> nil then
+          begin        
+            lLongId := (Round(lSQL.FieldByName('A').AsFloat*100))/100;                      
+            lSQL.Free; //Importante!
+          end;        
+          Descripcion:='_'+HD; 
+          lIni.WriteStringSimple('HOJAS',lID_Rec+'Derecha=ID'+ IntToStr(lID)+Descripcion+'_Long='+FloatToStr(lLongId)); 
+          lIni.WriteStringSimple('SOLDADORA',lID_Rec+'Derecha=ID'+ IntToStr(lID)+Descripcion+'_Long='+FloatToStr(lLongId));
+          lIni.WriteStringSimple('MATRIMONIO',lID_Rec+'Derecha=ID'+ IntToStr(lID)+Descripcion+'_Long='+FloatToStr(lLongId));          
+           //PERFIL QUE LLEVA EL MECANIZADO DE LA MANILLA SI ES LA HOJA 3
+           If (lHoja=3) and (lDescCierre<>'') then 
+           Begin      
+            lIni.WriteStringSimple('FRESADORA',lID_Rec+'Perfil.Cierre=ID'+ IntToStr(lID)+Descripcion+'_Posicion=Derecha_Long='+FloatToStr(lLongId)); 
+            lIni.WriteStringSimple('FRESADORA',lID_Rec+'Cierre='+lDescCierre); 
+            lIni.WriteStringSimple('FRESADORA',lID_Rec+'Eje='+FloatToSTr(pAnalizador.BVar('HM')));
+           end;
+           //SI ES LA HOJA CENTRAL Y HAY CIERRE TAMBIEN DEPENDE DEL TIPO DE APARTURA
+           If (lHoja=2) and (lDescCierre<>'') then 
+           Begin      
+            lIni.WriteStringSimple('FRESADORA',lID_Rec+'Perfil.Cierre=ID'+ IntToStr(lID)+Descripcion+'_Posicion=Derecha_Long='+FloatToStr(lLongId)); 
+            lIni.WriteStringSimple('FRESADORA',lID_Rec+'Cierre='+lDescCierre); 
+            lIni.WriteStringSimple('FRESADORA',lID_Rec+'Eje='+FloatToSTr(pAnalizador.BVar('HM')));
+           end;         
+        end;
+        
+        //Perfil Inferior
+        lID := pSistema.Calculador.DameIdDescompuestoMem(HI,3,pFigura.Hueco(lXREC+1).Id);
+        If (lID > 0) then
+        Begin
+        If (lIDinicial=0) or (lIDinicial>lID) then lIDinicial:=lID;
+        lLongId:=0;
+        lSQL := pSistema.Calculador.DameLineaDescompuestoMem(lID); 
+        if lSQL <> nil then
+          begin        
+            lLongId := (Round(lSQL.FieldByName('A').AsFloat*100))/100;                      
+            lSQL.Free; //Importante!
+          end;        
+          Descripcion:='_'+HI; 
+          lIni.WriteStringSimple('HOJAS',lID_Rec+'Inferior=ID'+ IntToStr(lID)+Descripcion+'_Long='+FloatToStr(lLongId)); 
+          lIni.WriteStringSimple('SOLDADORA',lID_Rec+'Inferior=ID'+ IntToStr(lID)+Descripcion+'_Long='+FloatToStr(lLongId));
+          lIni.WriteStringSimple('MATRIMONIO',lID_Rec+'Inferior=ID'+ IntToStr(lID)+Descripcion+'_Long='+FloatToStr(lLongId)); 
+        end;
+        
+        //Perfil Izquierda
+        lID := pSistema.Calculador.DameIdDescompuestoMem(HZ,4,pFigura.Hueco(lXREC).Id);
+        If (lID > 0) then
+        Begin
+        If (lIDinicial=0) or (lIDinicial>lID) then lIDinicial:=lID;
+        lLongId:=0;
+        lSQL := pSistema.Calculador.DameLineaDescompuestoMem(lID); 
+        if lSQL <> nil then
+          begin        
+            lLongId := (Round(lSQL.FieldByName('A').AsFloat*100))/100;                      
+            lSQL.Free; //Importante!
+          end;        
+          Descripcion:='_'+HZ; 
+          lIni.WriteStringSimple('HOJAS',lID_Rec+'Izquierda=ID'+ IntToStr(lID)+Descripcion+'_Long='+FloatToStr(lLongId)); 
+          lIni.WriteStringSimple('SOLDADORA',lID_Rec+'Izquierda=ID'+ IntToStr(lID)+Descripcion+'_Long='+FloatToStr(lLongId));
+          lIni.WriteStringSimple('MATRIMONIO',lID_Rec+'Izquierda=ID'+ IntToStr(lID)+Descripcion+'_Long='+FloatToStr(lLongId)); 
+           //PERFIL QUE LLEVA EL MECANIZADO DE LA MANILLA SI ES LA HOJA 1
+           If (lHoja=1) and (lDescCierre<>'') then 
+           Begin      
+            lIni.WriteStringSimple('FRESADORA',lID_Rec+'Perfil.Cierre=ID'+ IntToStr(lID)+Descripcion+'_Posicion=Izquierda_Long='+FloatToStr(lLongId)); 
+            lIni.WriteStringSimple('FRESADORA',lID_Rec+'Cierre='+lDescCierre); 
+            lIni.WriteStringSimple('FRESADORA',lID_Rec+'Eje='+FloatToSTr(pAnalizador.BVar('HM')));
+           end;
+           //SI ES LA HOJA CENTRAL Y HAY CIERRE TAMBIEN DEPENDE DEL TIPO DE APARTURA
+           If (lHoja=1) and (lDescCierre<>'') then 
+           Begin      
+            lIni.WriteStringSimple('FRESADORA',lID_Rec+'Perfil.Cierre=ID'+ IntToStr(lID)+Descripcion+'_Posicion=Izquierda_Long='+FloatToStr(lLongId)); 
+            lIni.WriteStringSimple('FRESADORA',lID_Rec+'Cierre='+lDescCierre); 
+            lIni.WriteStringSimple('FRESADORA',lID_Rec+'Eje='+FloatToSTr(pAnalizador.BVar('HM')));
+           end;          
+        end; 
+        
+        
+      //Me quedo lIDinicial que es el ID de pieza inicial para escanerar escuadras y gomas.   
+      //ShowMessage(lIDinicial);
+      Ix:=1000;
+      For I:=1 to Ix do
+        begin              
+          lSQL := pSistema.Calculador.DameLineaDescompuestoMem(lIDinicial+I); 
+          If lSQL <> nil then
+              begin 
+                Descripcion:='';Descripcion2:='';
+                // Si el articulo a continuacion pertene al mismo rectangulo que el ID inicial
+                If lSQL.FieldByName('NumeroRectangulo').AsInteger=lNumRec then  
+                  Begin
+                    //Si se trata de un articulo accesorios y si tiene precio (no se que sea un sol0 aux)
+                    If (lSQL.FieldByName('TipoArticulo').AsInteger=2) and (lSQL.FieldByName('Coste').AsFloat<>0) then
+                       Begin
+                        Descripcion:=lSQL.FieldByName('CodigoArticulo').AsString;
+                        Descripcion2:=lSQL.FieldByName('Descripcion').AsString;
+                        Descripcion2:=Descripcion2+'   ('+lSQL.FieldByName('CodigoAcabado').AsString+')';
+                        //Segun sea por unidad o por metro - los guardo en HOJASACCE o en HOJASGOMAS
+                        If (lSQL.FieldByName('TipoMedida').AsInteger=1) then lIni.WriteStringSimple('HOJASACCE',lID_Rec+'Hojas_Accesorio='+Descripcion+' '+Descripcion2) 
+                        else lIni.WriteStringSimple('HOJASGOMAS',lID_Rec+'Hojas_Goma='+Descripcion+' '+Descripcion2);                                                
+                       end;
+                  end else
+                  Begin
+                   //Showmessage(I);
+                   lSQL.Free; //Importante!
+                   Break
+                  end;
+                  lSQL.Free; //Importante!
+              end;           
+        end;          
+     
+
+      //Herraje vinculado
+      Descripcion:='';
+      If (pSistema.Calculador.DameDescripcionTecnica(CodKit)<>'') then Descripcion:=pSistema.Calculador.DameDescripcionTecnica(CodKit)
+      else If (pSistema.Calculador.DameDescripcionPresupuesto(CodKit)<>'') then Descripcion:=pSistema.Calculador.DameDescripcionPresupuesto(CodKit)
+      else Descripcion:=pSistema.Calculador.DameDescripcionArticulo(CodKit); 
+      lIni.WriteStringSimple('HERRAJEHOJA',lID_Rec+'Kit='+Descripcion+' (Hoja '+lTextHojaPos+')');  
+      
+      
+      //AHORA LOS ENGATILLADOS SI ES QUE LOS HAY
+      
+       If (ENG<>'') then
+        Begin
+        
+          lID := pSistema.Calculador.DameIdDescompuestoMem(ENG,2,pFigura.Hueco(lXRECeng).Id);
+          If (lID > 0) then
+          Begin
+           Descripcion:='Eng de Hoja '+lTextHojaPos;   
+           lIni.WriteStringSimple('HOJAS',lID_Rec+'Tipo Engatillado='+Descripcion+' Rec.'+IntToStr(lNumRec2));            
+           Descripcion:='';
+           If (pSistema.Calculador.DameDescripcionTecnica(ENG)<>'') then Descripcion:=ENG+'_'+pSistema.Calculador.DameDescripcionTecnica(ENG)
+           else If (pSistema.Calculador.DameDescripcionPresupuesto(ENG)<>'') then Descripcion:=ENG+'_'+pSistema.Calculador.DameDescripcionPresupuesto(ENG)
+           else Descripcion:=ENG+'_'+pSistema.Calculador.DameDescripcionArticulo(ENG);
+           lIni.WriteStringSimple('HOJAS',lID_Rec+'Perfil Engatillado='+Descripcion);
+           lLongId:=0;
+           lSQL := pSistema.Calculador.DameLineaDescompuestoMem(lID); 
+           if lSQL <> nil then
+            begin        
+              lLongId := (Round(lSQL.FieldByName('A').AsFloat*100))/100;                      
+              lSQL.Free; //Importante!
+            end;        
+            Descripcion:='_'+ENG; 
+            lIni.WriteStringSimple('HOJAS',lID_Rec+'Engatillado a Derecha=ID'+ IntToStr(lID)+Descripcion+'_Long='+FloatToStr(lLongId));  
+          end; 
+          
+          lID := pSistema.Calculador.DameIdDescompuestoMem(ENG,4,pFigura.Hueco(lXRECeng).Id);
+          If (lID > 0) then
+          Begin
+           Descripcion:='Eng de hoja '+lTextHojaPos;   
+           lIni.WriteStringSimple('HOJAS',lID_Rec+'Tipo Engatillado='+Descripcion+' Rec.'+IntToStr(lNumRec2));            
+           Descripcion:='';
+           If (pSistema.Calculador.DameDescripcionTecnica(ENG)<>'') then Descripcion:=ENG+'_'+pSistema.Calculador.DameDescripcionTecnica(ENG)
+           else If (pSistema.Calculador.DameDescripcionPresupuesto(ENG)<>'') then Descripcion:=ENG+'_'+pSistema.Calculador.DameDescripcionPresupuesto(ENG)
+           else Descripcion:=ENG+'_'+pSistema.Calculador.DameDescripcionArticulo(ENG);
+           lIni.WriteStringSimple('HOJAS',lID_Rec+'Perfil Engatillado='+Descripcion);          
+           lLongId:=0;
+           lSQL := pSistema.Calculador.DameLineaDescompuestoMem(lID); 
+           if lSQL <> nil then
+            begin        
+              lLongId := (Round(lSQL.FieldByName('A').AsFloat*100))/100;                      
+              lSQL.Free; //Importante!
+            end;        
+            Descripcion:='_'+ENG; 
+            lIni.WriteStringSimple('HOJAS',lID_Rec+'Engatillado a Izquierda=ID'+ IntToStr(lID)+Descripcion+'_Long='+FloatToStr(lLongId));  
+          end;          
+         end;
+                          
+      end; //Fin blucle for
+      
+          
+    
+    //PROCESO EL HERRAJE PARA AÑADIR LAS PIEZAS QUE SE HAN MARCADO EN INFORMES EN SECCION FABRICACION VALOR 4
+    //INICIO CICLO DE HERRAJE
+    If (lIDKit>0) then 
+       Begin         
+        lNumFigura:=0;
+        lSQL := pSistema.Calculador.DameLineaDescompuestoMem(lIDKit); 
+          If lSQL <> nil then
+            begin                      
+              lNumFigura:=lSQL.FieldByName('Figura').AsInteger;
+              lSQL.Free; //Importante!
+            end; 
+        //Las hojas van de izquierda a derecha          
+        lNumRec:=pFigura.Hueco(5).Id;
+                 
+        //DEBO TENER EN CUENTA QUE ESTOY EN KIT DE HERRAJE, POR LO QUE LOS ARTICULOS AUX QUE PERTENECEN A ESTE
+        //SON LOS INMEDITAMENTE CONSECUTIVOS AL ID DEL KIT Y QUE ADEMAS SON DE LA MISMA FIGURA Y TIENEN DATO EN LINKID...
+
+          lIDinicial:=lIDKit;
+          lCount:=0;
+          lCount1:=0;
+          lCount2:=0;
+          lCount3:=0;
+          //ShowMessage(lIDinicial);
+          Ix:=1000;
+          For I:=1 to Ix do
+            begin
+              lSQL := pSistema.Calculador.DameLineaDescompuestoMem(lIDinicial+I); 
+              If lSQL <> nil then
+                  begin 
+                    Descripcion:='';Descripcion2:='';                   
+                    // Si el articulo a continuacion pertene al mismo rectangulo que el ID inicial
+                    If (lSQL.FieldByName('Figura').AsInteger=lNumFigura) and  (lSQL.FieldByName('LinkID').AsInteger>=lIDinicial) then  
+                      Begin                         
+                        //Solo lo proceso si tiene coste y se se ha marcado en el sistema que se imprima en listados de fabricacion check 4 que es herraje
+                        If (lSQL.FieldByName('Coste').AsFloat<>0) and ((lSQL.FieldByName('Fabricacion').AsInteger AND 8) =8) then
+                           Begin                                     
+                            If lSQL.FieldByName('NumeroRectangulo').AsString=1  then 
+                             Begin                                   
+                              lID_Rec:='R'+IntToStr(lNumRec)+'.';
+                              lCount1:=lCount1+1;
+                              lCount:=lCount1;
+                             end;
+                             
+                            
+                            lCodArti:=lSQL.FieldByName('CodigoArticulo').AsString; 
+                            lCodUnds:=lSQL.FieldByName('Cantidad').AsInteger;
+                            
+                            If lSQL.FieldByName('Situacion').AsInteger=1 then Descripcion2:='Sit.Sup' else
+                            If lSQL.FieldByName('Situacion').AsInteger=2 then Descripcion2:='Sit.Dcha' else
+                            If lSQL.FieldByName('Situacion').AsInteger=3 then Descripcion2:='Sit.Inf' else
+                            If lSQL.FieldByName('Situacion').AsInteger=4 then Descripcion2:='Sit.Izqda' else
+                            If lSQL.FieldByName('Situacion').AsInteger=5 then Descripcion2:='Sit.Vert' else
+                            If lSQL.FieldByName('Situacion').AsInteger=6 then Descripcion2:='Sit.Hor' else                            
+                            Descripcion2:='';
+                            Descripcion2:= Descripcion2 + ' (Id'+IntToStr(lSQL.FieldByName('ID').AsInteger) + ')'; 
+                            If (lSQL.FieldByName('TipoMedida').AsInteger=2) then Descripcion2:= Descripcion2+ ' Long=' + FloatToStr(lSQL.FieldByName('A').AsFloat);
+                            
+                            Descripcion:=pSistema.Calculador.DameDescripcionTecnica(lCodArti);
+                            If (Descripcion='') then Descripcion:=pSistema.Calculador.DameDescripcionPresupuesto(lCodArti);
+                            If (Descripcion='') then Descripcion:=lSQL.FieldByName('Descripcion').AsString;;                            
+                            //VINCULAMOS AL RECTANGULO DE HOJA EL ARTICULO EN USO.
+                            lIni.WriteStringSimple('HERRAJEHOJA_ARTICULOS',lID_Rec+'Articulo'+IntToStr(lCount)+'='+lCodArti+' Unds '+IntToStr(lCodUnds)+' '+Descripcion+' '+Descripcion2);
+                           end;
+                      end else
+                      Begin
+                       //Showmessage(I);
+                       lSQL.Free; //Importante!
+                       Break
+                      end;
+                      lSQL.Free; //Importante!
+                  end;           
+            end;           
+           
+       end;
+       //FIN CLICLO HERRAJE   
+   
+  
+
+  //Guardo el nuevo ini:
+  pSistema.Calculador.GuardaIniTxtCliente(lIni);    
+  //Importante!  
+  lIni.Free;        
+  
+  END;   
+
+
+end;

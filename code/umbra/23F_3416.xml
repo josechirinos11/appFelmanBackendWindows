@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<JOB>
+	<JINF>
+		<NUM>1</NUM>
+	</JINF>
+	<VER>
+		<MJ>1</MJ>
+		<MN>0</MN>
+	</VER>
+	<HEAD>
+		<PDAT>
+			<CODE>PI65002</CODE>
+			<DESC>Perfil union 2 hojas</DESC>
+			<DICL>9010</DICL>
+			<DOCL>9010</DOCL>
+			<BQTY>1</BQTY>
+		</PDAT>
+		<PDAT>
+			<CODE>PI65008</CODE>
+			<DESC>Marco guia superior</DESC>
+			<DICL>9010</DICL>
+			<DOCL>9010</DOCL>
+			<BQTY>1</BQTY>
+		</PDAT>
+		<PDAT>
+			<CODE>PI65010</CODE>
+			<DESC>Hoja ajunquillada</DESC>
+			<DICL>9010</DICL>
+			<DOCL>9010</DOCL>
+			<BQTY>5</BQTY>
+		</PDAT>
+		<PDAT>
+			<CODE>PI65013</CODE>
+			<DESC>Guia empotrada UMBRA</DESC>
+			<DICL>9010</DICL>
+			<DOCL>9010</DOCL>
+			<BQTY>1</BQTY>
+		</PDAT>
+	</HEAD>
+	<BODY>
+		<BAR>
+			<BRAN>FELMAN</BRAN>
+			<SYST></SYST>
+			<CODE>PI65002</CODE>
+			<DICL>9010</DICL>
+			<DOCL></DOCL>
+			<LEN>6500</LEN>
+			<LENR>2218</LENR>
+			<H>22</H>
+			<W>19.5</W>
+			<MLT>1</MLT>
+			<CUT>
+				<ANGL>90</ANGL>
+				<ANGR>90</ANGR>
+				<IL>2121.0 </IL>
+				<OL>2121.0 </OL>
+				<BCOD>3416000100000100230001</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>0</IDQUADRO>
+				<DESC>Aux de Inversor 1</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>1</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Perfil union 2 hojas - Aux de Inversor 1</LBL>
+				<LBL></LBL>
+				<LBL></LBL>
+				<LBL>0</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.1</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>90</ANGL>
+				<ANGR>90</ANGR>
+				<IL>2141.0 </IL>
+				<OL>2141.0 </OL>
+				<BCOD>3416000100000100220002</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>0</IDQUADRO>
+				<DESC>Aux de Inversor 1</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>1</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Perfil union 2 hojas - Aux de Inversor 1</LBL>
+				<LBL></LBL>
+				<LBL></LBL>
+				<LBL>0</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.1</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+		</BAR>
+		<BAR>
+			<BRAN>FELMAN</BRAN>
+			<SYST></SYST>
+			<CODE>PI65008</CODE>
+			<DICL>9010</DICL>
+			<DOCL></DOCL>
+			<LEN>6500</LEN>
+			<LENR>3305</LENR>
+			<H>50</H>
+			<W>47</W>
+			<MLT>1</MLT>
+			<CUT>
+				<ANGL>90</ANGL>
+				<ANGR>90</ANGR>
+				<IL>3185.0 </IL>
+				<OL>3185.0 </OL>
+				<BCOD>3416000100070100010003</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>7</IDQUADRO>
+				<DESC>marco</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>1</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Marco guia superior - marco</LBL>
+				<LBL></LBL>
+				<LBL>SUPERIOR</LBL>
+				<LBL>7</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.1</LBL>
+				<MACHININGS>
+						<Comentario1>Proceso en máquina FijacionMT_ Fijación 1: union_perf_lat</Comentario1>
+						<MACHINING WCODE="union_perf_lat" OFFSET="3168"/>
+						<Comentario1>Proceso en máquina FijacionMT_ Fijación 1: union_perf_lat</Comentario1>
+						<MACHINING WCODE="union_perf_lat" OFFSET="17"/>
+				</MACHININGS>
+			</CUT>
+		</BAR>
+		<BAR>
+			<BRAN>FELMAN</BRAN>
+			<SYST></SYST>
+			<CODE>PI65010</CODE>
+			<DICL>9010</DICL>
+			<DOCL></DOCL>
+			<LEN>6500</LEN>
+			<LENR>298</LENR>
+			<H>55</H>
+			<W>40</W>
+			<MLT>1</MLT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>615.1  </IL>
+				<OL>505.1  </OL>
+				<BCOD>3416000100380100120004</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>38</IDQUADRO>
+				<DESC>hoja 1 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>1</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Hoja ajunquillada - hoja 1 de 5</LBL>
+				<LBL></LBL>
+				<LBL>SUPERIOR</LBL>
+				<LBL>38</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.1</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>615.1  </IL>
+				<OL>505.1  </OL>
+				<BCOD>3416000100380100180005</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>38</IDQUADRO>
+				<DESC>hoja 1 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>1</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Hoja ajunquillada - hoja 1 de 5</LBL>
+				<LBL></LBL>
+				<LBL>INFERIOR</LBL>
+				<LBL>38</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.1</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>615.1  </IL>
+				<OL>505.1  </OL>
+				<BCOD>3416000100390100250006</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>39</IDQUADRO>
+				<DESC>hoja 2 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>2</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Hoja ajunquillada - hoja 2 de 5</LBL>
+				<LBL></LBL>
+				<LBL>SUPERIOR</LBL>
+				<LBL>39</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.2</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>2141.0 </IL>
+				<OL>2031.0 </OL>
+				<BCOD>3416000100380100090007</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>38</IDQUADRO>
+				<DESC>hoja 1 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>1</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Hoja ajunquillada - hoja 1 de 5</LBL>
+				<LBL></LBL>
+				<LBL>IZQUIERDO</LBL>
+				<LBL>38</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.1</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>2141.0 </IL>
+				<OL>2031.0 </OL>
+				<BCOD>3416000100380100150008</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>38</IDQUADRO>
+				<DESC>hoja 1 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>1</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Hoja ajunquillada - hoja 1 de 5</LBL>
+				<LBL></LBL>
+				<LBL>DERECHO</LBL>
+				<LBL>38</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.1</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+		</BAR>
+		<BAR>
+			<BRAN>FELMAN</BRAN>
+			<SYST></SYST>
+			<CODE>PI65010</CODE>
+			<DICL>9010</DICL>
+			<DOCL></DOCL>
+			<LEN>6500</LEN>
+			<LENR>298</LENR>
+			<H>55</H>
+			<W>40</W>
+			<MLT>1</MLT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>615.1  </IL>
+				<OL>505.1  </OL>
+				<BCOD>3416000100390100310009</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>39</IDQUADRO>
+				<DESC>hoja 2 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>2</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Hoja ajunquillada - hoja 2 de 5</LBL>
+				<LBL></LBL>
+				<LBL>INFERIOR</LBL>
+				<LBL>39</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.2</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>615.1  </IL>
+				<OL>505.1  </OL>
+				<BCOD>3416000100400100370010</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>40</IDQUADRO>
+				<DESC>hoja 3 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>3</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Hoja ajunquillada - hoja 3 de 5</LBL>
+				<LBL></LBL>
+				<LBL>SUPERIOR</LBL>
+				<LBL>40</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.3</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>615.1  </IL>
+				<OL>505.1  </OL>
+				<BCOD>3416000100400100430011</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>40</IDQUADRO>
+				<DESC>hoja 3 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>3</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Hoja ajunquillada - hoja 3 de 5</LBL>
+				<LBL></LBL>
+				<LBL>INFERIOR</LBL>
+				<LBL>40</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.3</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>2141.0 </IL>
+				<OL>2031.0 </OL>
+				<BCOD>3416000100390100280012</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>39</IDQUADRO>
+				<DESC>hoja 2 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>2</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Hoja ajunquillada - hoja 2 de 5</LBL>
+				<LBL></LBL>
+				<LBL>DERECHO</LBL>
+				<LBL>39</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.2</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>2141.0 </IL>
+				<OL>2031.0 </OL>
+				<BCOD>3416000100390100340013</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>39</IDQUADRO>
+				<DESC>hoja 2 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>2</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Hoja ajunquillada - hoja 2 de 5</LBL>
+				<LBL></LBL>
+				<LBL>IZQUIERDO</LBL>
+				<LBL>39</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.2</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+		</BAR>
+		<BAR>
+			<BRAN>FELMAN</BRAN>
+			<SYST></SYST>
+			<CODE>PI65010</CODE>
+			<DICL>9010</DICL>
+			<DOCL></DOCL>
+			<LEN>6500</LEN>
+			<LENR>298</LENR>
+			<H>55</H>
+			<W>40</W>
+			<MLT>1</MLT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>615.1  </IL>
+				<OL>505.1  </OL>
+				<BCOD>3416000100410100490014</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>41</IDQUADRO>
+				<DESC>hoja 4 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>4</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Hoja ajunquillada - hoja 4 de 5</LBL>
+				<LBL></LBL>
+				<LBL>SUPERIOR</LBL>
+				<LBL>41</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.4</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>615.1  </IL>
+				<OL>505.1  </OL>
+				<BCOD>3416000100410100550015</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>41</IDQUADRO>
+				<DESC>hoja 4 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>4</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Hoja ajunquillada - hoja 4 de 5</LBL>
+				<LBL></LBL>
+				<LBL>INFERIOR</LBL>
+				<LBL>41</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.4</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>615.1  </IL>
+				<OL>505.1  </OL>
+				<BCOD>3416000100420100610016</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>42</IDQUADRO>
+				<DESC>hoja 5 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>5</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Hoja ajunquillada - hoja 5 de 5</LBL>
+				<LBL></LBL>
+				<LBL>SUPERIOR</LBL>
+				<LBL>42</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.5</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>2141.0 </IL>
+				<OL>2031.0 </OL>
+				<BCOD>3416000100400100400017</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>40</IDQUADRO>
+				<DESC>hoja 3 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>3</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Hoja ajunquillada - hoja 3 de 5</LBL>
+				<LBL></LBL>
+				<LBL>DERECHO</LBL>
+				<LBL>40</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.3</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>2141.0 </IL>
+				<OL>2031.0 </OL>
+				<BCOD>3416000100400100460018</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>40</IDQUADRO>
+				<DESC>hoja 3 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>3</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Hoja ajunquillada - hoja 3 de 5</LBL>
+				<LBL></LBL>
+				<LBL>IZQUIERDO</LBL>
+				<LBL>40</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.3</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+		</BAR>
+		<BAR>
+			<BRAN>FELMAN</BRAN>
+			<SYST></SYST>
+			<CODE>PI65010</CODE>
+			<DICL>9010</DICL>
+			<DOCL></DOCL>
+			<LEN>6500</LEN>
+			<LENR>1558</LENR>
+			<H>55</H>
+			<W>40</W>
+			<MLT>1</MLT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>615.1  </IL>
+				<OL>505.1  </OL>
+				<BCOD>3416000100420100670019</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>42</IDQUADRO>
+				<DESC>hoja 5 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>5</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Hoja ajunquillada - hoja 5 de 5</LBL>
+				<LBL></LBL>
+				<LBL>INFERIOR</LBL>
+				<LBL>42</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.5</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>2141.0 </IL>
+				<OL>2031.0 </OL>
+				<BCOD>3416000100410100520020</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>41</IDQUADRO>
+				<DESC>hoja 4 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>4</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Hoja ajunquillada - hoja 4 de 5</LBL>
+				<LBL></LBL>
+				<LBL>DERECHO</LBL>
+				<LBL>41</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.4</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>2141.0 </IL>
+				<OL>2031.0 </OL>
+				<BCOD>3416000100410100580021</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>41</IDQUADRO>
+				<DESC>hoja 4 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>4</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Hoja ajunquillada - hoja 4 de 5</LBL>
+				<LBL></LBL>
+				<LBL>IZQUIERDO</LBL>
+				<LBL>41</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.4</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+		</BAR>
+		<BAR>
+			<BRAN>FELMAN</BRAN>
+			<SYST></SYST>
+			<CODE>PI65010</CODE>
+			<DICL>9010</DICL>
+			<DOCL></DOCL>
+			<LEN>6500</LEN>
+			<LENR>2188</LENR>
+			<H>55</H>
+			<W>40</W>
+			<MLT>1</MLT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>2141.0 </IL>
+				<OL>2031.0 </OL>
+				<BCOD>3416000100420100640022</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>42</IDQUADRO>
+				<DESC>hoja 5 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>5</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Hoja ajunquillada - hoja 5 de 5</LBL>
+				<LBL></LBL>
+				<LBL>DERECHO</LBL>
+				<LBL>42</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.5</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+			<CUT>
+				<ANGL>135</ANGL>
+				<ANGR>135</ANGR>
+				<IL>2141.0 </IL>
+				<OL>2031.0 </OL>
+				<BCOD>3416000100420100700023</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>42</IDQUADRO>
+				<DESC>hoja 5 de 5</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>5</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Hoja ajunquillada - hoja 5 de 5</LBL>
+				<LBL></LBL>
+				<LBL>IZQUIERDO</LBL>
+				<LBL>42</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.5</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+		</BAR>
+		<BAR>
+			<BRAN>FELMAN</BRAN>
+			<SYST></SYST>
+			<CODE>PI65013</CODE>
+			<DICL>9010</DICL>
+			<DOCL></DOCL>
+			<LEN>6500</LEN>
+			<LENR>3264</LENR>
+			<H>20</H>
+			<W>50</W>
+			<MLT>1</MLT>
+			<CUT>
+				<ANGL>158.96</ANGL>
+				<ANGR>158.96</ANGR>
+				<IL>3221.0 </IL>
+				<OL>3181.0 </OL>
+				<BCOD>3416000100250100060024</BCOD>
+				<ORCD>23F_3416</ORCD>
+				<ORDCDQTY>0</ORDCDQTY>
+				<TINA>V01 01</TINA>
+				<CSNA>JAVIER MARTINEZ HUGUET</CSNA>
+				<CSNU>CLI08989</CSNU>
+				<IDQUADRO>25</IDQUADRO>
+				<DESC>marco</DESC>
+				<CID></CID>
+				<STAT></STAT>
+				<TROLLEY>A</TROLLEY>
+				<SLOT>2</SLOT>
+				<LBL>2025_40_876 (23FBA/3416)</LBL>
+				<LBL>JAVIER MARTINEZ HUGUET / </LBL>
+				<LBL>Guia empotrada UMBRA - marco</LBL>
+				<LBL></LBL>
+				<LBL>INFERIOR</LBL>
+				<LBL>25</LBL>
+				<LBL></LBL>
+				<LBL> / </LBL>
+				<LBL></LBL>
+				<LBL>LP: 4  A.2</LBL>
+				<MACHININGS>
+				</MACHININGS>
+			</CUT>
+		</BAR>
+	</BODY>
+</JOB>

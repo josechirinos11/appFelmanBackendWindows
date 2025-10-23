@@ -1,0 +1,1447 @@
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Formulario: ControlEntregasDiarias                                                                       Página: 1
+
+
+
+
+Propiedades
+
+AllowAdditions:              Verdadero                    AllowDatasheetView:         Verdadero
+AllowDeletions:              Verdadero                    AllowDesignChanges:         Verdadero
+AllowEditing:                Verdadero                    AllowEdits:                 Verdadero
+
+AllowFilters:                Verdadero                    AllowFormView:              Verdadero
+AllowLayoutView:             Verdadero                    AllowPivotChartView:        Falso
+
+AllowPivotTableView:         Falso                        AllowUpdating:              No
+AlternateBackShade:          95                           AlternateBackThemeCol       1
+AlternateBackTint:           100                          AutoCenter:                 Verdadero
+
+AutoResize:                  Verdadero                    BackShade:                  100
+BackThemeColorIndex:         1                            BackTint:                   100
+
+BorderShade:                 100                          BorderStyle:                Ajustable
+BorderThemeColorIndex        3                            BorderTint:                 100
+CloseButton:                 Verdadero                    Container:                  Forms
+
+ControlBox:                  Verdadero                    Count:                      10
+CurrentView:                 0                            Cycle:                      Todos los registros
+
+DataEntry:                   Falso                        DatasheetAlternateBack      15921906
+DatasheetBackColor:          16777215                     DatasheetBackShade:         100
+
+DatasheetBackThemeC          1                            DatasheetBackTint:          100
+DatasheetBorderLineSty       1                            DatasheetCellsEffect:       Normal
+DatasheetColumnHeade         1                            DatasheetFontHeight:        11
+
+DatasheetFontItalic:         Falso                        DatasheetFontName:          Calibri
+DatasheetFontUnderline       Falso                        DatasheetFontWeight:        Normal
+
+DatasheetForeColor:          0                            DatasheetForeShade:         100
+DatasheetForeThemeCo         0                            DatasheetForeTint:          100
+DatasheetGridlinesBeha       Ambas                        DatasheetGridlinesColor     15132391
+
+DatasheetGridlinesShad       100                          DatasheetGridlinesThe       3
+DatasheetGridlinesTint:      100                          DateCreated:                22/07/2022 23:23:55
+
+DefaultEditing:              2                            DefaultView:                Un único formulario
+DisplayOnSharePointSit       Seguir configuración de      DividingLines:              Falso
+FastLaserPrinting:           Verdadero                    FetchDefaults:              Verdadero
+
+FilterOn:                    Falso                        FilterOnLoad:               Falso
+FitToScreen:                 Verdadero                    ForeShade:                  100
+
+ForeThemeColorIndex:         0                            ForeTint:                   100
+FrozenColumns:               1                            GridX:                      10
+
+GridY:                       10                           GUID:                       {guid {EE68468C-8F87-
+                                                                                      413F-BDEF-
+HasIvyChart:                 0                            HasModule:                  Falso
+
+HelpContextId:               0                            HorizontalDatasheetGrid     1
+Hwnd:                        1117322                      InsideHeight:               7740
+InsideWidth:                 16290                        KeyPreview:                 Falso
+
+LastUpdated:                 31/03/2023 10:59:03          LayoutForPrint:             Falso
+LogicalPageWidth:            11186                        MaxButton:                  Verdadero
+
+MinButton:                   Verdadero                    MinMaxButtons:              Ambos habilitados
+Modal:                       Falso                        Moveable:                   Verdadero
+NameMap:                     Datos binarios largos        NavigationButtons:          Falso
+
+OrderByOn:                   Falso                        OrderByOnLoad:              Verdadero
+Orientation:                 De izquieda a derecha        Owner:                      admin
+
+Painting:                    Verdadero                    PaletteSource:              (Predeterminado)
+Picture:                     (ninguna)
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Formulario: ControlEntregasDiarias                                                                       Página: 2
+
+
+                                                          PictureAlignment:           Esquina superior derecha
+PictureSizeMode:             Recortar                     PictureTiling:              Falso
+PictureType:                 0                            PopUp:                      Verdadero
+
+PrtDevMode:                  Datos binarios largos        PrtDevModeW:                Datos binarios largos
+PrtDevNames:                 Datos binarios largos        PrtDevNamesW:               Datos binarios largos
+
+PrtMip:                      Datos binarios largos        PublishToWeb:               1
+RecordLocks:                 Sin bloquear                 RecordSelectors:            Falso
+RecordsetType:               Dynaset                      RowHeight:                  Predeterminado
+
+SaveSplitterBarPosition:     Verdadero                    ScrollBars:                 Ambas
+ShortcutMenu:                Verdadero                    ShowGrid:                   Verdadero
+
+SplitFormDatasheet:          Permitir ediciones           SplitFormOrientation:       Hoja de datos arriba
+SplitFormPrinting:           solo formulario              SplitFormSize:              0
+SplitFormSplitterBar:        Verdadero                    SubdatasheetExpanded        Falso
+
+SubdatasheetHeight:          0                            ThemeFontIndex:             1
+ThemeResourceName:           [Use DB Theme]               TimerInterval:              0
+
+UseDefaultPaperSize:         Falso                        UserName:                   admin
+VerticalDatasheetGridlin     1                            ViewsAllowed:               Ambas
+
+Visible:                     Falso                        WaitForPostProcessing       Falso
+Width:                       22563                        WindowHeight:               7995
+WindowLeft:                  0                            WindowTop:                  0
+
+WindowWidth:                 16545
+
+
+
+
+Objetos
+
+Sección: Detalle
+AlternateBackC     15921906                           AlternateBackS     95
+
+AlternateBackT     1                                  AlternateBackTi    100
+hemeColorIndex
+:
+AutoHeight:        Falso                              BackColor:         16777215
+BackShade:         100                                BackThemeColo      1
+                                                      rIndex:
+
+BackTint:          100                                CanGrow:           Verdadero
+
+CanShrink:         Falso                              DisplayWhen:       Siempre
+EventProcPrefix    Detalle                            ForceNewPage:      Ninguno
+
+HasContinued:      Falso                              Height:            7426
+InSelection:       Falso                              KeepTogether:      Falso
+
+Name:              Detalle                            NewRowOrCol:       Ninguno
+SpecialEffect:     Sin relieve                        Visible:           Verdadero
+
+WillContinue:      Falso
+
+Sección: EncabezadoDelFormulario
+
+AlternateBackS     95                                 AlternateBackT     1
+                                                      hemeColorIndex
+                                                      :
+AlternateBackTi    100                                AutoHeight:        Falso
+BackColor:         15064278                           BackShade:         100
+
+BackThemeColo      2                                  BackTint:          20
+rIndex:
+CanGrow:           Verdadero                          CanShrink:         Falso
+
+DisplayWhen:       Siempre                            EventProcPrefix    EncabezadoDelFormulario
+
+ForceNewPage:      Ninguno
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Formulario: ControlEntregasDiarias                                                                       Página: 3
+
+
+                                                      HasContinued:      Falso
+Height:            1360                               InSelection:       Falso
+
+KeepTogether:      Falso                              Name:              EncabezadoDelFormulario
+NewRowOrCol:       Ninguno                            SpecialEffect:     Sin relieve
+
+Visible:           Verdadero                          WillContinue:      Falso
+
+Sección: PieDelFormulario
+
+AlternateBackS     95                                 AlternateBackT     1
+                                                      hemeColorIndex
+                                                      :
+AlternateBackTi    100                                AutoHeight:        Verdadero
+BackColor:         16777215                           BackShade:         100
+
+BackThemeColo      1                                  BackTint:          100
+rIndex:
+CanGrow:           Falso                              CanShrink:         Falso
+
+DisplayWhen:       Siempre                            EventProcPrefix    PieDelFormulario
+
+ForceNewPage:      Ninguno                            HasContinued:      Falso
+Height:            0                                  InSelection:       Falso
+
+KeepTogether:      Falso                              Name:              PieDelFormulario
+NewRowOrCol:       Ninguno                            SpecialEffect:     Sin relieve
+
+Visible:           Verdadero                          WillContinue:      Falso
+
+Botón de comando: cmd_AbrirFormEntregas
+
+Alignment:         2                                  AutoRepeat:        Falso
+BackColor:         14461583                           BackShade:         100
+
+BackStyle:         Normal                             BackThemeColo      4
+                                                      rIndex:
+BackTint:          60                                 Bevel:             0
+
+BorderColor:       14461583                           BorderLineStyle    Sólido
+
+BorderShade:       100                                BorderStyle:       0
+BorderThemeCo      4                                  BorderTint:        60
+lorIndex:
+
+BorderWidth:       Trazo fino                         BottomPadding:     30
+Cancel:            Falso                              Caption:           ABRIR ENTREGA
+
+ColumnEnd:         0                                  ColumnStart:       0
+
+ControlType:       104                                CursorOnHover:     0
+Default:           Falso                              DisplayWhen:       Siempre
+
+Enabled:           Verdadero                          EventProcPrefix    cmd_AbrirFormEntregas
+FontBold:          Sí                                 FontItalic:        Falso
+
+FontName:          Calibri                            FontSize:          14
+FontUnderline:     Falso                              FontWeight:        Negrita
+
+ForeColor:         4210752                            ForeShade:         100
+ForeThemeColor     0                                  ForeTint:          75
+Index:
+
+Glow:              0                                  Gradient:          12
+
+GridlineColor:     10921638                           GridlineShade:     65
+GridlineStyleBot   Transparente                       GridlineStyleLeft  Transparente
+tom:
+
+GridlineStyleRig   Transparente                       GridlineStyleTop   Transparente
+
+GridlineThemeC     1
+olorIndex:
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Formulario: ControlEntregasDiarias                                                                       Página: 4
+
+
+                                                      GridlineTint:      100
+GridlineWidthBo    1                                  GridlineWidthLef   1
+ttom:
+
+GridlineWidthRi    1                                  GridlineWidthTo    1
+
+Height:            735                                HelpContextId:     0
+HorizontalAncho    Izquierda                          HoverColor:        15189940
+
+HoverForeColor:    4210752                            HoverForeShade     100
+HoverForeThem      0                                  HoverForeTint:     75
+eColorIndex:
+
+HoverShade:        100                                HoverThemeCol      4
+                                                      orIndex:
+
+HoverTint:         40                                 Layout:            0
+LayoutID:          0                                  Left:              8844
+
+LeftPadding:       30                                 Name:              cmd_AbrirFormEntregas
+OldBorderStyle:    1                                  OnClick:           [Macro incrustada]
+
+OnClickEmMacr      Version =196611
+                   ColumnsShown =0
+                   Begin
+                       Action ="Close"
+                       Argument ="2"
+                       Argument
+                   ="ControlEntregasDiarias"
+                       Argument ="0"
+                   End
+                   Begin
+                       Action ="OpenForm"
+                       Argument ="EntregasDiarias"
+                       Argument ="0"
+                       Argument =""
+                       Argument ="=\"[Id_Entrega]=\"
+                    & Nz([Subformulario
+                   DEntregasLineas
+                   Consulta].[Form]![Id_Entr"
+                           "ega],0)"
+                       Argument ="1"
+                       Argument ="3"
+                   End
+                   Begin
+                       Comment ="_AXL:<?xml
+                   version=\"1.0\" encoding=\"UTF-
+                   16\"
+                   standalone=\"no\"?>\015\012<Us
+                   erI"
+                           "nterfaceMacro
+                   For=\"cmd_AbrirFormEntregas\"
+                   Event=\"OnClick\"
+                   xmlns=\"http://sch"
+
+                   "emas.microsoft.com/office/acce
+                   ssservices/2009/11/application\"
+                   ><Statements><Acti"
+                           "on
+                   Name=\"CloseWindow\"><Argum
+                   ent"
+                   End
+                   Begin
+                       Comment ="_AXL:
+                   Name=\"ObjectType\">Form</Ar
+                   gument><Argument
+                   Name=\"ObjectName\">ControlE
+                   n"
+
+                   "tregasDiarias</Argument></Acti
+                   on><Action
+                   Name=\"OpenForm\"><Argument
+                    Name=\"Form"
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Formulario: ControlEntregasDiarias                                                                       Página: 5
+
+
+o:                                                    Picture:           (ninguna)
+                   "Name\">EntregasDiarias</Argu
+                   ment><Argument
+                   Name=\"WhereCondition\">=\"[Id
+                   _Entreg"
+                           "a]=\" &amp;
+                   Nz([Subformul"
+                   End
+                   Begin
+                       Comment ="_AXL:ario
+                   DEntregasLineas
+                   Consulta].[Form]![Id_Entrega],0)<
+                   /Argument><Argument N"
+
+                   "ame=\"DataMode\">Edit</Argu
+                   ment><Argument
+                   Name=\"WindowMode\">Dialog<
+                   /Argument><"
+
+                   "/Action></Statements></UserIn
+                   terfaceMacro>"
+                   End
+
+
+
+
+PictureCaptionA    0                                  PictureType:       0
+rrangement:
+
+PressedColor:      9917743                            PressedForeCol     4210752
+PressedForeSh      100                                PressedForeThe     0
+                                                      meColorIndex:
+
+PressedForeTint    75                                 PressedShade:      75
+
+PressedTheme       4                                  PressedTint:       100
+ColorIndex:
+QuickStyle:        0                                  QuickStyleMas      0
+
+ReadingOrder:      Contexto                           RightPadding:      30
+RowEnd:            0                                  RowStart:          0
+
+Section:           1                                  Shadow:            0
+
+Shape:             1                                  SoftEdges:         0
+TabIndex:          0                                  TabStop:           Verdadero
+
+TextFontCharSe     0                                  ThemeFontInde      1
+Top:               56                                 TopPadding:        30
+
+Transparent:       Falso                              UseTheme:          Verdadero
+VerticalAnchor:    Superior                           Visible:           Verdadero
+
+Width:             2595
+
+Botón de comando: cmd_Cerrar
+
+Alignment:         2                                  AutoRepeat:        Falso
+BackColor:         14461583                           BackShade:         100
+
+BackStyle:         Normal                             BackThemeColo      4
+                                                      rIndex:
+
+BackTint:          60                                 Bevel:             0
+BorderColor:       14461583                           BorderLineStyle    Sólido
+
+BorderShade:       100                                BorderStyle:       0
+BorderThemeCo      4                                  BorderTint:        60
+lorIndex:
+
+BorderWidth:       Trazo fino                         BottomPadding:     30
+
+Cancel:            Falso
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Formulario: ControlEntregasDiarias                                                                       Página: 6
+
+
+                                                      Caption:           Comando3
+ColumnEnd:         0                                  ColumnStart:       0
+
+ControlTipText:    Cerrar formulario                  ControlType:       104
+CursorOnHover:     0                                  Default:           Falso
+
+DisplayWhen:       Siempre                            Enabled:           Verdadero
+EventProcPrefix    cmd_Cerrar                         FontBold:          No
+
+FontItalic:        Falso                              FontName:          Calibri
+
+FontSize:          11                                 FontUnderline:     Falso
+FontWeight:        Normal                             ForeColor:         4210752
+
+ForeShade:         100                                ForeThemeColor     0
+                                                      Index:
+ForeTint:          75                                 Glow:              0
+
+Gradient:          12                                 GridlineColor:     10921638
+
+GridlineShade:     65                                 GridlineStyleBot   Transparente
+                                                      tom:
+GridlineStyleLeft  Transparente                       GridlineStyleRig   Transparente
+
+GridlineStyleTop   Transparente                       GridlineThemeC     1
+                                                      olorIndex:
+
+GridlineTint:      100                                GridlineWidthBo    1
+                                                      ttom:
+GridlineWidthLef   1                                  GridlineWidthRi    1
+
+GridlineWidthTo    1                                  Height:            576
+HelpContextId:     0                                  HorizontalAncho    Izquierda
+
+HoverColor:        15189940                           HoverForeColor:    4210752
+
+HoverForeShade     100                                HoverForeThem      0
+                                                      eColorIndex:
+HoverForeTint:     75                                 HoverShade:        100
+
+HoverThemeCol      4                                  HoverTint:         40
+orIndex:
+
+ImageData:         Datos binarios largos              Layout:            0
+LayoutID:          0                                  Left:              21770
+
+LeftPadding:       30                                 Name:              cmd_Cerrar
+OldBorderStyle:    1                                  OnClick:           [Macro incrustada]
+
+OnClickEmMacr      Version =196611
+                   ColumnsShown =0
+                   Begin
+                       Action ="Close"
+                       Argument ="2"
+                       Argument
+                   ="ControlEntregasDiarias"
+                       Argument ="0"
+                   End
+                   Begin
+                       Action ="OpenForm"
+                       Argument
+                   ="PANELDECONTROL"
+                       Argument ="0"
+                       Argument =""
+                       Argument =""
+                       Argument ="2"
+                       Argument ="3"
+                   End
+                   Begin
+                       Comment ="_AXL:<?xml
+                   version=\"1.0\" encoding=\"UTF-
+                   16\"
+                   standalone=\"no\"?>\015\012<Us
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Formulario: ControlEntregasDiarias                                                                       Página: 7
+
+
+o:                 erI"                               Picture:           (imagen)
+                           "nterfaceMacro
+                   For=\"cmd_Cerrar\"
+                   Event=\"OnClick\"
+                   xmlns=\"http://schemas.micros"
+
+                   "oft.com/office/accessservices/20
+                   09/11/application\"><Statements
+                   ><Action Name=\"C"
+                           "loseWindow\"><Argument
+                   Name=\"Obje"
+                   End
+                   Begin
+                       Comment
+                   ="_AXL:ctType\">Form</Argume
+                   nt><Argument
+                   Name=\"ObjectName\">ControlE
+                   ntregasDiaria"
+
+                   "s</Argument></Action><Action
+                    Name=\"OpenForm\"><Argumen
+                   t Name=\"FormName\">PANEL"
+
+                   "DECONTROL</Argument><Arg
+                   ument
+                   Name=\"DataMode\">Read
+                   Only</Argument><Argument Na"
+
+                   "me=\"WindowMode\">Dialog"
+                   End
+                   Begin
+                       Comment
+                   ="_AXL:</Argument></Action></
+                   Statements></UserInterfaceMacr
+                   o>"
+                   End
+
+
+PictureCaptionA    0                                  PictureData:       Datos binarios largos
+rrangement:
+
+PictureType:       0                                  PressedColor:      9917743
+PressedForeCol     4210752                            PressedForeSh      100
+
+PressedForeThe     0                                  PressedForeTint    75
+meColorIndex:
+
+PressedShade:      75                                 PressedTheme       4
+                                                      ColorIndex:
+PressedTint:       100                                QuickStyle:        0
+
+QuickStyleMas      0                                  ReadingOrder:      Contexto
+RightPadding:      30                                 RowEnd:            0
+
+RowStart:          0                                  Section:           1
+Shadow:            0                                  Shape:             1
+
+SoftEdges:         0                                  TabIndex:          1
+
+TabStop:           Verdadero                          TextFontCharSe     0
+ThemeFontInde      1                                  Top:               340
+
+TopPadding:        30                                 Transparent:       Falso
+UseTheme:          Verdadero                          VerticalAnchor:    Superior
+
+Visible:           Verdadero                          Width:             576
+
+Botón de comando: cmd_Filtro_PdtesValidar
+
+Alignment:         2                                  AutoRepeat:        Falso
+BackColor:         14461583                           BackShade:         100
+
+BackStyle:         Normal
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Formulario: ControlEntregasDiarias                                                                       Página: 8
+
+
+                                                      BackThemeColo      4
+                                                      rIndex:
+BackTint:          60                                 Bevel:             0
+
+BorderColor:       14461583                           BorderLineStyle    Sólido
+
+BorderShade:       100                                BorderStyle:       0
+BorderThemeCo      4                                  BorderTint:        60
+lorIndex:
+
+BorderWidth:       Trazo fino                         BottomPadding:     30
+Cancel:            Falso                              Caption:           Pdtes Confirmar
+
+ColumnEnd:         0                                  ColumnStart:       0
+ControlType:       104                                CursorOnHover:     0
+
+Default:           Falso                              DisplayWhen:       Siempre
+
+Enabled:           Verdadero                          EventProcPrefix    cmd_Filtro_PdtesValidar
+FontBold:          No                                 FontItalic:        Falso
+
+FontName:          Calibri                            FontSize:          11
+FontUnderline:     Falso                              FontWeight:        Normal
+
+ForeColor:         4210752                            ForeShade:         100
+ForeThemeColor     0                                  ForeTint:          75
+Index:
+
+Glow:              0                                  Gradient:          12
+
+GridlineColor:     10921638                           GridlineShade:     65
+GridlineStyleBot   Transparente                       GridlineStyleLeft  Transparente
+tom:
+
+GridlineStyleRig   Transparente                       GridlineStyleTop   Transparente
+
+GridlineThemeC     1                                  GridlineTint:      100
+olorIndex:
+GridlineWidthBo    1                                  GridlineWidthLef   1
+ttom:
+
+GridlineWidthRi    1                                  GridlineWidthTo    1
+
+Height:            510                                HelpContextId:     0
+HorizontalAncho    Izquierda                          HoverColor:        15189940
+
+HoverForeColor:    4210752                            HoverForeShade     100
+HoverForeThem      0                                  HoverForeTint:     75
+eColorIndex:
+
+HoverShade:        100                                HoverThemeCol      4
+                                                      orIndex:
+
+HoverTint:         40                                 Layout:            0
+LayoutID:          0                                  Left:              15590
+
+LeftPadding:       30                                 Name:              cmd_Filtro_PdtesValidar
+OldBorderStyle:    1                                  OnClick:           [Macro incrustada]
+
+OnClickEmMacr      Version =196611
+                   ColumnsShown =0
+                   Begin
+                       Action ="Beep"
+                   End
+                   Begin
+                       Action ="SetFilter"
+                       Argument =""
+                       Argument
+                   ="[EntregaConfirmada]=0"
+                       Argument ="Subformulario
+                   DEntregasLineas Consulta"
+                   End
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Formulario: ControlEntregasDiarias                                                                       Página: 9
+
+
+o:                 Begin                              Picture:           (ninguna)
+                       Action ="SetOrderBy"
+                       Argument ="[Id_Entrega]"
+                       Argument ="Subformulario
+                   DEntregasLineas Consulta"
+                   End
+                   Begin
+                       Comment ="_AXL:<?xml
+                   version=\"1.0\" encoding=\"UTF-
+                   16\"
+                   standalone=\"no\"?>\015\012<Us
+                   erI"
+                           "nterfaceMacro
+                   For=\"cmd_Filtro_PdtesValidar\"
+                   Event=\"OnClick\"
+                   xmlns=\"http://s"
+
+                   "chemas.microsoft.com/office/ac
+                   cessservices/2009/11/application
+                   \"><Statements><Ac"
+                           "tion
+                   Name=\"Beep\"/><Action
+                   Name="
+                   End
+                   Begin
+                       Comment
+                   ="_AXL:\"SetFilter\"><Argument
+                   Name=\"WhereCondition\">[Entr
+                   egaConfirmada]=0</Argu"
+                           "ment><Argument
+                   Name=\"ControlName\">Subform
+                   ulario DEntregasLineas
+                   Consulta</Argu"
+                           "ment></Action><Action
+                   Name=\"SetOrderBy\"><Argume
+                   nt
+                   Name=\"OrderBy\">&lt;Orderin"
+                           "g xmlns=\"http://schemas"
+                   End
+                   Begin
+                       Comment
+                   ="_AXL:.microsoft.com/office/acc
+                   essservices/2010/12/application\"
+                   &gt;&lt;Order Nam"
+                           "e=\"[Id_Entrega]\"
+                   Direction=\"Ascending\"/&gt;&lt;/
+                   Ordering&gt;</Argument><Argu"
+                           "ment
+                   Name=\"ControlName\">Subform
+                   ulario DEntregasLineas
+                   Consulta</Argument></Act"
+                           "ion></Statements></U"
+                   End
+                   Begin
+                       Comment
+                   ="_AXL:serInterfaceMacro>"
+                   End
+
+
+
+
+PictureCaptionA    0                                  PictureType:       0
+rrangement:
+PressedColor:      9917743                            PressedForeCol     4210752
+
+PressedForeSh      100                                PressedForeThe     0
+                                                      meColorIndex:
+
+PressedForeTint    75                                 PressedShade:      75
+PressedTheme       4                                  PressedTint:       100
+ColorIndex:
+
+QuickStyle:        0
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Formulario: ControlEntregasDiarias                                                                      Página: 10
+
+
+                                                      QuickStyleMas      0
+ReadingOrder:      Contexto                           RightPadding:      30
+
+RowEnd:            0                                  RowStart:          0
+Section:           1                                  Shadow:            0
+
+Shape:             1                                  SoftEdges:         0
+TabIndex:          4                                  TabStop:           Verdadero
+
+TextFontCharSe     0                                  ThemeFontInde      1
+
+Top:               115                                TopPadding:        30
+Transparent:       Falso                              UseTheme:          Verdadero
+
+VerticalAnchor:    Superior                           Visible:           Verdadero
+Width:             1860
+
+
+Botón de comando: cmd_NuevaEntrega
+Alignment:         2                                  AutoRepeat:        Falso
+
+BackColor:         14461583                           BackShade:         100
+BackStyle:         Normal                             BackThemeColo      4
+                                                      rIndex:
+
+BackTint:          60                                 Bevel:             0
+
+BorderColor:       14461583                           BorderLineStyle    Sólido
+BorderShade:       100                                BorderStyle:       0
+
+BorderThemeCo      4                                  BorderTint:        60
+lorIndex:
+BorderWidth:       Trazo fino                         BottomPadding:     30
+
+Cancel:            Falso                              Caption:           Nueva Entrega
+
+ColumnEnd:         0                                  ColumnStart:       0
+ControlType:       104                                CursorOnHover:     0
+
+Default:           Falso                              DisplayWhen:       Siempre
+Enabled:           Verdadero                          EventProcPrefix    cmd_NuevaEntrega
+
+FontBold:          Sí                                 FontItalic:        Falso
+FontName:          Calibri                            FontSize:          14
+
+FontUnderline:     Falso                              FontWeight:        Negrita
+ForeColor:         4210752                            ForeShade:         100
+
+ForeThemeColor     0                                  ForeTint:          75
+Index:
+
+Glow:              0                                  Gradient:          12
+GridlineColor:     10921638                           GridlineShade:     65
+
+GridlineStyleBot   Transparente                       GridlineStyleLeft  Transparente
+tom:
+
+GridlineStyleRig   Transparente                       GridlineStyleTop   Transparente
+GridlineThemeC     1                                  GridlineTint:      100
+olorIndex:
+
+GridlineWidthBo    1                                  GridlineWidthLef   1
+ttom:
+
+GridlineWidthRi    1                                  GridlineWidthTo    1
+Height:            735                                HelpContextId:     0
+
+HorizontalAncho    Izquierda                          HoverColor:        15189940
+HoverForeColor:    4210752                            HoverForeShade     100
+
+HoverForeThem      0
+eColorIndex:
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Formulario: ControlEntregasDiarias                                                                      Página: 11
+
+
+                                                      HoverForeTint:     75
+HoverShade:        100                                HoverThemeCol      4
+                                                      orIndex:
+
+HoverTint:         40                                 Layout:            0
+
+LayoutID:          0                                  Left:              11508
+LeftPadding:       30                                 Name:              cmd_NuevaEntrega
+
+OldBorderStyle:    1                                  OnClick:           [Macro incrustada]
+OnClickEmMacr      Version =196611                    Picture:           (ninguna)
+                   ColumnsShown =0
+                   Begin
+                       Action ="OpenForm"
+                       Argument ="EntregasDiarias"
+                       Argument ="0"
+                       Argument =""
+                       Argument =""
+                       Argument ="0"
+                       Argument ="3"
+                   End
+                   Begin
+                       Comment ="_AXL:<?xml
+                   version=\"1.0\" encoding=\"UTF-
+                   16\"
+                   standalone=\"no\"?>\015\012<Us
+                   erI"
+                           "nterfaceMacro
+                   For=\"cmd_NuevaEntrega\"
+                   Event=\"OnClick\"
+                   xmlns=\"http://schemas."
+
+                   "microsoft.com/office/accessservi
+                   ces/2009/11/application\"><State
+                   ments><Action Na"
+
+                   "me=\"OpenForm\"><Argument
+                   Name=\"F"
+                   End
+                   Begin
+                       Comment
+                   ="_AXL:ormName\">EntregasDia
+                   rias</Argument><Argument
+                   Name=\"DataMode\">Add</Argu
+                   me"
+                           "nt><Argument
+                   Name=\"WindowMode\">Dialog<
+                   /Argument></Action></Statemen
+                   ts></UserIn"
+                           "terfaceMacro>"
+                   End
+
+
+
+
+PictureCaptionA    0                                  PictureType:       0
+rrangement:
+PressedColor:      9917743                            PressedForeCol     4210752
+
+PressedForeSh      100                                PressedForeThe     0
+                                                      meColorIndex:
+
+PressedForeTint    75                                 PressedShade:      75
+PressedTheme       4                                  PressedTint:       100
+ColorIndex:
+
+QuickStyle:        0                                  QuickStyleMas      0
+ReadingOrder:      Contexto                           RightPadding:      30
+
+RowEnd:            0                                  RowStart:          0
+
+Section:           1                                  Shadow:            0
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Formulario: ControlEntregasDiarias                                                                      Página: 12
+
+
+Shape:             1                                  SoftEdges:         0
+TabIndex:          3                                  TabStop:           Verdadero
+
+TextFontCharSe     0                                  ThemeFontInde      1
+Top:               56                                 TopPadding:        30
+
+Transparent:       Falso                              UseTheme:          Verdadero
+VerticalAnchor:    Superior                           Visible:           Verdadero
+
+Width:             2160
+
+Botón de comando: cmd_QuitarFiltros
+
+Alignment:         2                                  AutoRepeat:        Falso
+BackColor:         14461583                           BackShade:         100
+
+BackStyle:         Normal                             BackThemeColo      4
+                                                      rIndex:
+
+BackTint:          60                                 Bevel:             0
+BorderColor:       14461583                           BorderLineStyle    Sólido
+
+BorderShade:       100                                BorderStyle:       0
+BorderThemeCo      4                                  BorderTint:        60
+lorIndex:
+
+BorderWidth:       Trazo fino                         BottomPadding:     30
+
+Cancel:            Falso                              Caption:           Quitar Filtros
+ColumnEnd:         0                                  ColumnStart:       0
+
+ControlType:       104                                CursorOnHover:     0
+Default:           Falso                              DisplayWhen:       Siempre
+
+Enabled:           Verdadero                          EventProcPrefix    cmd_QuitarFiltros
+
+FontBold:          No                                 FontItalic:        Falso
+FontName:          Calibri                            FontSize:          11
+
+FontUnderline:     Falso                              FontWeight:        Normal
+ForeColor:         4210752                            ForeShade:         100
+
+ForeThemeColor     0                                  ForeTint:          75
+Index:
+Glow:              0                                  Gradient:          12
+
+GridlineColor:     10921638                           GridlineShade:     65
+
+GridlineStyleBot   Transparente                       GridlineStyleLeft  Transparente
+tom:
+GridlineStyleRig   Transparente                       GridlineStyleTop   Transparente
+
+GridlineThemeC     1                                  GridlineTint:      100
+olorIndex:
+
+GridlineWidthBo    1                                  GridlineWidthLef   1
+ttom:
+GridlineWidthRi    1                                  GridlineWidthTo    1
+
+Height:            913                                HelpContextId:     0
+HorizontalAncho    Izquierda                          HoverColor:        15189940
+
+HoverForeColor:    4210752                            HoverForeShade     100
+
+HoverForeThem      0                                  HoverForeTint:     75
+eColorIndex:
+HoverShade:        100                                HoverThemeCol      4
+                                                      orIndex:
+
+HoverTint:         40                                 Layout:            0
+
+LayoutID:          0                                  Left:              19445
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Formulario: ControlEntregasDiarias                                                                      Página: 13
+
+
+LeftPadding:       30                                 Name:              cmd_QuitarFiltros
+OldBorderStyle:    1                                  OnClick:           [Macro incrustada]
+
+OnClickEmMacr      Version =196611                    Picture:           (ninguna)
+                   ColumnsShown =0
+                   Begin
+                       Action ="RunCommand"
+                       Argument ="144"
+                   End
+                   Begin
+                       Comment ="_AXL:<?xml
+                   version=\"1.0\" encoding=\"UTF-
+                   16\"
+                   standalone=\"no\"?>\015\012<Us
+                   erI"
+                           "nterfaceMacro
+                   For=\"cmd_QuitarFiltros\"
+                   Event=\"OnClick\"
+                   xmlns=\"http://schemas"
+
+                   ".microsoft.com/office/accessser
+                   vices/2009/11/application\"><Sta
+                   tements><Action N"
+
+                   "ame=\"RunMenuCommand\"><
+                   Argument "
+                   End
+                   Begin
+                       Comment
+                   ="_AXL:Name=\"Command\">Re
+                   moveFilterSort</Argument></Act
+                   ion></Statements></UserInt"
+                           "erfaceMacro>"
+                   End
+
+
+
+
+PictureCaptionA    0                                  PictureType:       0
+rrangement:
+PressedColor:      9917743                            PressedForeCol     4210752
+
+PressedForeSh      100                                PressedForeThe     0
+                                                      meColorIndex:
+
+PressedForeTint    75                                 PressedShade:      75
+PressedTheme       4                                  PressedTint:       100
+ColorIndex:
+
+QuickStyle:        0                                  QuickStyleMas      0
+
+ReadingOrder:      Contexto                           RightPadding:      30
+RowEnd:            0                                  RowStart:          0
+
+Section:           1                                  Shadow:            0
+Shape:             1                                  SoftEdges:         0
+
+TabIndex:          2                                  TabStop:           Verdadero
+TextFontCharSe     0                                  ThemeFontInde      1
+
+Top:               170                                TopPadding:        30
+Transparent:       Falso                              UseTheme:          Verdadero
+
+VerticalAnchor:    Superior                           Visible:           Verdadero
+
+Width:             1476
+
+Botón de comando: Comando8
+Alignment:         2                                  AutoRepeat:        Falso
+
+BackColor:         14461583                           BackShade:         100
+
+BackStyle:         Normal
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Formulario: ControlEntregasDiarias                                                                      Página: 14
+
+
+                                                      BackThemeColo      4
+                                                      rIndex:
+BackTint:          60                                 Bevel:             0
+
+BorderColor:       14461583                           BorderLineStyle    Sólido
+
+BorderShade:       100                                BorderStyle:       0
+BorderThemeCo      4                                  BorderTint:        60
+lorIndex:
+
+BorderWidth:       Trazo fino                         BottomPadding:     30
+Cancel:            Falso                              Caption:           TODOS
+
+ColumnEnd:         0                                  ColumnStart:       0
+ControlType:       104                                CursorOnHover:     0
+
+Default:           Falso                              DisplayWhen:       Siempre
+
+Enabled:           Verdadero                          EventProcPrefix    Comando8
+FontBold:          No                                 FontItalic:        Falso
+
+FontName:          Calibri                            FontSize:          11
+FontUnderline:     Falso                              FontWeight:        Normal
+
+ForeColor:         4210752                            ForeShade:         100
+ForeThemeColor     0                                  ForeTint:          75
+Index:
+
+Glow:              0                                  Gradient:          12
+
+GridlineColor:     10921638                           GridlineShade:     65
+GridlineStyleBot   Transparente                       GridlineStyleLeft  Transparente
+tom:
+
+GridlineStyleRig   Transparente                       GridlineStyleTop   Transparente
+
+GridlineThemeC     1                                  GridlineTint:      100
+olorIndex:
+GridlineWidthBo    1                                  GridlineWidthLef   1
+ttom:
+
+GridlineWidthRi    1                                  GridlineWidthTo    1
+
+Height:            510                                HelpContextId:     0
+HorizontalAncho    Izquierda                          HoverColor:        15189940
+
+HoverForeColor:    4210752                            HoverForeShade     100
+HoverForeThem      0                                  HoverForeTint:     75
+eColorIndex:
+
+HoverShade:        100                                HoverThemeCol      4
+                                                      orIndex:
+
+HoverTint:         40                                 Layout:            0
+LayoutID:          0                                  Left:              15590
+
+LeftPadding:       30                                 Name:              Comando8
+OldBorderStyle:    1                                  OnClick:           [Macro incrustada]
+
+OnClickEmMacr      Version =196611
+                   ColumnsShown =0
+                   Begin
+                       Action ="Beep"
+                   End
+                   Begin
+                       Action ="SetFilter"
+                       Argument =""
+                       Argument
+                   ="[EntregaConfirmada]=0 Or
+                   [EntregaConfirmada]=-1"
+                       Argument ="Subformulario
+                   DEntregasLineas Consulta"
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Formulario: ControlEntregasDiarias                                                                      Página: 15
+
+
+o:                 End                                Picture:           (ninguna)
+                   Begin
+                       Action ="SetOrderBy"
+                       Argument ="[Id_Entrega]
+                   DESC"
+                       Argument ="Subformulario
+                   DEntregasLineas Consulta"
+                   End
+                   Begin
+                       Comment ="_AXL:<?xml
+                   version=\"1.0\" encoding=\"UTF-
+                   16\"
+                   standalone=\"no\"?>\015\012<Us
+                   erI"
+                           "nterfaceMacro
+                   For=\"Comando8\"
+                   Event=\"OnClick\"
+                   xmlns=\"http://schemas.microsof
+                   "
+
+                   "t.com/office/accessservices/200
+                   9/11/application\"><Statements>
+                   <Action Name=\"Bee"
+                           "p\"/><Action
+                   Name=\"SetFilter\"><Ar"
+                   End
+                   Begin
+                       Comment ="_AXL:gument
+                   Name=\"WhereCondition\">[Entr
+                   egaConfirmada]=0 Or
+                   [EntregaConfirmada]"
+                           "=-
+                   1</Argument><Argument
+                   Name=\"ControlName\">Subform
+                   ulario DEntregasLineas Consu"
+
+                   "lta</Argument></Action><Actio
+                   n
+                   Name=\"SetOrderBy\"><Argume
+                   nt Name=\"OrderBy\">&l"
+                           "t;Ordering xmlns=\"htt"
+                   End
+                   Begin
+                       Comment
+                   ="_AXL:p://schemas.microsoft.c
+                   om/office/accessservices/2010/1
+                   2/application\"&gt;&l"
+                           "t;Order
+                   Name=\"[Id_Entrega]\"
+                   Direction=\"Descending\"/&gt;&lt;
+                   /Ordering&gt;</Ar"
+                           "gument><Argument
+                   Name=\"ControlName\">Subform
+                   ulario DEntregasLineas
+                   Consulta</Ar"
+                           "gument></Action></St"
+                   End
+                   Begin
+                       Comment
+                   ="_AXL:atements></UserInterfac
+                   eMacro>"
+                   End
+PictureCaptionA    0                                  PictureType:       0
+rrangement:
+PressedColor:      9917743                            PressedForeCol     4210752
+
+PressedForeSh      100                                PressedForeThe     0
+                                                      meColorIndex:
+
+PressedForeTint    75                                 PressedShade:      75
+PressedTheme       4
+ColorIndex:
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Formulario: ControlEntregasDiarias                                                                      Página: 16
+
+
+                                                      PressedTint:       100
+QuickStyle:        0                                  QuickStyleMas      0
+
+ReadingOrder:      Contexto                           RightPadding:      30
+RowEnd:            0                                  RowStart:          0
+
+Section:           1                                  Shadow:            0
+Shape:             1                                  SoftEdges:         0
+
+TabIndex:          5                                  TabStop:           Verdadero
+
+TextFontCharSe     0                                  ThemeFontInde      1
+Top:               680                                TopPadding:        30
+
+Transparent:       Falso                              UseTheme:          Verdadero
+VerticalAnchor:    Superior                           Visible:           Verdadero
+
+Width:             1860
+
+Rectángulo: Cuadro5
+
+BackColor:         16777215                           BackShade:         100
+BackStyle:         Transparente                       BackThemeColo      1
+                                                      rIndex:
+
+BackTint:          100                                BorderColor:       10921638
+
+BorderLineStyle    Sólido                             BorderShade:       65
+BorderStyle:       0                                  BorderThemeCo      1
+                                                      lorIndex:
+
+BorderTint:        100                                BorderWidth:       Trazo fino
+BottomPadding:     30                                 ColumnEnd:         0
+
+ColumnStart:       0                                  ControlType:       101
+
+DisplayWhen:       Siempre                            EventProcPrefix    Cuadro5
+GridlineColor:     10921638                           GridlineShade:     65
+
+GridlineStyleBot   Transparente                       GridlineStyleLeft  Transparente
+tom:
+GridlineStyleRig   Transparente                       GridlineStyleTop   Transparente
+
+GridlineThemeC     1                                  GridlineTint:      100
+olorIndex:
+
+GridlineWidthBo    1                                  GridlineWidthLef   1
+ttom:
+GridlineWidthRi    1                                  GridlineWidthTo    1
+
+Height:            1189                               HorizontalAncho    Izquierda
+
+Layout:            0                                  LayoutID:          0
+Left:              15465                              LeftPadding:       30
+
+Name:              Cuadro5                            OldBorderStyle:    1
+RightPadding:      30                                 RowEnd:            0
+
+RowStart:          0                                  Section:           1
+SpecialEffect:     Grabado                            Top:               60
+
+TopPadding:        30                                 VerticalAnchor:    Superior
+Visible:           Verdadero                          Width:             5516
+
+
+Etiqueta: Filtros
+BackColor:         16777215                           BackShade:         100
+
+BackStyle:         Transparente                       BackThemeColo      1
+                                                      rIndex:
+
+BackTint:          100                                BorderColor:       8355711
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Formulario: ControlEntregasDiarias                                                                      Página: 17
+
+
+BorderLineStyle    Sólido                             BorderShade:       100
+BorderStyle:       Transparente                       BorderThemeCo      0
+                                                      lorIndex:
+
+BorderTint:        50                                 BorderWidth:       Trazo fino
+
+BottomMargin:      0                                  BottomPadding:     30
+Caption:           FILTROS:                           ColumnEnd:         0
+
+ColumnStart:       0                                  ControlType:       100
+DisplayWhen:       Siempre                            EventProcPrefix    Filtros
+
+FontBold:          Sí                                 FontItalic:        Falso
+FontName:          Calibri                            FontSize:          12
+
+FontUnderline:     Falso                              FontWeight:        Negrita
+ForeColor:         6710886                            ForeShade:         100
+
+ForeThemeColor     0                                  ForeTint:          60
+Index:
+
+GridlineColor:     10921638                           GridlineShade:     65
+GridlineStyleBot   Transparente                       GridlineStyleLeft  Transparente
+tom:
+
+GridlineStyleRig   Transparente                       GridlineStyleTop   Transparente
+
+GridlineThemeC     1                                  GridlineTint:      100
+olorIndex:
+GridlineWidthBo    1                                  GridlineWidthLef   1
+ttom:
+
+GridlineWidthRi    1                                  GridlineWidthTo    1
+
+Height:            315                                HelpContextId:     0
+HorizontalAncho    Izquierda                          Layout:            0
+
+LayoutID:          0                                  Left:              14343
+LeftMargin:        0                                  LeftPadding:       30
+
+LineSpacing:       0                                  Name:              Filtros
+NumeralShapes      Sistema                            OldBorderStyle:    0
+
+ReadingOrder:      Contexto                           RightMargin:       0
+RightPadding:      30                                 RowEnd:            0
+
+RowStart:          0                                  Section:           1
+
+SpecialEffect:     Sin relieve                        TextAlign:         General
+TextFontCharSe     0                                  ThemeFontInde      1
+
+Top:               56                                 TopMargin:         0
+TopPadding:        30                                 Vertical:          Falso
+
+VerticalAnchor:    Superior                           Visible:           Verdadero
+Width:             1080
+
+
+Subformulario/Subinforme: Subformulario
+BorderColor:       10921638                           BorderLineStyle    Sólido
+
+BorderShade:       65                                 BorderStyle:       0
+BorderThemeCo      1                                  BorderTint:        100
+lorIndex:
+
+BorderWidth:       Trazo fino                         BottomPadding:     30
+
+CanGrow:           Verdadero                          CanShrink:         Falso
+ColumnEnd:         0                                  ColumnStart:       0
+
+ControlType:       112                                DisplayWhen:       Siempre
+Enabled:           Verdadero
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Formulario: ControlEntregasDiarias                                                                      Página: 18
+
+
+                                                      EventProcPrefix    Subformulario_DEntregasLineas_
+FilterOnEmptyM     Verdadero                          GridlineColor:     10921638
+aster:
+
+GridlineShade:     65                                 GridlineStyleBot   Transparente
+                                                      tom:
+
+GridlineStyleLeft  Transparente                       GridlineStyleRig   Transparente
+GridlineStyleTop   Transparente                       GridlineThemeC     1
+                                                      olorIndex:
+
+GridlineTint:      100                                GridlineWidthBo    1
+                                                      ttom:
+
+GridlineWidthLef   1                                  GridlineWidthRi    1
+GridlineWidthTo    1                                  Height:            7110
+
+HorizontalAncho    Izquierda                          Layout:            0
+LayoutID:          0                                  Left:              113
+
+LeftPadding:       30                                 Locked:            Falso
+
+Name:              Subformulario DEntregasLineas      OldBorderStyle:    1
+RightPadding:      30                                 RowEnd:            0
+
+RowStart:          0                                  Section:           0
+ShowPageHead       Verdadero                          SourceObject:      Subformulario DEntregasLineas
+erAndPageFoot
+er:
+SpecialEffect:     Sin relieve                        TabIndex:          0
+TabStop:           Verdadero                          Top:               0
+
+TopPadding:        30                                 VerticalAnchor:    Superior
+
+Visible:           Verdadero                          Width:             22236
+
+Etiqueta: TituloForm_controlentregas
+
+BackColor:         16777215                           BackShade:         100
+BackStyle:         Transparente                       BackThemeColo      1
+                                                      rIndex:
+
+BackTint:          100                                BorderColor:       8355711
+BorderLineStyle    Sólido                             BorderShade:       100
+
+BorderStyle:       Transparente                       BorderThemeCo      0
+                                                      lorIndex:
+
+BorderTint:        50                                 BorderWidth:       Trazo fino
+BottomMargin:      0                                  BottomPadding:     30
+
+Caption:           CONTROL DE ENTREGAS                ColumnEnd:         0
+ColumnStart:       0                                  ControlType:       100
+
+DisplayWhen:       Siempre                            EventProcPrefix    TituloForm_controlentregas
+FontBold:          Sí                                 FontItalic:        Verdadero
+
+FontName:          Calibri                            FontSize:          28
+
+FontUnderline:     Falso                              FontWeight:        Negrita
+ForeColor:         0                                  ForeShade:         100
+
+ForeThemeColor     0                                  ForeTint:          100
+Index:
+GridlineColor:     10921638                           GridlineShade:     65
+
+GridlineStyleBot   Transparente                       GridlineStyleLeft  Transparente
+tom:
+
+GridlineStyleRig   Transparente                       GridlineStyleTop   Transparente
+GridlineThemeC     1
+olorIndex:
+
+ D:\Compartido\PRODUCCION_MONCADA\CONTROL_PRODUCCI                                       jueves, 29 de mayo de 2025
+ Formulario: ControlEntregasDiarias                                                                      Página: 19
+
+
+                                                      GridlineTint:      100
+GridlineWidthBo    1                                  GridlineWidthLef   1
+ttom:
+
+GridlineWidthRi    1                                  GridlineWidthTo    1
+
+Height:            855                                HelpContextId:     0
+HorizontalAncho    Izquierda                          Layout:            0
+
+LayoutID:          0                                  Left:              165
+LeftMargin:        0                                  LeftPadding:       30
+
+LineSpacing:       0                                  Name:              TituloForm_controlentregas
+NumeralShapes      Sistema                            OldBorderStyle:    0
+
+ReadingOrder:      Contexto                           RightMargin:       0
+RightPadding:      30                                 RowEnd:            0
+
+RowStart:          0                                  Section:           1
+
+SpecialEffect:     Sin relieve                        TextAlign:         General
+TextFontCharSe     0                                  ThemeFontInde      1
+
+Top:               0                                  TopMargin:         0
+TopPadding:        30                                 Vertical:          Falso
+
+VerticalAnchor:    Superior                           Visible:           Verdadero
+Width:             8460
+
+
+
+
+
+Permisos de usuario
+
+          admin                     Eliminar; Leer permisos; Establecer permisos; Cambiar propietario,
+                                    Leer definición; Modificar definición; Ejecutar
+
+
+
+
+Permisos de grupo
+
+          Admins                    Eliminar; Leer permisos; Establecer permisos; Cambiar propietario,
+                                    Leer definición; Modificar definición; Ejecutar
+          Users                     Eliminar; Leer permisos; Establecer permisos; Cambiar propietario,
+                                    Leer definición; Modificar definición; Ejecutar
+
