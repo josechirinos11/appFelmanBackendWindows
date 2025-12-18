@@ -405,7 +405,7 @@ app.get("/api/pedidosComercialesJeronimoN8N", async (_, res) => {
         [BPedidos].[RefCliente],
         [BPedidos].[FechaCompromiso] AS Compromiso,
         [AE].[Estado] AS EstadoPedido,
-        [Ent].[FechaEnvio] AS FechaEnvio,
+        Format([Ent].[FechaEnvio], "yyyy-mm-dd") AS FechaEnvio,
         [BCM].[Id_ControlMat],
         [AM].[Material],
         [AP].[Proveedor],
