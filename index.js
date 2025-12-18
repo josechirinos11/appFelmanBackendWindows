@@ -389,6 +389,72 @@ app.get("/api/pedidosComercialesJeronimoN8N", async (_, res) => {
   }
 });
 
+app.get("/api/pedidosComercialesJeronimoN8N_completa", async (_, res) => {
+  try {
+    const rows = await connection.query(`
+      SELECT
+        [BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido] AS NoPedido,
+        [ASecciones].[Seccion],
+        [AClientes].[NombreCliente] AS Cliente,
+        [AComerciales].[Comercial],
+        [AComerciales].[Email] AS EmailComercial,
+        [BPedidos].[RefCliente],
+        [BPedidos].[FechaCompromiso] AS Compromiso,
+        [AE].[Estado] AS EstadoPedido,
+
+        -- ✅ FechaEnvio (última por pedido)
+        [Ent].[FechaEnvio] AS FechaEnvio,
+
+        [BCM].[Id_ControlMat],
+        [AM].[Material],
+        [AP].[Proveedor],
+        [BCM].[FechaPrevista],
+        [BCM].[Recibido]
+      FROM
+        (((([BPedidos]
+            INNER JOIN [AClientes]
+              ON [BPedidos].[Id_Cliente] = [AClientes].[Id_Cliente])
+           INNER JOIN [AComerciales]
+              ON [AClientes].[Id_Comercial] = [AComerciales].[Id_Comercial])
+          INNER JOIN [ASecciones]
+              ON [BPedidos].[Id_Seccion] = [ASecciones].[Id_Seccion])
+         INNER JOIN [AEstadosPedido] AS [AE]
+              ON [BPedidos].[Id_EstadoPedido] = [AE].[Id_EstadoPedido])
+
+      -- ✅ Subconsulta de entregas: 1 fila por pedido con Max(FechaEnvio)
+      LEFT JOIN
+        (
+          SELECT
+            [DL].[Id_Pedido],
+            Max([DD].[FechaEnvio]) AS FechaEnvio
+          FROM
+            [DEntregasLineas] AS [DL]
+            INNER JOIN [DEntregasDiarias] AS [DD]
+              ON [DL].[Id_Entrega] = [DD].[Id_Entrega]
+          GROUP BY
+            [DL].[Id_Pedido]
+        ) AS [Ent]
+        ON [BPedidos].[Id_Pedido] = [Ent].[Id_Pedido]
+
+      LEFT JOIN
+        (
+          ([BControlMateriales] AS [BCM]
+            LEFT JOIN [AMateriales] AS [AM]
+              ON [BCM].[Id_Material] = [AM].[Id_Material])
+          LEFT JOIN [AProveedores] AS [AP]
+            ON [BCM].[Id_Proveedor] = [AP].[Id_Proveedor]
+        )
+        ON [BPedidos].[Id_Pedido] = [BCM].[Id_Pedido];
+    `);
+
+    res.json(rows);
+  } catch (err) {
+    console.error("Error al consultar Access:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
 
 app.get("/api/pedidosComerciales40Registro", async (_, res) => {
   try {
