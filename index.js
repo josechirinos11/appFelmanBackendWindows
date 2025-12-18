@@ -391,7 +391,9 @@ app.get("/api/pedidosComercialesJeronimoN8N", async (_, res) => {
 
 
 //ultima versión con fecha de envío
-app.get("/api/pedidosComercialesJeronimoN8N_completa", async (_, res) => {
+
+
+  app.get("/api/pedidosComercialesJeronimoN8N_completa", async (_, res) => {
   try {
     const rows = await connection.query(`
       SELECT
@@ -410,29 +412,32 @@ app.get("/api/pedidosComercialesJeronimoN8N_completa", async (_, res) => {
         [BCM].[FechaPrevista],
         [BCM].[Recibido]
       FROM
-        (((([BPedidos]
-            INNER JOIN [AClientes]
-              ON [BPedidos].[Id_Cliente] = [AClientes].[Id_Cliente])
-           INNER JOIN [AComerciales]
-              ON [AClientes].[Id_Comercial] = [AComerciales].[Id_Comercial])
-          INNER JOIN [ASecciones]
-              ON [BPedidos].[Id_Seccion] = [ASecciones].[Id_Seccion])
-         INNER JOIN [AEstadosPedido] AS [AE]
-              ON [BPedidos].[Id_EstadoPedido] = [AE].[Id_EstadoPedido])
-      LEFT JOIN
         (
-          SELECT
-            [DL].[Id_Pedido],
-            Max([DD].[FechaEnvio]) AS FechaEnvio
-          FROM
-            [DEntregasLineas] AS [DL]
-            INNER JOIN [DEntregasDiarias] AS [DD]
-              ON [DL].[Id_Entrega] = [DD].[Id_Entrega]
-          GROUP BY
-            [DL].[Id_Pedido]
-        ) AS [Ent]
-        ON [BPedidos].[Id_Pedido] = [Ent].[Id_Pedido]
-      LEFT JOIN
+          (
+            ((([BPedidos]
+              INNER JOIN [AClientes]
+                ON [BPedidos].[Id_Cliente] = [AClientes].[Id_Cliente])
+             INNER JOIN [AComerciales]
+                ON [AClientes].[Id_Comercial] = [AComerciales].[Id_Comercial])
+            INNER JOIN [ASecciones]
+                ON [BPedidos].[Id_Seccion] = [ASecciones].[Id_Seccion])
+           INNER JOIN [AEstadosPedido] AS [AE]
+                ON [BPedidos].[Id_EstadoPedido] = [AE].[Id_EstadoPedido])
+          LEFT JOIN
+            (
+              SELECT
+                [DL].[Id_Pedido],
+                Max([DD].[FechaEnvio]) AS FechaEnvio
+              FROM
+                [DEntregasLineas] AS [DL]
+                INNER JOIN [DEntregasDiarias] AS [DD]
+                  ON [DL].[Id_Entrega] = [DD].[Id_Entrega]
+              GROUP BY
+                [DL].[Id_Pedido]
+            ) AS [Ent]
+            ON [BPedidos].[Id_Pedido] = [Ent].[Id_Pedido]
+        )
+        LEFT JOIN
         (
           ([BControlMateriales] AS [BCM]
             LEFT JOIN [AMateriales] AS [AM]
@@ -449,6 +454,7 @@ app.get("/api/pedidosComercialesJeronimoN8N_completa", async (_, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
 
 
 
