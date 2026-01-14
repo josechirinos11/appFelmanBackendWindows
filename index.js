@@ -465,6 +465,7 @@ app.get("/api/pedidosComercialesJeronimoN8N", async (_, res) => {
   }
 });
 
+
 app.get("/api/pedidosComercialesJeronimoN8N_completa_tipoTrabajo", async (_, res) => {
   try {
     console.log('📍 Consultando ruta: /api/pedidosComercialesJeronimoN8N_completa_tipoTrabajo');
@@ -479,12 +480,21 @@ app.get("/api/pedidosComercialesJeronimoN8N_completa_tipoTrabajo", async (_, res
         [BPedidos].[FechaCompromiso] AS Compromiso,
         [AE].[Estado] AS EstadoPedido,
         Format([Ent].[FechaEnvio], "yyyy-mm-dd") AS FechaEnvio,
+
         [BCM].[Id_ControlMat],
         [AM].[Material],
         [AP].[Proveedor],
         [BCM].[FechaPrevista],
         [BCM].[Recibido],
-        [ATT].[TipoTrabajo] AS TipoTrabajo
+
+        [BCM].[FechaPedido] AS FechaPedido,
+        [BCM].[NumeroPedido] AS NumeroPedido,
+
+        [BPedidos].[FechaPedido] AS FechaAltaPedido,
+
+        [ATT].[TipoTrabajo] AS TipoTrabajo,
+        [BPT].[NFab] AS NFab,
+        [BPT].[Unidades] AS Unidades
       FROM
         (
           (
