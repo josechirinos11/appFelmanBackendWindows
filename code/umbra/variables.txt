@@ -1,0 +1,750 @@
+;------------------------------------------------------------------------------------------
+;Si el color no es el indicado hará aireaciones segun configuracion de articulo en cuestion
+COLORBASE="01"; {Color de base comparacion aireacion en foliado}
+
+OLGGALCE=12;{Distancia interior entre hoja y marco}             
+INVGALCE=36;{Añadido a hoja pasiva por inversor}
+DTOGALCE=40;{Descuento para definir galce hoja. Suma de alas exteriores}                         
+                                                                            
+; -----------------------------------------------------------------------------------------
+PR.FORMATOETIQUETA=0; { formato etiqueta: 0:corta 1:larga }
+PR.ESCUADRAS=1;     
+PR.ESCUADRAS="";
+PR.TOPES=1;          
+                
+             
+;--MARCO--MARCO--MARCO--MARCO--MARCO--MARCO--MARCO--MARCO--MARCO--MARCO--MARCO--MARCO--MARCO--MARCO--MARCO--MARCO--MARCO
+
+;-------------------------------------------------------
+;DESAGUES          
+;------------------------------------------------------- 
+;Desagues exteriores en apertura interior
+PR.DES_EXT_MARCO=1; {Activacion de los procesos}                                                 
+PR.DES_EXT_MARCO="DesExtMarco"; {Desagüe frontal a aplicar cuando no lleva condensacion}                      
+PR.DES_EXT_ESP_MARCO="DesExtEspMarco"; {Desagüe a aplicar cuando debajo lleva condensacion}
+PR.DES_EXT_MARCO_MIN=150; {Si entre desgues queda menos de esta medida se mete un solo desagüe}   
+PR.DES_EXT_MARCO_MAX=450; {Mete los desagues necesarios para que entre ellos quede menos de esta medida}     
+PR.DES_EXT_MARCO_DES=165; {Eje de posicion del desagüe desde la esquina} 
+
+;Desagues exteriores en apertura exterior 
+PR.DES_EXT_MARCOEXT=1; {Activacion de los procesos} 
+PR.DES_EXT_MARCOEXT="DesExtMarcoExt"; {Desagüe frontal a aplicar cuando no lleva condensacion}                                              
+PR.DES_EXT_ESP_MARCOEXT="DesExtEspMarcoExt"; {Desagüe a aplicar cuando debajo lleva condensacion}  
+PR.DES_EXT_MARCOEXT_MIN=150; {Si entre desgues queda menos de esta medida se mete un solo desagüe}                  
+PR.DES_EXT_MARCOEXT_MAX=450; {Mete los desagues necesarios para que entre ellos quede menos de esta medida}      
+PR.DES_EXT_MARCOEXT_DES=165; {Eje de posicion del desagüe desde la esquina}      
+                                                                   
+;Desagues interiores en apertura interior                                                 
+PR.DES_INT_MARCO=1;                                                            
+PR.DES_INT_MARCO="DesIntMarco";     
+PR.DES_INT_MARCO_MIN=350;                                                                                                                                                                                                                                                     
+PR.DES_INT_MARCO_MAX=1500;                           
+PR.DES_INT_MARCO_DES=45;
+
+;Desagues interiores en apertura exterior                                                 
+PR.DES_INT_MARCO=1;                                                            
+PR.DES_INT_MARCO="DesIntMarco";     
+PR.DES_INT_MARCO_MIN=350;                                                                                                                                                                                                                                                     
+PR.DES_INT_MARCO_MAX=1500;                           
+PR.DES_INT_MARCO_DES=45;
+                         
+;-------------------------------------------------------            
+;VENTILACIONES          
+;------------------------------------------------------- 
+
+;Ventilaciones exteriores en apertura interior
+PR.VEN_EXT_MARCO=1; {Activacion de los procesos} 
+PR.VEN_EXT_MARCO="VenExtMarco"; {Ventilación}                                                   
+PR.VEN_EXT_MARCO_MIN=150; {Si entre ventilaciones queda menos de esta medida se mete una sola}
+PR.VEN_EXT_MARCO_MAX=450; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida}     
+PR.VEN_EXT_MARCO_DES=165; {Eje de posicion de la ventilacion desde la esquina}
+;Ventilaciones laterales exteriores en apertura interior
+PR.VENLAT_EXT_MARCO=1; {Activacion y seleccion de tipo en lateral. 1 Simétrica como ventilación en uperior o 2 una única ventilacion en X desde arriba} 
+PR.VENLAT_EXT_MARCO="VenExtMarco"; {Ventilación}                                                   
+PR.VENLAT_EXT_MARCO_MIN=150; {Si entre ventilaciones queda menos de esta medida se mete una sola solo para el caso 1}
+PR.VENLAT_EXT_MARCO_MAX=450; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida solo para el caso 1}     
+PR.VENLAT_EXT_MARCO_DES=165; {Eje de posicion de la ventilacion desde la esquina, tanto en el caso 1 como 2}   
+                     
+;Ventilaciones exteriores marco en apertura exterior               
+PR.VEN_EXT_MARCOEXT=1; {Activacion de los procesos}  
+PR.VEN_EXT_MARCOEXT="VenExtMarcoExt"; {Ventilación}                                                  
+PR.VEN_EXT_MARCOEXT_MIN=150; {Si entre ventilaciones queda menos de esta medida se mete una sola}
+PR.VEN_EXT_MARCOEXT_MAX=450; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida}         
+PR.VEN_EXT_MARCOEXT_DES=165; {Eje de posicion de la ventilacion desde la esquina}
+;Ventilaciones laterales exteriores en apertura exterior                                                    
+PR.VENLAT_EXT_MARCOEXT=1;{Activacion y seleccion de tipo en lateral. 1 Simétrica como ventilación en uperior o 2 una única ventilacion en X desde arriba} 
+PR.VENLAT_EXT_MARCOEXT="VenExtMarcoExt"; {Ventilación}                                                  
+PR.VENLAT_EXT_MARCOEXT_MIN=150; {Si entre ventilaciones queda menos de esta medida se mete una sola solo para el caso 1}
+PR.VENLAT_EXT_MARCOEXT_MAX=450; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida solo para el caso 1}     
+PR.VENLAT_EXT_MARCOEXT_DES=165; {Eje de posicion de la ventilacion desde la esquina, tanto en el caso 1 como 2}                                                                                                                  
+                                                                                                                                                                                                      
+;Ventilaciones interiores en apertura interior 
+PR.VEN_INT_MARCO=1; {Activacion de los procesos}                                                                           
+PR.VEN_INT_MARCO="VenIntMarco"; {Ventilación}                  
+PR.VEN_INT_MARCO_MIN=350; {Si entre ventilaciones queda menos de esta medida se mete una sola} 
+PR.VEN_INT_MARCO_MAX=900; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medid
+PR.VEN_INT_MARCO_DES=45;  {Eje de posicion de la ventilacion desde la esquina  luz interior hueco }    
+;Ventilaciones laterales interiores en apertura interior 
+PR.VENLAT_INT_MARCO=1; {Activacion y seleccion de tipo en lateral. 1 Simétrica como ventilación en uperior o 2 una única ventilacion en X desde arriba}      
+PR.VENLAT_INT_MARCO="VenIntMarco"; {Ventilación}                  
+PR.VENLAT_INT_MARCO_MIN=350; {Si entre ventilaciones queda menos de esta medida se mete una sola} 
+PR.VENLAT_INT_MARCO_MAX=900; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medid
+PR.VENLAT_INT_MARCO_DES=45;  {Eje de posicion de la ventilacion desde la esquina  luz interior hueco } 
+
+;Ventilaciones interiores en apertura exterior 
+PR.VEN_INT_MARCOEXT=1; {Activacion y seleccion de tipo en lateral. 1 Simétrica como ventilación en uperior o 2 una única ventilacion en X desde arriba}                                        
+PR.VEN_INT_MARCOEXT="VenIntMarcoExt";  {Ventilación}                 
+PR.VEN_INT_MARCOEXT_MIN=350; {Si entre ventilaciones queda menos de esta medida se mete una sola}  
+PR.VEN_INT_MARCOEXT_MAX=900; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida}  
+PR.VEN_INT_MARCOEXT_DES=45;  {Eje de posicion de la ventilacion desde la esquina  luz interior hueco }  
+;Ventilaciones laterales interiores en apertura exterior 
+PR.VENLAT_INT_MARCOEXT=1; {Activacion de los procesos}      
+PR.VENLAT_INT_MARCOEXT="VenIntMarcoExt";  {Ventilación}                 
+PR.VENLAT_INT_MARCOEXT_MIN=350; {Si entre ventilaciones queda menos de esta medida se mete una sola}  
+PR.VENLAT_INT_MARCOEXT_MAX=900; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida}  
+PR.VENLAT_INT_MARCOEXT_DES=45;  {Eje de posicion de la ventilacion desde la esquina  luz interior hueco }
+                                                                                                                                                                                 
+                                                                                                                                            
+;----HOJA----HOJA----HOJA----HOJA----HOJA----HOJA----HOJA----HOJA----HOJA----HOJA----HOJA----HOJA----HOJA----HOJA----HOJA----
+ 
+;-------------------------------------------------------
+;DESAGUES          
+;-------------------------------------------------------                                                             
+;Desagues exteriores en apertura interior 
+PR.DES_EXT_HOJA=1; {Activacion de los procesos}           
+PR.DES_EXT_HOJA="DesExtHoja"; {Desagüe}
+PR.DES_EXT_HOJA_MIN=200; {Si entre desagues queda menos de esta medida se mete un solo desagüe}              
+PR.DES_EXT_HOJA_MAX=1500; {Mete los desagues necesarios para que entre ellos quede menos de esta medida}                    
+PR.DES_EXT_HOJA_DES=165; {Eje de posicion del desagüe desde la esquina}      
+
+;Desagues exteriores en apertura exterior 
+PR.DES_EXT_HOJAEXT=1; {Activacion de los procesos}            
+PR.DES_EXT_HOJAEXT="DesExtHoja"; {Desagüe}
+PR.DES_EXT_HOJAEXT_MIN=200; {Si entre desagues queda menos de esta medida se mete un solo desagüe}  
+PR.DES_EXT_HOJAEXT_MAX=1500; {Mete los desagues necesarios para que entre ellos quede menos de esta medida}
+PR.DES_EXT_HOJAEXT_DES=165; {Eje de posicion del desagüe desde la esquina} 
+                                     
+;Desague interior apertura interior
+PR.DES_INT_HOJA=1; {Activacion de los procesos}                 
+PR.DES_INT_HOJA="DesIntHoja"; {Desagüe}
+PR.DES_INT_HOJA_MIN=300; {Si entre desagues queda menos de esta medida se mete un solo desagüe}    
+PR.DES_INT_HOJA_MAX=1500; {Mete los desagues necesarios para que entre ellos quede menos de esta medida} 
+PR.DES_INT_HOJA_DES=45; {Eje de posicion del desagüe desde la interior}   
+
+;Desague interior apertura exterior
+PR.DES_INT_HOJAEXT=1; {Activacion de los procesos}                 
+PR.DES_INT_HOJAEXT="DesIntHoja"; {Desagüe}
+PR.DES_INT_HOJAEXT_MIN=300; {Si entre desagues queda menos de esta medida se mete un solo desagüe}    
+PR.DES_INT_HOJAEXT_MAX=1500; {Mete los desagues necesarios para que entre ellos quede menos de esta medida} 
+PR.DES_INT_HOJAEXT_DES=45; {Eje de posicion del desagüe desde la interior} 
+
+;-------------------------------------------------------
+;VENTILACIONES                
+;-------------------------------------------------------                                                 
+
+;Ventilaciones interiores en apertura interior
+PR.VEN_EXT_HOJA=1; {Activacion de los procesos} 
+PR.VEN_EXT_HOJA="VenIntHoja"; {Ventilacion}
+PR.VEN_EXT_HOJA_MIN=300;  {Si entre ventilaciones queda menos de esta medida se mete una sola}  
+PR.VEN_EXT_HOJA_MAX=1500; {{Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida}  
+PR.VEN_EXT_HOJA_DES=45;   {Eje de posicion de la ventilacion desde la esquina luz interior hueco }   
+;Ventilaciones laterales interiores en apertura interior
+PR.VENLAT_EXT_HOJA=1; {Activacion y seleccion de tipo en lateral. 1 Simétrica como ventilación en uperior o 2 una única ventilacion en X desde arriba} 
+PR.VENLAT_EXT_HOJA="VenIntHoja"; {Ventilacion}
+PR.VENLAT_EXT_HOJA_MIN=300;  {Si entre ventilaciones queda menos de esta medida se mete una sola}  
+PR.VENLAT_EXT_HOJA_MAX=1500; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida}  
+PR.VENLAT_EXT_HOJA_DES=45;   {Eje de posicion de la ventilacion desde la esquina luz interior hueco }                   
+
+;Ventilaciones interiores en apertura interior                                    
+PR.VEN_EXT_HOJAEXT=1; {Activacion de los procesos} 
+PR.VEN_EXT_HOJAEXT="VenExtHoja"; {Ventilacion}
+PR.VEN_EXT_HOJAEXT_MIN=300;  {Si entre ventilaciones queda menos de esta medida se mete una sola}  
+PR.VEN_EXT_HOJAEXT_MAX=1500; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida}  
+PR.VEN_EXT_HOJAEXT_DES=45;   {Eje de posicion de la ventilacion desde la esquina luz interior hueco }   
+;Ventilaciones laterales interiores en apertura interior
+PR.VENLAT_EXT_HOJAEXT=1; {Activacion y seleccion de tipo en lateral. 1 Simétrica como ventilación en uperior o 2 una única ventilacion en X desde arriba} 
+PR.VENLAT_EXT_HOJAEXT="VenExtHoja"; {Ventilacion}
+PR.VENLAT_EXT_HOJAEXT_MIN=300;  {Si entre ventilaciones queda menos de esta medida se mete una sola}  
+PR.VENLAT_EXT_HOJAEXT_MAX=1500; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida}  
+PR.VENLAT_EXT_HOJAEXT_DES=45;   {Eje de posicion de la ventilacion desde la esquina luz interior hueco }   
+
+;Ventilaciones interiores en apertura interior
+PR.VEN_INT_HOJA=1; {Activacion de los procesos} 
+PR.VEN_INT_HOJA="VenIntHoja"; {Ventilacion}
+PR.VEN_INT_HOJA_MIN=300;  {Si entre ventilaciones queda menos de esta medida se mete una sola}  
+PR.VEN_INT_HOJA_MAX=1500; {{Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida}  
+PR.VEN_INT_HOJA_DES=45;   {Eje de posicion de la ventilacion desde la esquina luz interior hueco }   
+;Ventilaciones laterales interiores en apertura interior
+PR.VENLAT_INT_HOJA=1; {Activacion y seleccion de tipo en lateral. 1 Simétrica como ventilación en uperior o 2 una única ventilacion en X desde arriba} 
+PR.VENLAT_INT_HOJA="VenIntHoja"; {Ventilacion}
+PR.VENLAT_INT_HOJA_MIN=300;  {Si entre ventilaciones queda menos de esta medida se mete una sola}  
+PR.VENLAT_INT_HOJA_MAX=1500; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida}  
+PR.VENLAT_INT_HOJA_DES=45;   {Eje de posicion de la ventilacion desde la esquina luz interior hueco }                   
+
+;Ventilaciones interiores en apertura interior                                    
+PR.VEN_INT_HOJAEXT=1; {Activacion de los procesos} 
+PR.VEN_INT_HOJAEXT="VenIntHoja"; {Ventilacion}
+PR.VEN_INT_HOJAEXT_MIN=300;  {Si entre ventilaciones queda menos de esta medida se mete una sola}  
+PR.VEN_INT_HOJAEXT_MAX=1500; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida}  
+PR.VEN_INT_HOJAEXT_DES=45;   {Eje de posicion de la ventilacion desde la esquina luz interior hueco }   
+;Ventilaciones laterales interiores en apertura interior
+PR.VENLAT_INT_HOJAEXT=1; {Activacion y seleccion de tipo en lateral. 1 Simétrica como ventilación en uperior o 2 una única ventilacion en X desde arriba} 
+PR.VENLAT_INT_HOJAEXT="VenIntHoja"; {Ventilacion}
+PR.VENLAT_INT_HOJAEXT_MIN=300;  {Si entre ventilaciones queda menos de esta medida se mete una sola}  
+PR.VENLAT_INT_HOJAEXT_MAX=1500; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida}  
+PR.VENLAT_INT_HOJAEXT_DES=45;   {Eje de posicion de la ventilacion desde la esquina luz interior hueco }     
+                                                                                                                                                              
+                                                                       
+;----TRAVESA----TRAVESA----TRAVESA----TRAVESA----TRAVESA----TRAVESA----TRAVESA----TRAVESA----TRAVESA----TRAVESA----TRAVESA               
+                                                   
+;-------------------------------------------------------
+;DESAGUES          
+;-------------------------------------------------------  
+;Desagues exteriores en apertura interior
+PR.DES_EXT_TRAVE=1; {Activacion de los procesos} 
+PR.DES_EXT_TRAVE="DesExtTrave"; {Desagüe} 
+PR.DES_EXT_TRAVE_MIN=500;  {Si entre desagues queda menos de esta medida se mete un solo desagüe}            
+PR.DES_EXT_TRAVE_MAX=1500; {Mete los desagues necesarios para que entre ellos quede menos de esta medida}            
+PR.DES_EXT_TRAVE_DES=165;  {Eje de posicion del desagüe}   
+
+;Desagues exteriores en apertura exterior
+PR.DES_EXT_TRAVEEXT=1; {Activacion de los procesos} 
+PR.DES_EXT_TRAVEEXT="DesExtTraveExt"; {Desagüe}      
+PR.DES_EXT_TRAVEEXT_MIN=500;  {Si entre desagues queda menos de esta medida se mete un solo desagüe}            
+PR.DES_EXT_TRAVEEXT_MAX=1500; {Mete los desagues necesarios para que entre ellos quede menos de esta medida} 
+PR.DES_EXT_TRAVEEXT_DES=165;  {Eje de posicion del desagüe}
+ 
+;Desagues interiores en apertura interior
+PR.DES_INT_TRAVE=1; {Activacion de los procesos}   
+PR.DES_INT_TRAVE="DesIntTrave";  {Desagüe} 
+PR.DES_INT_TRAVE_MIN=350;  {Si entre desagues queda menos de esta medida se mete un solo desagüe}      
+PR.DES_INT_TRAVE_MAX=1300; {Mete los desagues necesarios para que entre ellos quede menos de esta medida} 
+PR.DES_INT_TRAVE_DES=65;   {Eje de posicion del desagüe}    
+
+;Desagues interiores en apertura exterior
+PR.DES_INT_TRAVEEXT=1; {Activacion de los procesos}                             
+PR.DES_INT_TRAVEEXT="DesIntTraveExt";  {Desagüe} 
+PR.DES_INT_TRAVEEXT_MIN=350;  {Si entre desagues queda menos de esta medida se mete un solo desagüe}      
+PR.DES_INT_TRAVEEXT_MAX=1300; {Mete los desagues necesarios para que entre ellos quede menos de esta medida} 
+PR.DES_INT_TRAVEEXT_DES=65;   {Eje de posicion del desagüe}  
+
+;-------------------------------------------------------
+;VENTILACIONES  --- SOLO EN TRAMOS HORIZONTALES        
+;------------------------------------------------------- 
+
+;Ventilaciones exteriorios en apertura interior
+PR.VEN_EXT_TRAVE=1;                                      
+PR.VEN_EXT_TRAVE="VentExtTrave";
+PR.VEN_EXT_TRAVE_MIN=350;  {Si entre ventilaciones queda menos de esta medida se mete un sola ventilacion}      
+PR.VEN_EXT_TRAVE_MAX=1300; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida} 
+PR.VEN_EXT_TRAVE_DES=65;   {Eje de posicion de la ventilacion}  
+                
+;Ventilaciones exteriorios en apertura exterior
+PR.VEN_EXT_TRAVEEXT=1;                                      
+PR.VEN_EXT_TRAVEEXT="VentExtTrave";
+PR.VEN_EXT_TRAVEEXT_MIN=350;  {Si entre ventilaciones queda menos de esta medida se mete un sola ventilacion}      
+PR.VEN_EXT_TRAVEEXT_MAX=1300; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida} 
+PR.VEN_EXT_TRAVEEXT_DES=65;   {Eje de posicion de la ventilacion}
+
+
+;Ventilaciones inteirores en apertura interior
+PR.VEN_INT_TRAVE=1;                                      
+PR.VEN_INT_TRAVE="VentExtTrave";
+PR.VEN_INT_TRAVE_MIN=350;  {Si entre ventilaciones queda menos de esta medida se mete un sola ventilacion}      
+PR.VEN_INT_TRAVE_MAX=1300; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida} 
+PR.VEN_INT_TRAVE_DES=65;   {Eje de posicion de la ventilacion}  
+                
+;Ventilaciones interiores en apertura exterior
+PR.VEN_INT_TRAVEEXT=1;                                      
+PR.VEN_INT_TRAVEEXT="VentExtTrave";
+PR.VEN_INT_TRAVEEXT_MIN=350;  {Si entre ventilaciones queda menos de esta medida se mete un sola ventilacion}      
+PR.VEN_INT_TRAVEEXT_MAX=1300; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida} 
+PR.VEN_INT_TRAVEEXT_DES=65;   {Eje de posicion de la ventilacion}  
+     
+
+               
+
+;----ZOCALO----ZOCALO----ZOCALO----ZOCALO----ZOCALO----ZOCALO----ZOCALO----ZOCALO----ZOCALO----ZOCALO----ZOCALO----ZOCALO---
+
+;-------------------------------------------------------
+;DESAGUES          
+;-------------------------------------------------------
+;Ventilaciones exteriores en apertura interior
+PR.VEN_EXT_ZOCAL=1; {Activacion de los procesos} 
+PR.VEN_EXT_ZOCAL="VenExtMarco"; {Ventilación}                                                   
+PR.VEN_EXT_ZOCAL_MIN=150; {Si entre ventilaciones queda menos de esta medida se mete una sola}
+PR.VEN_EXT_ZOCAL_MAX=450; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida}     
+PR.VEN_EXT_ZOCAL_DES=165; {Eje de posicion de la ventilacion desde la esquina}
+;Ventilaciones laterales exteriores en apertura interior
+PR.VENLAT_EXT_ZOCAL=1; {Activacion y seleccion de tipo en lateral. 1 Simétrica como ventilación en uperior o 2 una única ventilacion en X desde arriba} 
+PR.VENLAT_EXT_ZOCAL="VenExtMarco"; {Ventilación}                                                   
+PR.VENLAT_EXT_ZOCAL_MIN=150; {Si entre ventilaciones queda menos de esta medida se mete una sola solo para el caso 1}
+PR.VENLAT_EXT_ZOCAL_MAX=450; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida solo para el caso 1}     
+PR.VENLAT_EXT_ZOCAL_DES=165; {Eje de posicion de la ventilacion desde la esquina, tanto en el caso 1 como 2}   
+                     
+;Ventilaciones exteriores marco en apertura exterior               
+PR.VEN_EXT_ZOCALEXT=1; {Activacion de los procesos}  
+PR.VEN_EXT_ZOCALEXT="VenExtMarcoExt"; {Ventilación}                                                  
+PR.VEN_EXT_ZOCALEXT_MIN=150; {Si entre ventilaciones queda menos de esta medida se mete una sola}
+PR.VEN_EXT_ZOCALEXT_MAX=450; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida}         
+PR.VEN_EXT_ZOCALEXT_DES=165; {Eje de posicion de la ventilacion desde la esquina}
+;Ventilaciones laterales exteriores en apertura exterior                                                    
+PR.VENLAT_EXT_ZOCALEXT=1;{Activacion y seleccion de tipo en lateral. 1 Simétrica como ventilación en uperior o 2 una única ventilacion en X desde arriba} 
+PR.VENLAT_EXT_ZOCALEXT="VenExtMarcoExt"; {Ventilación}                                                  
+PR.VENLAT_EXT_ZOCALEXT_MIN=150; {Si entre ventilaciones queda menos de esta medida se mete una sola solo para el caso 1}
+PR.VENLAT_EXT_ZOCALEXT_MAX=450; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida solo para el caso 1}     
+PR.VENLAT_EXT_ZOCALEXT_DES=165; {Eje de posicion de la ventilacion desde la esquina, tanto en el caso 1 como 2}                                                                                                                  
+                                                                                                                                                                                                      
+;Ventilaciones interiores en apertura interior 
+PR.VEN_INT_ZOCAL=1; {Activacion de los procesos}                                                                           
+PR.VEN_INT_ZOCAL="VenIntMarco"; {Ventilación}                  
+PR.VEN_INT_ZOCAL_MIN=350; {Si entre ventilaciones queda menos de esta medida se mete una sola} 
+PR.VEN_INT_ZOCAL_MAX=900; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medid
+PR.VEN_INT_ZOCAL_DES=45;  {Eje de posicion de la ventilacion desde la esquina  luz interior hueco }    
+;Ventilaciones laterales interiores en apertura interior 
+PR.VENLAT_INT_ZOCAL=1; {Activacion y seleccion de tipo en lateral. 1 Simétrica como ventilación en uperior o 2 una única ventilacion en X desde arriba}      
+PR.VENLAT_INT_ZOCAL="VenIntMarco"; {Ventilación}                  
+PR.VENLAT_INT_ZOCAL_MIN=350; {Si entre ventilaciones queda menos de esta medida se mete una sola} 
+PR.VENLAT_INT_ZOCAL_MAX=900; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medid
+PR.VENLAT_INT_ZOCAL_DES=45;  {Eje de posicion de la ventilacion desde la esquina  luz interior hueco } 
+
+;Ventilaciones interiores en apertura exterior 
+PR.VEN_INT_ZOCALEXT=1; {Activacion y seleccion de tipo en lateral. 1 Simétrica como ventilación en uperior o 2 una única ventilacion en X desde arriba}                                        
+PR.VEN_INT_ZOCALEXT="VenIntMarcoExt";  {Ventilación}                 
+PR.VEN_INT_ZOCALEXT_MIN=350; {Si entre ventilaciones queda menos de esta medida se mete una sola}  
+PR.VEN_INT_ZOCALEXT_MAX=900; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida}  
+PR.VEN_INT_ZOCALEXT_DES=45;  {Eje de posicion de la ventilacion desde la esquina  luz interior hueco }  
+;Ventilaciones laterales interiores en apertura exterior 
+PR.VENLAT_INT_ZOCALEXT=1; {Activacion de los procesos}      
+PR.VENLAT_INT_ZOCALEXT="VenIntMarcoExt";  {Ventilación}                 
+PR.VENLAT_INT_ZOCALEXT_MIN=350; {Si entre ventilaciones queda menos de esta medida se mete una sola}  
+PR.VENLAT_INT_ZOCALEXT_MAX=900; {Mete las ventilaciones necesarias para que entre ellas quede menos de esta medida}  
+PR.VENLAT_INT_ZOCALEXT_DES=45;  {Eje de posicion de la ventilacion desde la esquina  luz interior hueco }
+
+                                                                                                   
+
+                                         
+;----------------------------------------------------------------------
+;-------------------AIREACIONES INTERIORES POR COLOR ------------------
+;----------------------------------------------------------------------
+PR.AIREACIONES=1;                  
+;Activar procesos de aireación por color exterior
+PR.COLORBASE=""; 
+PR.COLORBASE2=""; 
+PR.COLORBASE3=""; 
+;Colores base de comparacion.
+;En el resto de colores distintos de los indicados se aplicaran los mecanizados de aireacion 
+PR.AIREACION_MARCO_SUP="AireacionMarcoSup"; 
+PR.AIREACION_HOJA_SUP="AireacionHojaSup";
+PR.AIREACION_TRAVE_INF="AireacionTraveInf";
+;Los procesos segun tipo de articulo contra el que se toca en la parte SUPERIOR
+PR.AIREACION_MARCO_INF="AireacionMarcoInf";
+PR.AIREACION_HOJA_INF="AireacionHojaInf";                   
+PR.AIREACION_TRAVE_SUP="AireacionTraveSup";
+;Los procesos segun tipo de articulo contra el que se toca en la parte INFERIOR   
+                 
+PR.AIREACION_VER=0;
+;Si queremos en vertical aplicacion de ventilaciones simetrica el valor ha de ser 0
+;Si queremos que en vertical unicamente se aplique una sola aireacion el valor ha de ser 1
+;En este caso se hara desde inicio superior de hueco ha desplazamiento indicado en PR.AIREACION_DES
+PR.AIREACION_MARCO_VER="AireacionMarcoVer";
+PR.AIREACION_HOJA_VER="AireacionHojaVer";                                          
+PR.AIREACION_POSTE_IZQ="AireacionPosteIzq";
+;Cuando a DERECHA va poste se aplica aireación a la izquierda de este
+PR.AIREACION_POSTE_DER="AireacionPosteDer";                        
+;Cuando a IZQUIERDA va poste se aplica aireación a la derecha de este
+                       
+PR.AIREACION_DES=50            
+;Las aireaciones por color son generados desde hueco de vidrio chapa y panel
+;Posicion de inicio y fin del proceso de aireacion desde inicio de fin de hueco 
+PR.AIREACION_MIN=100;
+;Si una vez situada la primera y ultima aireacion entre ellas queda menos de la distancia
+;indicada se hará una sola aireación al centro del perfil
+PR.AIREACION_MAX=300; 
+;Distancia máxima permitida entre aireaciones.
+
+                                 
+
+PR.CORTE_GOMA=0; {Corte goma }                      
+PR.CORTE_GOMA_MARCO="CorteGomaMarco";
+PR.CORTE_GOMA_HOJA="CorteGomaHoja";
+PR.CORTE_GOMA_TRAVE_SUP="CorteGomaTraveSup";
+PR.CORTE_GOMA_TRAVE_INF="CorteGomaTraveInf";
+PR.CORTE_GOMA_POSTE_DER="CorteGomaPosteDer";
+PR.CORTE_GOMA_POSTE_IZQ="CorteGomaPosteIzq";
+
+PR.CANAL_GOMA=0; {Canal goma }
+PR.CANAL_GOMA_MARCO="CanalGomaMarco";
+PR.CANAL_GOMA_HOJA="CanalGomaHoja";
+PR.CANAL_GOMA_TRAVE_SUP="CanalGomaTraveSup";
+PR.CANAL_GOMA_TRAVE_INF="CanalGomaTraveInf";
+PR.CANAL_GOMA_POSTE_DER="CanalGomaPosteDer";
+PR.CANAL_GOMA_POSTE_IZQ="CanalGomaPosteIzq";
+
+PR.RANURA_GOMA=1; {Ranura goma }
+PR.RANURA_GOMA_MARCO="RanuraGomaMarco";
+PR.RANURA_GOMA_HOJA="RanuraGomaHoja";
+PR.RANURA_GOMA_TRAVE_SUP="RanuraGomaTraveSup";
+PR.RANURA_GOMA_TRAVE_INF="RanuraGomaTraveInf";
+PR.RANURA_GOMA_POSTE_DER="RanuraGomaPosteDer";  
+PR.RANURA_GOMA_POSTE_IZQ="RanuraGomaPosteIzq";
+              
+PR.LIMP_GOMA=1;{Limpieza de goma}
+PR.LIMP_GOMA_INI="LimpGomaIni";
+PR.LIMP_GOMA_FIN="LimpGomaFin";
+
+;BISAGRAS EN MARCO
+PR.BIS_VEN_DESP_MARCO=41;  {Eje centro Bisagras marco / poste}
+PR.BIS_VEN_MARCO_IZQ="BisVenMarco";
+PR.BIS_VEN_MARCO_DER="BisVenMarco";
+PR.BIS_VEN_POSTE_IZQ="BisVenPosteIzq";
+PR.BIS_VEN_POSTE_DER="BisVenPosteDer";
+;Procesos apertura exterior
+PR.BISEXT_VEN_DESP_MARCO=41;{Desde galce marco Eje centro de bisagra de marco}
+PR.BISEXT_VEN_MARCO_IZQ="BisExtVenMarco";
+PR.BISEXT_VEN_MARCO_DER="BisExtVenMarco";
+PR.BISEXT_VEN_POSTE_IZQ="BisExtVenPosteIzq";
+PR.BISEXT_VEN_POSTE_DER="BisExtVenPosteDer";
+
+;BISAGRAS EN HOJAS
+PR.BIS_VEN_DESP_HOJA=58;{Eje centro Bisagras hoja desde hueco luz del marco}
+PR.BIS_VEN_HOJA_SEP=0;{Bisagras hoja}
+PR.BIS_VEN_HOJA=1;{Bisagra hoja}                                     
+PR.BIS_VEN_HOJA="BisVenHoja"; {Bisagra hoja}
+
+PR.BIS_VEN_CEN_MIN=1500;{A partir de aqui mete una bisagra central}                                                                                                                                                                                                            
+
+;Procesos en apertura exterior
+PR.BISEXT_VEN_DESP_HOJA=85;{Desde galce marco Eje centro de bisagra de hoja}
+PR.BISEXT_VEN_MAX=1800;{Medida galce a partir de la cual mete una bisagra central}
+PR.BISEXT_VEN_HOJA="BisExtVenHoja";                             
+
+;Procesos bisagras abatible  
+PR.BIS_VEN_ABA_DESP_MARCO=85;
+PR.BIS_VEN_ABA_MIN=2000;{Distancia a partir de la cual mete una bisagra central} 
+PR.BIS_VEN_ABA_MIN2=2500;{Distancia a partir de la cual mete una bisagra central} 
+PR.BIS_VEN_ABA_MARCO="BisVenMarcoAba";           
+PR.BIS_VEN_ABA_TRAVE_SUP="BisVenTraveAba";
+PR.BIS_VEN_ABA_HOJA=1;{Activa la bisagra abatible en hoja} 
+PR.BIS_VEN_ABA_HOJA="BisVenHojaAba";   
+
+PR.CRE_VENTANA=1; {Cremona ventana}
+PR.CRE_VEN_TAL="CreVentanaTal";
+;PR.CRE_VEN_CAJ=50;             
+PR.CRE_VEN_CAJ="CreVentanaCaj";
+
+;-------------- CERRADEROS---------------
+PR.CERRADEROS=1;{Anula 0 o activa 1 los procesos de cerradero}
+PR.MAR.CERRA_STD=0;{Ancho del cerradero standar y seguridad}
+PR.MAR.CERRA_SEG=0;{Ancho del cerradero standar y seguridad}
+PR.MAR.CERRA_STD="CerraSTDMarco";{Proceso en marco de cerradero standar}
+PR.MAR.CERRA_SEG="CerraSEGMarco";{Proceso en marco de cerradero de seguridad}
+PR.POS.CERRA_STD_DER="CerraSTDPosteDer";{Proceso en poste por la derecha de cerradero standar}
+PR.POS.CERRA_STD_IZQ="CerraSTDPosteIzq";{Proceso en poste por la izquierda de cerradero standar}
+PR.TRA.CERRA_STD_SUP="CerraSTDTraveSup";{Proceso en travesano por la parte superior de cerradero standar}
+PR.TRA.CERRA_STD_INF="CerraSTDTraveInf";{Proceso en travesano por la parte inferior de cerradero standar}
+PR.TRA.CERRA_SEG_SUP="CerraSEGTraveSup";{Proceso en travesano por la parte superior de cerradero seguridad}
+
+;--------------- PROCESOS DE BISAGRA OCULTA -------------------------
+PR.MAR.CERRA_BSO="BisOcultaMarco";{Proceso de bisagra oculta de marco}
+PR.HOJ.CERRA_BSO="BisOcultaHoja";{Proceso de bisagra oculta de hoja}       
+PR.POS.CERRA_BSO_DER="BisOcultaPosteDer";{Proceso de bisagra oculta poste por la derecha}
+PR.POS.CERRA_BSO_IZQ="BisOcultaPosteIzq";{Proceso de bisagra oculta poste por la izquierda}
+
+
+PR.RECOGEDOR_INT_MARCO=1;
+PR.RECOGEDOR_INT_ALTO=160;
+PR.RECOGEDOR_INT_MARCO="RecogedorIntMarco";{Proceso principal de cajeado recogedor}
+PR.RECOGEDOR_INT2_MARCO="RecogedorIntMarco2";{Proceso auxiliar de cajeado recogedor}
+PR.RECOGEDOR_INT3_MARCO="RecogedorIntMarco3";{Proceso auxliar de cajeado recogedor}
+PR.RECOGEDOR_PROCESOS="RecogedorIntMarco,RecogedorIntMarco2";
+PR.RECOGEDOR_MIN_REF_DOBLE=120;
+PR.RECOGEDOR_INT_ALTO=145;
+
+PR.FIJACION_A_OBRA=1;{Activa el uso de taladros de obra}
+PR.FIJACION_A_OBRA_DES=90; {Distancia desde interior inglete a taladro inicial vertical}   
+PR.FIJACION_A_OBRA_DESHOR=90;{Distancia desde interior inglete a taladro inicial horizontal}                                                                
+PR.FIJACION_A_OBRAMAX=500; {Distancia a partir de la cual mete uno al centro en vertical}                                                                
+PR.FIJACION_A_OBRAMAXHOR=500; {Distancia a partir de la cual mete uno al centro en horizontal}
+PR.FIJACION_A_OBRA="FijacionAObra";
+                                 
+;Tornillos de refuerzo
+PR.REFUERZO=1;             {para anular el refuerzo}
+PR.TOR_REFUERZO=1;         {para anular el atornillado del refuerzo}   
+PR.TOR_REFUERZO="TorRefuerzo"; {atornillado refuerzo}
+PR.TOR_MINIMO=70;
+PR.TOR_MAX_COLOR=250;         
+PR.TOR_MAX_BLANCO=300;
+
+PR.FIJACION_INVERSOR=1;{Activa el uso de fijacion inversor}
+PR.FIJACION_INVERSOR="FijacionInversor";{Proceso de taladro en hoja para fijar inversor}
+PR.FIJACION_INVERSOR_DES=200;{Distancia taladro desde esquina para fijacion inversor}
+PR.FIJACION_INVERSOR_SEP1=1100;{A partir de esta medida se mete una fijacion mas}
+PR.FIJACION_INVERSOR_SEP2=1700;{A partir de esta medida se mete una fijacion mas}
+
+ ;Fijacion de la guia monobloc a traves de taladros para anclaje de tornillo cabezon.
+PR.FIJACION_GUIA=0;{Activa taladro tornillo cabezon para guias de monoblock}
+PR.FIJACION_GUIA_MAR="FijacionGuiaMar";{Proceso de taladro fijacion de guia}
+PR.FIJACION_GUIA_MAR_INI=80;{Inicio y fin del primer tornillo}
+PR.FIJACION_GUIA_MAR_DES=300;{Distancia maxima entre taladros de fijacion}
+
+
+;Fijacion del remate a pavimento 
+PR.FIJ_RPAVI_MARCO="FijarRpaviM";
+PR.FIJ_RPAVI_POSTE="FijarRpaviP"; 
+
+
+;Parametros de contra interior
+PR.BIS_CONTRA="BisContraInt"; 
+PR.BIS_CONTRA_MAX=1400; 
+PR.BIS_CONTRA_DES=90;    
+
+
+
+;Parametros de oscilo paralela 
+PR.PARALELA=1;
+PR.PARALELA_RANURA="CreParRanura";
+PR.PARALELA_TM1="CreParT1";
+PR.PARALELA_TM2="CreParT2";          
+PR.PARALELA_TM3="";  
+PR.PARALELA_TM4=""; 
+
+
+
+PR.ORDENARPOSICIONES=1; {ordena los mecanizados por posicion}
+           
+SOLD90=3;
+
+;POSICION GENERAL DE LOS CERRADEROS.
+
+;Variables de uso comun
+CER.GALCEHOL=12;{Holgura entre galce de hoja y galce de marco}
+CER.HOLBUL=3;{Holgura entre bulon y cerradero en posicion de abierto}
+CER.MEDANC=62;{Ancho del cerradero utilizado}
+
+;---------------------------------------------------------------------------------------------
+;OSCILO-OSCILO-OSCILO-OSCILO-OSCILO-OSCILO-OSCILO
+;---------------------------------------------------------------------------------------------
+;OSCILO  LADO CREMONA
+CR.OSCCRER0=800;
+CR.OSCCRER0NP=0;
+                   
+CR.OSCCRER1=1600;
+CR.OSCCRER1NP=2;
+CR.OSCCRER1D1=0; 
+CR.OSCCRER1D2=85+CER.HOLBUL+(CER.MEDANC/2); 
+
+
+CR.OSCCRER2=2360;
+CR.OSCCRER2NP=3;
+CR.OSCCRER2D1=0; 
+CR.OSCCRER2D2=415+CER.HOLBUL+(CER.MEDANC/2)-20; 
+CR.OSCCRER2D3=-385+CER.HOLBUL+(CER.MEDANC/2)-20; 
+
+
+CR.OSCCRER3=5000;
+CR.OSCCRER3NP=4;
+CR.OSCCRER3D1=0; 
+CR.OSCCRER3D2=415+CER.HOLBUL+(CER.MEDANC/2)-20; 
+CR.OSCCRER3D3=-385+CER.HOLBUL+(CER.MEDANC/2)-20; 
+CR.OSCCRER3D4=1163+CER.HOLBUL+(CER.MEDANC/2)-20; 
+
+;---------------------------------------------------------------------------------------------
+;OSCILO LADO SUPERIOR
+CR.OSCSUPR0=330;
+CR.OSCSUPR0NP=0;
+
+CR.OSCSUPR1=850;
+CR.OSCSUPR1NP=1;
+CR.OSCSUPR1D1=CER.GALCEHOL+67+CER.HOLBUL+(CER.MEDANC/2);
+
+CR.OSCSUPR2=3000;
+CR.OSCSUPR2NP=2;
+CR.OSCSUPR2D1=CER.GALCEHOL+67+CER.HOLBUL+(CER.MEDANC/2);
+CR.OSCSUPR2D2=CER.GALCEHOL+547-CER.HOLBUL-(CER.MEDANC/2);    
+
+;---------------------------------------------------------------------------------------------
+;OSCILO LADO INFERIOR
+CR.OSCINFR0=300;
+CR.OSCINFR0NP=0;
+
+CR.OSCINFR1=850;
+CR.OSCINFR1NP=1;
+CR.OSCINFR1D1=CER.GALCEHOL+63;
+
+CR.OSCINFR2=3000;
+CR.OSCINFR2NP=2;
+CR.OSCINFR2D1=CER.GALCEHOL+63;
+CR.OSCINFR2D2=CER.GALCEHOL+423-CER.HOLBUL-(CER.MEDANC/2);
+
+;---------------------------------------------------------------------------------------------
+;OSCILO LADO BISAGRAS 
+CR.OSCBISR0=800;
+CR.OSCBISR0NP=0;
+                   
+CR.OSCBISR1=1200;
+CR.OSCBISR1NP=1;
+CR.OSCBISR1D1=CER.GALCEHOL+481+CER.HOLBUL+(CER.MEDANC/2);
+
+CR.OSCBISR2=1375;
+CR.OSCBISR2NP=1;
+CR.OSCBISR2D1=CER.GALCEHOL+681+CER.HOLBUL+(CER.MEDANC/2);
+
+CR.OSCBISR3=1680;
+CR.OSCBISR3NP=2;
+CR.OSCBISR3D1=CER.GALCEHOL+681+CER.HOLBUL+(CER.MEDANC/2);
+CR.OSCBISR3D2=CER.GALCEHOL+983+CER.HOLBUL+(CER.MEDANC/2);
+
+CR.OSCBISR4=2180;
+CR.OSCBISR4NP=2;
+CR.OSCBISR4D1=CER.GALCEHOL+681+CER.HOLBUL+(CER.MEDANC/2);
+CR.OSCBISR4D2=CER.GALCEHOL+1479+CER.HOLBUL+(CER.MEDANC/2);
+
+CR.OSCBISR5=5000;
+CR.OSCBISR5NP=3;
+CR.OSCBISR5D1=CER.GALCEHOL+681+CER.HOLBUL+(CER.MEDANC/2);
+CR.OSCBISR5D2=CER.GALCEHOL+1479+CER.HOLBUL+(CER.MEDANC/2);
+CR.OSCBISR5D3=CER.GALCEHOL+1785+CER.HOLBUL+(CER.MEDANC/2);
+
+;---------------------------------------------------------------------------------------------
+;PRACTICABLE-PRACTICABLE-PRACTICABLE-PRACTICABLE-
+;---------------------------------------------------------------------------------------------
+;PRACTICABLE LADO CREMONA
+CR.PRACRER0=800;
+CR.PRACRER0NP=0;
+                   
+CR.PRACRER1=1600;
+CR.PRACRER1NP=2;
+CR.PRACRER1D1=0; 
+CR.PRACRER1D2=85+CER.HOLBUL+(CER.MEDANC/2); 
+
+
+CR.PRACRER2=2360;
+CR.PRACRER2NP=3;
+CR.PRACRER2D1=0; 
+CR.PRACRER2D2=415+CER.HOLBUL+(CER.MEDANC/2)-20; 
+CR.PRACRER2D3=-385+CER.HOLBUL+(CER.MEDANC/2)-20; 
+
+
+CR.PRACRER3=5000;
+CR.PRACRER3NP=4;
+CR.PRACRER3D1=0; 
+CR.PRACRER3D2=415+CER.HOLBUL+(CER.MEDANC/2)-20; 
+CR.PRACRER3D3=-385+CER.HOLBUL+(CER.MEDANC/2)-20; 
+CR.PRACRER3D4=1163+CER.HOLBUL+(CER.MEDANC/2)-20; 
+
+;---------------------------------------------------------------------------------------------
+;PRACTICABLE LADO BISAGRAS
+CR.PRABISR0=800;
+CR.PRABISR0NP=0;
+                   
+CR.PRABISR1=1200;
+CR.PRABISR1NP=1;
+CR.PRABISR1D1=CER.GALCEHOL+481+CER.HOLBUL+(CER.MEDANC/2);
+
+CR.PRABISR2=1375;
+CR.PRABISR2NP=1;
+CR.PRABISR2D1=CER.GALCEHOL+681+CER.HOLBUL+(CER.MEDANC/2);
+
+CR.PRABISR3=1680;
+CR.PRABISR3NP=2;
+CR.PRABISR3D1=CER.GALCEHOL+681+CER.HOLBUL+(CER.MEDANC/2);
+CR.PRABISR3D2=CER.GALCEHOL+983+CER.HOLBUL+(CER.MEDANC/2);
+
+CR.PRABISR4=2180;
+CR.PRABISR4NP=2;
+CR.PRABISR4D1=CER.GALCEHOL+681+CER.HOLBUL+(CER.MEDANC/2);
+CR.PRABISR4D2=CER.GALCEHOL+1479+CER.HOLBUL+(CER.MEDANC/2);
+
+CR.PRABISR5=5000;
+CR.PRABISR5NP=3;
+CR.PRABISR5D1=CER.GALCEHOL+681+CER.HOLBUL+(CER.MEDANC/2);
+CR.PRABISR5D2=CER.GALCEHOL+1479+CER.HOLBUL+(CER.MEDANC/2);
+CR.PRABISR5D3=CER.GALCEHOL+1785+CER.HOLBUL+(CER.MEDANC/2);
+
+;---------------------------------------------------------------------------------------------
+;PRACTICABLE LADO SUPERIOR
+CR.PRASUPR0=330;
+CR.PRASUPR0NP=0;
+
+CR.PRASUPR1=850;
+CR.PRASUPR1NP=1;
+CR.PRASUPR1D1=CER.GALCEHOL+67+CER.HOLBUL+(CER.MEDANC/2);
+
+CR.PRASUPR2=3000;
+CR.PRASUPR2NP=2;
+CR.PRASUPR2D1=CER.GALCEHOL+67+CER.HOLBUL+(CER.MEDANC/2);
+CR.PRASUPR2D2=CER.GALCEHOL+436+CER.HOLBUL+(CER.MEDANC/2);
+
+;---------------------------------------------------------------------------------------------
+;PRACTICABLE LADO INFERIOR
+CR.PRAINFR0=330;
+CR.PRAINFR0NP=0;
+
+CR.PRAINFR1=850;
+CR.PRAINFR1NP=1;
+CR.PRAINFR1D1=CER.GALCEHOL+63;
+
+CR.PRAINFR2=3000;
+CR.PRAINFR2NP=2;
+CR.PRAINFR2D1=CER.GALCEHOL+63;
+CR.PRAINFR2D2=CER.GALCEHOL+423-CER.HOLBUL-(CER.MEDANC/2);
+
+;---------------------------------------------------------------------------------------------
+;PASIVA-PASIVA-PASIVA-PASIVA-PASIVA-PASIVA-PASIVA
+;---------------------------------------------------------------------------------------------
+;PASIVA LADO BISAGRAS
+CR.PASBISR0=800;
+CR.PASBISR0NP=0;
+                   
+CR.PASBISR1=1200;
+CR.PASBISR1NP=1;
+CR.PASBISR1D1=CER.GALCEHOL+481+CER.HOLBUL+(CER.MEDANC/2);
+
+CR.PASBISR2=1375;
+CR.PASBISR2NP=1;
+CR.PASBISR2D1=CER.GALCEHOL+681+CER.HOLBUL+(CER.MEDANC/2);
+
+CR.PASBISR3=1680;
+CR.PASBISR3NP=2;
+CR.PASBISR3D1=CER.GALCEHOL+681+CER.HOLBUL+(CER.MEDANC/2);
+CR.PASBISR3D2=CER.GALCEHOL+983+CER.HOLBUL+(CER.MEDANC/2);
+
+CR.PASBISR4=2180;
+CR.PASBISR4NP=2;
+CR.PASBISR4D1=CER.GALCEHOL+681+CER.HOLBUL+(CER.MEDANC/2);
+CR.PASBISR4D2=CER.GALCEHOL+1479+CER.HOLBUL+(CER.MEDANC/2);
+
+CR.PASBISR5=5000;
+CR.PASBISR5NP=3;
+CR.PASBISR5D1=CER.GALCEHOL+681+CER.HOLBUL+(CER.MEDANC/2);
+CR.PASBISR5D2=CER.GALCEHOL+1479+CER.HOLBUL+(CER.MEDANC/2);
+CR.PASBISR5D3=CER.GALCEHOL+1785+CER.HOLBUL+(CER.MEDANC/2);
+
+;---------------------------------------------------------------------------------------------
+;PASIVA LADO SUPERIOR
+CR.PASSUPR0=330;
+CR.PASSUPR0NP=0;
+
+CR.PASSUPR1=850+36;
+CR.PASSUPR1NP=1;
+CR.PASSUPR1D1=CER.GALCEHOL+67+CER.HOLBUL+(CER.MEDANC/2);
+
+CR.PASSUPR2=3000;
+CR.PASSUPR2NP=2;
+CR.PASSUPR2D1=CER.GALCEHOL+67+CER.HOLBUL+(CER.MEDANC/2);
+CR.PASSUPR2D2=CER.GALCEHOL+436+CER.HOLBUL+(CER.MEDANC/2);
+
+;---------------------------------------------------------------------------------------------
+;PASIVA LADO INFERIOR
+CR.PASINFR0=330;
+CR.PASINFR0NP=0;
+
+CR.PASINFR1=850+36;
+CR.PASINFR1NP=1;
+CR.PASINFR1D1=CER.GALCEHOL+59-CER.HOLBUL-(CER.MEDANC/2);
+
+CR.PASINFR2=3000;
+CR.PASINFR2NP=2;
+CR.PASINFR2D1=CER.GALCEHOL+59-CER.HOLBUL-(CER.MEDANC/2);
+CR.PASINFR2D2=CER.GALCEHOL+423-CER.HOLBUL-(CER.MEDANC/2);                   

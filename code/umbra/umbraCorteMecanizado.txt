@@ -1,0 +1,68 @@
+# Listado de Perfiles, Cortes y Mecanizados (UMBRA MONTSE.XML)
+
+Formato:
+- Perfil: [Código] - [Descripción]
+  - Corte: IL=[Longitud Interna], OL=[Longitud Externa], Ángulos=[ANGL]/[ANGR]
+    - Mecanizados: [Lista de mecanizados con WCODE y OFFSET]
+
+---
+Perfil: PI34025 - Junquillo H10
+  - Corte: IL=2001.5, OL=2001.5, Ángulos=90/90
+    - Mecanizados: Ninguno
+  - Corte: IL=2001.5, OL=2001.5, Ángulos=90/90
+    - Mecanizados: Ninguno
+  - Corte: IL=511.3, OL=511.3, Ángulos=90/90
+    - Mecanizados: Ninguno
+  - Corte: IL=511.3, OL=511.3, Ángulos=90/90
+    - Mecanizados: Ninguno
+  - Corte: IL=511.3, OL=511.3, Ángulos=90/90
+    - Mecanizados: Ninguno
+  - Corte: IL=511.3, OL=511.3, Ángulos=90/90
+    - Mecanizados: Ninguno
+  - Corte: IL=2001.5, OL=2001.5, Ángulos=90/90
+    - Mecanizados: Ninguno
+  - Corte: IL=2001.5, OL=2001.5, Ángulos=90/90
+    - Mecanizados: Ninguno
+  - Corte: IL=2001.5, OL=2001.5, Ángulos=90/90
+    - Mecanizados: Ninguno
+  - Corte: IL=554.3, OL=554.3, Ángulos=90/90
+    - Mecanizados: Ninguno
+  - Corte: IL=554.3, OL=554.3, Ángulos=90/90
+    - Mecanizados: Ninguno
+
+Perfil: 65017 - HOJA PUERTA
+  - Corte: IL=2141.2, OL=2000, Ángulos=135/135
+    - Mecanizados: CAJEADO_PASO_PLETINA@0, CAJEADO_PASO_PLETINA@2141.2, HC44962D@55.2, HC44962I@2086
+  - Corte: IL=2141.2, OL=2000, Ángulos=135/135
+    - Mecanizados: CAJEADO_PASO_PLETINA@0, CAJEADO_PASO_PLETINA@2141.2, HC44962D@55.2, HC44962I@2086
+  - Corte: IL=2141.2, OL=2000, Ángulos=135/135
+    - Mecanizados: cierre_alma_apiMOD1@1050, CAJEADO_PASO_PLETINA@0, CAJEADO_PASO_PLETINA@2141.2, HC44962D@55.2, HC44962I@2086
+  - Corte: IL=2141.2, OL=2000, Ángulos=135/135
+    - Mecanizados: CAJEADO_PASO_PLETINA@0, CAJEADO_PASO_PLETINA@2141.2, HC44962D@55.2, HC44962I@2086
+  - Corte: IL=2141.2, OL=2000, Ángulos=135/135
+    - Mecanizados: ACG1154@1050, CAJEADO_PASO_PLETINA@0, CAJEADO_PASO_PLETINA@2141.2, HC44962D@55.2, HC44962I@2086
+  - Corte: IL=650, OL=508.8, Ángulos=135/135
+    - Mecanizados: CAJEADO_PASO_PLETINA@0, CAJEADO_PASO_PLETINA@650, HC44962D@55.2, HC44962I@594.8
+  - Corte: IL=607, OL=465.8, Ángulos=135/135
+    - Mecanizados: CAJEADO_PASO_PLETINA@0, CAJEADO_PASO_PLETINA@607, HC44962D@55.2, HC44962I@551.8
+  - Corte: IL=607, OL=465.8, Ángulos=135/135
+    - Mecanizados: CAJEADO_PASO_PLETINA@0, CAJEADO_PASO_PLETINA@607, HC44962D@55.2, HC44962I@551.8
+  - Corte: IL=650, OL=508.8, Ángulos=135/135
+    - Mecanizados: CAJEADO_PASO_PLETINA@0, CAJEADO_PASO_PLETINA@650, HC44962D@55.2, HC44962I@594.8
+
+Perfil: PI65008 - Marco guia superior - inferior
+  - Corte: IL=3185, OL=3185, Ángulos=90/90
+    - Mecanizados: bocado_ruedas@420, union_perf_lat@26, union_perf_lat@3159
+
+Perfil: PI65009 - Marco de mallorquina
+  - Corte: IL=2156.7, OL=2156.7, Ángulos=90/90
+    - Mecanizados: RETESTADO_VOLT@2156.7
+  - Corte: IL=2156.7, OL=2156.7, Ángulos=90/90
+    - Mecanizados: RETESTADO@0
+
+Perfil: PI65013 - Gia inferior UMBRA Embutir
+  - Corte: IL=3185, OL=3185, Ángulos=90/90
+    - Mecanizados: TALADROS@26, TALADROS@3159
+
+---
+Todos los cortes de cada perfil están listados, aunque se repitan longitudes o mecanizados.

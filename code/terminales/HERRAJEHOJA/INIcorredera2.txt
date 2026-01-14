@@ -1,0 +1,139 @@
+[HUECOS] 
+R8=440;Jamba o solape. Ancho 2600 alto 2500;;
+R88=520;Junquillo curvo a inglete <Vid.1>. Ancho 1145,25 alto 2244;VEK107120;Junq. 7 mm Ekosol
+R102=520;Junquillo curvo a inglete <Vid.2>. Ancho 1145,25 alto 2244;VEK107120;Junq. 7 mm Ekosol
+
+[HERRAJE] 
+DESPROF.CierreH1=Manilla multipunto en hoja izquierda.
+DESPROF.CierreH2=Manilla embutida multipunto en hoja derecha.
+DESPROF.EjeCierres=Posición del cierre a 1250 mm. Centrado en perfil hoja a 1194 mm. - EJE CIERRE NO DECLARADO
+
+[ACRISTALAMIENTO] 
+DESPROF.Descripcion=Laminar 3+3 / Camara 14mm / Transparente 4mm.
+
+[MARCOS] 
+R31.1=VEK105351;1;210;4;Marco deslizante 70mm;00BASE;00BASE;0;1;2506;0;1000;Marco;12
+R31.2=VEK113002;1;400;4;Refuerzo  Marco Corredera 30/25;AD;;1;1;2386;0;1019;Refuerzo;12
+R31.3=GUH013561602;2;0;4;Tonrillo para refuerzo;AD;;2;11;0;0;0;;12
+R31.4=VEK109043;1;330;4;Taparranuras marcos Ekosol 70;00BASE;;1;1;2372;0;1018;Acople;12
+R31.5=VEK109043;1;330;4;Taparranuras marcos Ekosol 70;00BASE;;1;1;2372;0;1018;Acople;12
+R31.6=VEK105351;1;200;1;Marco deslizante 70mm;00BASE;00BASE;0;1;2606;0;1000;Marco;12
+R31.7=VEK113002;1;400;1;Refuerzo  Marco Corredera 30/25;AD;;6;1;2486;0;1019;Refuerzo;12
+R31.8=GUH013561602;2;0;1;Tonrillo para refuerzo;AD;;7;11;0;0;0;;12
+R31.9=VEK109043;1;330;1;Taparranuras marcos Ekosol 70;00BASE;;6;1;2472;0;1018;Acople;12
+R31.10=VEK109043;1;330;1;Taparranuras marcos Ekosol 70;00BASE;;6;1;2472;0;1018;Acople;12
+R31.11=VEK105351;1;210;2;Marco deslizante 70mm;00BASE;00BASE;0;1;2506;0;1000;Marco;12
+R31.12=VEK113002;1;400;2;Refuerzo  Marco Corredera 30/25;AD;;11;1;2386;0;1019;Refuerzo;12
+R31.13=GUH013561602;2;0;2;Tonrillo para refuerzo;AD;;12;11;0;0;0;;12
+R31.14=VEK109043;1;330;2;Taparranuras marcos Ekosol 70;00BASE;;11;1;2372;0;1018;Acople;12
+R31.15=VEK109043;1;330;2;Taparranuras marcos Ekosol 70;00BASE;;11;1;2372;0;1018;Acople;12
+R31.16=VEK105351;1;220;3;Marco deslizante 70mm;00BASE;00BASE;0;1;2606;0;1000;Marco;12
+R31.17=VEK113002;1;400;3;Refuerzo  Marco Corredera 30/25;AD;;16;1;2486;0;1019;Refuerzo;12
+R31.18=GUH013561602;2;0;3;Tonrillo para refuerzo;AD;;17;11;0;0;0;;12
+R31.19=VEK104047;1;330;3;Guía Carril Rodadura Aluminio;AD;;16;2;2472;0;0;;12
+R0.20=VEK109076;2;0;0;Tapadesagües Veka;BLANCO;;0;3;0;0;0;;12
+R0.21=MOFABRIC;3;0;0;M.Obra Fabricacion;AD;;0;40;0;0;0;;12
+
+[HOJA_COR] 
+R50.25=VEK105327;1;240;4;Hoja deslizante 90mm Nueva;00BASE;00BASE;0;1;2394;0;1001;Hoja;33
+R50.26=VEK1130352;1;400;4;Refuerzo Hoja Corredera Grande 53/33;AD;;25;1;2229;0;1019;Refuerzo;33
+R50.27=GUH013561602;2;0;4;Tonrillo para refuerzo;AD;;26;10;0;0;0;;33
+R50.28=VEK112164;2;0;4;Burlete "Fin-Seal" Ekosol;AD;;25;2;2394;0;0;;33
+R50.29=VEK105327;1;260;1;Hoja deslizante 90mm Nueva;00BASE;00BASE;0;1;1295,25;0;1001;Hoja;33
+R50.30=VEK1130432;1;400;1;Refuerzo 52/30/2mm,P. 105.321 "U";AD;;29;1;1130,25;0;1019;Refuerzo;33
+R50.31=GUH013561602;2;0;1;Tonrillo para refuerzo;AD;;30;6;0;0;0;;33
+R50.32=VEK112164;2;0;1;Burlete "Fin-Seal" Ekosol;AD;;29;2;1295,25;0;0;;33
+R50.33=VEK105327;1;250;2;Hoja deslizante 90mm Nueva;00BASE;00BASE;0;1;2394;0;1001;Hoja;33
+R50.34=VEK1130432;1;400;2;Refuerzo 52/30/2mm,P. 105.321 "U";AD;;33;1;2229;0;1019;Refuerzo;33
+R50.35=GUH013561602;2;0;2;Tonrillo para refuerzo;AD;;34;10;0;0;0;;33
+R50.36=VEK112164;2;0;2;Burlete "Fin-Seal" Ekosol;AD;;33;2;2394;0;0;;33
+R50.37=VEK105327;1;260;3;Hoja deslizante 90mm Nueva;00BASE;00BASE;0;1;1295,25;0;1001;Hoja;33
+R50.38=VEK1130432;1;400;3;Refuerzo 52/30/2mm,P. 105.321 "U";AD;;37;1;1130,25;0;1019;Refuerzo;33
+R50.39=GUH013561602;2;0;3;Tonrillo para refuerzo;AD;;38;6;0;0;0;;33
+R50.40=VEK112164;2;0;3;Burlete "Fin-Seal" Ekosol;AD;;37;2;1295,25;0;0;;33
+R53.41=VEK105315;1;320;2;Tapa Hoja Central;00BASE;;0;1;2323;0;0;;33
+R53.42=VEK105350;1;0;2;Engatillado De Hoja Centro;00BASE;;41;1;2387;0;0;;33
+R53.43=VEK112462;2;0;2;Burlete "fin-seal" 5.5 X 7.1mm;AD;;42;1;2387;0;0;;33
+R53.44=VEK112344;2;0;2;Junta Enganche Central;NEGRO;;42;1;2387;0;0;;33
+R53.45=VEK109633;2;0;2;Remate Tapa Lateral;BLANCO;;41;2;0;0;0;;33
+R48.46=VEK105327;1;260;1;Hoja deslizante 90mm Nueva;00BASE;00BASE;0;1;1295,25;0;1001;Hoja;33
+R48.47=VEK1130432;1;400;1;Refuerzo 52/30/2mm,P. 105.321 "U";AD;;46;1;1130,25;0;1019;Refuerzo;33
+R48.48=GUH013561602;2;0;1;Tonrillo para refuerzo;AD;;47;6;0;0;0;;33
+R48.49=VEK112164;2;0;1;Burlete "Fin-Seal" Ekosol;AD;;46;2;1295,25;0;0;;33
+R48.50=VEK105327;1;240;2;Hoja deslizante 90mm Nueva;00BASE;00BASE;0;1;2394;0;1001;Hoja;33
+R48.51=VEK1130352;1;400;2;Refuerzo Hoja Corredera Grande 53/33;AD;;50;1;2229;0;1019;Refuerzo;33
+R48.52=GUH013561602;2;0;2;Tonrillo para refuerzo;AD;;51;10;0;0;0;;33
+R48.53=VEK112164;2;0;2;Burlete "Fin-Seal" Ekosol;AD;;50;2;2394;0;0;;33
+R48.54=VEK105327;1;260;3;Hoja deslizante 90mm Nueva;00BASE;00BASE;0;1;1295,25;0;1001;Hoja;33
+R48.55=VEK1130432;1;400;3;Refuerzo 52/30/2mm,P. 105.321 "U";AD;;54;1;1130,25;0;1019;Refuerzo;33
+R48.56=GUH013561602;2;0;3;Tonrillo para refuerzo;AD;;55;6;0;0;0;;33
+R48.57=VEK112164;2;0;3;Burlete "Fin-Seal" Ekosol;AD;;54;2;1295,25;0;0;;33
+R48.58=VEK105327;1;250;4;Hoja deslizante 90mm Nueva;00BASE;00BASE;0;1;2394;0;1001;Hoja;33
+R48.59=VEK1130432;1;400;4;Refuerzo 52/30/2mm,P. 105.321 "U";AD;;58;1;2229;0;1019;Refuerzo;33
+R48.60=GUH013561602;2;0;4;Tonrillo para refuerzo;AD;;59;10;0;0;0;;33
+R48.61=VEK112164;2;0;4;Burlete "Fin-Seal" Ekosol;AD;;58;2;2394;0;0;;33
+R52.62=VEK105315;1;320;4;Tapa Hoja Central;00BASE;;0;1;2323;0;0;;33
+R52.63=VEK105350;1;0;4;Engatillado De Hoja Centro;00BASE;;62;1;2387;0;0;;33
+R52.64=VEK112462;2;0;4;Burlete "fin-seal" 5.5 X 7.1mm;AD;;63;1;2387;0;0;;33
+R52.65=VEK112344;2;0;4;Junta Enganche Central;NEGRO;;63;1;2387;0;0;;33
+R52.66=VEK109633;2;0;4;Remate Tapa Lateral;BLANCO;;62;2;0;0;0;;33
+R0.67=HGUCOR2PU;0;0;0;Kit 2h corredera puerta;BLANCO;;0;1;2472;2372;0;;33
+R0.68=SISCIEVEK70;0;0;0;Sistemas de Cierre Corredera en Linea;BLANCO;;67;1;15;0;0;;33
+R0.69=MK_CORMAN001;2;0;0;Manilla corredera;BLANCO;;68;1;0;0;0;;33
+R0.70=GU3937181;2;0;0;MANILLA TOULON 7*32-42 M5*50 - HOPPE 0737/US947;BLANCO;;69;1;0;0;2001;Manilla;33
+R0.71=MK_CORCRE15;2;0;0;Mini Kit Corredera Cremona AG 15;BLANCO;;69;1;0;0;0;;33
+R1.72=GUG139541801;2;0;0;Crem.Corred.Linea L:1800 E:15;AD;;71;1;0;0;0;;33
+R0.73=MK_CORCERRA001;2;0;0;Mini Kit Corredera Cerraderos GU;BLANCO;;71;3;0;0;0;;33
+R0.74=GUE138800601;2;0;0;Cerrad.Corred.Linea Patilla 6M;AD;;73;3;0;0;0;;33
+R0.75=GUE181960001;2;0;0;Seguro Antielevacion Cor.Linea;AD;;71;1;0;0;0;;33
+R0.76=VEK112009;2;0;0;Amortiguador tope hojas EKOSOL;AD;;69;1;0;0;0;;33
+R0.77=SISCIEVEK70;0;0;0;Sistemas de Cierre Corredera en Linea;BLANCO;;67;1;15;0;0;;33
+R0.78=MK_CORMAN121;2;0;0;Manilla corredera empotrada;BLANCO;;77;1;0;0;0;;33
+R0.79=GUE35611083X;2;0;0;MANILLA EMB;BLANCO;;78;1;0;0;2006;Herraje;33
+R0.80=MK_CORCRE15;2;0;0;Mini Kit Corredera Cremona AG 15;BLANCO;;78;1;2388;0;0;;33
+R1.81=GUG139541801;2;0;0;Crem.Corred.Linea L:1800 E:15;AD;;80;1;0;0;0;;33
+R0.82=MK_CORCERRA001;2;0;0;Mini Kit Corredera Cerraderos GU;BLANCO;;80;3;0;0;0;;33
+R0.83=GUE138800601;2;0;0;Cerrad.Corred.Linea Patilla 6M;AD;;82;3;0;0;0;;33
+R0.84=GUE181960001;2;0;0;Seguro Antielevacion Cor.Linea;AD;;80;1;0;0;0;;33
+R0.85=VEK112009;2;0;0;Amortiguador tope hojas EKOSOL;AD;;78;1;0;0;0;;33
+R0.86=GUKGT1004288;2;0;0;Kit Tandem Regul.140Kg hoja 125X12mm;AD;;67;2;0;0;0;;33
+R0.87=GUKGT1004288;2;0;0;Kit Tandem Regul.140Kg hoja 125X12mm;AD;;67;2;0;0;0;;33
+
+[VIDRIOS] 
+R1.91=VC_3314TR4;5;0;0;Laminar 3+3 / Camara 14mm / Transparente 4mm.;TR;;0;1;1132,25;2230;5001;Doble;34
+R0.92=MOACRIS;3;0;0;M.Obra Cristal;AD;;0;37,8737625;0;0;0;;34
+R88.93=VEK107120;1;470;1;Junq. 7 mm Ekosol;00BASE;;0;1;1145,75;0;1028;Junquillo;34
+R88.94=VEK107120;1;470;2;Junq. 7 mm Ekosol;00BASE;;0;1;2244,5;0;1028;Junquillo;34
+R88.95=VEK107120;1;470;3;Junq. 7 mm Ekosol;00BASE;;0;1;1145,75;0;1028;Junquillo;34
+R88.96=VEK107120;1;470;4;Junq. 7 mm Ekosol;00BASE;;0;1;2244,5;0;1028;Junquillo;34
+R0.97=MOFABRIC;3;0;0;M.Obra Fabricacion;AD;;0;5;0;0;0;;34
+R0.98=MOFABRIC;3;0;0;M.Obra Fabricacion;AD;;0;5;0;0;0;;34
+R0.99=MOFABRIC;3;0;0;M.Obra Fabricacion;AD;;0;5;0;0;0;;34
+R0.100=MOFABRIC;3;0;0;M.Obra Fabricacion;AD;;0;5;0;0;0;;34
+R2.101=VC_3314TR4;5;0;0;Laminar 3+3 / Camara 14mm / Transparente 4mm.;TR;;0;1;1132,25;2230;5001;Doble;35
+R0.102=MOACRIS;3;0;0;M.Obra Cristal;AD;;0;37,8737625;0;0;0;;35
+R102.103=VEK107120;1;470;4;Junq. 7 mm Ekosol;00BASE;;0;1;2244,5;0;1028;Junquillo;35
+R102.104=VEK107120;1;470;1;Junq. 7 mm Ekosol;00BASE;;0;1;1145,75;0;1028;Junquillo;35
+R102.105=VEK107120;1;470;2;Junq. 7 mm Ekosol;00BASE;;0;1;2244,5;0;1028;Junquillo;35
+R102.106=VEK107120;1;470;3;Junq. 7 mm Ekosol;00BASE;;0;1;1145,75;0;1028;Junquillo;35
+R0.107=MOFABRIC;3;0;0;M.Obra Fabricacion;AD;;0;5;0;0;0;;35
+R0.108=MOFABRIC;3;0;0;M.Obra Fabricacion;AD;;0;5;0;0;0;;35
+R0.109=MOFABRIC;3;0;0;M.Obra Fabricacion;AD;;0;5;0;0;0;;35
+R0.110=MOFABRIC;3;0;0;M.Obra Fabricacion;AD;;0;5;0;0;0;;35
+
+[CARROSPERFILESA] 
+Carros=  1.1
+
+[CARROSHOJA] 
+Carros= 1.1 1.2
+Rec48= 1.1
+Rec50= 1.2
+
+[CARROSMARCO] 
+Carros= 1.1
+Rec31= 1.1
+
+[CARROSJUNQUILLO] 
+Rec88=R01: A 1
+Rec102=R02: A 2
+

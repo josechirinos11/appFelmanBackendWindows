@@ -1,0 +1,28 @@
+# Listado de Perfiles, Cortes y Mecanizados (23F_3339.xml)
+
+Formato:
+- Perfil: [Código] - [Descripción]
+  - Corte: IL=[Longitud Interna], OL=[Longitud Externa], Ángulos=[ANGL]/[ANGR]
+    - Mecanizados: [Lista de mecanizados con WCODE y OFFSET]
+
+---
+Perfil: PI65002 - Perfil union 2 hojas
+  - Corte: IL=1925.0, OL=1925.0, Ángulos=90/90
+    - Mecanizados: Ninguno
+
+Perfil: PI65008 - Marco guia superior
+  - Corte: IL=2960.0, OL=2960.0, Ángulos=90/90
+    - Mecanizados: union_perf_lat@17, union_perf_lat@2943
+
+Perfil: PI65013 - Guia empotrada UMBRA
+  - Corte: IL=2960.0, OL=2960.0, Ángulos=90/90
+    - Mecanizados: Ninguno
+
+Perfil: 65017 - Hoja ajunquillada de puerta
+  - Corte: IL=570.6, OL=429.4, Ángulos=135/135
+    - Mecanizados: Ninguno
+  - Corte: IL=1962.0, OL=1820.8, Ángulos=135/135
+    - Mecanizados: Ninguno
+
+---
+Nota: Solo se muestran los mecanizados presentes en el archivo. Si algún corte no tiene mecanizados, se indica como 'Ninguno'.

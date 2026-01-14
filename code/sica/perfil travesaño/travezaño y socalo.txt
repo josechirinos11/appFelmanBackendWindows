@@ -1,0 +1,189 @@
+;------------------------------------------------------------------------------           
+;------------------------------RETESTADOS--------------------------------------
+;------------------------------------------------------------------------------
+PR.RET_MARCO=1;{Activación del proceso en marcos}   
+PR.RET_MARCO="Retestado";{Código del proceso en marcos}  
+PR.RET_TRAVE=1;{Activacion del proceso en traviesas}
+PR.RET_TRAVE="Retestado";{Codigo del proceso en traviesas}    
+PR.RET_POSTE=1;{Activacion del proceso en postes}                                      
+PR.RET_POSTE="Retestado";{Codigo del proceso en Postes} 
+PR.RET_ZOCAL=1;{Activacion del proceso en zocalos}  
+PR.RET_ZOCAL="Retestado";{Codigo del proceso en zocalos} 
+
+                                              
+;------------------------------------------------------------------------------
+;------------------------------FIJACION DE MARCOS------------------------------
+;------------------------------------------------------------------------------ 
+                                                  
+;Contra marcos               
+PR.FIJ_MARCO_MARCO_TT="FijacionTT";
+PR.FIJ_MARCO_MARCO_MT="FijacionMT";    
+                                                     
+;Contra Zocalos                    
+PR.FIJ_MARCO_ZOCAL_TT="FijacionTT";
+PR.FIJ_MARCO_ZOCAL_MT="FijacionMT";   
+                                           
+;Contra Postes                 
+PR.FIJ_MARCO_POSTE_IZQ_TT="FijacionTT_CI";  
+PR.FIJ_MARCO_POSTE_IZQ_MT="FijacionMT_CI"; 
+PR.FIJ_MARCO_POSTE_DER_TT="FijacionTT_CE"; 
+PR.FIJ_MARCO_POSTE_DER_MT="FijacionMT_CE";              
+
+;Contra travesas                                                                   
+PR.FIJ_MARCO_TRAVE_SUP_TT="FijacionTT_CI"; 
+PR.FIJ_MARCO_TRAVE_SUP_MT="FijacionMT_CI";
+PR.FIJ_MARCO_TRAVE_INF_TT="FijacionTT_CE";
+PR.FIJ_MARCO_TRAVE_INF_MT="FijacionMT_CE";       
+                                                    
+;Procesos a aplicar para la fijacion de un tope dentro del marco
+;Proceso relativo a principio y fin. Usar  LPOS
+PR.FIJ_TOPINI_MARCO="FijaTopeMarcoIni";
+PR.FIJ_TOPFIN_MARCO="FijaTopeMarcoFin" 
+                                                               
+                                             
+;------------------------------------------------------------------------------
+;------------------------------FIJACION DE POSTES------------------------------
+;------------------------------------------------------------------------------ 
+                   
+;Contra marcos                                           
+PR.FIJ_POSTE_MARCO_TT="FijacionTT";                                  
+PR.FIJ_POSTE_MARCO_MT="FijacionMT";  
+                                           
+;Contra hojas                                 
+PR.FIJ_POSTE_HOJA_TT="FijacionTT";
+PR.FIJ_POSTE_HOJA_MT="FijacionMT";   
+
+;Contra Zocalos              
+PR.FIJ_POSTE_ZOCAL_TT="FijacionTT";
+PR.FIJ_POSTE_ZOCAL_MT="FijacionMT";                  
+                                   
+;Contra travesas                                                                   
+PR.FIJ_POSTE_TRAVE_SUP_TT="FijacionTT_CI";              
+PR.FIJ_POSTE_TRAVE_SUP_MT="FijacionMT_CI";
+PR.FIJ_POSTE_TRAVE_INF_TT="FijacionTT_CE";        
+PR.FIJ_POSTE_TRAVE_INF_MT="FijacionMT_CE"; 
+                                                    
+;Procesos a aplicar para la fijacion de un tope dentro del poste 
+;Proceso relativo a principio y fin. Usar LPOS
+PR.FIJ_TOPINI_POSTE_DER="FijaTopePosIniCE"; 
+PR.FIJ_TOPINI_POSTE_IZQ="FijaTopePosIniCI"; 
+PR.FIJ_TOPFIN_POSTE_DER="FijaTopePosFinCE";
+PR.FIJ_TOPFIN_POSTE_IZQ="FijaTopePosFinCI";  
+                                            
+;------------------------------------------------------------------------------
+;------------------------------FIJACION DE TRAVESAS----------------------------
+;------------------------------------------------------------------------------ 
+;Contra marcos              
+PR.FIJ_TRAVE_MARCO_TT="FijacionTT";                
+PR.FIJ_TRAVE_MARCO_MT="FijacionMT";   
+
+;Contra Hojas
+PR.FIJ_TRAVE_HOJA_TT="FijacionTT";         
+PR.FIJ_TRAVE_HOJA_MT="FijacionMT";
+
+;Contra marcos              
+PR.FIJ_TRAVE_ZOCAL_TT="FijacionTT";                
+PR.FIJ_TRAVE_ZOCAL_MT="FijacionMT"; 
+
+                                          
+;Contra Postes
+PR.FIJ_TRAVE_POSTE_IZQ_TT="FijacionTT_CI";  
+PR.FIJ_TRAVE_POSTE_IZQ_MT="FijacionMT_CI"; 
+PR.FIJ_TRAVE_POSTE_DER_TT="FijacionTT_CE"; 
+PR.FIJ_TRAVE_POSTE_DER_MT="FijacionMT_CE"; 
+
+
+;Procesos a aplicar para la fijacion de un tope dentro del poste
+;Proceso relativo a principio y fin. Usar LPOS               
+PR.FIJ_TOPINI_TRAVE_SUP="FijaTopeTraIniCI"; 
+PR.FIJ_TOPINI_TRAVE_INF="FijaTopeTraIniCE";
+PR.FIJ_TOPFIN_TRAVE_SUP="FijaTopeTraFinCI"; 
+PR.FIJ_TOPFIN_TRAVE_INF="FijaTopeTraFinCE";  
+                                        
+;------------------------------------------------------------------------------
+;------------------------------FIJACION DE ZOCALOS-----------------------------
+;------------------------------------------------------------------------------  
+;Contra marcos
+PR.FIJ_ZOCAL_MARCO_TT="FijacionZTT";
+PR.FIJ_ZOCAL_MARCO_MT="FijacionZMT";  
+
+;Contra hojas
+PR.FIJ_ZOCAL_HOJA_TT="FijacionTT";
+PR.FIJ_ZOCAL_HOJA_MT="FijacionMT"; 
+
+;Contra Zocalos
+PR.FIJ_ZOCAL_ZOCAL_TT="FijacionTT";
+PR.FIJ_ZOCAL_ZOCAL_MT="FijacionMT"; 
+
+;Contra Postes
+PR.FIJ_ZOCAL_POSTE_IZQ_TT="FijacionZTT_CI";  
+PR.FIJ_ZOCAL_POSTE_IZQ_MT="FijacionZMT_CI"; 
+PR.FIJ_ZOCAL_POSTE_DER_TT="FijacionZTT_CE"; 
+PR.FIJ_ZOCAL_POSTE_DER_MT="FijacionZMT_CE";              
+
+;Contra travesas                                                                   
+PR.FIJ_ZOCAL_TRAVE_SUP_TT="FijacionTT_CI"; 
+PR.FIJ_ZOCAL_TRAVE_SUP_MT="FijacionMT_CI";
+PR.FIJ_ZOCAL_TRAVE_INF_TT="FijacionTT_CE";
+PR.FIJ_ZOCAL_TRAVE_INF_MT="FijacionMT_CE";       
+                                                    
+;Procesos a aplicar para la fijacion de un tope dentro del poste 
+;Proceso relativo a principio y fin. Usar LPOS
+PR.FIJ_TOPINI_ZOCAL="FijaTopeMarcoIni";                                           
+PR.FIJ_TOPFIN_ZOCAL="FijaTopeMarcoFin";                                           
+                                                                          
+;-----------------------------------------------------------------------------------------   
+;-----------AIREACIONES APLICADAS AL LABIO DEL PERFIL CONTACTADO ------------------------- 
+;----------------POR FIJACION DE POSTE O TRAVESA  O ZOCALO -------------------------------
+;----------------------------------------------------------------------------------------- 
+;Aireaciones aplicadas contra el perfil contactado por el poste o travesa.
+;Se hacen sobre el ala interior del perfil contactado conocido como labio, bajo el poste o travesa.
+;Se aplican desde eje de contacto entre poste o travesa en funcion de los valores indicados en variables del perfil
+;poste o travesa utilizado. Las variables son POSI_AIRESP1,POSI_AIRESP2,POSI_AIRESP3,POSI_AIRESP4
+;Si en una variable se asigna 0 como valor el proces vinculado a esa variable quedaría anulado.
+;de esta forma podemos indicar que el proceso se haga hasta cuatro veces a x distancias.
+
+PR.FIJ_MARCO_AIREA_LAB=1;{Activa los procesos de aireacio en labio por fijacion de marco}
+PR.FIJ_MARCO_MARCO_AIRLAB="AireaLab"; {Aireacion en labio por fijacion de marco}
+PR.FIJ_MARCO_HOJA_AIRLAB="AireaLab";{Aireacion en labio por fijacion de marco}                                                                               
+PR.FIJ_MARCO_ZOCAL_AIRLAB="AireaLab";{Aireacion en labio por fijacion de marco}                                                                                  
+PR.FIJ_MARCO_POSTE_AIRLAB_DER="AireaLab_Der";{Aireacion en labio por fijacion de marco a poste por su parte derecha}
+PR.FIJ_MARCO_POSTE_AIRLAB_IZQ="AireaLab_Izq";{Aireacion en labio por fijacion de marco a poste por su parte izquierda} 
+PR.FIJ_MARCO_TRAVE_AIRLAB_INF="AireaLab_Inf";{Aireacion en labio por fijacion de marco a travesa por su parte inferior}
+PR.FIJ_MARCO_TRAVE_AIRLAB_SUP="AireaLab_Sup";{Aireacion en labio por fijacion de marco a travesa por su parte superior} 
+             
+PR.FIJ_POSTE_AIREA_LAB=1;{Activa los procesos de aireacione en labio por fijacion de poste}
+PR.FIJ_POSTE_MARCO_AIRLAB="AireaLab"; {Aireacion en labio por fijacion de poste} 
+PR.FIJ_POSTE_HOJA_AIRLAB="AireaLab";{Aireacion en labio por fijacion de poste} 
+PR.FIJ_POSTE_ZOCAL_AIRLAB="AireaLab";{Aireacion en labio por fijacion de poste} 
+PR.FIJ_POSTE_TRAVE_AIRLAB_INF="AireaLab_Inf";{Aireacion en labio por fijacion de poste} 
+PR.FIJ_POSTE_TRAVE_AIRLAB_SUP="AireaLab_Sup";{Aireacion en labio por fijacion de poste} 
+                                                                                        
+PR.FIJ_TRAVE_AIREA_LAB=1;{Activa los procesos de aireacione en labio por fijacion de travesa}
+PR.FIJ_TRAVE_MARCO_AIRLAB="AireaLab"; {Aireacion en labioo por fijacion de travesa}
+PR.FIJ_TRAVE_HOJA_AIRLAB="AireaLab";{Aireacion en labioo por fijacion de travesa}
+PR.FIJ_TRAVE_ZOCAL_AIRLAB="AireaLab";{Aireacion en labioo por fijacion de travesa}
+PR.FIJ_TRAVE_POSTE_AIRLAB_DER="AireaLab_Der";{Aireacion en labio por fijacion de travesa}
+PR.FIJ_TRAVE_POSTE_AIRLAB_IZQ="AireaLab_Izq";{Aireacion en labio por fijacion de travesa}
+                    
+PR.FIJ_ZOCAL_AIREA_LAB=1;{Activa los procesos de aireacione en labio por fijacion de zocalo}
+PR.FIJ_ZOCAL_MARCO_AIRLAB="AireaLab"; {Aireacion en labio por fijacion de zocalo}   
+PR.FIJ_ZOCAL_HOJA_AIRLAB="AireaLab";{Aireacion en labio por fijacion de zocalo}        
+PR.FIJ_ZOCAL_ZOCAL_AIRLAB="AireaLab";{Aireacion en labio por fijacion de zocalo}
+PR.FIJ_ZOCAL_POSTE_AIRLAB_DER="AireaLab_Der";{Aireacion en labio por fijacion de zocalo}
+PR.FIJ_ZOCAL_POSTE_AIRLAB_IZQ="AireaLab_Izq";{Aireacion en labio por fijacion de zocalo}
+PR.FIJ_ZOCAL_TRAVE_AIRLAB_INF="AireaLab_Inf";{Aireacion en labio por fijacion de zocalo}
+PR.FIJ_ZOCAL_TRAVE_AIRLAB_SUP="AireaLab_Sup";{Aireacion en labio por fijacion de zocalo}                                                                                                                           
+;-----------------------------------------------------------------------------------------  
+
+
+
+;-----------------------------------------------------------------------------------------   
+;----------- MECANIZADO ESPECIAL REALIZADO EN EL PERFIL CONTACTADO------------------------ 
+;--------LO GENERA EL POSTE, SOLO CONTRA EL PERFIL QUE CONTACTA EN LA PARTE INFERIOR -----
+;-----------------------------------------------------------------------------------------
+;Se usan para mecanizados especiales y su posicion es a centro del poste                        
+PR.FIJ_POSTEINF_MARCO="";
+PR.FIJ_POSTEINF_HOJA="";    
+PR.FIJ_POSTEINF_ZOCAL="";  
+PR.FIJ_POSTEINF_TRAVE="";

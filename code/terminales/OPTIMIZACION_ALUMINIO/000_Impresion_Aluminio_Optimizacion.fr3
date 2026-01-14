@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TfrxReport Version="2023.1.3" DotMatrixReport="False" EngineOptions.DoublePass="True" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="4095" PreviewOptions.Zoom="1" PrintOptions.Printer="Por defecto" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="39139,7688603125" ReportOptions.Description.Text="" ReportOptions.LastChange="45799,2928515509" ScriptLanguage="PascalScript" ScriptText.Text="function ExtraeEntreCorchetes(pTexto:String):String;&#13;&#10;var&#13;&#10;    Pos1,Pos2:Integer;&#13;&#10;begin&#13;&#10;  Result := '';&#13;&#10;&#13;&#10;  Pos1 := Pos('[',pTexto);&#13;&#10;  Pos2 := Pos(']',pTexto);&#13;&#10;  if((Pos1 &#62; 0) and (Pos2 &#62; (Pos1+1))) then&#13;&#10;  begin&#13;&#10;    Result := Copy(pTexto,Pos1+1,Pos2-Pos1-1);&#13;&#10;  end;&#13;&#10;&#13;&#10;end;&#13;&#10;begin&#13;&#10;&#13;&#10;end." StoreInDFM="False" OnReportPrint="FRTOnReportPrint">
+  <Datasets>
+    <item DataSet="AcabAccExt" DataSetName="AcabAccExt"/>
+    <item DataSet="AcabAccInt" DataSetName="AcabAccInt"/>
+    <item DataSet="AcabPerfExt" DataSetName="AcabPerfExt"/>
+    <item DataSet="AcabPerfInterior" DataSetName="AcabPerfInterior"/>
+    <item DataSet="AcabPersExt" DataSetName="AcabPersExt"/>
+    <item DataSet="AcabPersInt" DataSetName="AcabPersInt"/>
+    <item DataSet="AcabSupExt" DataSetName="AcabSupExt"/>
+    <item DataSet="AcabSupInt" DataSetName="AcabSupInt"/>
+    <item DataSet="DatosEmpresa" DataSetName="DatosEmpresa"/>
+    <item DataSet="dmFabricaciones.fBaseFRT" DataSetName="fBaseFRT"/>
+    <item DataSet="dmFabricaciones.fLineasFRT" DataSetName="fLineasFRT"/>
+    <item DataSet="LineasGraficosT" DataSetName="LineasGraficosT"/>
+    <item DataSet="LineasT" DataSetName="LineasT"/>
+    <item DataSet="Serie1T" DataSetName="Serie1T"/>
+    <item DataSet="Serie2T" DataSetName="Serie2T"/>
+  </Datasets>
+  <Variables>
+    <item Name=" IDIOMA"/>
+    <item Name="IDIOMA_FICHERO" Value="''"/>
+    <item Name="IDIOMA_CODIGO" Value="'Español'"/>
+    <item Name="IDIOMA_PAIS" Value="'España'"/>
+    <item Name="IDIOMA_MONEDA" Value="'Euro'"/>
+    <item Name="IDIOMA_MEDIDA" Value="'Métrico'"/>
+    <item Name="IDIOMA_DECIMALES" Value="2"/>
+    <item Name="IDIOMA_FORMATO" Value="3"/>
+    <item Name="IDIOMA_SIMBOLO" Value="'€'"/>
+    <item Name="IDIOMA_SIMBOLO_CONTRAVALOR" Value="'Ptas'"/>
+    <item Name="IDIOMA_VALOR_CONTRAVALOR" Value="166.386"/>
+    <item Name="IDIOMA_USAR_CONTRAVALOR" Value="False"/>
+    <item Name="IDIOMA_REDONDEO_CONTRAVALOR" Value="False"/>
+    <item Name="IDIOMA_IVA" Value="21"/>
+    <item Name="IDIOMA_MULTI_IVA" Value="False"/>
+    <item Name="IDIOMA_IVA2" Value="0"/>
+    <item Name="IDIOMA_IVA3" Value="0"/>
+    <item Name=" LOGIN"/>
+    <item Name="USER_CODIGO" Value="'JOSE'"/>
+    <item Name="USER_NOMBRE" Value="'Jose'"/>
+    <item Name="USER_ESSUPERVISOR" Value="True"/>
+    <item Name=" SICAR2"/>
+    <item Name="RUTA_EXE" Value="D:\Compartido\Sicar\"/>
+    <item Name="RUTA_EMP" Value="'D:\Compartido\Sicar\datos\z_felman2023\'"/>
+    <item Name="RUTA_IMG" Value="'D:\Compartido\Sicar\datos\z_felman2023\imagenes\'"/>
+    <item Name="EMP_COD" Value="'z_felman2023'"/>
+    <item Name="EMP_NOMBRE" Value="'Comercial Felman'"/>
+    <item Name=" FORM"/>
+    <item Name="FORM" Value="'FrmFabricaciones'"/>
+    <item Name="FORM_CODIGO" Value="'23FBA'"/>
+    <item Name="FORM_NUMERO" Value="2725"/>
+    <item Name="FORM_OPCION" Value="0"/>
+    <item Name="FORM_LINEA" Value="1"/>
+    <item Name="FORM_IDDESCOMP" Value="1"/>
+    <item Name="FORM_NUMEROMANUAL" Value="'2025_40_501'"/>
+  </Variables>
+  <TfrxDataPage Name="Data" HGuides.Text="" VGuides.Text="" Height="1000" Left="0" Top="0" Width="1000">
+    <TfrxADSTable Name="LineasT" UserName="LineasT" CloseDataSource="True" FieldAliases.Text="AuxModulo=AuxModulo&#13;&#10;Cadena=Cadena&#13;&#10;Calculo=Calculo&#13;&#10;Cantidad=Cantidad&#13;&#10;Capitulo=Capitulo&#13;&#10;CodigoModelo=CodigoModelo&#13;&#10;CodigoNumero=CodigoNumero&#13;&#10;CodigoObraNumero=CodigoObraNumero&#13;&#10;CodigoObraSerie=CodigoObraSerie&#13;&#10;CodigoSerie=CodigoSerie&#13;&#10;CodigoSerie1=CodigoSerie1&#13;&#10;CodigoSerie2=CodigoSerie2&#13;&#10;Serie1Desc=Serie1Desc&#13;&#10;Serie2Desc=Serie2Desc&#13;&#10;Coste=Coste&#13;&#10;Descripcion=Descripcion&#13;&#10;DescripcionAutomatica=DescripcionAutomatica&#13;&#10;Diseno=Diseno&#13;&#10;Entregadas=Entregadas&#13;&#10;EntregaParcial=EntregaParcial&#13;&#10;Escala=Escala&#13;&#10;Etiquetas=Etiquetas&#13;&#10;Fabricadas=Fabricadas&#13;&#10;Facturadas=Facturadas&#13;&#10;PenFabricar=PenFabricar&#13;&#10;PenEntregar=PenEntregar&#13;&#10;PenFacturar=PenFacturar&#13;&#10;CodigoPresupSerie=CodigoPresupSerie&#13;&#10;CodigoPresupNumero=CodigoPresupNumero&#13;&#10;CodigoPresupLinea=CodigoPresupLinea&#13;&#10;PresupNumMan=PresupNumMan&#13;&#10;Grupo=Grupo&#13;&#10;ImporteGG=ImporteGG&#13;&#10;ImporteParcial=ImporteParcial&#13;&#10;Linea=Linea&#13;&#10;LineaManual=LineaManual&#13;&#10;ModificacionManual=ModificacionManual&#13;&#10;Modulo=Modulo&#13;&#10;OtrosGastos=OtrosGastos&#13;&#10;Precio=Precio&#13;&#10;PrecioManual=PrecioManual&#13;&#10;PrecioBruto=PrecioBruto&#13;&#10;Descuento=Descuento&#13;&#10;DescuentoManual=DescuentoManual&#13;&#10;PrecioReal=PrecioReal&#13;&#10;PrecioSumar=PrecioSumar&#13;&#10;PrecioVentaFijado=PrecioVentaFijado&#13;&#10;Situacion=Situacion&#13;&#10;Tipo=Tipo&#13;&#10;TotalCertificaciones=TotalCertificaciones&#13;&#10;TxtIni=TxtIni&#13;&#10;TxtOtros=TxtOtros&#13;&#10;Observaciones=Observaciones&#13;&#10;NoOG=NoOG&#13;&#10;AcabadoPerfilesI=AcabadoPerfilesI&#13;&#10;AcabadoPerfilesE=AcabadoPerfilesE&#13;&#10;AcabadoAccesoriosI=AcabadoAccesoriosI&#13;&#10;AcabadoAccesoriosE=AcabadoAccesoriosE&#13;&#10;AcabadoBarrotillosI=AcabadoBarrotillosI&#13;&#10;AcabadoBarrotillosE=AcabadoBarrotillosE&#13;&#10;AcabadoSuperficiesI=AcabadoSuperficiesI&#13;&#10;AcabadoSuperficiesE=AcabadoSuperficiesE&#13;&#10;AcabadoVidriosI=AcabadoVidriosI&#13;&#10;AcabadoVidriosE=AcabadoVidriosE&#13;&#10;AcabadoPersianas1=AcabadoPersianas1&#13;&#10;AcabadoPersianas2=AcabadoPersianas2&#13;&#10;AcabadoPerfilesIDesc=AcabadoPerfilesIDesc&#13;&#10;AcabadoPerfilesEDesc=AcabadoPerfilesEDesc&#13;&#10;AcabadoAccesoriosIDesc=AcabadoAccesoriosIDesc&#13;&#10;AcabadoAccesoriosEDesc=AcabadoAccesoriosEDesc&#13;&#10;AcabadoBarrotillosIDesc=AcabadoBarrotillosIDesc&#13;&#10;AcabadoBarrotillosEDesc=AcabadoBarrotillosEDesc&#13;&#10;AcabadoSuperficiesIDesc=AcabadoSuperficiesIDesc&#13;&#10;AcabadoSuperficiesEDesc=AcabadoSuperficiesEDesc&#13;&#10;AcabadoVidriosIDesc=AcabadoVidriosIDesc&#13;&#10;AcabadoVidriosEDesc=AcabadoVidriosEDesc&#13;&#10;AcabadoPersianasIDesc=AcabadoPersianasIDesc&#13;&#10;AcabadoPersianasEDesc=AcabadoPersianasEDesc&#13;&#10;AcabadosINI=AcabadosINI&#13;&#10;EstadoReproceso=EstadoReproceso&#13;&#10;InfoReproceso=InfoReproceso&#13;&#10;GastosColocacion=GastosColocacion&#13;&#10;KitMaterial=KitMaterial&#13;&#10;KitTiempo=KitTiempo&#13;&#10;GastosKitMaterial=GastosKitMaterial&#13;&#10;CantidadKitTiempo=CantidadKitTiempo&#13;&#10;GastosKitTiempo=GastosKitTiempo&#13;&#10;NoColocacion=NoColocacion&#13;&#10;CosteKitMaterial=CosteKitMaterial&#13;&#10;CosteKitTiempo=CosteKitTiempo&#13;&#10;CosteColocacion=CosteColocacion&#13;&#10;CosteOtrosGastos=CosteOtrosGastos&#13;&#10;CosteReal=CosteReal&#13;&#10;Fachada=Fachada&#13;&#10;CoefK=CoefK&#13;&#10;CoefDB=CoefDB&#13;&#10;CoefObligatorioK=CoefObligatorioK&#13;&#10;CoefObligatorioDB=CoefObligatorioDB&#13;&#10;NoUsarDescAuto=NoUsarDescAuto&#13;&#10;LineaProduccion=LineaProduccion&#13;&#10;IdentificadorLinea=IdentificadorLinea&#13;&#10;TxtCliente=TxtCliente&#13;&#10;TxtTaller=TxtTaller" BCDToCurrency="False" DataSetOptions="0" Master="dmFabricaciones.fBaseFRT" MasterFields="CodigoSerie=Serie;CodigoNumero=Numero" TableName="fPresupuestosLineas" AdsConnection="ConectionEmpresa" Active="True" MasterFiels="Serie;Numero" DetailFiels="CodigoSerie;CodigoNumero" PropData="05704C65667403D0000470546F700224"/>
+    <TfrxADSTable Name="LineasGraficosT" UserName="LineasGraficosT" CloseDataSource="True" FieldAliases.Text="CodigoSerie=CodigoSerie&#13;&#10;CodigoNumero=CodigoNumero&#13;&#10;Linea=Linea&#13;&#10;Fecha=Fecha&#13;&#10;Grafico=Grafico&#13;&#10;GraficoCotas=GraficoCotas&#13;&#10;GraficoSecciones=GraficoSecciones" BCDToCurrency="False" DataSetOptions="0" Master="dmFabricaciones.fLineasFRT" MasterFields="CodigoSerie=CodigoSerie;CodigoNumero=CodigoNumero;Linea=Linea" TableName="fpresupuestoslineasgraficos" AdsConnection="ConectionEmpresa" Active="False" MasterFiels="CodigoSerie;CodigoNumero;Linea" DetailFiels="CodigoSerie;CodigoNumero;Linea" PropData="05704C656674034C010470546F700224"/>
+    <TfrxADSTable Name="Serie1T" UserName="Serie1T" CloseDataSource="True" FieldAliases.Text="Codigo=Codigo&#13;&#10;Descripcion=Descripcion&#13;&#10;Tipo=Tipo&#13;&#10;Plantilla=Plantilla&#13;&#10;Usos=Usos&#13;&#10;Version=Version&#13;&#10;Memoria=Memoria&#13;&#10;Imagen=Imagen&#13;&#10;IconosActivos=IconosActivos&#13;&#10;Otros=Otros&#13;&#10;Orden=Orden" BCDToCurrency="False" DataSetOptions="0" Master="dmFabricaciones.fLineasFRT" MasterFields="Codigo=CodigoSerie1" TableName="Series" AdsConnection="ConectionEmpresa" Active="False" MasterFiels="CodigoSerie1" DetailFiels="Codigo" PropData="05704C65667403D0010470546F700224"/>
+    <TfrxADSTable Name="Serie2T" UserName="Serie2T" CloseDataSource="True" FieldAliases.Text="" BCDToCurrency="False" DataSetOptions="0" Master="dmFabricaciones.fLineasFRT" MasterFields="Codigo=CodigoSerie2" TableName="Series" AdsConnection="ConectionEmpresa" Active="False" MasterFiels="CodigoSerie2" DetailFiels="Codigo" PropData="05704C6566740348020470546F700224"/>
+    <TfrxADSTable Name="DatosEmpresa" UserName="DatosEmpresa" CloseDataSource="True" FieldAliases.Text="Codigo=Codigo&#13;&#10;Nombre=Nombre&#13;&#10;Direccion=Direccion&#13;&#10;CodPost=CodPost&#13;&#10;Poblacion=Poblacion&#13;&#10;Provincia=Provincia&#13;&#10;NIF=NIF&#13;&#10;Telefono=Telefono&#13;&#10;Fax=Fax&#13;&#10;Registro=Registro&#13;&#10;CapitalSocial=CapitalSocial&#13;&#10;Alias=Alias&#13;&#10;C_Banco=C_Banco&#13;&#10;Banco=Banco&#13;&#10;C_Sucursal=C_Sucursal&#13;&#10;Sucursal=Sucursal&#13;&#10;C_DC=C_DC&#13;&#10;C_Cuenta=C_Cuenta&#13;&#10;Bco_Tlf=Bco_Tlf&#13;&#10;Bco_Fax=Bco_Fax&#13;&#10;Logotipo=Logotipo&#13;&#10;C_IBAN=C_IBAN&#13;&#10;Municipio=Municipio&#13;&#10;Pais=Pais&#13;&#10;Telefono2=Telefono2" BCDToCurrency="False" DataSetOptions="0" TableName="Empresa" AdsConnection="ConectionEmpresa" Active="True" PropData="05704C65667402600470546F700224"/>
+    <TfrxADSTable Name="AcabPerfInterior" UserName="AcabPerfInterior" CloseDataSource="True" FieldAliases.Text="" BCDToCurrency="False" DataSetOptions="0" Master="dmFabricaciones.fLineasFRT" MasterFields="Codigo=AcabadoPerfilesI" TableName="acabados" AdsConnection="ConectionEmpresa" Active="False" MasterFiels="AcabadoPerfilesI" DetailFiels="Codigo" PropData="05704C656674025F0470546F700272"/>
+    <TfrxADSTable Name="AcabPerfExt" UserName="AcabPerfExt" CloseDataSource="True" FieldAliases.Text="" BCDToCurrency="False" DataSetOptions="0" Master="dmFabricaciones.fLineasFRT" MasterFields="Codigo=AcabadoPerfilesE" TableName="acabados" AdsConnection="ConectionEmpresa" Active="False" MasterFiels="AcabadoPerfilesE" DetailFiels="Codigo" PropData="05704C65667403BE000470546F700271"/>
+    <TfrxADSTable Name="AcabAccInt" UserName="AcabAccInt" CloseDataSource="True" FieldAliases.Text="" BCDToCurrency="False" DataSetOptions="0" Master="dmFabricaciones.fLineasFRT" MasterFields="Codigo=AcabadoAccesoriosI" TableName="acabados" AdsConnection="ConectionEmpresa" Active="False" MasterFiels="AcabadoAccesoriosI" DetailFiels="Codigo" PropData="05704C65667402540470546F7003BC00"/>
+    <TfrxADSTable Name="AcabAccExt" UserName="AcabAccExt" CloseDataSource="True" FieldAliases.Text="" BCDToCurrency="False" DataSetOptions="0" Master="dmFabricaciones.fLineasFRT" MasterFields="Codigo=AcabadoAccesoriosE" TableName="acabados" AdsConnection="ConectionEmpresa" Active="False" MasterFiels="AcabadoAccesoriosE" DetailFiels="Codigo" PropData="05704C65667403BC000470546F7003BC00"/>
+    <TfrxADSTable Name="AcabSupInt" UserName="AcabSupInt" CloseDataSource="True" FieldAliases.Text="" BCDToCurrency="False" DataSetOptions="0" Master="dmFabricaciones.fLineasFRT" MasterFields="Codigo=AcabadoSuperficiesI" TableName="acabados" AdsConnection="ConectionEmpresa" Active="False" MasterFiels="AcabadoSuperficiesI" DetailFiels="Codigo" PropData="05704C65667402540470546F70030801"/>
+    <TfrxADSTable Name="AcabSupExt" UserName="AcabSupExt" CloseDataSource="True" FieldAliases.Text="" BCDToCurrency="False" DataSetOptions="0" Master="dmFabricaciones.fLineasFRT" MasterFields="Codigo=AcabadoSuperficiesE" TableName="acabados" AdsConnection="ConectionEmpresa" Active="False" MasterFiels="AcabadoSuperficiesE" DetailFiels="Codigo" PropData="05704C65667403C4000470546F70030801"/>
+    <TfrxADSTable Name="AcabPersInt" UserName="AcabPersInt" CloseDataSource="True" FieldAliases.Text="" BCDToCurrency="False" DataSetOptions="0" Master="dmFabricaciones.fLineasFRT" MasterFields="Codigo=AcabadoPersianas1" TableName="acabados" AdsConnection="ConectionEmpresa" Active="False" MasterFiels="AcabadoPersianas1" DetailFiels="Codigo" PropData="05704C65667402540470546F70034001"/>
+    <TfrxADSTable Name="AcabPersExt" UserName="AcabPersExt" CloseDataSource="True" FieldAliases.Text="" BCDToCurrency="False" DataSetOptions="0" Master="dmFabricaciones.fLineasFRT" MasterFields="Codigo=AcabadoPersianas2" TableName="acabados" AdsConnection="ConectionEmpresa" Active="False" MasterFiels="AcabadoPersianas2" DetailFiels="Codigo" PropData="05704C65667403C0000470546F70034001"/>
+  </TfrxDataPage>
+  <TfrxReportPage Name="PresupCuerpo" HGuides.Text="" VGuides.Text="" Orientation="poLandscape" PaperWidth="297" PaperHeight="210" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="5" ColumnWidth="277" ColumnPositions.Text="0" Frame.Typ="0" Frame.Width="0,1" MirrorMode="0">
+    <TfrxMasterData Name="MasterData1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="0" Height="291,88992" Left="0" Top="166,29932" Width="1046,92981" Columns="3" ColumnWidth="348,850393700787" ColumnGap="0" DataSet="dmFabricaciones.fLineasFRT" DataSetName="fLineasFRT" RowCount="0">
+      <TfrxPictureView Name="Picture1" AllowVectorExport="False" Left="0" Top="20,49738586" Width="343,62214" Height="237,7953" Center="True" DataField="GraficoCotas" DataSet="LineasGraficosT" DataSetName="LineasGraficosT" Frame.Color="8388608" Frame.Typ="15" HightQuality="False" Transparent="False" TransparentColor="16777215"/>
+      <TfrxMemoView Name="Memo11" AllowVectorExport="False" Left="0" Top="1,28464586" Width="343,62214" Height="26,88188" DataSetName="oLineasFRT" Font.Charset="1" Font.Color="8388608" Font.Height="-11" Font.Name="Arial" Font.Style="1" Frame.Color="8388608" Frame.Typ="15" Fill.BackColor="15790320" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="[fLineasFRT.&#34;Modulo&#34;] - ([fLineasFRT.&#34;Situacion&#34;])-Unds [fLineasFRT.&#34;Cantidad&#34;]">
+        <Formats>
+          <item/>
+          <item/>
+        </Formats>
+      </TfrxMemoView>
+      <TfrxRichView Name="Rich1" AllowVectorExport="False" Left="0" Top="260,78757" Width="173,85838" Height="30,23624" Frame.Color="8388608" Frame.Typ="0" GapX="2" GapY="1" PropData="0852696368456469740A680100007B5C727466315C616E73695C616E7369637067313235325C64656666305C6E6F7569636F6D7061745C6465666C616E67333038327B5C666F6E7474626C7B5C66305C666E696C205461686F6D613B7D7B5C66315C666E696C5C666368617273657430205461686F6D613B7D7D0D0A7B5C2A5C67656E657261746F722052696368656432302031302E302E31373736337D5C766965776B696E64345C756331200D0A5C706172645C625C66305C667331362050657266696C65733A5C623020205B4163616250657266496E746572696F722E224465736372697063696F6E225D205C6631202D5C663020205B41636162506572664578742E224465736372697063696F6E225D5C66312020205C7061720D0A5C622041636365736F72696F733A5C623020205B41636162416363496E742E224465736372697063696F6E225D202D205B416361624163634578742E224465736372697063696F6E225D5C66305C7061720D0A7D0D0A00"/>
+      <TfrxRichView Name="Rich2" AllowVectorExport="False" Left="173,85838" Top="260,78757" Width="170,07885" Height="30,23624" Frame.Color="8388608" Frame.Typ="0" GapX="2" GapY="1" PropData="0852696368456469740A580100007B5C727466315C616E73695C616E7369637067313235325C64656666305C6E6F7569636F6D7061745C6465666C616E67333038327B5C666F6E7474626C7B5C66305C666E696C205461686F6D613B7D7B5C66315C666E696C5C666368617273657430205461686F6D613B7D7D0D0A7B5C2A5C67656E657261746F722052696368656432302031302E302E31373736337D5C766965776B696E64345C756331200D0A5C706172645C625C66305C667331362043616A5C66315C2766336E3A5C623020205B41636162537570496E742E224465736372697063696F6E225D202D205B416361625375704578742E224465736372697063696F6E225D20205C7061720D0A5C62205065727369616E613A5C623020205B41636162506572734578742E224465736372697063696F6E225D202D205B41636162506572734578742E224465736372697063696F6E225D5C66305C7061720D0A7D0D0A00"/>
+      <TfrxMemoView Name="Memo14" AllowVectorExport="False" Left="249,44898" Top="30,23624" Width="94,48825" Height="18,89765" Font.Charset="1" Font.Color="-16777208" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="0" ParentFont="False" Text="CARGADO"/>
+      <TfrxGrafico2D Name="Grafico2D1" AllowVectorExport="False" Left="321,26005" Top="30,23624" Width="18,89765" Height="15,11812"/>
+    </TfrxMasterData>
+    <TfrxPageFooter Name="PageFooter1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="0" Height="64,25201" Left="0" Top="517,79561" Width="1046,92981">
+      <TfrxMemoView Name="Memo26" AllowVectorExport="False" Left="3,77953" Top="4,34694" Width="376,5671" Height="57,35436" Font.Charset="1" Font.Color="8388608" Font.Height="-12" Font.Name="Arial" Font.Style="1" Frame.Color="536870911" Frame.Typ="0" Frame.Width="2" ParentFont="False" Text="[DatosEmpresa.&#34;Nombre&#34;]&#13;&#10;[DatosEmpresa.&#34;Direccion&#34;]&#13;&#10;[DatosEmpresa.&#34;CodPost&#34;] - [DatosEmpresa.&#34;Poblacion&#34;] - [DatosEmpresa.&#34;Provincia&#34;]"/>
+      <TfrxMemoView Name="Memo27" AllowVectorExport="False" Left="718,14224" Top="4,34694" Width="180,5671" Height="57,35436" Font.Charset="1" Font.Color="8388608" Font.Height="-12" Font.Name="Arial" Font.Style="1" Frame.Color="536870911" Frame.Typ="0" Frame.Width="2" HAlign="haRight" ParentFont="False" Text="Telf: [DatosEmpresa.&#34;Telefono&#34;]&#13;&#10;Fax: [DatosEmpresa.&#34;Fax&#34;]&#13;&#10;E-mail:"/>
+      <TfrxPictureView Name="Picture7" AllowVectorExport="False" Left="906,1577" Top="3,77953" Width="135,10235" Height="58" DataField="Logotipo" DataSet="DatosEmpresa" DataSetName="DatosEmpresa" Frame.Typ="0" HightQuality="False" Transparent="False" TransparentColor="16777215"/>
+    </TfrxPageFooter>
+    <TfrxPageHeader Name="PageHeader1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="0" Height="86,92919" Left="0" Top="18,89765" Width="1046,92981">
+      <TfrxMemoView Name="Memo22" AllowVectorExport="False" Left="901,30767" Top="7,55906" Width="143,62214" Height="18,89765" DisplayFormat.DecimalSeparator="," Font.Charset="1" Font.Color="8388608" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="0" HAlign="haRight" ParentFont="False" Text="Pág [Page] de [TotalPages]  "/>
+      <TfrxMemoView Name="Memo23" AllowVectorExport="False" Left="723,66976" Top="56,69295" Width="321,26005" Height="22,67718" DataSetName="BaseFRT" Font.Charset="1" Font.Color="8388608" Font.Height="-15" Font.Name="Arial" Font.Style="1" Frame.Color="536870911" Frame.Typ="15" HAlign="haRight" ParentFont="False" VAlign="vaCenter" Text="FAB.: [fBaseFRT.&#34;Serie&#34;] / [fBaseFRT.&#34;Numero&#34;] | Fecha: [fBaseFRT.&#34;FechaCreacion&#34;]">
+        <Formats>
+          <item/>
+          <item/>
+          <item/>
+        </Formats>
+      </TfrxMemoView>
+      <TfrxPictureView Name="Picture6" AllowVectorExport="False" Left="3,77953" Top="3,77953" Width="149,73222" Height="65,98423" DataField="Logotipo" DataSet="DatosEmpresa" DataSetName="DatosEmpresa" Frame.Typ="0" HightQuality="False" Transparent="False" TransparentColor="16777215"/>
+      <TfrxMemoView Name="Memo12" AllowVectorExport="False" Left="725,66976" Top="34,01577" Width="321,26005" Height="26,45671" DataSetName="BaseFRT" Font.Charset="1" Font.Color="8388608" Font.Height="-15" Font.Name="Arial" Font.Style="1" Frame.Color="536870911" Frame.Typ="15" HAlign="haRight" ParentFont="False" VAlign="vaCenter" Text="PEDIDO AFIX - [fBaseFRT.&#34;NumeroManual&#34;]"/>
+      <TfrxMemoView Name="Memo13" AllowVectorExport="False" Left="476,22078" Top="3,77953" Width="245,66945" Height="75,5906" Font.Charset="1" Font.Color="-16777208" Font.Height="-16" Font.Name="Arial" Font.Style="1" Frame.Typ="0" ParentFont="False" Text="OBRA / REFERENCIA:&#13;&#10;[fBaseFRT.&#34;ProyectoNombre&#34;]&#13;&#10;([ExtraeEntreCorchetes(&#60;fBaseFRT.&#34;Descripcion&#34;&#62;)])">
+        <Formats>
+          <item/>
+          <item/>
+        </Formats>
+      </TfrxMemoView>
+      <TfrxMemoView Name="Memo18" AllowVectorExport="False" Left="190,75603" Top="3,77953" Width="283,46475" Height="15,11812" DataSetName="BaseFRT" Font.Charset="1" Font.Color="8388608" Font.Height="-15" Font.Name="Arial" Font.Style="1" Frame.Typ="0" ParentFont="False" Text="[fBaseFRT.&#34;ClienteNombre&#34;]"/>
+      <TfrxMemoView Name="Memo21" AllowVectorExport="False" Left="190,75603" Top="18,89765" Width="283,46475" Height="15,11812" DataSetName="BaseFRT" Font.Charset="1" Font.Color="-16777208" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="0" ParentFont="False" Text="[fBaseFRT.&#34;ClienteDireccion&#34;]"/>
+      <TfrxMemoView Name="Memo19" AllowVectorExport="False" Left="190,75603" Top="34,01577" Width="283,46475" Height="15,11812" DataSetName="BaseFRT" Font.Charset="1" Font.Color="-16777208" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="0" ParentFont="False" Text="[fBaseFRT.&#34;ClienteCP&#34;]   [fBaseFRT.&#34;ClientePoblacion&#34;]"/>
+      <TfrxMemoView Name="Memo20" AllowVectorExport="False" Left="190,75603" Top="49,13389" Width="283,46475" Height="15,11812" DataSetName="BaseFRT" Font.Charset="1" Font.Color="-16777208" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="0" ParentFont="False" Text="[fBaseFRT.&#34;ClienteProvincia&#34;]   [fBaseFRT.&#34;ClientePais&#34;]"/>
+      <TfrxMemoView Name="Memo24" AllowVectorExport="False" Left="190,75603" Top="64,25201" Width="283,46475" Height="15,11812" DataSetName="BaseFRT" DisplayFormat.DecimalSeparator="," Font.Charset="1" Font.Color="-16777208" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="0" ParentFont="False" Text="Obra: [fBaseFRT.&#34;ProyectoNombre&#34;]"/>
+    </TfrxPageHeader>
+  </TfrxReportPage>
+</TfrxReport>

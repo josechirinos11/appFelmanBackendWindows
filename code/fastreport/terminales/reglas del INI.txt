@@ -1,0 +1,80 @@
+CLAVE=VALOR
+Clave es R + número de rectángulo + . + Id de perfil
+
+En valor se guardan los siguientes datos separados por punto y coma
+1-Código artículo… código sicar del artículo 
+2-Tipo de artículo … perfil, accesorio, servicio, superficie, vidrio 1-2-3-4-5
+3-Uso  … uso del perfil 10 marco, 20 hojas etc. si no tiene uso o no es perfil valor será 0
+4-Situación … 1 superior, 2 derecha...etc. 0 no determinada o indicada
+5-Descripción. Aquí tendremos la descripción técnica si la hay, sino la del artículo. 8
+6-Acabado1 el acabado interior.
+7-Acabado2 el acabado exterior si lo hay
+8-LinkID si este artículo está vinculado a otro, aquí estará el id de perfil al que está vinculado.
+9-Cantidad. Unidades por esta línea de descompuesto.
+10-LON_A Largo para perfiles y gomas, ancho en caso de ser superficie
+11-LON_B Alto para superficies. 
+12-Número Clasificación del artículo (campo nuevo en articulos para su clasificación)
+13-Texto Clasificación del artículo (campo nuevo en articulos para su clasificación)
+14-IdFigura Id de la figura desde donde se generó el descompuesto.
+
+
+
+
+ //Usos perfiles:
+  //Practicable
+  upDesconocido = 0; //Sin uso
+  upMarco : Integer = 10;
+  upHoja : Integer = 20;
+  upHojaInversora : Integer = 30;
+  upInversor : Integer = 40;
+  upPoste : Integer = 50;
+  upTravesano : Integer = 60;
+  upZocaloMarco : Integer = 70;
+  upZocaloHoja : Integer = 80;
+  upVierteaguas : Integer = 90;
+  upRIH : Integer = 100; //Remate inferior hoja 
+  upRIHP : Integer = 110; //Remate inferior hoja pavimento
+  upUnionMarcosVertical = 120;
+  upUnionMarcosHorizontal = 130;
+  upUnionMarco = 140; //La posicional
+  //Corredera
+  upMarcoSuperior : Integer = 200;
+  upMarcoLateral : Integer = 210;
+  upMarcoInferior : Integer = 220;
+  upMarcoFijo : Integer = 230;
+  upHojaLateral : Integer = 240;
+  upHojaCentro : Integer = 250;
+  upHojaRodamiento : Integer = 260;
+  upHojaRodamientoZocalo : Integer = 270;
+  upUnionHojas : Integer = 280;
+  upViertaguasMarco : Integer = 290;
+  upDivisorVertical : Integer = 300; //(equivalente a poste en hoja corredera)
+  upDivisorHorizontal : Integer = 310; //(equivalente a travesaño en hoja corredera)
+  upEngatillado : Integer = 320;
+  upAcople : Integer = 330;
+  //Genericos
+  upRefuerzo : Integer = 400; //(interior perfil pvc)
+  upCajonPersiana : Integer = 405;   // Cajon persiana
+  upGuiaObra : Integer = 410;
+  upGuiaMonoblocAplacar : Integer = 420;
+  upGuiaMonoblocRecogedor : Integer = 430;
+  upSolape : Integer = 440; // (tapajuntas, jamba, guarnición)
+  upCondensacion : Integer = 450; // (vierteaguas de marco)
+  upAlargadera : Integer = 460; // (babero)
+  upJunquillo : Integer = 470;
+  upAdaptador : Integer = 480; //Adaptador del junquillo
+  upRecercado : Integer = 490;
+  upPremarco : Integer = 500;
+  upDintel : Integer = 510;
+  upJunquilloZocalo : Integer = 520;
+  upCompensador : Integer = 530;
+  upAdaptadorMallorquina : Integer = 540;
+  upLamaMallorquina : Integer = 550;
+  upRemateMallorquina : Integer = 560;
+  upLamaTerminal : Integer = 570;
+  upMosquitera : Integer = 580;
+  upHojaContra : Integer = 590;
+  upMontante : Integer = 600;
+  upTapeta : Integer = 610;
+  upRemate : Integer = 620;
+  upAnclaje : Integer = 630;

@@ -1,0 +1,5 @@
+TIPOTOPZ=Sist.Fijacion izquierda
+TIPOTOPD=Sist.Fijacion derecha
+
+ADESEXTTRCR=Anular Desagües                           
+CDESEXTTRMSQ=Salida Desagües      
