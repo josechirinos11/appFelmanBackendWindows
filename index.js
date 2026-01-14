@@ -16,6 +16,8 @@ const PORT = process.env.PORT || 3001;
 
 // Habilitar CORS para todas las rutas
 app.use(cors());
+app.use(express.json());
+
 
 // Ruta a la base de datos Access - Usar una copia local si es posible
 const originDbFile =
@@ -95,23 +97,9 @@ app.get("/api/pedidos", async (_, res) => {
   }
 });
 
-app.get("/api/webhook", (req, res) => {
-  console.log(
-    "🔁 Recibido webhook desde Linux, reiniciando AppFelmanWindows..."
-  );
 
-  exec("pm2 restart AppFelmanWindows && pm2 save", (error, stdout, stderr) => {
-    if (error) {
-      console.error(`❌ Error al reiniciar: ${error.message}`);
-      return res.status(500).json({ error: error.message });
-    }
-    if (stderr) console.error(`stderr: ${stderr}`);
-    console.log(`stdout: ${stdout}`);
-    res.json({
-      message: "✅ AppFelmanWindows reiniciada exitosamente desde webhook",
-    });
-  });
-});
+
+
 
 app.get("/api/controlPedidoInicio", async (_, res) => {
   try {
@@ -356,14 +344,15 @@ app.get("/api/pedidosComerciales", async (_, res) => {
   }
 });
 
-app.get("/api/pedidosComerciales40Registro", async (_, res) => {
+app.get("/api/pedidosComercialesJeronimoN8N", async (_, res) => {
   try {
     const rows = await connection.query(`
-      SELECT TOP 40
+      SELECT
         [BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido] AS NoPedido,
         [ASecciones].[Seccion],
         [AClientes].[NombreCliente] AS Cliente,
         [AComerciales].[Comercial],
+        [AComerciales].[Email] AS EmailComercial,
         [BPedidos].[RefCliente],
         [BPedidos].[FechaCompromiso] AS Compromiso,
         [AE].[Estado] AS EstadoPedido,
@@ -372,31 +361,103 @@ app.get("/api/pedidosComerciales40Registro", async (_, res) => {
         [AP].[Proveedor],
         [BCM].[FechaPrevista],
         [BCM].[Recibido]
-      FROM ((((((( 
-            [BPedidos]
-            INNER JOIN [AClientes]     ON [BPedidos].[Id_Cliente]      = [AClientes].[Id_Cliente])
-            INNER JOIN [AComerciales]  ON [AClientes].[Id_Comercial]    = [AComerciales].[Id_Comercial])
-            INNER JOIN [ASecciones]    ON [BPedidos].[Id_Seccion]      = [ASecciones].[Id_Seccion])
-            INNER JOIN [AEstadosPedido] AS [AE]   ON [BPedidos].[Id_EstadoPedido] = [AE].[Id_EstadoPedido])
-            LEFT JOIN [BControlMateriales] AS [BCM] ON [BPedidos].[Id_Pedido]     = [BCM].[Id_Pedido])
-            LEFT JOIN [AMateriales]         AS [AM]  ON [BCM].[Id_Material]     = [AM].[Id_Material])
-            LEFT JOIN [AProveedores]        AS [AP]  ON [BCM].[Id_Proveedor]    = [AP].[Id_Proveedor])
-      WHERE
-        [AE].[Estado] <> 'SERVIDO'
-        AND [BCM].[FechaPrevista] >= Date()
-      ORDER BY
-        [BCM].[FechaPrevista] ASC
+      FROM
+        (((([BPedidos]
+            INNER JOIN [AClientes]
+              ON [BPedidos].[Id_Cliente] = [AClientes].[Id_Cliente])
+           INNER JOIN [AComerciales]
+              ON [AClientes].[Id_Comercial] = [AComerciales].[Id_Comercial])
+          INNER JOIN [ASecciones]
+              ON [BPedidos].[Id_Seccion] = [ASecciones].[Id_Seccion])
+         INNER JOIN [AEstadosPedido] AS [AE]
+              ON [BPedidos].[Id_EstadoPedido] = [AE].[Id_EstadoPedido])
+      LEFT JOIN
+        (
+          ([BControlMateriales] AS [BCM]
+            LEFT JOIN [AMateriales] AS [AM]
+              ON [BCM].[Id_Material] = [AM].[Id_Material])
+          LEFT JOIN [AProveedores] AS [AP]
+            ON [BCM].[Id_Proveedor] = [AP].[Id_Proveedor]
+        )
+        ON [BPedidos].[Id_Pedido] = [BCM].[Id_Pedido];
     `);
-    console.log(
-      `Pedidos Comerciales 40 (${rows.length} registros):`,
-      rows.slice(0, 5)
-    );
+
     res.json(rows);
   } catch (err) {
     console.error("Error al consultar Access:", err);
     res.status(500).json({ error: err.message });
   }
 });
+
+
+//ultima versión con fecha de envío
+// prueba de pm2
+
+
+  app.get("/api/pedidosComercialesJeronimoN8N_completa", async (_, res) => {
+  try {
+    const rows = await connection.query(`
+      SELECT
+        [BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido] AS NoPedido,
+        [ASecciones].[Seccion],
+        [AClientes].[NombreCliente] AS Cliente,
+        [AComerciales].[Comercial],
+        [AComerciales].[Email] AS EmailComercial,
+        [BPedidos].[RefCliente],
+        [BPedidos].[FechaCompromiso] AS Compromiso,
+        [AE].[Estado] AS EstadoPedido,
+        Format([Ent].[FechaEnvio], "yyyy-mm-dd") AS FechaEnvio,
+        [BCM].[Id_ControlMat],
+        [AM].[Material],
+        [AP].[Proveedor],
+        [BCM].[FechaPrevista],
+        [BCM].[Recibido]
+      FROM
+        (
+          (
+            ((([BPedidos]
+              INNER JOIN [AClientes]
+                ON [BPedidos].[Id_Cliente] = [AClientes].[Id_Cliente])
+             INNER JOIN [AComerciales]
+                ON [AClientes].[Id_Comercial] = [AComerciales].[Id_Comercial])
+            INNER JOIN [ASecciones]
+                ON [BPedidos].[Id_Seccion] = [ASecciones].[Id_Seccion])
+           INNER JOIN [AEstadosPedido] AS [AE]
+                ON [BPedidos].[Id_EstadoPedido] = [AE].[Id_EstadoPedido])
+          LEFT JOIN
+            (
+              SELECT
+                [DL].[Id_Pedido],
+                Max([DD].[FechaEnvio]) AS FechaEnvio
+              FROM
+                [DEntregasLineas] AS [DL]
+                INNER JOIN [DEntregasDiarias] AS [DD]
+                  ON [DL].[Id_Entrega] = [DD].[Id_Entrega]
+              GROUP BY
+                [DL].[Id_Pedido]
+            ) AS [Ent]
+            ON [BPedidos].[Id_Pedido] = [Ent].[Id_Pedido]
+        )
+        LEFT JOIN
+        (
+          ([BControlMateriales] AS [BCM]
+            LEFT JOIN [AMateriales] AS [AM]
+              ON [BCM].[Id_Material] = [AM].[Id_Material])
+          LEFT JOIN [AProveedores] AS [AP]
+            ON [BCM].[Id_Proveedor] = [AP].[Id_Proveedor]
+        )
+        ON [BPedidos].[Id_Pedido] = [BCM].[Id_Pedido];
+    `);
+
+    res.json(rows);
+  } catch (err) {
+    console.error("Error al consultar Access:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
+
 
 app.get("/api/controlEntregaDiaria", async (_, res) => {
   try {
@@ -487,5 +548,34 @@ app.get("/api/test-access", (_, res) => {
   console.log("Probando acceso a Access");
   res.send("acceso a access");
 });
+
+app.post("/api/webhook", (req, res) => {
+  console.log("🔁 Recibido webhook desde Linux, cuerpo:", req.body);
+
+  // Respuesta rápida al webhook
+  res.json({ message: "✅ Webhook recibido, actualizando proyecto..." });
+
+  // Ejecutar git pull y reiniciar pm2
+  setTimeout(() => {
+    exec("cd D:/Compartido/AppFelmanAccessMySQL/access-proxy && git pull", (err, stdout, stderr) => {
+      if (err) {
+        console.error("❌ Error en git pull:", err.message);
+        return;
+      }
+      console.log("✅ git pull completado:\n", stdout);
+
+      // Luego reinicia PM2
+      exec("pm2 restart AppFelmanWindows && pm2 save", (error, out, err2) => {
+        if (error) {
+          console.error("❌ Error al reiniciar con pm2:", error.message);
+          return;
+        }
+        if (err2) console.error("stderr pm2:", err2);
+        console.log("✅ AppFelmanWindows reiniciado:\n", out);
+      });
+    });
+  }, 1000);
+});
+
 
 app.listen(PORT, () => console.log(`Proxy Access corriendo en puerto ${PORT}`));
