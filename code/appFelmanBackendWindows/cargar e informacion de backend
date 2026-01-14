@@ -1,0 +1,68 @@
+
+
+cd D:\Compartido\AppFelmanAccessMySQL\access-proxy>
+
+git pull
+
+pm2 restart AppFelmanWindows && pm2 save
+
+
+
+
+
+
+
+
+PS D:\Compartido\AppFelmanAccessMySQL\access-proxy> pm2 describe AppFelmanWindows
+ Describing process with id 0 - name AppFelmanWindows
+┌───────────────────┬─────────────────────────────────────────────────────────────┐
+│ status            │ online                                                      │
+│ name              │ AppFelmanWindows                                            │
+│ namespace         │ default                                                     │
+│ version           │ 1.0.0                                                       │
+│ restarts          │ 509                                                         │
+│ uptime            │ 57s                                                         │
+│ script path       │ D:\Compartido\AppFelmanAccessMySQL\access-proxy\index.js    │
+│ script args       │ N/A                                                         │
+│ error log path    │ C:\Users\Administrador\.pm2\logs\AppFelmanWindows-error.log │
+│ out log path      │ C:\Users\Administrador\.pm2\logs\AppFelmanWindows-out.log   │
+│ pid path          │ C:\Users\Administrador\.pm2\pids\AppFelmanWindows-0.pid     │
+│ interpreter       │ node                                                        │
+│ interpreter args  │ N/A                                                         │
+│ script id         │ 0                                                           │
+│ exec cwd          │ D:\Compartido\AppFelmanAccessMySQL\access-proxy             │
+│ exec mode         │ fork_mode                                                   │
+│ node.js version   │ 18.19.0                                                     │
+│ node env          │ N/A                                                         │
+│ watch & reload    │ ✘                                                           │
+│ unstable restarts │ 0                                                           │
+│ created at        │ 2026-01-14T06:21:35.653Z                                    │
+└───────────────────┴─────────────────────────────────────────────────────────────┘
+ Actions available
+┌────────────────────────┐
+│ km:heapdump            │
+│ km:cpu:profiling:start │
+│ km:cpu:profiling:stop  │
+│ km:heap:sampling:start │
+│ km:heap:sampling:stop  │
+└────────────────────────┘
+ Trigger via: pm2 trigger AppFelmanWindows <action_name>
+
+ Code metrics value
+┌────────────────────────┬───────────┐
+│ Used Heap Size         │ 9.26 MiB  │
+│ Heap Usage             │ 85.12 %   │
+│ Heap Size              │ 10.88 MiB │
+│ Event Loop Latency p95 │ 15.50 ms  │
+│ Event Loop Latency     │ 15.22 ms  │
+│ Active handles         │ 4         │
+│ Active requests        │ 0         │
+└────────────────────────┴───────────┘
+ Divergent env variables from local env
+
+
+ Add your own code metrics: http://bit.ly/code-metrics
+ Use `pm2 logs AppFelmanWindows [--lines 1000]` to display logs
+ Use `pm2 env 0` to display environment variables
+ Use `pm2 monit` to monitor CPU and Memory usage AppFelmanWindows
+PS D:\Compartido\AppFelmanAccessMySQL\access-proxy>
