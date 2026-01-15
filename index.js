@@ -470,7 +470,7 @@ app.get("/api/pedidosComercialesJeronimoN8N_completa_tipoTrabajo", async (_, res
   try {
     console.log('📍 Consultando ruta: /api/pedidosComercialesJeronimoN8N_completa_tipoTrabajo');
     const rows = await connection.query(`
-      SELECT
+SELECT
         [BPedidos].[Ejercicio] & '-' & [BPedidos].[Serie] & '-' & [BPedidos].[NPedido] AS NoPedido,
         [ASecciones].[Seccion],
         [AClientes].[NombreCliente] AS Cliente,
@@ -494,12 +494,15 @@ app.get("/api/pedidosComercialesJeronimoN8N_completa_tipoTrabajo", async (_, res
 
         [ATT].[TipoTrabajo] AS TipoTrabajo,
         [BPT].[NFab] AS NFab,
-        [BPT].[Unidades] AS Unidades
+        [BPT].[Unidades] AS Unidades,
+        
+        [BPedidos].[ColorGeneral],
+        [AFT].[FormatoTrabajo]
       FROM
         (
           (
             (
-              ((([BPedidos]
+              (((([BPedidos]
                 INNER JOIN [AClientes]
                   ON [BPedidos].[Id_Cliente] = [AClientes].[Id_Cliente])
                INNER JOIN [AComerciales]
@@ -508,6 +511,8 @@ app.get("/api/pedidosComercialesJeronimoN8N_completa_tipoTrabajo", async (_, res
                   ON [BPedidos].[Id_Seccion] = [ASecciones].[Id_Seccion])
              INNER JOIN [AEstadosPedido] AS [AE]
                   ON [BPedidos].[Id_EstadoPedido] = [AE].[Id_EstadoPedido])
+            LEFT JOIN [AFormatoTrabajo] AS [AFT]
+                  ON [BPedidos].[Id_Formato] = [AFT].[Id_Formato])
             LEFT JOIN
               (
                 SELECT
