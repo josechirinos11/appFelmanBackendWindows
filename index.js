@@ -477,20 +477,20 @@ SELECT
         [AComerciales].[Comercial],
         [AComerciales].[Email] AS EmailComercial,
         [BPedidos].[RefCliente],
-        [BPedidos].[FechaCompromiso] AS Compromiso,
+        Format([BPedidos].[FechaCompromiso], "yyyy-mm-dd") AS Compromiso,
         [AE].[Estado] AS EstadoPedido,
         Format([Ent].[FechaEnvio], "yyyy-mm-dd") AS FechaEnvio,
 
         [BCM].[Id_ControlMat],
         [AM].[Material],
         [AP].[Proveedor],
-        [BCM].[FechaPrevista],
+        Format([BCM].[FechaPrevista], "yyyy-mm-dd") as FechaPrevista,
         [BCM].[Recibido],
 
-        [BCM].[FechaPedido] AS FechaPedido,
+        Format([BCM].[FechaPedido], "yyyy-mm-dd") AS FechaPedido,
         [BCM].[NumeroPedido] AS NumeroPedido,
 
-        [BPedidos].[FechaPedido] AS FechaAltaPedido,
+        Format([BPedidos].[FechaPedido], "yyyy-mm-dd") AS FechaAltaPedido,
 
         [ATT].[TipoTrabajo] AS TipoTrabajo,
         [BPT].[NFab] AS NFab,
