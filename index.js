@@ -87,7 +87,7 @@ app.get("/api/pedidos", async (_, res) => {
       [Ejercicio] & '-' & [Serie] & '-' & [NPedido] AS NºPedido,
       Estado AS EstadoPedido,
       Incidencia,
-      FechaCompromiso AS Compromiso
+      Format(FechaCompromiso, "yyyy-mm-dd") AS Compromiso
     FROM BPedidos
     LEFT JOIN AEstadosPedido ON BPedidos.Id_EstadoPedido = AEstadosPedido.Id_EstadoPedido`);
     console.log(`Consulta a api/pedidos`);
@@ -111,12 +111,12 @@ app.get("/api/controlPedidoInicio", async (_, res) => {
         [ASecciones].[Seccion],
         [AClientes].[NombreCliente] AS Cliente,
         [BPedidos].[RefCliente],
-        [BPedidos].[FechaCompromiso] AS Compromiso,
+        Format([BPedidos].[FechaCompromiso], "yyyy-mm-dd") AS Compromiso,
         [AE].[Estado] AS EstadoPedido,
         [BCM].[Id_ControlMat],
         [AM].[Material],
         [AP].[Proveedor],
-        [BCM].[FechaPrevista],
+        Format([BCM].[FechaPrevista], "yyyy-mm-dd") as FechaPrevista,
         [BCM].[Recibido]
       FROM (((((([BPedidos]
           INNER JOIN [AClientes]   ON [BPedidos].[Id_Cliente]      = [AClientes].[Id_Cliente])
@@ -147,12 +147,12 @@ app.get("/api/controlPedidoInicio40Registro", async (_, res) => {
         [ASecciones].[Seccion],
         [AClientes].[NombreCliente] AS Cliente,
         [BPedidos].[RefCliente],
-        [BPedidos].[FechaCompromiso] AS Compromiso,
+        Format([BPedidos].[FechaCompromiso], "yyyy-mm-dd") AS Compromiso,
         [AE].[Estado] AS EstadoPedido,
         [BCM].[Id_ControlMat],
         [AM].[Material],
         [AP].[Proveedor],
-        [BCM].[FechaPrevista],
+        Format([BCM].[FechaPrevista], "yyyy-mm-dd") as FechaPrevista,
         [BCM].[Recibido]
       FROM
         (
@@ -200,11 +200,11 @@ app.get("/api/controlPedidoInicio__EJEMPLO", async (_, res) => {
         ASecciones.Seccion,
         AClientes.NombreCliente AS Cliente,
         BPedidos.RefCliente,
-        BPedidos.FechaCompromiso AS Compromiso,
+        Format(BPedidos.FechaCompromiso, "yyyy-mm-dd") AS Compromiso,
         BCM.Id_ControlMat,
         AM.Material,
         AP.Proveedor,
-        BCM.FechaPrevista,
+        Format(BCM.FechaPrevista, "yyyy-mm-dd") as FechaPrevista,
         BCM.Recibido
       FROM ((((BPedidos
         INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente)
@@ -230,11 +230,11 @@ app.get("/api/controlPedidoInicio40Registro__EJEMPLO", async (_, res) => {
         ASecciones.Seccion,
         AClientes.NombreCliente AS Cliente,
         BPedidos.RefCliente,
-        BPedidos.FechaCompromiso AS Compromiso,
+        Format(BPedidos.FechaCompromiso, "yyyy-mm-dd") AS Compromiso,
         BCM.Id_ControlMat,
         AM.Material,
         AP.Proveedor,
-        BCM.FechaPrevista,
+        Format(BCM.FechaPrevista, "yyyy-mm-dd") as FechaPrevista,
         BCM.Recibido
       FROM ((((BPedidos
         INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente)
@@ -278,11 +278,11 @@ app.get("/api/incidencia", async (_, res) => {
         ASecciones.Seccion,
         AClientes.NombreCliente AS Cliente,
         BPedidos.RefCliente,
-        BPedidos.FechaCompromiso AS Compromiso,
+        Format(BPedidos.FechaCompromiso, "yyyy-mm-dd") AS Compromiso,
         BCM.Id_ControlMat,
         AM.Material,
         AP.Proveedor,
-        BCM.FechaPrevista,
+        Format(BCM.FechaPrevista, "yyyy-mm-dd") as FechaPrevista,
         BCM.Recibido
       FROM ((((BPedidos
         INNER JOIN AClientes ON BPedidos.Id_Cliente = AClientes.Id_Cliente)
@@ -312,12 +312,12 @@ app.get("/api/pedidosComerciales", async (_, res) => {
         [AClientes].[NombreCliente] AS Cliente,
         [AComerciales].[Comercial],
         [BPedidos].[RefCliente],
-        [BPedidos].[FechaCompromiso] AS Compromiso,
+        Format([BPedidos].[FechaCompromiso], "yyyy-mm-dd") AS Compromiso,
         [AE].[Estado] AS EstadoPedido,
         [BCM].[Id_ControlMat],
         [AM].[Material],
         [AP].[Proveedor],
-        [BCM].[FechaPrevista],
+        Format([BCM].[FechaPrevista], "yyyy-mm-dd") as FechaPrevista,
         [BCM].[Recibido]
       FROM
         (((([BPedidos]
@@ -362,12 +362,12 @@ app.get("/api/pedidosComercialesJeronimoN8N", async (_, res) => {
         [AComerciales].[Comercial],
         [AComerciales].[Email] AS EmailComercial,
         [BPedidos].[RefCliente],
-        [BPedidos].[FechaCompromiso] AS Compromiso,
+        Format([BPedidos].[FechaCompromiso], "yyyy-mm-dd") AS Compromiso,
         [AE].[Estado] AS EstadoPedido,
         [BCM].[Id_ControlMat],
         [AM].[Material],
         [AP].[Proveedor],
-        [BCM].[FechaPrevista],
+        Format([BCM].[FechaPrevista], "yyyy-mm-dd") as FechaPrevista,
         [BCM].[Recibido]
       FROM
         (((([BPedidos]
@@ -402,7 +402,7 @@ app.get("/api/pedidosComercialesJeronimoN8N", async (_, res) => {
 // prueba de pm2
 
 
-  app.get("/api/pedidosComercialesJeronimoN8N_completa", async (_, res) => {
+app.get("/api/pedidosComercialesJeronimoN8N_completa", async (_, res) => {
   try {
     console.log('📍 Consultando ruta: /api/pedidosComercialesJeronimoN8N_completa');
     const rows = await connection.query(`
@@ -413,13 +413,13 @@ app.get("/api/pedidosComercialesJeronimoN8N", async (_, res) => {
         [AComerciales].[Comercial],
         [AComerciales].[Email] AS EmailComercial,
         [BPedidos].[RefCliente],
-        [BPedidos].[FechaCompromiso] AS Compromiso,
+        Format([BPedidos].[FechaCompromiso], "yyyy-mm-dd") AS Compromiso,
         [AE].[Estado] AS EstadoPedido,
         Format([Ent].[FechaEnvio], "yyyy-mm-dd") AS FechaEnvio,
         [BCM].[Id_ControlMat],
         [AM].[Material],
         [AP].[Proveedor],
-        [BCM].[FechaPrevista],
+        Format([BCM].[FechaPrevista], "yyyy-mm-dd") as FechaPrevista,
         [BCM].[Recibido]
       FROM
         (
@@ -497,7 +497,9 @@ SELECT
         [BPT].[Unidades] AS Unidades,
         
         [BPedidos].[ColorGeneral],
-        [AFT].[FormatoTrabajo]
+        [AFT].[FormatoTrabajo],
+        [BPedidos].[Unidades] AS Unidades_del_Pedido,
+        [BPedidos].[Orden]
       FROM
         (
           (
@@ -562,7 +564,7 @@ app.get("/api/controlEntregaDiaria", async (_, res) => {
     const rows = await connection.query(`
       SELECT
         DED.Id_Entrega,
-        DED.FechaEnvio,
+        Format(DED.FechaEnvio, "yyyy-mm-dd") AS FechaEnvio,
         DED.EntregaConfirmada,
         DED.EstadoCarga,
         DED.ObservaGral,
@@ -599,11 +601,11 @@ app.get("/api/controlEntregaDiaria", async (_, res) => {
 
 app.get("/api/controlEntregaDiariaA1DIA", async (_, res) => {
   try {
-    console.log('📍 Consultando ruta: /api/controlEntregaDiariaA1DIA');
+    console.log('📍 Consultando ruta: /api/controlEntreгаDiariaA1DIA');
     const rows = await connection.query(`
       SELECT
         DED.Id_Entrega,
-        DED.FechaEnvio,
+        Format(DED.FechaEnvio, "yyyy-mm-dd") AS FechaEnvio,
         DED.EntregaConfirmada,
         DED.EstadoCarga,
         DED.ObservaGral,
