@@ -21,10 +21,10 @@ app.use(express.json());
 
 // Ruta a la base de datos Access - Usar una copia local si es posible
 const originDbFile =
-  "\\\\192.168.1.81\\Compartido\\PRODUCCION_MONCADA\\CONTROL_PRODUCCION_MONCADA_V40.accdb";
+  "\\\\192.168.1.81\\Compartido\\PRODUCCION_MONCADA\\CONTROL_PRODUCCION_MONCADA_V42.2.accdb";
 const localDbCopy = path.join(
   __dirname,
-  "CONTROL_PRODUCCION_MONCADA_V40_LOCAL.accdb"
+  "CONTROL_PRODUCCION_MONCADA_V42.2_LOCAL.accdb"
 );
 
 // Crear una copia local de la base de datos para evitar problemas de bloqueo
