@@ -66,14 +66,14 @@ function createConnection() {
   try {
     // Opciones de conexión con manejo explícito de permisos y bloqueo
     return ADODB.open(
-      `Provider=Microsoft.ACE.OLEDB.16.0;Data Source=${dbFile};Mode=Share Deny None;Jet OLEDB:Database Password=;User Id=Admin;Password=;`,
+      `Provider=Microsoft.ACE.OLEDB.16.0;Data Source=${dbFile};`,
       true
     );
   } catch (error) {
     console.error("Error al crear la conexión:", error);
     // Intentar una configuración alternativa si la primera falla
     return ADODB.open(
-      `Provider=Microsoft.ACE.OLEDB.16.0;Data Source=${dbFile};Mode=Read;Persist Security Info=False;`,
+      `Provider=Microsoft.ACE.OLEDB.16.0;Data Source=${dbFile};`,
       true
     );
   }
