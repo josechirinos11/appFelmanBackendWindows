@@ -1,3 +1,23 @@
 ﻿node_modules/
 *.log
 .env
+
+
+
+
+# Local Access database copies
+*.accdb
+
+# Local backups
+*.backup
+*.backup2
+
+# Generated/build output
+code/servidorAccess/dist/
+
+# Local audit/diff files
+*.patch
+diff_*.txt
+
+# Local test files
+test2.js
